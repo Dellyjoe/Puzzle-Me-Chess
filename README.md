@@ -27,7 +27,7 @@ Create an automated chess board that could play Human Vs. Human, Human Vs. Compu
 
 * 1. Human Vs. Human will be playable over bluetooh or in person.
 * 2. Human Vs. Computer will use Stockfish chess engine ELO level (400 - 2900)
-* 3. Human Vs. Chess Puzzle will haveover 50 Puzzles from ELO level (400 + 30)0)
+* 3. Human Vs. Chess Puzzle will haveover 50 Puzzles from ELO level (400 + 3000)
 
 ## Functional Block Diagram
 
