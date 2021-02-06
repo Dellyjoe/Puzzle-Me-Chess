@@ -12,35 +12,27 @@
 #include <Arduino.h>
 #include <Potentiometer.h>
 #include <OLED_RTC.h>
-#include <timer.h>
 #include <avr/io.h>        // interrupt
 #include <avr/interrupt.h> // interrupt
 
 //******************************************Declare*****************************//
-Timerhour Timerhour0;      // Setting Object 0 for Timer12hour0
-OLED OLED0;                // Setting Object 0 for OLED
-struct timeralarmpara tap; // Struct Declare for timeralarmpara
-
+//Timerhour Timerhour0;      // Setting Object 0 for Timer12hour0
+OLED OLED0; // Setting Object 0 for OLED
+//struct timeralarmpara tap; // Struct Declare for timeralarmpara
+Potentiometer Potentiometer1;
 //******************************************Setup*****************************//
 void setup()
 {
-
-  Timerhour0.setuptimer();
   OLED0.intdisplay();
   pinMode(0, INPUT);
   pinMode(1, INPUT);
-  attachInterrupt(digitalPinToInterrupt(0), OLEDflag, HIGH);       // Setting interrupt pin D0
-  attachInterrupt(digitalPinToInterrupt(1), SendValuesflag, HIGH); // Setting interrupt pin D1
+  attachInterrupt(digitalPinToInterrupt(0), OLEDflag, HIGH); // Setting interrupt pin D0
   Serial.begin(9600);
 
   pinMode(2, INPUT_PULLUP); // Below is setting alarm funtion
-
-  attachInterrupt(digitalPinToInterrupt(2), alarm_now, LOW); // setting interrupt pin D2
 } // end setup
 
 void loop()
 {
-  OLED0.OLEDdraw(Timerhour0.timer(tap), Timerhour0.getRelayString());
-  // map Timerhour0.timer(Tap) return to currenttimer , map Timerhour0.getRelayString() return to Relaystring
-  Timerhour0.timer(tap);
+  OLED0.OLEDdraw(Potentiometer1.getpot1());
 } //end void loop
