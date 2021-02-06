@@ -14,22 +14,24 @@
 #include <OLED_RTC.h>
 #include <avr/io.h>        // interrupt
 #include <avr/interrupt.h> // interrupt
+#include <SD_Reader.h> 
 
 //******************************************Declare*****************************//
-//Timerhour Timerhour0;      // Setting Object 0 for Timer12hour0
 OLED OLED0; // Setting Object 0 for OLED
-//struct timeralarmpara tap; // Struct Declare for timeralarmpara
+SDReader SDReader0; // setting object 0 for SDReader
 Potentiometer Potentiometer1;
 //******************************************Setup*****************************//
 void setup()
 {
   OLED0.intdisplay();
+  SDReader0.intSDReader();
   pinMode(0, INPUT);
   pinMode(1, INPUT);
   attachInterrupt(digitalPinToInterrupt(0), OLEDflag, HIGH); // Setting interrupt pin D0
-  Serial.begin(9600);
-
   pinMode(2, INPUT_PULLUP); // Below is setting alarm funtion
+
+
+ 
 } // end setup
 
 void loop()

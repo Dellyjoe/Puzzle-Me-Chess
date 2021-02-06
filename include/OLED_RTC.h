@@ -15,4 +15,4 @@ public:
 };                     // end class OLED
 void OLEDflag();       //interrupt function is a global function
 void SendValuesflag(); //interrupt function is a global function
-//void alarm_now();
+
