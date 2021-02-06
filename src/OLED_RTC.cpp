@@ -15,6 +15,7 @@ void OLED::OLEDdraw(int potvalue1)
 {
     Potentiometer Potentiometer1;
     Potentiometer1.getpot1();
+    
     u8g2.clearBuffer();              // clear the internal memory
     u8g2.setFlipMode(0);             // Flips display 180 (1) = True
     u8g2.setFont(u8g2_font_9x18_tf); // choose a suitable font
