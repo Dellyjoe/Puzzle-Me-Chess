@@ -16,22 +16,22 @@
 #include <avr/interrupt.h> // interrupt
 #include <SD_Reader.h> 
 
-//******************************************Declare*****************************//
+//******************************************Declare****************************//
 OLED OLED0; // Setting Object 0 for OLED
 SDReader SDReader0; // setting object 0 for SDReader
 Potentiometer Potentiometer1;
-//******************************************Setup*****************************//
+//******************************************Setup******************************//
 void setup()
 {
   OLED0.intdisplay();
   SDReader0.intSDReader();
+  SDReader0.openread();
+//******************************************Inputs*****************************//
   pinMode(0, INPUT);
   pinMode(1, INPUT);
+  //****************************************Interrputs*************************//
   attachInterrupt(digitalPinToInterrupt(0), OLEDflag, HIGH); // Setting interrupt pin D0
   //pinMode(2, INPUT_PULLUP); // Input for Blue Botton 
-
-
- 
 } // end setup
 
 void loop()

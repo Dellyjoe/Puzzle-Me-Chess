@@ -7,7 +7,6 @@ SdVolume volume;
 SdFile root;
 const int chipSelect = BUILTIN_SDCARD; // setting SD library to read from Internal SD card
 
-
 //******************************************Initializing SD Reader***************//
 void SDReader::intSDReader()
 {
@@ -83,5 +82,33 @@ void SDReader::intSDReader()
 
     // list all files in the card with date and size
     root.ls(LS_R | LS_DATE | LS_SIZE);
-
+    root.close();
 } // end intSDReader
+
+void SDReader::openread()
+{
+    if (!SD.begin(chipSelect))
+    {
+        while (true);
+    }
+    File dataFile = SD.open("T015704.CSV"); //opening File T015704.csv
+
+    // if the file is available, write to it:
+
+    if (dataFile)
+    {
+        while (dataFile.available())
+        {
+
+            Serial.write(dataFile.read());
+        }
+        dataFile.close();
+    }
+
+    // if the file isn't open, pop up an error:
+
+    else
+    {
+        Serial.println("error opening T015704.CSV");
+    }
+}

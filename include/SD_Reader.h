@@ -7,4 +7,5 @@ class SDReader
 private:
 public: 
     void intSDReader();
+    void openread();
 };
