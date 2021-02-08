@@ -7,7 +7,7 @@
 // to hard. There will be an OLED screen to show the user where to put
 // the prices to set up the chess puzzle. This project will also have
 // a feature to show user hint or show asnwer. After completing the
-// puzzle a sound will play to tell the user he/she has completed the puzzle.
+// puzzle a sound will play to tell the user has completed the puzzle.
 
 #include <Arduino.h>
 #include <Potentiometer.h>
@@ -28,7 +28,7 @@ void setup()
   pinMode(0, INPUT);
   pinMode(1, INPUT);
   attachInterrupt(digitalPinToInterrupt(0), OLEDflag, HIGH); // Setting interrupt pin D0
-  pinMode(2, INPUT_PULLUP); // Below is setting alarm funtion
+  //pinMode(2, INPUT_PULLUP); // Input for Blue Botton 
 
 
  
