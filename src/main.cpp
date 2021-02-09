@@ -11,21 +11,21 @@
 
 #include <Arduino.h>
 #include <Potentiometer.h>
-#include <OLED_RTC.h>
+#include <Display.h>
 #include <avr/io.h>        // interrupt
 #include <avr/interrupt.h> // interrupt
-#include <SD_Reader.h> 
+#include <SDcard.h> 
 
 //******************************************Declare****************************//
-OLED OLED0; // Setting Object 0 for OLED
-SDReader SDReader0; // setting object 0 for SDReader
+Display Display0; // Setting Object 0 for OLED
+SDCARD SDCARD0; // setting object 0 for SDReader
 Potentiometer Potentiometer1;
 //******************************************Setup******************************//
 void setup()
 {
-  OLED0.intdisplay();
-  SDReader0.intSDReader();
-  SDReader0.openread();
+  Display0.intdisplay();
+  SDCARD0.intSDReader();
+  SDCARD0.openread();
 //******************************************Inputs*****************************//
   pinMode(0, INPUT);
   pinMode(1, INPUT);
@@ -36,5 +36,5 @@ void setup()
 
 void loop()
 {
-  OLED0.OLEDdraw(Potentiometer1.getpot1());
+  Display0.OLEDdraw(Potentiometer1.getpot1());
 } //end void loop

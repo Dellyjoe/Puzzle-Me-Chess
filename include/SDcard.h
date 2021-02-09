@@ -2,10 +2,10 @@
 #include <SD.h>  // SD card library 
 #include <SPI.h> // SD card library 
 
-class SDReader
+class SDCARD
 {
 private:
 public: 
     void intSDReader();
     void openread();
-};
+}; // end Class SDCARD

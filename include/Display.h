@@ -4,7 +4,7 @@
 #include <Wire.h>
 
 
-class OLED
+class Display
 {
 private:
 public:

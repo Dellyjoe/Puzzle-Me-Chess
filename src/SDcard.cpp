@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include <SD_Reader.h>
+#include <SDcard.h>
 
 //******************************************Declare*****************************//
 Sd2Card card;
@@ -8,7 +8,7 @@ SdFile root;
 const int chipSelect = BUILTIN_SDCARD; // setting SD library to read from Internal SD card
 
 //******************************************Initializing SD Reader***************//
-void SDReader::intSDReader()
+void SDCARD::intSDReader()
 {
     Serial.begin(9600);
     while (!Serial)
@@ -85,7 +85,7 @@ void SDReader::intSDReader()
     root.close();
 } // end intSDReader
 
-void SDReader::openread()
+void SDCARD::openread()
 {
     if (!SD.begin(chipSelect))
     {
