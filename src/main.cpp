@@ -20,7 +20,7 @@
 //******************************************Declare****************************//
 Display Display0; // Setting Object 0 for OLED
 SDCARD SDCARD0; // setting object 0 for SDReader
-Potentiometer Potentiometer1;
+Potentiometer Potentiometer0;
 //******************************************Setup******************************//
 void setup()
 {
@@ -31,11 +31,17 @@ void setup()
   pinMode(0, INPUT);
   pinMode(1, INPUT);
   //****************************************Interrputs*************************//
-  attachInterrupt(digitalPinToInterrupt(0), OLEDflag, HIGH); // Setting interrupt pin D0
+ // attachInterrupt(digitalPinToInterrupt(0), OLEDflag, HIGH); // Setting interrupt pin D0
   //pinMode(2, INPUT_PULLUP); // Input for Blue Botton 
 } // end setup
 
 void loop()
 {
-  Display0.draw();
+  Display0.print(45, 30,Potentiometer0.r_pot() );
+
+  // you need to add a while loop that is ture is the button is not pressed which will show select 
+  //puzzle and then allow you to use the pot to select which puzzle you want.
+  // after selecting the puzzle hitting the butotn will send the code to exit this loop and move on
+  // to mapping the vaule to the sd card. 
+
 } //end void loop
