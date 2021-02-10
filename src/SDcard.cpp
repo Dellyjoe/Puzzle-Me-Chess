@@ -8,7 +8,7 @@ SdFile root;
 const int chipSelect = BUILTIN_SDCARD; // setting SD library to read from Internal SD card
 
 //******************************************Initializing SD Reader***************//
-void SDCARD::intSDReader()
+void SDCARD::int_SD()
 {
     Serial.begin(9600);
     while (!Serial)
@@ -85,7 +85,7 @@ void SDCARD::intSDReader()
     root.close();
 } // end intSDReader
 
-void SDCARD::openread()
+void SDCARD::open()
 {
     if (!SD.begin(chipSelect))
     {

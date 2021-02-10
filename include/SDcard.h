@@ -6,6 +6,9 @@ class SDCARD
 {
 private:
 public: 
-    void intSDReader();
-    void openread();
+    void int_SD();
+    void open();
+    void mapp();
+    void print();
+    void close();
 }; // end Class SDCARD
