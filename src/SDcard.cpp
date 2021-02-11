@@ -91,7 +91,7 @@ void SDCARD::open()
     {
         while (true);
     }
-    File dataFile = SD.open("T015704.CSV"); //opening File T015704.csv
+    File dataFile = SD.open("1015704.CSV" ); //opening File T015704.csv
 
     // if the file is available, write to it:
 
