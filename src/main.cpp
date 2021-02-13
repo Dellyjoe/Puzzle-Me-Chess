@@ -20,15 +20,14 @@
 
 //******************************************Declare****************************//
 Display Display0; // Setting Object 0 for Display
-SDcard SDcard0; // Setting object 0 for SDcard
-Button Button0; // Setting object 0 for Button
-Potentiometer Potentiometer0; // Setting oject 0 for P
+SDcard SDcard0; 
+Button Button0;
+Potentiometer Potentiometer0; 
 //******************************************Setup******************************//
 void setup()
 {
   Display0.int_display();
   SDcard0.int_SD();
-  //SDcard0.open();
 //******************************************Inputs*****************************//
   Button0.init_button(); //setting D0 to button
   Potentiometer0.init_pot(); // setting A0 to pot
@@ -42,18 +41,22 @@ Potentiometer Potentiometer2;
 Display Display1;
 
 //***************************************Start of Code*************************//
-// do {
-//   Potentiometer Potentiometer1; // moved from declare b/c I need to pull value continuous
-//   Display1.print_select_puzzle(45, 30, Potentiometer1.r_pot());
-// } while (Button1.r_button() == 1);
-while (Button1.r_button() == 1)
+
+while (Button1.r_button() == 0)
 {
+  
   Potentiometer Potentiometer1; // moved from declare b/c I need to pull value continuous
-  Display0.print_select_puzzle(45, 30, Potentiometer1.r_pot());
+  Display1.print_select_puzzle(45, 30, Potentiometer1.r_pot());
 }
-  Display1.print_user_puzzle(45,30, Potentiometer2.r_pot());
-  // you need to add a while loop that is ture is the button is not pressed which will show select 
-  //puzzle and then allow you to use the pot to select which puzzle you want.
+
+delay(1000);
+
+while (Button1.r_button() == 0)
+{
+  Display1.print_user_puzzle(0,30, Potentiometer2.r_pot());
+  SDcard0.open();
+  break;
+}
   // after selecting the puzzle hitting the butotn will send the code to exit this loop and move on
   // to mapping the vaule to the sd card. 
 

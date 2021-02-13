@@ -13,6 +13,6 @@ public:
   void clear();
   void print_select_puzzle(int x , int y, int value); //<-- fix inputs //int x, int y, int vaule
   void print_user_puzzle(int a, int b, int value1);
-};                     // end class Display
+}; // end class Display
 
 //class DisplaySM::DisplaySM : Display
