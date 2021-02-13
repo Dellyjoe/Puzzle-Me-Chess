@@ -8,3 +8,7 @@ int Potentiometer::r_pot()
   return (potmap1);
 } // Close r_pot
 
+void Potentiometer::init_pot()
+{
+  pinMode(0, INPUT); // pin A0 mapped to an INPUT --> r_pot 
+}

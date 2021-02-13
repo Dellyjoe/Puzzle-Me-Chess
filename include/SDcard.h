@@ -2,7 +2,7 @@
 #include <SD.h>  // SD card library 
 #include <SPI.h> // SD card library 
 
-class SDCARD
+class SDcard
 {
 private:
 public: 
@@ -11,4 +11,4 @@ public:
     void mapp();
     void print();
     void close();
-}; // end Class SDCARD
+}; // end Class SDcard

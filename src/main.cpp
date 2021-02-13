@@ -19,37 +19,39 @@
 #include <Button.h>
 
 //******************************************Declare****************************//
-Display Display0; // Setting Object 0 for OLED
-SDCARD SDCARD0; // Setting object 0 for SDReader
+Display Display0; // Setting Object 0 for Display
+SDcard SDcard0; // Setting object 0 for SDcard
 Button Button0; // Setting object 0 for Button
+Potentiometer Potentiometer0; // Setting oject 0 for P
 //******************************************Setup******************************//
 void setup()
 {
   Display0.int_display();
-  SDCARD0.int_SD();
-  SDCARD0.open();
+  SDcard0.int_SD();
+  //SDcard0.open();
 //******************************************Inputs*****************************//
-  Button0.initbutton(); //setting A0 to button
-  pinMode(0, INPUT); // pin A0 mapped to an INPUT --> r_pot 
-  //pinMode(1, INPUT);
-  //****************************************Interrputs*************************//
-  // attachInterrupt(digitalPinToInterrupt(0), OLEDflag, HIGH); // Setting interrupt pin D0
-  //pinMode(2, INPUT_PULLUP); // Input for Blue Botton 
+  Button0.init_button(); //setting D0 to button
+  Potentiometer0.init_pot(); // setting A0 to pot
 } // end setup
 
 void loop()
 {
+//******************************************Declare****************************//
 Button Button1;
-Button1.r_button();
-//Button0.buttonstate = digitalRead(button1);
+Potentiometer Potentiometer2;
+Display Display1;
 
-  // while (buttonstate ==0)
-  // {
-  // Potentiometer Potentiometer1; // moved from declare b/c I need to pull value continuous
-  // Display0.print(45, 30, Potentiometer1.r_pot() );
-
-  // }
-
+//***************************************Start of Code*************************//
+// do {
+//   Potentiometer Potentiometer1; // moved from declare b/c I need to pull value continuous
+//   Display1.print_select_puzzle(45, 30, Potentiometer1.r_pot());
+// } while (Button1.r_button() == 1);
+while (Button1.r_button() == 1)
+{
+  Potentiometer Potentiometer1; // moved from declare b/c I need to pull value continuous
+  Display0.print_select_puzzle(45, 30, Potentiometer1.r_pot());
+}
+  Display1.print_user_puzzle(45,30, Potentiometer2.r_pot());
   // you need to add a while loop that is ture is the button is not pressed which will show select 
   //puzzle and then allow you to use the pot to select which puzzle you want.
   // after selecting the puzzle hitting the butotn will send the code to exit this loop and move on
