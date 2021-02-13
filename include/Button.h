@@ -1,9 +1,11 @@
 #include <Arduino.h>
 
-class BUTTON
+class Button
 {
 private:
-void read();
+const int button1 = 2;
+int buttonState1 = 0; 
 public:
-
+int r_button();
+void initbutton();
 }; // end Class BUTTON

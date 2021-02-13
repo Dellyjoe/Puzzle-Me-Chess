@@ -16,10 +16,12 @@
 #include <avr/io.h>        // interrupt
 #include <avr/interrupt.h> // interrupt
 #include <SDcard.h> 
+#include <Button.h>
 
 //******************************************Declare****************************//
 Display Display0; // Setting Object 0 for OLED
-SDCARD SDCARD0; // setting object 0 for SDReader
+SDCARD SDCARD0; // Setting object 0 for SDReader
+Button Button0; // Setting object 0 for Button
 //******************************************Setup******************************//
 void setup()
 {
@@ -27,6 +29,7 @@ void setup()
   SDCARD0.int_SD();
   SDCARD0.open();
 //******************************************Inputs*****************************//
+  Button0.initbutton(); //setting A0 to button
   pinMode(0, INPUT); // pin A0 mapped to an INPUT --> r_pot 
   //pinMode(1, INPUT);
   //****************************************Interrputs*************************//
@@ -36,8 +39,16 @@ void setup()
 
 void loop()
 {
-  Potentiometer Potentiometer1; // moved from declare b/c I need to pull value continuous
-  Display0.print(45, 30, Potentiometer1.r_pot() );
+Button Button1;
+Button1.r_button();
+//Button0.buttonstate = digitalRead(button1);
+
+  // while (buttonstate ==0)
+  // {
+  // Potentiometer Potentiometer1; // moved from declare b/c I need to pull value continuous
+  // Display0.print(45, 30, Potentiometer1.r_pot() );
+
+  // }
 
   // you need to add a while loop that is ture is the button is not pressed which will show select 
   //puzzle and then allow you to use the pot to select which puzzle you want.
