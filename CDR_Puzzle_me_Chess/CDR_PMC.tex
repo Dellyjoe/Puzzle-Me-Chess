@@ -1,0 +1,211 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Programmer : Joseph Vitale
+% Date : 02/15/21
+% Assessment : CDR Puzzle Me Chess
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Change "article" to "report" to get rid of page number on title page
+% Most of these packages that you are calling will be installed by MiKTeX the first time you use it
+% After that, they should work fine on your jump drive or laptop
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{Tabbing}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{extramarks}
+\usepackage{chngpage}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% In case you need to adjust margins:
+\topmargin=-0.45in      %
+\evensidemargin=0in     %
+\oddsidemargin=0in      %
+\textwidth=6.5in        %
+\textheight=9.0in       %
+\headsep=0.25in         %
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Homework Specific Information (THIS IS WHERE YOU MAKE YOUR TITLE CHANGES)
+%
+% You only need to change the homework number and the Date
+%
+% You should make sure your correct name is on this as well.
+%
+\newcommand{\hmwkTitle}{Puzzle Me Chess}
+\newcommand{\hmwkDueDate}{February\ 22,\ 2021}
+\newcommand{\hmwkClass}{Critical Design Review}
+\newcommand{\hmwkClassInstructor}{Embedded Systems Development Lab: EN.525.743.8VL.SP21}
+\newcommand{\hmwkAuthorName}{Mr. Joseph Vitale}
+
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set up for the header and footer here
+% This stuff should not change much for you, but you may play around with it safely.
+% Notice that the "\lhead" is for the left header and "\chead" is for the center header, etc.
+
+\pagestyle{fancy}                                                      
+\lhead{\hmwkAuthorName}                                                 
+\chead{\hmwkClass\ (\hmwkClassInstructor )}  
+\rhead{\firstxmark}                                                     
+\lfoot{\lastxmark}                                                      
+\cfoot{}                                                                
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}}                          
+\renewcommand\headrulewidth{0.4pt}                                      
+\renewcommand\footrulewidth{0.4pt}   
+                                   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tools to mark the numbering of problems. They don't need to be modified by you.
+% All the text below is pretty important for the formatting, but you don't need to change it.
+%
+\newcommand{\enterProblemHeader}[1]{\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak%
+                                    \nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak}%
+\newcommand{\exitProblemHeader}[1]{\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak%
+                                   \nobreak\extramarks{#1}{}\nobreak}%
+
+\newlength{\labelLength}
+\newcommand{\labelAnswer}[2]
+  {\settowidth{\labelLength}{#1}%
+   \addtolength{\labelLength}{0.25in}%
+   \changetext{}{-\labelLength}{}{}{}%
+   \noindent\fbox{\begin{minipage}[c]{\columnwidth}#2\setlength{\parindent}{10mm}\end{minipage}}%
+   \marginpar{\fbox{#1}}%
+
+   % You can leave this alone too
+   \changetext{}{+\labelLength}{}{}{}}%
+
+% Nothing to change here
+\setcounter{secnumdepth}{0}
+\newcommand{\homeworkProblemName}{}%
+\newcounter{homeworkProblemCounter}%
+\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]%
+  {\stepcounter{homeworkProblemCounter}%
+   \renewcommand{\homeworkProblemName}{#1}%
+   \section{\homeworkProblemName}%
+   \enterProblemHeader{\homeworkProblemName}}%
+  {\exitProblemHeader{\homeworkProblemName}}%
+
+\newcommand{\problemAnswer}[1]
+  {\noindent\fbox{\begin{minipage}[c]{\columnwidth}#1\setlength{\parindent}{10mm}\end{minipage}}}%
+
+\newcommand{\problemLAnswer}[1]
+  {\labelAnswer{\homeworkProblemName}{#1}}
+
+\newcommand{\homeworkSectionName}{}%
+\newlength{\homeworkSectionLabelLength}{}%
+\newenvironment{homeworkSection}[1]%
+  {% The author put this space here to make sure it is not connected to the above.
+   % Otherwise the changetext can do funny things to the other margin
+
+   \renewcommand{\homeworkSectionName}{#1}%
+   \settowidth{\homeworkSectionLabelLength}{\homeworkSectionName}%
+   \addtolength{\homeworkSectionLabelLength}{0.25in}%
+   \changetext{}{-\homeworkSectionLabelLength}{}{}{}%
+   \subsection{\homeworkSectionName}%
+   \enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]}}%
+  {\enterProblemHeader{\homeworkProblemName}%
+
+   % The author put the blank space above in order to make sure this margin
+   % change doesn't happen too soon (otherwise \sectionAnswer's can
+   % get ugly about their \marginpar placement.
+   \changetext{}{+\homeworkSectionLabelLength}{}{}{}}%
+
+\newcommand{\sectionAnswer}[1]
+  {% The author put this space here to make sure we're disconnected from the previous
+   % passage
+
+   \noindent\fbox{\begin{minipage}[c]{\columnwidth}#1\setlength{\parindent}{10mm}\end{minipage}}%
+   \enterProblemHeader{\homeworkProblemName}\exitProblemHeader{\homeworkProblemName}%
+   \marginpar{\fbox{\homeworkSectionName}}%
+
+   % The author put the blank space above in order to make sure this
+   % \marginpar gets correctly placed.
+   }%
+%
+% All the text above is pretty important for the formatting, but you don't need to change it.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Formatting the title. This part of the document is where the title page is set up.
+%    We are almost to the beginning of the homework!
+%
+\title{\vspace{2in}\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\\normalsize\vspace{0.1in}\small{\hmwkDueDate}\\\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ }}\vspace{3in}}
+\date{}
+\author{\textbf{\hmwkAuthorName}}
+
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  This is the BEGINNING of the DOCUMENT
+%
+%
+\begin{document}
+
+\maketitle % Actually calling the typesetter to include the title that you formatted above
+\newpage
+% Comment out the \tableofcontents and \newpage lines to get remove the Contents page
+% Uncomment the \setcounter line as well if you do NOT want subsections
+%       listed in Contents
+%\setcounter{tocdepth}{1}
+
+%\tableofcontents % 
+%\newpage % The \\ command tells LaTeX to start a new line. 
+
+% When problems are long, it may be desirable to put a \newpage or a
+% \clearpage before each homeworkProblem environment
+
+\clearpage 
+% The \clearpage command ends the current page and causes all figures 
+% and tables that have so far appeared in the input to be printed.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Project description}
+\subsection{High level description of project}
+\subsection{Capabilities}
+\subsection{Limitations}
+
+\section{Functional description}
+\subsection{System Block Diagram}
+\subsection{Code Flow Diagram}
+
+\section{Interface description}
+\subsection{Internal}
+
+\section{Explanation of code}
+\subsection{Code layout}
+\subsection{Main.cpp}
+\subsection{Display.cpp}
+\subsection{SDcard.cpp}
+
+
+\section{Material and resource requirements}
+\subsection{List of Items (BOM)}
+\subsection{Test equipment}
+\subsection{Ording from}
+include date and times and websites
+
+\section{Development Plan and Schedule}
+\subsection{Order of Development}
+\subsection{Milestones and Schedule}
+\subsection{Risk}
+
+\section{Reference}
+
+\end{document}
