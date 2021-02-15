@@ -183,8 +183,38 @@ In chess there are many different ways to play the game. After each player moves
 \noindent The physical chess puzzle allows the user to practice looking at a physical board to solve each puzzle. This project is titled "Puzzle me Chess`` and it will be equipped to have 3 different puzzle's. The chess board will allow the user to place each piece in the right location that is displayed on the OLED screen. After each piece is on the board the chess puzzle will then display to the user which color he/she will play. After the user makes his first move the board will check to see if the move was correct. If not the user will be asked to reset the peice and try again until puzzle is complete. 
 
 \subsection{Capabilities}
+Capabilites for the Puzzle me Chess project range from Indicators, User Direction, SD card capability, and Location Detection. See below for more details. 
 
+\begin{center}
+    \begin{tabular}{| l | l |}
+    \hline
+    Capability  & Description below\\ \hline
+    Indicator &  LED light indicator to show user hint/show answer feature \\ \hline
+    User Direction & OLED to describe to the user where to put pieces \\ \hline 
+    SD Card & Read .csv standardized format to quickly import puzzles \\ \hline
+    User Direction & User input switch to show user answer, indicated by LEDs \\ \hline
+    User Direction & User input Button to show user a hint \\ \hline
+    Location Detection & Check board spots are correct for puzzle that was selected \\ \hline
+    \end{tabular}
+\end{center}
+ *Assume User puts right pieces on spot 
+ \newline
+ *Assume Chess Board will be lit evenly with light  
 \subsection{Limitations}
+Limitations for the Puzzle me Chess project range from Location Detection, Auto Movement, Puzzle Selection, Physical and parts. See below for more details.
+
+\begin{center}
+    \begin{tabular}{| l | l |}
+    \hline
+    Limitations  & Description below\\ \hline
+    Location Detection & Not knowing which piece is on the spot \\ \hline
+    Auto Movement & Not being able to move the piece on correct spot \\ \hline 
+    Puzzle Selection & Not having 3+ different puzzles to choose from  \\ \hline
+    Physical & Not being able to light each square along the perimeter  \\ \hline
+    Parts & Not having multiple colors to indicate wrong or right answer \\ \hline
+    Physical & Needing light to illuminate  the chess board \\ \hline
+    \end{tabular}
+\end{center}
 
 \section{Functional description}
 \subsection{System Block Diagram}
