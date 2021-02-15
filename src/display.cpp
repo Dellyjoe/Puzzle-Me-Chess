@@ -11,7 +11,6 @@ void Display::int_display()
 //*****************************************Functions**************************//
 void Display::print_select_puzzle(int x, int y, int value)
 {   
-
     u8g2.clearBuffer();              // clear the internal memory
     u8g2.setFlipMode(0);             // Flips display 180 (1) = True
     u8g2.setFont(u8g2_font_9x18_tf); // choose a suitable font
@@ -21,7 +20,6 @@ void Display::print_select_puzzle(int x, int y, int value)
     u8g2.print(value);
     u8g2.sendBuffer(); // transfer internal memory to the display
 } // end void print_select_puzzle
-
 
 void Display::print_user_puzzle(int a, int b, int value1)
 {

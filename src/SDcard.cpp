@@ -109,6 +109,6 @@ void SDcard::open()
 
     else
     {
-        Serial.println("error opening T015704.CSV");
+        Serial.println("error opening 1015704.CSV");
     }
 }

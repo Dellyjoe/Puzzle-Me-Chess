@@ -3,7 +3,6 @@
 #endif
 #include <Wire.h>
 
-
 class Display
 {
 private:

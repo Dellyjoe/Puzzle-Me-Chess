@@ -13,8 +13,6 @@
 #include <Arduino.h>
 #include <Potentiometer.h>
 #include <Display.h>
-#include <avr/io.h>        // interrupt
-#include <avr/interrupt.h> // interrupt
 #include <SDcard.h> 
 #include <Button.h>
 
@@ -39,17 +37,15 @@ void loop()
 Button Button1;
 Potentiometer Potentiometer2;
 Display Display1;
-
 //***************************************Start of Code*************************//
-
 while (Button1.r_button() == 0)
 {
   
-  Potentiometer Potentiometer1; // moved from declare b/c I need to pull value continuous
+  Potentiometer Potentiometer1; // moved from Declare b/c I need to pull value continuous
   Display1.print_select_puzzle(45, 30, Potentiometer1.r_pot());
 }
 
-delay(1000);
+delay(1000); //--> to allow for button press
 
 while (Button1.r_button() == 0)
 {
