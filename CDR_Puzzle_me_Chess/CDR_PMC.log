@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  15 FEB 2021 10:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  15 FEB 2021 12:58
 entering extended mode
 **./CDR_PMC.tex
 (CDR_PMC.tex
@@ -258,6 +258,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {C:/Users/josep/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 180--182
+
+ []
+
 
 AED: lastpage setting LastPage
 
@@ -270,22 +274,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
-] (CDR_PMC.aux) ) 
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[3] (CDR_PMC.aux) ) 
 Here is how much of TeX's memory you used:
  3107 strings out of 479618
  43017 string characters out of 2865026
- 320611 words of memory out of 3000000
+ 323611 words of memory out of 3000000
  20240 multiletter control sequences out of 15000+200000
  410553 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,74p,226b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on CDR_PMC.pdf (2 pages, 50903 bytes).
+ 68i,11n,74p,631b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/josep/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on CDR_PMC.pdf (3 pages, 55994 bytes).
 PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
+ 24 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
