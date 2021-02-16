@@ -44,7 +44,7 @@
 \newcommand{\hmwkTitle}{Puzzle Me Chess}
 \newcommand{\hmwkDueDate}{February\ 22,\ 2021}
 \newcommand{\hmwkClass}{Critical Design Review}
-\newcommand{\hmwkClassInstructor}{Embedded Systems Development Lab: EN.525.743.8VL.SP21}
+\newcommand{\hmwkClassInstructor}{EN.525.743.8VL.SP21}
 \newcommand{\hmwkAuthorName}{Mr. Joseph Vitale}
 
 %
@@ -166,7 +166,7 @@
 %       listed in Contents
 %\setcounter{tocdepth}{1}
 
-%\tableofcontents % 
+\tableofcontents % 
 %\newpage % The \\ command tells LaTeX to start a new line. 
 
 % When problems are long, it may be desirable to put a \newpage or a
@@ -180,7 +180,7 @@
 In chess there are many different ways to play the game. After each player moves three times there are 121 million different moves that can end the game. Many people need to practice chess in order to get better and there are many ways to do this. You can play over the internet and play computer which range from (400 - 3200) EIO or you can play puzzle's in chess. Puzzle's in chess allow you to study the board in a given state and make the next several moves. This project is dedicated to solving puzzles in the physical world. 
 \\
 
-\noindent The physical chess puzzle allows the user to practice looking at a physical board to solve each puzzle. This project is titled "Puzzle me Chess`` and it will be equipped to have 3 different puzzle's. The chess board will allow the user to place each piece in the right location that is displayed on the OLED screen. After each piece is on the board the chess puzzle will then display to the user which color he/she will play. After the user makes his first move the board will check to see if the move was correct. If not the user will be asked to reset the peice and try again until puzzle is complete. 
+\noindent The physical chess puzzle allows the user to practice looking at a physical board to solve each puzzle. This project is titled "Puzzle me Chess`` and it will be equipped to have 3 different puzzle's. The chess board will allow the user to place each piece in the right location that is displayed on the OLED screen. After each piece is on the board the chess puzzle will then display to the user which color he/she will play. After the user makes his first move the board will check to see if the move was correct. If not the user will be asked to reset the piece and try again until puzzle is complete. 
 
 \subsection{Capabilities}
 Capabilites for the Puzzle me Chess project range from Indicators, User Direction, SD card capability, and Location Detection. See below for more details. 
@@ -217,18 +217,93 @@ Limitations for the Puzzle me Chess project range from Location Detection, Auto 
 \end{center}
 
 \section{Functional description}
+The Puzzle me Chess project will feature a microcontroller, one 21x21 wooden chess board, 8 Multiplexers, 1 switch, 1 Potentiometer, 1 button, and A Display. Figure \ref{fig:Circuit} shows  the current circuit layout as of 02/16/2021, this circuit doesn't show the chess board. Explanation of the System Block Diagram to follow.
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{./Pics/Circuit_as_of_2162020.jpg}
+  \caption{Circuit layout as of 02/16/2021}
+  \label{fig:Circuit}
+\end{figure}
+
 \subsection{System Block Diagram}
+Figure \ref{fig:SBD1} shows the sudo hand drawn block diagram. The project consist of One Microcontroller which will feature the teensy 3.6, 8 Multiplexer's from Texas Instruments part \# CD4051BE, 1 basic breadboard switch, 1 breadboard Potentiometer, 1 basic breadbaord button, LED's, Photoresister's, 1 Chess Board and one Display. 
+\\
+
+
+\noindent The Chess board will have 1 LED and 1 photoresister per block. The LED will be drilled and placed on the top left side of each block and will be used to show the user where to place each piece. The photoresister will be drilled in the middle of each block and will be used as a voltage drop to tell if there is a piece there or not.  
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{./Pics/System_Block_Diagram.PNG}
+  \caption{System Block Diagram}
+  \label{fig:SBD1}
+\end{figure}
+
+% Figure \ref{fig:boat1} shows a boat.
+
+\subsection{Multiplexer circuit diagram} 
+
 \subsection{Code Flow Diagram}
+
+\begin{center}
+\begin{figure}
+  \includegraphics[width=17cm,height=21cm]{./Pics/Code_Flow_Diagram.PNG}
+  \caption{Code Flow Diagram}
+  \label{fig:CFD1}
+\end{figure}
+\end{center}
 
 \section{Interface description}
 \subsection{Internal}
 
 \section{Explanation of code}
+Text Text
 \subsection{Code layout}
-\subsection{Main.cpp}
-\subsection{Display.cpp}
-\subsection{SDcard.cpp}
 
+\begin{figure}
+  \includegraphics[width=\linewidth]{./Pics/code_layout.PNG}
+  \caption{Module Code Layout}
+  \label{fig:MCL1}
+\end{figure}
+
+\subsection{Main}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{./Pics/maincpp.PNG}
+  \caption{Puzzle me Chess - main.cpp file}
+  \label{fig:main}
+\end{figure}
+
+\subsection{Display}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{./Pics/Displaycpp.PNG}
+  \caption{Puzzle me Chess - display.cpp file}
+  \label{fig:Display}
+\end{figure}
+
+\subsection{SDcard}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{./Pics/sdcardpart3.PNG}
+  \caption{Puzzle me Chess - SDcard.cpp file}
+  \label{fig:sdcard1}
+\end{figure}
+
+\subsection{Button}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{./Pics/buttoncpp.PNG}
+  \caption{Puzzle me Chess - button.cpp file}
+  \label{fig:button}
+\end{figure}
+
+\subsection{Potentiometer}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{./Pics/Potentiometercpp.PNG}
+  \caption{Puzzle me Chess - Photentiometer.cpp file}
+  \label{fig:Photentiometer}
+\end{figure}
 
 \section{Material and resource requirements}
 \subsection{List of Items (BOM)}

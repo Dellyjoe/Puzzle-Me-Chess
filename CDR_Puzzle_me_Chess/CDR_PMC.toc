@@ -1,0 +1,25 @@
+\contentsline {section}{Project description}{3}{}%
+\contentsline {subsection}{Capabilities}{3}{}%
+\contentsline {subsection}{Limitations}{3}{}%
+\contentsline {section}{Functional description}{3}{}%
+\contentsline {subsection}{System Block Diagram}{4}{}%
+\contentsline {subsection}{Multiplexer circuit diagram}{5}{}%
+\contentsline {subsection}{Code Flow Diagram}{5}{}%
+\contentsline {section}{Interface description}{5}{}%
+\contentsline {subsection}{Internal}{5}{}%
+\contentsline {section}{Explanation of code}{5}{}%
+\contentsline {subsection}{Code layout}{12}{}%
+\contentsline {subsection}{Main}{12}{}%
+\contentsline {subsection}{Display}{12}{}%
+\contentsline {subsection}{SDcard}{12}{}%
+\contentsline {subsection}{Button}{12}{}%
+\contentsline {subsection}{Potentiometer}{12}{}%
+\contentsline {section}{Material and resource requirements}{12}{}%
+\contentsline {subsection}{List of Items (BOM)}{12}{}%
+\contentsline {subsection}{Test equipment}{12}{}%
+\contentsline {subsection}{Ording from}{12}{}%
+\contentsline {section}{Development Plan and Schedule}{12}{}%
+\contentsline {subsection}{Order of Development}{12}{}%
+\contentsline {subsection}{Milestones and Schedule}{12}{}%
+\contentsline {subsection}{Risk}{12}{}%
+\contentsline {section}{Reference}{12}{}%
