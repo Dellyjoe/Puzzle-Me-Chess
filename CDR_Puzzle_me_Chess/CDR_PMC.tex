@@ -230,7 +230,7 @@ Figure \ref{fig:SBD1} shows the sudo hand drawn block diagram. The project consi
 \\
 
 
-\noindent The Chess board will have 1 LED and 1 photoresister per block. The LED will be drilled and placed on the top left side of each block and will be used to show the user where to place each piece. The photoresister will be drilled in the middle of each block and will be used as a voltage drop to tell if there is a piece there or not.  
+\noindent The Chess board will have 1 LED and 1 photoresister per block. The LED will be drilled and placed on the top left side of each block and will be used to show the user where to place each piece. The photoresister will be drilled in the middle of each block and will be used as a voltage drop to tell if there is a piece there or not. See section multiplexer circuit diagram for the circuit layout. 
 
 \begin{figure}
   \includegraphics[width=\linewidth]{./Pics/System_Block_Diagram.PNG}
@@ -240,7 +240,35 @@ Figure \ref{fig:SBD1} shows the sudo hand drawn block diagram. The project consi
 
 % Figure \ref{fig:boat1} shows a boat.
 
-\subsection{Multiplexer circuit diagram} 
+\subsection{Multiplexer Circuit Diagram} 
+Figure \ref{fig:MSCD} shows the sudo circuit for Muxltiplexer A, the puzzle me chess project will consist of 8 Muxltiplexer one for each column A-H. Each of the Muxltiplexers will have 8 outgoing lines that will read Voltages levels from the column and rows \# 1-8. Each row will have one resister which will be $~2M \Omega$ and one Photoresister in series. Each Photoresister has two modes a light and a dark mode. Equation
+\\
+
+
+Assume Light; R = $500 \Omega$
+\\
+
+
+Assume Dark; R = $1M \Omega$
+
+
+\begin{equation}
+Light
+$$ V = IR, 3.3VDC = I*(2M + 500)$\Omega$ $$
+$$ I = 1.65$\mu$A, Vlight = 825$\mu$VDC, Mux input would see 3.299VDC if no piece on top of photoresister$$
+\end{equation}
+
+\begin{equation}
+Dark
+$$ V = IR, 3.3VDC = I*3.3M$\Omega$ $$
+$$ I = 1.1$\mu$A, Vdark = 1.1VDC, Mux input would see 2.2VD  if piece was placed on block$$
+\end{equation}
+\begin{figure}
+  \includegraphics[width=\linewidth]{./Pics/Mux_sudo_circuit.PNG}
+  \caption{Multiplexer Sudo Circuit Diagram}
+  \label{fig:MSCD}
+\end{figure}
+
 
 \subsection{Code Flow Diagram}
 
