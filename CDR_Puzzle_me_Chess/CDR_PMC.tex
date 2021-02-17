@@ -185,6 +185,7 @@ In chess there are many different ways to play the game. After each player moves
 \subsection{Capabilities}
 Capabilites for the Puzzle me Chess project range from Indicators, User Direction, SD card capability, and Location Detection. See below for more details. 
 
+\begin{table}
 \begin{center}
     \begin{tabular}{| l | l |}
     \hline
@@ -196,13 +197,17 @@ Capabilites for the Puzzle me Chess project range from Indicators, User Directio
     User Direction & User input Button to show user a hint \\ \hline
     Location Detection & Check board spots are correct for puzzle that was selected \\ \hline
     \end{tabular}
+    \caption{Shows the Capability's for Puzzle me Chess}
+	\label{tab:capability}
 \end{center}
+\end{table}
  *Assume User puts right pieces on spot 
  \newline
  *Assume Chess Board will be lit evenly with light  
 \subsection{Limitations}
 Limitations for the Puzzle me Chess project range from Location Detection, Auto Movement, Puzzle Selection, Physical and parts. See below for more details.
 
+\begin{table}
 \begin{center}
     \begin{tabular}{| l | l |}
     \hline
@@ -214,7 +219,10 @@ Limitations for the Puzzle me Chess project range from Location Detection, Auto 
     Parts & Not having multiple colors to indicate wrong or right answer \\ \hline
     Physical & Needing light to illuminate  the chess board \\ \hline
     \end{tabular}
+    \caption{Shows the Limitation's for Puzzle me Chess}
+	\label{tab:limitations}
 \end{center}
+\end{table}
 
 \section{Functional description}
 The Puzzle me Chess project will feature a microcontroller, one 21x21 wooden chess board, 8 Multiplexers, 1 switch, 1 Potentiometer, 1 button, and A Display. Figure \ref{fig:Circuit} shows  the current circuit layout as of 02/16/2021, this circuit doesn't show the chess board. Explanation of the System Block Diagram to follow.
@@ -241,7 +249,7 @@ Figure \ref{fig:SBD1} shows the sudo hand drawn block diagram. The project consi
 % Figure \ref{fig:boat1} shows a boat.
 
 \subsection{Multiplexer Circuit Diagram} 
-Figure \ref{fig:MSCD} shows the sudo circuit for Muxltiplexer A, the puzzle me chess project will consist of 8 Muxltiplexer one for each column A-H. Each of the Muxltiplexers will have 8 outgoing lines that will read Voltages levels from the column and rows \# 1-8. Each row will have one resister which will be $~2M \Omega$ and one Photoresister in series. Each Photoresister has two modes a light and a dark mode. Equation
+Figure \ref{fig:MSCD} shows the sudo circuit for Muxltiplexer A, the puzzle me chess project will consist of 8 Muxltiplexer one for each column A-H. Each of the Muxltiplexers will have 8 outgoing lines that will read Voltages levels from the rows \# 1-8. Each row will have one resister which will is set to be $~2M \Omega$ and one Photoresister in series. Each Photoresister has two modes a light and a dark mode. Equation (1) shows Mux input voltage at 3.29VDC and equation (2) shows Mux input voltage at 2.2VDC. 
 \\
 
 
@@ -271,6 +279,11 @@ $$ I = 1.1$\mu$A, Vdark = 1.1VDC, Mux input would see 2.2VD  if piece was placed
 
 
 \subsection{Code Flow Diagram}
+Figure \ref{fig:CFD1} shows the code flow diagram. The code starts with the display showing the user to pick a puzzle which the user will use the potentiometer to select puzzle 1-3. After the Puzzle has been selected the display will show which puzzle the user selected and open that .csv file. The code will then mapp each space to a 2x2 matrix with a cell name attached. The code will then display to the user which to place each piece on which block. LEDs will also light up to quickly help the user where to place each piece. After each piece has been placed the code will shut off each LED light and display to the user which color to go first.  
+\\
+
+
+\noindent The code will have the ability to have the user use a button to light up LEDs to show the user the hint, and a switch to show the user the answer if they get stuck. If the wrong move is made on the chess board the code will have the ability to check each move and display if the move is correct or not. If the move is correct the display will show where the user needs to move the opponent piece so the user can continue the puzzle until completion. If the move is incorrect the user will be asked to place the piece back and try again. 
 
 \begin{center}
 \begin{figure}
@@ -281,7 +294,8 @@ $$ I = 1.1$\mu$A, Vdark = 1.1VDC, Mux input would see 2.2VD  if piece was placed
 \end{center}
 
 \section{Interface description}
-\subsection{Internal}
+The internal interface description consist of 
+
 
 \section{Explanation of code}
 Text Text

@@ -1,23 +1,22 @@
 \contentsline {section}{Project description}{3}{}%
 \contentsline {subsection}{Capabilities}{3}{}%
 \contentsline {subsection}{Limitations}{3}{}%
-\contentsline {section}{Functional description}{3}{}%
+\contentsline {section}{Functional description}{4}{}%
 \contentsline {subsection}{System Block Diagram}{4}{}%
 \contentsline {subsection}{Multiplexer Circuit Diagram}{5}{}%
 \contentsline {subsection}{Code Flow Diagram}{6}{}%
-\contentsline {section}{Interface description}{6}{}%
-\contentsline {subsection}{Internal}{6}{}%
-\contentsline {section}{Explanation of code}{6}{}%
-\contentsline {subsection}{Code layout}{13}{}%
-\contentsline {subsection}{Main}{13}{}%
-\contentsline {subsection}{Display}{13}{}%
-\contentsline {subsection}{SDcard}{13}{}%
-\contentsline {subsection}{Button}{13}{}%
-\contentsline {subsection}{Potentiometer}{13}{}%
-\contentsline {section}{Material and resource requirements}{13}{}%
-\contentsline {subsection}{List of Items (BOM)}{13}{}%
-\contentsline {subsection}{Test equipment}{13}{}%
-\contentsline {subsection}{Ording from}{13}{}%
+\contentsline {section}{Interface description}{8}{}%
+\contentsline {section}{Explanation of code}{8}{}%
+\contentsline {subsection}{Code layout}{12}{}%
+\contentsline {subsection}{Main}{12}{}%
+\contentsline {subsection}{Display}{12}{}%
+\contentsline {subsection}{SDcard}{12}{}%
+\contentsline {subsection}{Button}{12}{}%
+\contentsline {subsection}{Potentiometer}{12}{}%
+\contentsline {section}{Material and resource requirements}{12}{}%
+\contentsline {subsection}{List of Items (BOM)}{12}{}%
+\contentsline {subsection}{Test equipment}{12}{}%
+\contentsline {subsection}{Ording from}{12}{}%
 \contentsline {section}{Development Plan and Schedule}{13}{}%
 \contentsline {subsection}{Order of Development}{13}{}%
 \contentsline {subsection}{Milestones and Schedule}{13}{}%
