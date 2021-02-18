@@ -33,3 +33,8 @@ u8g2.print(value1);
 u8g2.drawStr(30, 30, "Puzzle");
 u8g2.sendBuffer();
 } // end void print_user_puzzle
+
+void Display::clear()
+{
+ u8g2.clearBuffer();
+} // end void clear

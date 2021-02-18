@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  18 FEB 2021 10:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  18 FEB 2021 13:18
 entering extended mode
 **./CDR_PMC.tex
 (CDR_PMC.tex
@@ -400,32 +400,16 @@ File: ./Pics/code_layout.PNG Graphic file (type png)
 <use ./Pics/code_layout.PNG>
 Package pdftex.def Info: ./Pics/code_layout.PNG  used on input line 346.
 (pdftex.def)             Requested size: 469.75499pt x 403.64742pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--354
+
+ []
+
 <./Pics/maincpp.PNG, id=43, 564.23297pt x 622.57594pt>
 File: ./Pics/maincpp.PNG Graphic file (type png)
 <use ./Pics/maincpp.PNG>
-Package pdftex.def Info: ./Pics/maincpp.PNG  used on input line 354.
+Package pdftex.def Info: ./Pics/maincpp.PNG  used on input line 358.
 (pdftex.def)             Requested size: 469.75499pt x 518.33385pt.
-<./Pics/Displaycpp.PNG, id=44, 518.6878pt x 505.13719pt>
-File: ./Pics/Displaycpp.PNG Graphic file (type png)
-<use ./Pics/Displaycpp.PNG>
-Package pdftex.def Info: ./Pics/Displaycpp.PNG  used on input line 362.
-(pdftex.def)             Requested size: 469.75499pt x 457.50197pt.
-<./Pics/sdcardpart3.PNG, id=45, 433.62pt x 391.83891pt>
-File: ./Pics/sdcardpart3.PNG Graphic file (type png)
-<use ./Pics/sdcardpart3.PNG>
-Package pdftex.def Info: ./Pics/sdcardpart3.PNG  used on input line 370.
-(pdftex.def)             Requested size: 469.75499pt x 424.51303pt.
-<./Pics/buttoncpp.PNG, id=46, 344.41171pt x 199.87172pt>
-File: ./Pics/buttoncpp.PNG Graphic file (type png)
-<use ./Pics/buttoncpp.PNG>
-Package pdftex.def Info: ./Pics/buttoncpp.PNG  used on input line 378.
-(pdftex.def)             Requested size: 469.75499pt x 272.61487pt.
-<./Pics/Potentiometercpp.PNG, id=47, 500.62032pt x 206.27063pt>
-File: ./Pics/Potentiometercpp.PNG Graphic file (type png)
-<use ./Pics/Potentiometercpp.PNG>
-Package pdftex.def Info: ./Pics/Potentiometercpp.PNG  used on input line 386.
-(pdftex.def)             Requested size: 469.75499pt x 193.56078pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -453,34 +437,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [11 <./Pics/maincpp.PNG>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[12 <./Pics/Displaycpp.PNG>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[13 <./Pics/sdcardpart3.PNG>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[14 <./Pics/buttoncpp.PNG> <./Pics/Potentiometercpp.PNG>]
-
+<./Pics/Displaycpp.PNG, id=55, 518.6878pt x 505.13719pt>
+File: ./Pics/Displaycpp.PNG Graphic file (type png)
+<use ./Pics/Displaycpp.PNG>
+Package pdftex.def Info: ./Pics/Displaycpp.PNG  used on input line 367.
+(pdftex.def)             Requested size: 469.75499pt x 457.50197pt.
+<./Pics/sdcardpart3.PNG, id=56, 433.62pt x 391.83891pt>
+File: ./Pics/sdcardpart3.PNG Graphic file (type png)
+<use ./Pics/sdcardpart3.PNG>
+Package pdftex.def Info: ./Pics/sdcardpart3.PNG  used on input line 375.
+(pdftex.def)             Requested size: 469.75499pt x 424.51303pt.
+<./Pics/buttoncpp.PNG, id=57, 344.41171pt x 199.87172pt>
+File: ./Pics/buttoncpp.PNG Graphic file (type png)
+<use ./Pics/buttoncpp.PNG>
+Package pdftex.def Info: ./Pics/buttoncpp.PNG  used on input line 383.
+(pdftex.def)             Requested size: 469.75499pt x 272.61487pt.
+<./Pics/Potentiometercpp.PNG, id=58, 500.62032pt x 206.27063pt>
+File: ./Pics/Potentiometercpp.PNG Graphic file (type png)
+<use ./Pics/Potentiometercpp.PNG>
+Package pdftex.def Info: ./Pics/Potentiometercpp.PNG  used on input line 391.
+(pdftex.def)             Requested size: 469.75499pt x 193.56078pt.
+ 
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -490,7 +467,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[15] (CDR_PMC.aux) ) 
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[13 <./Pics/Displaycpp.PNG>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[14 <./Pics/sdcardpart3.PNG>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[15 <./Pics/buttoncpp.PNG> <./Pics/Potentiometercpp.PNG>] (CDR_PMC.aux) ) 
 Here is how much of TeX's memory you used:
  3207 strings out of 479618
  45187 string characters out of 2865026
@@ -498,18 +502,18 @@ Here is how much of TeX's memory you used:
  20321 multiletter control sequences out of 15000+200000
  412796 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,74p,676b,317s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmbx10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/josep/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/josep/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/josep/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/josep/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
-s/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb
-><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mti12.pfb>
-Output written on CDR_PMC.pdf (15 pages, 5524247 bytes).
+ 68i,12n,74p,905b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Us
+ers/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.p
+fb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/josep/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/josep/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/josep/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on CDR_PMC.pdf (15 pages, 5525825 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

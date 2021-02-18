@@ -340,7 +340,7 @@ $$ Pins = $\frac{1}{2•}*(1+\sqrt{1+4*L}$; L=LED=64, Pins = 8.5$$
 The following sub sections will describe different parts of the current code as it stands on 02/18/2021. There will be a brief explanation of the code layout which uses reference \cite{stone}. Other code explanations will be outlined in Main, Display, SDcard,Button,and Potentiometer, see sections below for more information. 
 
 \subsection{Code layout}
-Figure \ref{fig:MCL1} shows the modulatory of the Puzzle me Chess code. Each component of the circuit has it function and for that it will get its own .h file and .cpp file. As you can see in figure \ref{fig:MCL1}
+Figure \ref{fig:MCL1} shows the modulatory of the Puzzle me Chess code. Each component of the circuit has its function and for that it will get its own .h and .cpp files. As you can see in figure \ref{fig:MCL1}. This code modulatory is talked about in reference \cite{stone} and it states laying out the .h files to have a method that is used for one function. An example of this would be the Display having a method for initialization of the display, a print or draw function, and a clear function. This modulatory was done for each component a in the code and is clearly show in figure \ref{fig:MCL1}. For developing each method a .cpp file is used and these files will be discussed below in figures \ref{fig:main}, \ref{fig:Display}, \ref{fig:sdcard1}, \ref{fig:button}, and \ref{fig:Photentiometer}. All code below is current as of 02/18/2021 and is not finalized. 
 
 \begin{figure}
   \includegraphics[width=\linewidth]{./Pics/code_layout.PNG}
@@ -349,6 +349,10 @@ Figure \ref{fig:MCL1} shows the modulatory of the Puzzle me Chess code. Each com
 \end{figure}
 
 \subsection{Main}
+The main.cpp file in Arduino houses the main code.  Shown in figure \ref{fig:main} is the current main.cpp file code for Puzzle me Chess. At the top houses all the header files. Each header file is tied to its individual methods which are used in the individual .cpp files. Looking at figure \ref{fig:main} you have the header files and then come the declares. In the declare section there are method callers which grab the latest value of that method at any given time.   
+\\
+
+\noindent After the declares you call a function void setup() which generally would run one time and call most start up methods and initialization processes. Once the setup() function completes its run it then starts the main loop. In Arduino we use void loop() which loops every time it gets to the end but doesn't return any value. Currently I'm using two while loops which let the program pause as we wait for the user to enter in a value. The  first loop has the user select a puzzle and then the second loop tells the user which puzzle has been selected and then will open that .csv file. 
 
 \begin{figure}
   \includegraphics[width=\linewidth]{./Pics/maincpp.PNG}
@@ -357,6 +361,7 @@ Figure \ref{fig:MCL1} shows the modulatory of the Puzzle me Chess code. Each com
 \end{figure}
 
 \subsection{Display}
+Figure \ref{fig:Display} shows the .cpp file that holds all of the methods that are used within the main.cpp file and ran in void setup() and or void main(). Within the Display.cpp file there is the declare area which tells the code which display we are using and how to mapp the pins. After the declare the init.display() function is defined to start the display, followed by print.select.puzzle which shows the user which puzzle to select and the print.user.puzzle which will show the user which puzzle he/she selected. 
 
 \begin{figure}
   \includegraphics[width=\linewidth]{./Pics/Displaycpp.PNG}
