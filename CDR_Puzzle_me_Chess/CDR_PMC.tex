@@ -183,7 +183,7 @@ In chess there are many different ways to play the game. After each player moves
 \noindent The physical chess puzzle allows the user to practice looking at a physical board to solve each puzzle. This project is titled "Puzzle me Chess`` and it will be equipped to have 3 different puzzle's. The chess board will allow the user to place each piece in the right location that is displayed on the OLED screen. After each piece is on the board the chess puzzle will then display to the user which color he/she will play. After the user makes his first move the board will check to see if the move was correct. If not the user will be asked to reset the piece and try again until puzzle is complete. 
 
 \subsection{Capabilities}
-Capabilites for the Puzzle me Chess project range from Indicators, User Direction, SD card capability, and Location Detection. See below for more details. 
+Capabilites for the Puzzle me Chess project range from Indicators, User Direction, SD card capability, and Location Detection. See below for more details. More detailed explanation can be found in table \ref{tab:capability}.
 
 \begin{table}
 \begin{center}
@@ -201,11 +201,27 @@ Capabilites for the Puzzle me Chess project range from Indicators, User Directio
 	\label{tab:capability}
 \end{center}
 \end{table}
- *Assume User puts right pieces on spot 
- \newline
- *Assume Chess Board will be lit evenly with light  
+
+\subsection{Assumptions}
+Table \ref{tab:Assumptions} shows the assumptions that are being made for this project. The assume were made to reduce overall cost of the project and difficulty to lower risk. 
+
+\begin{table}
+\begin{center}
+    \begin{tabular}{| l | l |}
+    \hline
+    Assumptions & Description below\\ \hline
+    User Implication  & User puts right pieces on each spot \\ \hline
+    Physical &  Chess Board will be lit evenly with light  \\ \hline
+    Text File & Each file added to the SDcard will be in a standardized format \\ \hline     
+    \end{tabular}
+    \caption{Shows the Assumptions that were made for Puzzle me Chess}
+	\label{tab:Assumptions}
+\end{center}
+\end{table}
+
+ 
 \subsection{Limitations}
-Limitations for the Puzzle me Chess project range from Location Detection, Auto Movement, Puzzle Selection, Physical and parts. See below for more details.
+Limitations for the Puzzle me Chess project range from Location Detection, Auto Movement, Puzzle Selection, Physical and Physical parts. See table \ref{tab:limitations} for more details.
 
 \begin{table}
 \begin{center}
@@ -216,7 +232,7 @@ Limitations for the Puzzle me Chess project range from Location Detection, Auto 
     Auto Movement & Not being able to move the piece on correct spot \\ \hline 
     Puzzle Selection & Not having 3+ different puzzles to choose from  \\ \hline
     Physical & Not being able to light each square along the perimeter  \\ \hline
-    Parts & Not having multiple colors to indicate wrong or right answer \\ \hline
+    Physical Parts & Not having multiple colors to indicate wrong or right answer \\ \hline
     Physical & Needing light to illuminate  the chess board \\ \hline
     \end{tabular}
     \caption{Shows the Limitation's for Puzzle me Chess}
@@ -246,8 +262,6 @@ Figure \ref{fig:SBD1} shows the sudo hand drawn block diagram. The project consi
   \label{fig:SBD1}
 \end{figure}
 
-% Figure \ref{fig:boat1} shows a boat.
-
 \subsection{Multiplexer Circuit Diagram} 
 Figure \ref{fig:MSCD} shows the sudo circuit for Muxltiplexer A, the puzzle me chess project will consist of 8 Muxltiplexer one for each column A-H. Each of the Muxltiplexers will have 8 outgoing lines that will read Voltages levels from the rows \# 1-8. Each row will have one resister which will is set to be $~2M \Omega$ and one Photoresister in series. Each Photoresister has two modes a light and a dark mode. Equation (1) shows Mux input voltage at 3.29VDC and equation (2) shows Mux input voltage at 2.2VDC. 
 \\
@@ -264,12 +278,14 @@ Assume Dark; R = $1M \Omega$
 Light
 $$ V = IR, 3.3VDC = I*(2M + 500)$\Omega$ $$
 $$ I = 1.65$\mu$A, Vlight = 825$\mu$VDC, Mux input would see 3.299VDC if no piece on top of photoresister$$
+\label{Light}
 \end{equation}
 
 \begin{equation}
 Dark
 $$ V = IR, 3.3VDC = I*3.3M$\Omega$ $$
 $$ I = 1.1$\mu$A, Vdark = 1.1VDC, Mux input would see 2.2VD  if piece was placed on block$$
+\label{Dark}
 \end{equation}
 \begin{figure}
   \includegraphics[width=\linewidth]{./Pics/Mux_sudo_circuit.PNG}
@@ -294,12 +310,37 @@ Figure \ref{fig:CFD1} shows the code flow diagram. The code starts with the disp
 \end{center}
 
 \section{Interface description}
-The internal interface description consist of 
+The internal interface description consist of a display, switch, button, mulitiplexer, Potentiometer, and a SD Card. More information can be found in table \ref{tab:interface}. Charlieplexing is the method that will be used to turn on and off each LED that is needed to show the user where to put each piece, show hint and or show the answer. This equation to determine how many digital I/O pins needed to do this can be found in equation \eqref{Charlieplexiing}.
 
+\begin{table}
+\begin{center}
+    \begin{tabular}{| l | l |}
+    \hline
+    Interface Description  & Description below\\ \hline
+    Display & one SCL \@ 600MHz, one I2C  \\ \hline
+    Mulitiplexer & 3 select digital I/0 pin, 1 enable digital I/O Pin, 8 Input digital I/O Pins \\ \hline 
+    Switch & one digital I/O input pin \\ \hline
+    Button & one digital I/O input pin \\ \hline
+    Potentiometer & one analog PWM I/O input pin \\ \hline
+    SD Card & I2C interface 4bit \\ \hline
+    LEDs & 9 Digital I/O pins  to light up 64 LEDS \\ \hline
+    \end{tabular}
+    \caption{Shows the interface for Puzzle me Chess}
+	\label{tab:interface}
+\end{center}
+\end{table}
+
+\begin{equation}
+Charlieplexing  
+$$ Pins = $\frac{1}{2•}*(1+\sqrt{1+4*L}$; L=LED=64, Pins = 8.5$$
+\label{Charlieplexiing}
+\end{equation}
 
 \section{Explanation of code}
-Text Text
+The following sub sections will describe different parts of the current code as it stands on 02/18/2021. There will be a brief explanation of the code layout which uses reference \cite{stone}. Other code explanations will be outlined in Main, Display, SDcard,Button,and Potentiometer, see sections below for more information. 
+
 \subsection{Code layout}
+Figure \ref{fig:MCL1} shows the modulatory of the Puzzle me Chess code. Each component of the circuit has it function and for that it will get its own .h file and .cpp file. As you can see in figure \ref{fig:MCL1}
 
 \begin{figure}
   \includegraphics[width=\linewidth]{./Pics/code_layout.PNG}
@@ -358,6 +399,12 @@ include date and times and websites
 \subsection{Milestones and Schedule}
 \subsection{Risk}
 
-\section{Reference}
+\begin{thebibliography}{1}
+\bibitem{stone} 
+Brain Stone. 
+\textit{C++ Functions Modular Program Design}. (English) 
+\textit{ Lecture presented at W 3.1, 3.2 }. 
+Dublin City University Glasnevin, Dublin, 2001.
+\end{thebibliography}
 
 \end{document}

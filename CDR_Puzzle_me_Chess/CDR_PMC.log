@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  17 FEB 2021 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  18 FEB 2021 10:24
 entering extended mode
 **./CDR_PMC.tex
 (CDR_PMC.tex
@@ -289,21 +289,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ./Pics/Circuit_as_of_2162020.jpg Graphic file (type jpg)
 <use ./Pics/Circuit_as_of_2162020.jpg>
 Package pdftex.def Info: ./Pics/Circuit_as_of_2162020.jpg  used on input line 2
-31.
+47.
 (pdftex.def)             Requested size: 469.75499pt x 352.27568pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--239
+Underfull \hbox (badness 10000) in paragraph at lines 253--255
 
  []
 
 <./Pics/System_Block_Diagram.PNG, id=16, 1120.185pt x 596.98032pt>
 File: ./Pics/System_Block_Diagram.PNG Graphic file (type png)
 <use ./Pics/System_Block_Diagram.PNG>
-Package pdftex.def Info: ./Pics/System_Block_Diagram.PNG  used on input line 24
-4.
+Package pdftex.def Info: ./Pics/System_Block_Diagram.PNG  used on input line 26
+0.
 (pdftex.def)             Requested size: 469.75499pt x 250.34743pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--254
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--272
 
  []
 
@@ -315,16 +320,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4 <./Pics/Circuit_as_of_2162020.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 256--258
+[4]
 
- []
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-<./Pics/Mux_sudo_circuit.PNG, id=21, 1008.39235pt x 580.79485pt>
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[5 <./Pics/Circuit_as_of_2162020.jpg>]
+<./Pics/Mux_sudo_circuit.PNG, id=25, 1008.39235pt x 580.79485pt>
 File: ./Pics/Mux_sudo_circuit.PNG Graphic file (type png)
 <use ./Pics/Mux_sudo_circuit.PNG>
-Package pdftex.def Info: ./Pics/Mux_sudo_circuit.PNG  used on input line 275.
+Package pdftex.def Info: ./Pics/Mux_sudo_circuit.PNG  used on input line 291.
 (pdftex.def)             Requested size: 469.75499pt x 270.5631pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--300
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -333,22 +348,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[5 <./Pics/System_Block_Diagram.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 282--284
-
- []
-
-<./Pics/Code_Flow_Diagram.PNG, id=27, 373.395pt x 566.86781pt>
+[6 <./Pics/System_Block_Diagram.PNG>]
+<./Pics/Code_Flow_Diagram.PNG, id=30, 373.395pt x 566.86781pt>
 File: ./Pics/Code_Flow_Diagram.PNG Graphic file (type png)
 <use ./Pics/Code_Flow_Diagram.PNG>
-Package pdftex.def Info: ./Pics/Code_Flow_Diagram.PNG  used on input line 290.
+Package pdftex.def Info: ./Pics/Code_Flow_Diagram.PNG  used on input line 306.
 (pdftex.def)             Requested size: 483.72128pt x 597.56418pt.
 
-Overfull \hbox (13.9663pt too wide) in paragraph at lines 290--291
+Overfull \hbox (13.9663pt too wide) in paragraph at lines 306--307
 [][] 
  []
 
 
+Overfull \hbox (5.72005pt too wide) in paragraph at lines 317--328
+ [] 
+ []
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 335.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 335.
+
+Missing character: There is no ˆ in font cmr8!
+
+Overfull \hbox (1.12596pt too wide) in paragraph at lines 340--341
+\OT1/cmr/m/n/10.95 The fol-low-ing sub sec-tions will de-scribe dif-fer-ent par
+ts of the cur-rent code as it stands on 02/18/2021.
+ []
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -356,7 +385,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[6 <./Pics/Mux_sudo_circuit.PNG>]
+[7 <./Pics/Mux_sudo_circuit.PNG>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -365,75 +394,93 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[7 <./Pics/Code_Flow_Diagram.PNG>]
-<./Pics/code_layout.PNG, id=37, 628.59843pt x 540.14297pt>
+[8 <./Pics/Code_Flow_Diagram.PNG>]
+<./Pics/code_layout.PNG, id=42, 628.59843pt x 540.14297pt>
 File: ./Pics/code_layout.PNG Graphic file (type png)
 <use ./Pics/code_layout.PNG>
-Package pdftex.def Info: ./Pics/code_layout.PNG  used on input line 305.
+Package pdftex.def Info: ./Pics/code_layout.PNG  used on input line 346.
 (pdftex.def)             Requested size: 469.75499pt x 403.64742pt.
-<./Pics/maincpp.PNG, id=38, 564.23297pt x 622.57594pt>
+<./Pics/maincpp.PNG, id=43, 564.23297pt x 622.57594pt>
 File: ./Pics/maincpp.PNG Graphic file (type png)
 <use ./Pics/maincpp.PNG>
-Package pdftex.def Info: ./Pics/maincpp.PNG  used on input line 313.
+Package pdftex.def Info: ./Pics/maincpp.PNG  used on input line 354.
 (pdftex.def)             Requested size: 469.75499pt x 518.33385pt.
-<./Pics/Displaycpp.PNG, id=39, 518.6878pt x 505.13719pt>
+<./Pics/Displaycpp.PNG, id=44, 518.6878pt x 505.13719pt>
 File: ./Pics/Displaycpp.PNG Graphic file (type png)
 <use ./Pics/Displaycpp.PNG>
-Package pdftex.def Info: ./Pics/Displaycpp.PNG  used on input line 321.
+Package pdftex.def Info: ./Pics/Displaycpp.PNG  used on input line 362.
 (pdftex.def)             Requested size: 469.75499pt x 457.50197pt.
-<./Pics/sdcardpart3.PNG, id=40, 433.62pt x 391.83891pt>
+<./Pics/sdcardpart3.PNG, id=45, 433.62pt x 391.83891pt>
 File: ./Pics/sdcardpart3.PNG Graphic file (type png)
 <use ./Pics/sdcardpart3.PNG>
-Package pdftex.def Info: ./Pics/sdcardpart3.PNG  used on input line 329.
+Package pdftex.def Info: ./Pics/sdcardpart3.PNG  used on input line 370.
 (pdftex.def)             Requested size: 469.75499pt x 424.51303pt.
-<./Pics/buttoncpp.PNG, id=41, 344.41171pt x 199.87172pt>
+<./Pics/buttoncpp.PNG, id=46, 344.41171pt x 199.87172pt>
 File: ./Pics/buttoncpp.PNG Graphic file (type png)
 <use ./Pics/buttoncpp.PNG>
-Package pdftex.def Info: ./Pics/buttoncpp.PNG  used on input line 337.
+Package pdftex.def Info: ./Pics/buttoncpp.PNG  used on input line 378.
 (pdftex.def)             Requested size: 469.75499pt x 272.61487pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[8 <./Pics/code_layout.PNG>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[9 <./Pics/maincpp.PNG>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[10 <./Pics/Displaycpp.PNG>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[11 <./Pics/sdcardpart3.PNG>]
-<./Pics/Potentiometercpp.PNG, id=58, 500.62032pt x 206.27063pt>
+<./Pics/Potentiometercpp.PNG, id=47, 500.62032pt x 206.27063pt>
 File: ./Pics/Potentiometercpp.PNG Graphic file (type png)
 <use ./Pics/Potentiometercpp.PNG>
-Package pdftex.def Info: ./Pics/Potentiometercpp.PNG  used on input line 345.
+Package pdftex.def Info: ./Pics/Potentiometercpp.PNG  used on input line 386.
 (pdftex.def)             Requested size: 469.75499pt x 193.56078pt.
- 
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[9]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[10 <./Pics/code_layout.PNG>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[11 <./Pics/maincpp.PNG>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12 <./Pics/Displaycpp.PNG>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[13 <./Pics/sdcardpart3.PNG>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[14 <./Pics/buttoncpp.PNG> <./Pics/Potentiometercpp.PNG>]
+
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -443,37 +490,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[12 <./Pics/buttoncpp.PNG>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[13 <./Pics/Potentiometercpp.PNG>] (CDR_PMC.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[15] (CDR_PMC.aux) ) 
 Here is how much of TeX's memory you used:
- 3196 strings out of 479618
- 45055 string characters out of 2865026
- 328681 words of memory out of 3000000
- 20312 multiletter control sequences out of 15000+200000
- 412109 words of font info for 59 fonts, out of 3000000 for 9000
+ 3207 strings out of 479618
+ 45187 string characters out of 2865026
+ 328727 words of memory out of 3000000
+ 20321 multiletter control sequences out of 15000+200000
+ 412796 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,74p,676b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/josep/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on CDR_PMC.pdf (13 pages, 5487720 bytes).
+ 68i,12n,74p,676b,317s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/josep/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/josep/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/josep/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/josep/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
+s/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb
+><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mti12.pfb>
+Output written on CDR_PMC.pdf (15 pages, 5524247 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
