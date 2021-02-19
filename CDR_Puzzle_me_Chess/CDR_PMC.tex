@@ -370,6 +370,11 @@ Figure \ref{fig:Display} shows the .cpp file that holds all of the methods that 
 \end{figure}
 
 \subsection{SDcard}
+The SD card function is a big part of the Puzzle me Chess project. The goal of this code block is to mapp each of the 64 different spots on the .csv file to a spot on the chess board. After the mapping has been complete it will be used to light up each LED to show the user where to put each chess piece. The SD card code will need to be able to expect three different .csv files and mapp each to a different chess board layout and three completely different chess puzzles. 
+\\
+
+\noindent There are three main parts of the SD card code. The first part has you initialize the SDcard using code from reference \cite{sdcard}, second you need to open the file that was selected by the user, and lastly you need to mapp the open file to a chess board layout. Figure \ref{fig:MSCD} shows the second part of the SD card code. The code begins with opening a name of the .csv file and then it reads the file and prints the file on the serial terminal. After it prints the file it will close the file. Next I need to figure out how to mapp the SD card to a chess board layout. Look to use a Arduino - Multi-Dimensional Arrays to mapp the SD card to the chess board. 
+
 
 \begin{figure}
   \includegraphics[width=\linewidth]{./Pics/sdcardpart3.PNG}
@@ -378,6 +383,7 @@ Figure \ref{fig:Display} shows the .cpp file that holds all of the methods that 
 \end{figure}
 
 \subsection{Button}
+The button in Puzzle me Chess is used as a user interaction button. The user will have the ability to select which puzzle he or she would like to do and also when they are done setting up the chess board with the right pieces. Figure \ref{fig:button} shows the .cpp file that is current used in the code. You have two methods. a initialize function that sets up the button to pin 0 as an input and a read button which sets the starting value of button to be equal to 1 and then to read the button and return a value of buttonstate1. 
 
 \begin{figure}
   \includegraphics[width=\linewidth]{./Pics/buttoncpp.PNG}
@@ -386,15 +392,41 @@ Figure \ref{fig:Display} shows the .cpp file that holds all of the methods that 
 \end{figure}
 
 \subsection{Potentiometer}
+The potentiometer is used as a user interaction point to have the user select which puzzle he or she would like to do. Figure \ref{fig:Photentiometer} shows the .cpp file for the potentiometer. The file has a simple read pot value that is also mapped to 1-3. So when the user turns the potentiometer the user will have three values to choose from. The file also has an initialize method which sets the potentiometer to AO on the microcontroller. 
 
 \begin{figure}
-  \includegraphics[width=\linewidth]{./Pics/Potentiometercpp.PNG}
+  \includegraphics[width=\linewidth]{./Pics/Potentiometercpp.PNG} 
   \caption{Puzzle me Chess - Photentiometer.cpp file}
   \label{fig:Photentiometer}
 \end{figure}
 
 \section{Material and resource requirements}
+In this section we will discuss the list of items used in Puzzle me chess, the test equipment that will be used to test the code and test the circuit, and where we are ordering all components from and when we are due in. 
+
 \subsection{List of Items (BOM)}
+Table \ref{tab:BOM} shows the build of materials (BOM) used in the Puzzle me Chess project. 
+
+\begin{table} [!htbp]
+\begin{center}
+    \begin{tabular}{| l | l | c |}
+    \hline
+    Build of Material  & Item & Quantity \\ \hline
+    Display & Teyleten Robot SongHe OLED Display Module 128x64 & 1 \\ \hline
+    Mulitiplexer & Texas Instruments: part CD4051BE & 8 \\ \hline 
+    Switch & Ximimark 2 Position SK12D07 3 Pin & 1 \\ \hline
+    Button & Button Caps (square) & 1 \\ \hline
+    Potentiometer & DGZZI 10k Trim Potentiometer with Knob: part 3386MP-103  & 1 \\ \hline
+    SD Card & Micro Center 16GB Micro SD Card Class 10 Micro SDHC   & 1 \\ \hline
+    LEDs & Novelty Place 100 Pcs 5mm White LED Diode Lights & 64\\ \hline
+    Photoresister & eBoot  Photo Light Sensitive Resistor Light & 64\\ \hline
+    2M resister & EDGELEC 100pcs 2M ohm Resistor 1/2w (0.5Watt) ±1\% & 64\\ \hline
+    75 resister & EDGELEC 100pcs 75 ohm Resistor 1/2w (0.5Watt) ±1\%  & 64\\ \hline
+    \end{tabular}
+    \caption{Shows the BOM for Puzzle me Chess}
+	\label{tab:BOM}
+\end{center}
+\end{table}
+
 \subsection{Test equipment}
 \subsection{Ording from}
 include date and times and websites
@@ -404,12 +436,18 @@ include date and times and websites
 \subsection{Milestones and Schedule}
 \subsection{Risk}
 
-\begin{thebibliography}{1}
+\begin{thebibliography}{2}
 \bibitem{stone} 
 Brain Stone. 
 \textit{C++ Functions Modular Program Design}. (English) 
 \textit{ Lecture presented at W 3.1, 3.2 }. 
 Dublin City University Glasnevin, Dublin, 2001.
+
+\bibitem{sdcard}
+\textit{Team, T. (n.d.). Using the SD library to retrieve information over a serial port}.
+\textit{ Retrieved February 18, 2021}, 
+\textit{from https://www.arduino.cc/en/Tutorial/LibraryExamples/CardInfo}
+
 \end{thebibliography}
 
 \end{document}
