@@ -10,15 +10,15 @@
 \contentsline {section}{Explanation of code}{9}{}%
 \contentsline {subsection}{Code layout}{9}{}%
 \contentsline {subsection}{Main}{9}{}%
-\contentsline {subsection}{Display}{9}{}%
+\contentsline {subsection}{Display}{11}{}%
 \contentsline {subsection}{SDcard}{12}{}%
-\contentsline {subsection}{Button}{12}{}%
-\contentsline {subsection}{Potentiometer}{12}{}%
-\contentsline {section}{Material and resource requirements}{12}{}%
-\contentsline {subsection}{List of Items (BOM)}{12}{}%
-\contentsline {subsection}{Test equipment}{16}{}%
-\contentsline {subsection}{Ording from}{16}{}%
-\contentsline {section}{Development Plan and Schedule}{16}{}%
-\contentsline {subsection}{Order of Development}{16}{}%
-\contentsline {subsection}{Milestones and Schedule}{16}{}%
-\contentsline {subsection}{Risk}{16}{}%
+\contentsline {subsection}{Button}{13}{}%
+\contentsline {subsection}{Potentiometer}{13}{}%
+\contentsline {section}{Material and resource requirements}{14}{}%
+\contentsline {subsection}{List of Items (BOM)}{14}{}%
+\contentsline {subsection}{Test equipment}{14}{}%
+\contentsline {subsection}{Ording from}{14}{}%
+\contentsline {section}{Development Plan and Schedule}{14}{}%
+\contentsline {subsection}{Order of Development}{14}{}%
+\contentsline {subsection}{Milestones and Schedule}{14}{}%
+\contentsline {subsection}{Risk}{14}{}%

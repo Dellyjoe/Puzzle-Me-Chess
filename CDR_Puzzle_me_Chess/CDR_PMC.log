@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  18 FEB 2021 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  19 FEB 2021 08:59
 entering extended mode
 **./CDR_PMC.tex
 (CDR_PMC.tex
@@ -192,50 +192,99 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \WF@everypar=\toks35
 Package: wrapfig 2003/01/31  v 3.6
 )
+(C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count267
+\lst@gtempboxa=\box52
+\lst@token=\toks36
+\lst@length=\count268
+\lst@currlwidth=\dimen155
+\lst@column=\count269
+\lst@pos=\count270
+\lst@lostspace=\dimen156
+\lst@width=\dimen157
+\lst@newlines=\count271
+\lst@lineno=\count272
+\lst@maxwidth=\dimen158
+(C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count273
+\lst@skipnumbers=\count274
+\lst@framebox=\box53
+)
+(C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+(C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
 \labelLength=\skip65
-\c@homeworkProblemCounter=\count267
+\c@homeworkProblemCounter=\count275
 \homeworkSectionLabelLength=\skip66
 
 (C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2021-01-09 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count268
-\l__pdf_internal_box=\box52
+\l__kernel_color_stack_int=\count276
+\l__pdf_internal_box=\box54
 ) (CDR_PMC.aux)
 \openout1 = `CDR_PMC.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 160.
-LaTeX Font Info:    ... okay on input line 160.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 160.
-LaTeX Font Info:    ... okay on input line 160.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 160.
-LaTeX Font Info:    ... okay on input line 160.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 160.
-LaTeX Font Info:    ... okay on input line 160.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 160.
-LaTeX Font Info:    ... okay on input line 160.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 160.
-LaTeX Font Info:    ... okay on input line 160.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 160.
-LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 167.
+LaTeX Font Info:    ... okay on input line 167.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 167.
+LaTeX Font Info:    ... okay on input line 167.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 167.
+LaTeX Font Info:    ... okay on input line 167.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 167.
+LaTeX Font Info:    ... okay on input line 167.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 167.
+LaTeX Font Info:    ... okay on input line 167.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 167.
+LaTeX Font Info:    ... okay on input line 167.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 167.
+LaTeX Font Info:    ... okay on input line 167.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 160.
+(lastpage)             ! on input line 167.
 
 (C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count269
-\scratchdimen=\dimen155
-\scratchbox=\box53
-\nofMPsegments=\count270
-\nofMParguments=\count271
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count272
-\MPscratchDim=\dimen156
-\MPnumerator=\count273
-\makeMPintoPDFobject=\count274
-\everyMPtoPDFconversion=\toks37
+\scratchcounter=\count277
+\scratchdimen=\dimen159
+\scratchbox=\box55
+\nofMPsegments=\count278
+\nofMParguments=\count279
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count280
+\MPscratchDim=\dimen160
+\MPnumerator=\count281
+\makeMPintoPDFobject=\count282
+\everyMPtoPDFconversion=\toks38
 )
 (C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -243,13 +292,14 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 162
+\c@lstlisting=\count283
+LaTeX Font Info:    Trying to load font information for U+msa on input line 169
 .
 
 (C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 162
+LaTeX Font Info:    Trying to load font information for U+msb on input line 169
 .
 
 (C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -270,7 +320,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 180--182
+Underfull \hbox (badness 10000) in paragraph at lines 187--189
 
  []
 
@@ -289,10 +339,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ./Pics/Circuit_as_of_2162020.jpg Graphic file (type jpg)
 <use ./Pics/Circuit_as_of_2162020.jpg>
 Package pdftex.def Info: ./Pics/Circuit_as_of_2162020.jpg  used on input line 2
-47.
+54.
 (pdftex.def)             Requested size: 469.75499pt x 352.27568pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--255
+Underfull \hbox (badness 10000) in paragraph at lines 260--262
 
  []
 
@@ -300,15 +350,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--255
 File: ./Pics/System_Block_Diagram.PNG Graphic file (type png)
 <use ./Pics/System_Block_Diagram.PNG>
 Package pdftex.def Info: ./Pics/System_Block_Diagram.PNG  used on input line 26
-0.
+7.
 (pdftex.def)             Requested size: 469.75499pt x 250.34743pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--268
+Underfull \hbox (badness 10000) in paragraph at lines 273--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--272
+Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
 
@@ -333,10 +383,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <./Pics/Mux_sudo_circuit.PNG, id=25, 1008.39235pt x 580.79485pt>
 File: ./Pics/Mux_sudo_circuit.PNG Graphic file (type png)
 <use ./Pics/Mux_sudo_circuit.PNG>
-Package pdftex.def Info: ./Pics/Mux_sudo_circuit.PNG  used on input line 291.
+Package pdftex.def Info: ./Pics/Mux_sudo_circuit.PNG  used on input line 298.
 (pdftex.def)             Requested size: 469.75499pt x 270.5631pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--300
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
 
  []
 
@@ -352,27 +402,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <./Pics/Code_Flow_Diagram.PNG, id=30, 373.395pt x 566.86781pt>
 File: ./Pics/Code_Flow_Diagram.PNG Graphic file (type png)
 <use ./Pics/Code_Flow_Diagram.PNG>
-Package pdftex.def Info: ./Pics/Code_Flow_Diagram.PNG  used on input line 306.
+Package pdftex.def Info: ./Pics/Code_Flow_Diagram.PNG  used on input line 313.
 (pdftex.def)             Requested size: 483.72128pt x 597.56418pt.
 
-Overfull \hbox (13.9663pt too wide) in paragraph at lines 306--307
+Overfull \hbox (13.9663pt too wide) in paragraph at lines 313--314
 [][] 
  []
 
 
-Overfull \hbox (5.72005pt too wide) in paragraph at lines 317--328
+Overfull \hbox (5.72005pt too wide) in paragraph at lines 324--335
  [] 
  []
 
 
-LaTeX Warning: Command \textbullet invalid in math mode on input line 335.
+LaTeX Warning: Command \textbullet invalid in math mode on input line 342.
 
 
-LaTeX Warning: Command \textbullet invalid in math mode on input line 335.
+LaTeX Warning: Command \textbullet invalid in math mode on input line 342.
 
 Missing character: There is no ˆ in font cmr8!
 
-Overfull \hbox (1.12596pt too wide) in paragraph at lines 340--341
+Overfull \hbox (1.12596pt too wide) in paragraph at lines 347--348
 \OT1/cmr/m/n/10.95 The fol-low-ing sub sec-tions will de-scribe dif-fer-ent par
 ts of the cur-rent code as it stands on 02/18/2021.
  []
@@ -398,18 +448,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <./Pics/code_layout.PNG, id=42, 628.59843pt x 540.14297pt>
 File: ./Pics/code_layout.PNG Graphic file (type png)
 <use ./Pics/code_layout.PNG>
-Package pdftex.def Info: ./Pics/code_layout.PNG  used on input line 346.
+Package pdftex.def Info: ./Pics/code_layout.PNG  used on input line 353.
 (pdftex.def)             Requested size: 469.75499pt x 403.64742pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--354
+Underfull \hbox (badness 10000) in paragraph at lines 359--361
 
  []
 
-<./Pics/maincpp.PNG, id=43, 564.23297pt x 622.57594pt>
-File: ./Pics/maincpp.PNG Graphic file (type png)
-<use ./Pics/maincpp.PNG>
-Package pdftex.def Info: ./Pics/maincpp.PNG  used on input line 358.
-(pdftex.def)             Requested size: 469.75499pt x 518.33385pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -428,6 +473,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [10 <./Pics/code_layout.PNG>]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 3
+72.
+
+(C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 372.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 3
+94.
+
+(C:\Users\josep\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <9> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 394.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -436,32 +498,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[11 <./Pics/maincpp.PNG>]
-<./Pics/Displaycpp.PNG, id=55, 518.6878pt x 505.13719pt>
-File: ./Pics/Displaycpp.PNG Graphic file (type png)
-<use ./Pics/Displaycpp.PNG>
-Package pdftex.def Info: ./Pics/Displaycpp.PNG  used on input line 367.
-(pdftex.def)             Requested size: 469.75499pt x 457.50197pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 373--375
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 445--447
 
  []
 
-<./Pics/sdcardpart3.PNG, id=56, 433.62pt x 391.83891pt>
-File: ./Pics/sdcardpart3.PNG Graphic file (type png)
-<use ./Pics/sdcardpart3.PNG>
-Package pdftex.def Info: ./Pics/sdcardpart3.PNG  used on input line 380.
-(pdftex.def)             Requested size: 469.75499pt x 424.51303pt.
-<./Pics/buttoncpp.PNG, id=57, 344.41171pt x 199.87172pt>
-File: ./Pics/buttoncpp.PNG Graphic file (type png)
-<use ./Pics/buttoncpp.PNG>
-Package pdftex.def Info: ./Pics/buttoncpp.PNG  used on input line 389.
-(pdftex.def)             Requested size: 469.75499pt x 272.61487pt.
-<./Pics/Potentiometercpp.PNG, id=58, 500.62032pt x 206.27063pt>
-File: ./Pics/Potentiometercpp.PNG Graphic file (type png)
-<use ./Pics/Potentiometercpp.PNG>
-Package pdftex.def Info: ./Pics/Potentiometercpp.PNG  used on input line 398.
-(pdftex.def)             Requested size: 469.75499pt x 193.56078pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -479,26 +520,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[13 <./Pics/Displaycpp.PNG>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[14 <./Pics/sdcardpart3.PNG>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[15 <./Pics/buttoncpp.PNG> <./Pics/Potentiometercpp.PNG>]
-
+[13] 
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -508,29 +530,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[16] (CDR_PMC.aux) ) 
+[14] (CDR_PMC.aux) ) 
 Here is how much of TeX's memory you used:
- 3210 strings out of 479618
- 45214 string characters out of 2865026
- 329739 words of memory out of 3000000
- 20324 multiletter control sequences out of 15000+200000
- 412796 words of font info for 61 fonts, out of 3000000 for 9000
+ 5544 strings out of 479618
+ 75359 string characters out of 2865026
+ 585755 words of memory out of 3000000
+ 22625 multiletter control sequences out of 15000+200000
+ 414737 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,74p,905b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,12n,74p,881b,1813s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\josep\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\tcrm1095.pk><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmbx10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/josep/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/josep/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/josep/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/j
-osep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
-:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti
-10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmti12.pfb>
-Output written on CDR_PMC.pdf (16 pages, 5535971 bytes).
+pen/ec/dpi600\tcrm1095.pk> <C:\Users\josep\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\tcti0900.pk><C:/Users/josep/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/josep/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/josep/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/josep/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jo
+sep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/
+Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmr8.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr9.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/josep/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/josep/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/josep/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on CDR_PMC.pdf (14 pages, 5151201 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
+ 121 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
