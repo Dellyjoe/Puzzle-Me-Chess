@@ -19,6 +19,7 @@
 \contentsline {subsection}{Test equipment}{14}{}%
 \contentsline {subsection}{Ording from}{14}{}%
 \contentsline {section}{Development Plan and Schedule}{15}{}%
-\contentsline {subsection}{Order of Development}{15}{}%
 \contentsline {subsection}{Milestones and Schedule}{15}{}%
-\contentsline {subsection}{Risk}{17}{}%
+\contentsline {subsection}{Risk}{15}{}%
+\contentsline {subsection}{Risk Meditation}{17}{}%
+\contentsline {subsection}{Conclusion}{17}{}%

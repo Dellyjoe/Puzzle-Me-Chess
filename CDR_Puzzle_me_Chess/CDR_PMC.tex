@@ -571,12 +571,8 @@ Table \ref{tab:ording} shows the current list of items that need to be ordered. 
 \end{table}
 
 \section{Development Plan and Schedule}
-\subsection{Order of Development}
-\begin{figure}
-  \includegraphics[width=\linewidth]{./Pics/Critical_design_document_gnatt.PNG}
-  \caption{Critical Design Document}
-  \label{fig:CDD}
-\end{figure}
+Figure \ref{fig:PD} and figure \ref{fig:CBPD} show the Development plan and schedule for the Puzzle me Chess project. Figure \ref{fig:PD} shows the main part of the development plan and is set up in chronological order to finish the code. You can see Figure \ref{fig:PD} that Task 1 is complete and Tasks 2-3 have been started. Figure \ref{fig:CBPD} shows building of the physical chess board and the final demo and final documentation edits. 
+
 
 
 \begin{figure}
@@ -607,7 +603,30 @@ Below shows the completed and scheduled milestones for the Puzzle me Chess proje
 \end{itemize}
 
 \subsection{Risk}
+Below shows the Risk that will be involved in making Puzzle me Chess. 
 
+\begin{itemize}
+\item First Real microcontroller design project
+\item Re-learning C++, and C\#
+\item Learning how to mapp the SD card to an X-Y cornet system
+\item Making the code modular so I can upload a puzzle using an .csv file to the board
+\item Time, not a lot of room for a lost week
+\item Using proper coding techniques  
+\item Turn on multiple LEDs to show user where to put all pieces on the chess board
+\end{itemize}
+
+
+\subsection{Risk Meditation}
+
+\begin{itemize}
+\item Use pre-existing libraries for the SD card reader and Display
+\item Break the code down into different sub files for origination and readability
+\subitem .h and .cpp files $\rightarrow$ Used in main.cpp for function call backs, less code development
+\item Complete a document that list major c++ functions that will be used in this project
+\item Keep an eye one time and keep Gnatt chart up to date
+\end{itemize}
+
+\subsection{Conclusion}
 
 \begin{thebibliography}{2}
 \bibitem{stone} 
@@ -620,7 +639,6 @@ Dublin City University Glasnevin, Dublin, 2001.
 \textit{Team, T. (n.d.). Using the SD library to retrieve information over a serial port}.
 \textit{ Retrieved February 18, 2021}, 
 \textit{from https://www.arduino.cc/en/Tutorial/LibraryExamples/CardInfo}
-
 \end{thebibliography}
 
 \end{document}

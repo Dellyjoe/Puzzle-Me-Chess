@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  19 FEB 2021 10:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  19 FEB 2021 13:20
 entering extended mode
 **./CDR_PMC.tex
 (CDR_PMC.tex
@@ -250,17 +250,7 @@ tex.def
 File: l3backend-pdftex.def 2021-01-09 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count276
 \l__pdf_internal_box=\box54
-) (CDR_PMC.aux
-
-LaTeX Warning: Label `fig:MCL1' multiply defined.
-
-
-LaTeX Warning: Label `fig:MCL1' multiply defined.
-
-
-LaTeX Warning: Label `fig:MCL1' multiply defined.
-
-)
+) (CDR_PMC.aux)
 \openout1 = `CDR_PMC.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 167.
@@ -531,13 +521,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [13]
-<./Pics/Critical_design_document_gnatt.PNG, id=66, 484.43484pt x 199.11891pt>
-File: ./Pics/Critical_design_document_gnatt.PNG Graphic file (type png)
-<use ./Pics/Critical_design_document_gnatt.PNG>
-Package pdftex.def Info: ./Pics/Critical_design_document_gnatt.PNG  used on inp
-ut line 576.
-(pdftex.def)             Requested size: 469.75499pt x 193.09344pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -547,18 +530,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14]
-<./Pics/Project_Development.PNG, id=71, 487.44609pt x 438.51328pt>
+<./Pics/Project_Development.PNG, id=70, 488.95172pt x 435.50203pt>
 File: ./Pics/Project_Development.PNG Graphic file (type png)
 <use ./Pics/Project_Development.PNG>
-Package pdftex.def Info: ./Pics/Project_Development.PNG  used on input line 583
+Package pdftex.def Info: ./Pics/Project_Development.PNG  used on input line 579
 .
-(pdftex.def)             Requested size: 469.75499pt x 422.6006pt.
-<./Pics/Chess_Board_Project Demostation_Gnatt.PNG, id=72, 488.95172pt x 202.882
+(pdftex.def)             Requested size: 469.75499pt x 418.40945pt.
+<./Pics/Chess_Board_Project Demostation_Gnatt.PNG, id=71, 488.95172pt x 202.882
 97pt>
 File: ./Pics/Chess_Board_Project Demostation_Gnatt.PNG Graphic file (type png)
 <use ./Pics/Chess_Board_Project Demostation_Gnatt.PNG>
 Package pdftex.def Info: ./Pics/Chess_Board_Project Demostation_Gnatt.PNG  used
- on input line 590.
+ on input line 586.
 (pdftex.def)             Requested size: 469.75499pt x 194.92021pt.
 
 
@@ -569,7 +552,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[15 <./Pics/Critical_design_document_gnatt.PNG>]
+[15]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -588,39 +571,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[17 <./Pics/Chess_Board_Project Demostation_Gnatt.PNG>] (CDR_PMC.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[17 <./Pics/Chess_Board_Project Demostation_Gnatt.PNG>] (CDR_PMC.aux) ) 
 Here is how much of TeX's memory you used:
- 5566 strings out of 479618
- 76150 string characters out of 2865026
+ 5559 strings out of 479618
+ 75883 string characters out of 2865026
  585755 words of memory out of 3000000
- 22644 multiletter control sequences out of 15000+200000
+ 22638 multiletter control sequences out of 15000+200000
  414737 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,74p,881b,1813s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\josep\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1095.pk> <C:\Users\josep\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcti0900.pk><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmbx10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/josep/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/josep/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/josep/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jose
-p/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Use
-rs/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-<C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmsy9.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmti10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmti12.pfb><C:/Users/josep/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on CDR_PMC.pdf (17 pages, 5259227 bytes).
+ <C:\Use
+rs\josep\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <
+C:\Users\josep\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti0900
+.pk><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmbx9.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/josep/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/josep/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/josep/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/josep/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/
+josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y9.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmti10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmti12.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmti9.pfb>
+Output written on CDR_PMC.pdf (17 pages, 5242472 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
+ 135 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
