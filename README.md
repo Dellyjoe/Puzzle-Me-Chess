@@ -4,22 +4,44 @@ Author: Joseph Vitale
 
 ## Description
 
-Create a physical chess puzzle on a chess board. This board will have user checkability and software mapped defined chess puzzles. At first there will be 3 different chess puzzles ranging from easy to hard. There will be an OLED screen to show the user where to put the prices to set up the chess puzzle. This project will also have a feature to show user hint or show asnwer. After completing the puzzle a sound will play to tell the user he/she has completed the puzzle.
+In chess there are many different ways to play the game. After each player moves three times
+there are more than 121 million different moves that can end the game. Many people need to
+practice chess in order to get better and there are many ways to do this. You can play over
+the internet Player Vs. Player or Player Vs. Computer which range from (400 - 3200) EIO or
+you can play puzzle's in chess. Puzzle's in chess allow you to study the board in any given state
+and make the next several moves. This project is dedicated to solving puzzles in the physical world.
 
-## Functionality
+The physical chess puzzle allows the user to practice looking at a physical board to solve each puzzle.
+This project is titled \Puzzle me Chess" and it will be equipped to have 3 different puzzles. The
+chess board will allow the user to place piece's in the correct location that will be displayed on the
+OLED screen. After each piece is on the board the chess puzzle will then display to the user which
+color he/she will play to solve the puzzle. After the user makes his or her move the board will check
+to see if the move was correct. If not, the user will be asked to reset the piece and try again until
+puzzle is complete.
 
-* User show hint, LED to light up which piece to move, but not where
-* User show asnwer, LED to ligh up which piece to move and where it will be moved to
-* OLED to indicate where the user will place each piece
-* LED light to indicate where the piece will be placed
+## Assumptions
+
+* User puts correct pieces on each spot
+* Chess Board will be lit evenly with light
+* Each le added to the SDcard will be in a standardized format
+  
+## Capabilities
+
+* LED light indicator to show user hint/show answer feature
+* OLED to describe to the user where to put pieces
+* Read a .csv le standardized format to quickly import puzzles
+* User input switch to show user answer, indicated by LEDs
+* User input Button to show user the hint
+* Check board spots are correct for a given puzzle
 
 ## Limitations
 
-* Not knowing which piece is on each 64 spots
-* Not being able to set up the board for you
-* Not having 50 different puzzles to choose from
-* Not being able to light  each square along the perimeter
+* Not knowing which piece is on the correct spot
+* Not being able to move the piece on the correct spot
+* Not having 3+ different puzzles to choose from
+* Not being able to light each square along the perimeter
 * Not having multiple colors to indicate wrong or right answer
+* Needing light to illuminate the chess board evenly
 
 ## Larger System Chess Idea
 
@@ -31,6 +53,9 @@ Create an automated chess board that could play Human Vs. Human, Human Vs. Compu
 
 ## Functional Block Diagram
 
-The belove picture shows the functional block diagram
+The Puzzle me Chess project will feature a Microcontroller, one 21x21 Wooden Chess Board, 8
+Multiplexers, 1 Switch, 1 Potentiometer, 1 Button, and A Display. Figure 1 shows the current
+circuit layout as of 02/16/2021, this circuit doesn't show the chess board. Explanation of the
+System Block Diagram to follow.
 
 ![Functional Block Diagram](Pictures_readme/Functional Block Diagram.PNG)
