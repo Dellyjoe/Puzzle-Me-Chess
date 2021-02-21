@@ -38,3 +38,8 @@ void Display::clear()
 {
  u8g2.clearBuffer();
 } // end void clear
+
+void Display::draw()
+{
+ u8g2.sendBuffer();
+} // end void clear

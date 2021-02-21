@@ -17,7 +17,7 @@
 \contentsline {section}{Material and resource requirements}{15}{}%
 \contentsline {subsection}{List of Items (BOM)}{15}{}%
 \contentsline {subsection}{Test equipment}{15}{}%
-\contentsline {subsection}{Ording from}{16}{}%
+\contentsline {subsection}{Ordering and Arrival date}{16}{}%
 \contentsline {section}{Development Plan and Schedule}{16}{}%
 \contentsline {subsection}{Milestones and Schedule}{16}{}%
 \contentsline {subsection}{Risk}{18}{}%

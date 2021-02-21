@@ -227,10 +227,10 @@
 
 
 
-In chess there are many different ways to play the game. After each player moves three times there are more then 121 million different moves that can end the game. Many people need to practice chess in order to get better and there are many ways to do this. You can play over the internet Player Vs. Play or player Vs. computer which range from (400 - 3200) EIO or you can play puzzle's in chess. Puzzle's in chess allow you to study the board in any given state and make the next several moves. This project is dedicated to solving puzzles in the physical world. 
+In chess there are many different ways to play the game. After each player moves three times there are more then 121 million different moves that can end the game. Many people need to practice chess in order to get better and there are many ways to do this. You can play over the internet Player Vs. Player or Player Vs. Computer which range from (400 - 3200) EIO or you can play puzzle's in chess. Puzzle's in chess allow you to study the board in any given state and make the next several moves. This project is dedicated to solving puzzles in the physical world. 
 \\
 
-\noindent The physical chess puzzle allows the user to practice looking at a physical board to solve each puzzle. This project is titled "Puzzle me Chess`` and it will be equipped to have 3 different puzzle's. The chess board will allow the user to place piece's in the correct location that is displayed on the OLED screen. After each piece is on the board the chess puzzle will then display to the user which color he/she will play to solve the puzzle. After the user makes his first move the board will check to see if the move was correct. If not the user will be asked to reset the piece and try again until puzzle is complete. 
+\noindent The physical chess puzzle allows the user to practice looking at a physical board to solve each puzzle. This project is titled ``Puzzle me Chess" and it will be equipped to have 3 different puzzle's. The chess board will allow the user to place piece's in the correct location that will be displayed on the OLED screen. After each piece is on the board the chess puzzle will then display to the user which color he/she will play to solve the puzzle. After the user makes his first move the board will check to see if the move was correct. If not the user will be asked to reset the piece and try again until puzzle is complete. 
 
 \subsection{Capabilities}
 Capabilites for the Puzzle me Chess project range from Indicators, User Direction, SD card Capability, and Location Detection. More detailed explanation can be found in table \ref{tab:capability}.
@@ -274,7 +274,7 @@ Table \ref{tab:Assumptions} shows the assumptions that were made for this projec
 \subsection{Limitations}
 Limitations for the Puzzle me Chess project range from Location Detection, Auto Movement, Puzzle Selection, Physical and Physical parts. See table \ref{tab:limitations} for more details.
 
-\begin{table}
+\begin{table}[H]
 \begin{center}
     \begin{tabular}{| l | l |}
     \hline
@@ -362,7 +362,7 @@ Figure \ref{fig:CFD1} shows the code flow diagram. The code starts with the disp
 \end{center}
 
 \section{Interface description}
-The internal interface description consist of a display, switch, button, mulitiplexer, Potentiometer, and a SD Card. More information can be found in table \ref{tab:interface}. Charlieplexing is the method that will be used to turn on and off each LED that is needed to show the user where to put each piece, and also for show hint and or show answer. This equation to determine how many digital I/O pins needed to do this can be found in equation \eqref{Charlieplexiing}.
+The internal interface description consist of a display, switch, button, mulitiplexer, potentiometer, and a SD Card. More information can be found in table \ref{tab:interface}. Charlieplexing is the method that will be used to turn on and off each LED that is needed to show the user where to put each piece, and also for show hint and or show answer. This equation to determine how many digital I/O pins needed to do this can be found in equation \eqref{Charlieplexiing}.
 
 \begin{table}
 \begin{center}
@@ -548,7 +548,7 @@ return (buttonstate1);
 \subsection{Potentiometer}
 The potentiometer is used as a user interaction point to have the user select which puzzle he or she would like to do. Listing \ref{Photentiometer}. shows the .cpp file for the potentiometer. The file has a simple read pot value that is also mapped to 1-3. So when the user turns the potentiometer the user will have three values to choose from. The file also has an initialize method which sets the potentiometer to AO on the microcontroller. 
 
-\begin{lstlisting}[caption={Puzzle me Chess - Photentiometer.cpp file},label={Photentiometer}]
+\begin{lstlisting}[caption={Puzzle me Chess - photentiometer.cpp file},label={Photentiometer}]
 //*****************************************Functions********************//
 void Potentiometer::init_pot()
 {
@@ -563,7 +563,7 @@ int Potentiometer::r_pot()
 \end{lstlisting}
 
 \section{Material and resource requirements}
-In this section we will discuss the list of items used in Puzzle me chess, the test equipment that will be used to test the code and test the circuit, and where we are ordering all components from and when we are due in. 
+In this section we will discuss the list of items used in Puzzle me chess, the test equipment that will be used to test the code and test the circuitry, and where we are ordering all components from and when we are due in. 
 
 \subsection{List of Items (BOM)}
 Table \ref{tab:BOM} shows the build of materials (BOM) used in the Puzzle me Chess project. 
@@ -602,7 +602,7 @@ The Puzzle me Chess project consist of little test equipment needed to complete 
 
 \end{itemize}
 
-\subsection{Ording from}
+\subsection{Ordering  and Arrival date}
 Table \ref{tab:ording} shows the current list of items that need to be ordered. The Display, Switch, Potentiometer and microcontroller have arrived already. 
 
 \begin{table}[H]
@@ -616,7 +616,7 @@ Table \ref{tab:ording} shows the current list of items that need to be ordered. 
     2M$\Omega$ resister & Amazon & February 25 \\ \hline
     75$\Omega$ resister & Amazon  & February 25 \\ \hline
     \end{tabular}
-    \caption{Shows the BOM for Puzzle me Chess}
+    \caption{Shows website and arrival time of components}
 	\label{tab:ording}
 \end{center}
 \end{table}
@@ -654,8 +654,8 @@ Below shows the completed and scheduled milestones for the Puzzle me Chess proje
 Below shows the Risk that will be involved in making Puzzle me Chess. 
 
 \begin{itemize}
-\item First Real microcontroller design project
-\item Re-learning C++, and C\#
+\item First microcontroller design project
+\item Re-learning C++, and embedded C
 \item Learning how to mapp the SD card to an X-Y cornet system
 \item Making the code modular so I can upload a puzzle using an .csv file to the board
 \item Time, not a lot of room for a lost week
