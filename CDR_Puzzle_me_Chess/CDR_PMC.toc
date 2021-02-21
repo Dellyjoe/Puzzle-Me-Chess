@@ -1,25 +1,25 @@
-\contentsline {section}{Project description}{3}{}%
-\contentsline {subsection}{Capabilities}{3}{}%
-\contentsline {subsection}{Assumptions}{3}{}%
-\contentsline {subsection}{Limitations}{4}{}%
-\contentsline {section}{Functional description}{4}{}%
-\contentsline {subsection}{System Block Diagram}{4}{}%
-\contentsline {subsection}{Multiplexer Circuit Diagram}{4}{}%
-\contentsline {subsection}{Code Flow Diagram}{6}{}%
-\contentsline {section}{Interface description}{7}{}%
-\contentsline {section}{Explanation of code}{9}{}%
-\contentsline {subsection}{Code layout}{9}{}%
-\contentsline {subsection}{Main}{9}{}%
-\contentsline {subsection}{Display}{11}{}%
-\contentsline {subsection}{SDcard}{12}{}%
-\contentsline {subsection}{Button}{13}{}%
-\contentsline {subsection}{Potentiometer}{13}{}%
-\contentsline {section}{Material and resource requirements}{14}{}%
-\contentsline {subsection}{List of Items (BOM)}{14}{}%
-\contentsline {subsection}{Test equipment}{14}{}%
-\contentsline {subsection}{Ording from}{14}{}%
-\contentsline {section}{Development Plan and Schedule}{15}{}%
-\contentsline {subsection}{Milestones and Schedule}{15}{}%
-\contentsline {subsection}{Risk}{15}{}%
-\contentsline {subsection}{Risk Meditation}{17}{}%
-\contentsline {subsection}{Conclusion}{17}{}%
+\contentsline {section}{Project description}{4}{}%
+\contentsline {subsection}{Capabilities}{4}{}%
+\contentsline {subsection}{Assumptions}{4}{}%
+\contentsline {subsection}{Limitations}{5}{}%
+\contentsline {section}{Functional description}{5}{}%
+\contentsline {subsection}{System Block Diagram}{5}{}%
+\contentsline {subsection}{Multiplexer Circuit Diagram}{5}{}%
+\contentsline {subsection}{Code Flow Diagram}{7}{}%
+\contentsline {section}{Interface description}{8}{}%
+\contentsline {section}{Explanation of code}{10}{}%
+\contentsline {subsection}{Code layout}{10}{}%
+\contentsline {subsection}{Main}{10}{}%
+\contentsline {subsection}{Display}{12}{}%
+\contentsline {subsection}{SDcard}{13}{}%
+\contentsline {subsection}{Button}{14}{}%
+\contentsline {subsection}{Potentiometer}{15}{}%
+\contentsline {section}{Material and resource requirements}{15}{}%
+\contentsline {subsection}{List of Items (BOM)}{15}{}%
+\contentsline {subsection}{Test equipment}{15}{}%
+\contentsline {subsection}{Ording from}{16}{}%
+\contentsline {section}{Development Plan and Schedule}{16}{}%
+\contentsline {subsection}{Milestones and Schedule}{16}{}%
+\contentsline {subsection}{Risk}{18}{}%
+\contentsline {subsection}{Risk Meditation}{18}{}%
+\contentsline {subsection}{Conclusion}{19}{}%
