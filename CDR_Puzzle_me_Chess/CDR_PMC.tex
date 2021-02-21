@@ -184,13 +184,13 @@
 % and tables that have so far appeared in the input to be printed.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Project description}
-In chess there are many different ways to play the game. After each player moves three times there are 121 million different moves that can end the game. Many people need to practice chess in order to get better and there are many ways to do this. You can play over the internet and play computer which range from (400 - 3200) EIO or you can play puzzle's in chess. Puzzle's in chess allow you to study the board in a given state and make the next several moves. This project is dedicated to solving puzzles in the physical world. 
+In chess there are many different ways to play the game. After each player moves three times there are more then 121 million different moves that can end the game. Many people need to practice chess in order to get better and there are many ways to do this. You can play over the internet Player Vs. Play or player Vs. computer which range from (400 - 3200) EIO or you can play puzzle's in chess. Puzzle's in chess allow you to study the board in any given state and make the next several moves. This project is dedicated to solving puzzles in the physical world. 
 \\
 
-\noindent The physical chess puzzle allows the user to practice looking at a physical board to solve each puzzle. This project is titled "Puzzle me Chess`` and it will be equipped to have 3 different puzzle's. The chess board will allow the user to place each piece in the right location that is displayed on the OLED screen. After each piece is on the board the chess puzzle will then display to the user which color he/she will play. After the user makes his first move the board will check to see if the move was correct. If not the user will be asked to reset the piece and try again until puzzle is complete. 
+\noindent The physical chess puzzle allows the user to practice looking at a physical board to solve each puzzle. This project is titled "Puzzle me Chess`` and it will be equipped to have 3 different puzzle's. The chess board will allow the user to place piece's in the correct location that is displayed on the OLED screen. After each piece is on the board the chess puzzle will then display to the user which color he/she will play to solve the puzzle. After the user makes his first move the board will check to see if the move was correct. If not the user will be asked to reset the piece and try again until puzzle is complete. 
 
 \subsection{Capabilities}
-Capabilites for the Puzzle me Chess project range from Indicators, User Direction, SD card capability, and Location Detection. See below for more details. More detailed explanation can be found in table \ref{tab:capability}.
+Capabilites for the Puzzle me Chess project range from Indicators, User Direction, SD card Capability, and Location Detection. More detailed explanation can be found in table \ref{tab:capability}.
 
 \begin{table}
 \begin{center}
@@ -199,10 +199,10 @@ Capabilites for the Puzzle me Chess project range from Indicators, User Directio
     Capability  & Description below\\ \hline
     Indicator &  LED light indicator to show user hint/show answer feature \\ \hline
     User Direction & OLED to describe to the user where to put pieces \\ \hline 
-    SD Card & Read .csv standardized format to quickly import puzzles \\ \hline
+    SD Card & Read a .csv file standardized format to quickly import puzzles \\ \hline
     User Direction & User input switch to show user answer, indicated by LEDs \\ \hline
-    User Direction & User input Button to show user a hint \\ \hline
-    Location Detection & Check board spots are correct for puzzle that was selected \\ \hline
+    User Direction & User input Button to show user the hint \\ \hline
+    Location Detection & Check board spots are correct for a given puzzle  \\ \hline
     \end{tabular}
     \caption{Shows the Capability's for Puzzle me Chess}
 	\label{tab:capability}
@@ -210,14 +210,14 @@ Capabilites for the Puzzle me Chess project range from Indicators, User Directio
 \end{table}
 
 \subsection{Assumptions}
-Table \ref{tab:Assumptions} shows the assumptions that are being made for this project. The assume were made to reduce overall cost of the project and difficulty to lower risk. 
+Table \ref{tab:Assumptions} shows the assumptions that were made for this project. The assumptions were made to reduce overall cost of the project and difficulty to lower risk. 
 
 \begin{table}
 \begin{center}
     \begin{tabular}{| l | l |}
     \hline
     Assumptions & Description below\\ \hline
-    User Implication  & User puts right pieces on each spot \\ \hline
+    User Implication  & User puts correct pieces on each spot \\ \hline
     Physical &  Chess Board will be lit evenly with light  \\ \hline
     Text File & Each file added to the SDcard will be in a standardized format \\ \hline     
     \end{tabular}
@@ -235,12 +235,12 @@ Limitations for the Puzzle me Chess project range from Location Detection, Auto 
     \begin{tabular}{| l | l |}
     \hline
     Limitations  & Description below\\ \hline
-    Location Detection & Not knowing which piece is on the spot \\ \hline
-    Auto Movement & Not being able to move the piece on correct spot \\ \hline 
+    Location Detection & Not knowing which piece is on the correct spot \\ \hline
+    Auto Movement & Not being able to move the piece on the correct spot \\ \hline 
     Puzzle Selection & Not having 3+ different puzzles to choose from  \\ \hline
     Physical & Not being able to light each square along the perimeter  \\ \hline
     Physical Parts & Not having multiple colors to indicate wrong or right answer \\ \hline
-    Physical & Needing light to illuminate  the chess board \\ \hline
+    Physical & Needing light to illuminate the chess board evenly \\ \hline
     \end{tabular}
     \caption{Shows the Limitation's for Puzzle me Chess}
 	\label{tab:limitations}
@@ -248,7 +248,7 @@ Limitations for the Puzzle me Chess project range from Location Detection, Auto 
 \end{table}
 
 \section{Functional description}
-The Puzzle me Chess project will feature a microcontroller, one 21x21 wooden chess board, 8 Multiplexers, 1 switch, 1 Potentiometer, 1 button, and A Display. Figure \ref{fig:Circuit} shows  the current circuit layout as of 02/16/2021, this circuit doesn't show the chess board. Explanation of the System Block Diagram to follow.
+The Puzzle me Chess project will feature a Microcontroller, one 21x21 Wooden Chess Board, 8 Multiplexers, 1 Switch, 1 Potentiometer, 1 Button, and A Display. Figure \ref{fig:Circuit} shows  the current circuit layout as of 02/16/2021, this circuit doesn't show the chess board. Explanation of the System Block Diagram to follow.
 
 \begin{figure}
   \includegraphics[width=\linewidth]{./Pics/Circuit_as_of_2162020.jpg}
@@ -257,11 +257,11 @@ The Puzzle me Chess project will feature a microcontroller, one 21x21 wooden che
 \end{figure}
 
 \subsection{System Block Diagram}
-Figure \ref{fig:SBD1} shows the sudo hand drawn block diagram. The project consist of One Microcontroller which will feature the teensy 3.6, 8 Multiplexer's from Texas Instruments part \# CD4051BE, 1 basic breadboard switch, 1 breadboard Potentiometer, 1 basic breadbaord button, LED's, Photoresister's, 1 Chess Board and one Display. 
+Figure \ref{fig:SBD1} shows the sudo hand drawn block diagram. The project consist of One Microcontroller which will feature the Teensy 3.6, 8 Multiplexer's from Texas Instruments part \# CD4051BE, 1 basic breadboard Switch, 1 breadboard Potentiometer, 1 basic breadbaord Button, 64 LED's, 64 Photoresister's, 1 Chess Board and a Display. 
 \\
 
 
-\noindent The Chess board will have 1 LED and 1 photoresister per block. The LED will be drilled and placed on the top left side of each block and will be used to show the user where to place each piece. The photoresister will be drilled in the middle of each block and will be used as a voltage drop to tell if there is a piece there or not. See section multiplexer circuit diagram for the circuit layout. 
+\noindent The Chess board will have 1 LED and 1 photoresister per block. The LED will be drilled and placed on the top left side of each block and will be used to show the user where to place each piece. The photoresister will be drilled in the middle of each block and will be used as a voltage drop to tell if there is a piece there or not. See Figure \ref{fig:MSCD} for the circuit layout. 
 
 \begin{figure}
   \includegraphics[width=\linewidth]{./Pics/System_Block_Diagram.PNG}
@@ -270,15 +270,15 @@ Figure \ref{fig:SBD1} shows the sudo hand drawn block diagram. The project consi
 \end{figure}
 
 \subsection{Multiplexer Circuit Diagram} 
-Figure \ref{fig:MSCD} shows the sudo circuit for Muxltiplexer A, the puzzle me chess project will consist of 8 Muxltiplexer one for each column A-H. Each of the Muxltiplexers will have 8 outgoing lines that will read Voltages levels from the rows \# 1-8. Each row will have one resister which will is set to be $~2M \Omega$ and one Photoresister in series. Each Photoresister has two modes a light and a dark mode. Equation (1) shows Mux input voltage at 3.29VDC and equation (2) shows Mux input voltage at 2.2VDC. 
+Figure \ref{fig:MSCD} shows the sudo circuit for Muxltiplexer A, the puzzle me chess project will consist of 8 Muxltiplexer one for each column A-H. Each of the Muxltiplexers will have 8 outgoing lines that will read Voltages levels from the rows \# 1-8. Each row will have one resister which is set to be $~2M \Omega$ and one Photoresister in series. Each Photoresister has two modes a light and a dark mode. Equation (1) shows Mux input voltage at 3.29VDC and equation (2) shows Mux input voltage at 2.2VDC. 
 \\
 
 
-Assume Light; R = $500 \Omega$
+Assume Photoresister Light; R = $500 \Omega$
 \\
 
 
-Assume Dark; R = $1M \Omega$
+Assume Photoresister Dark; R = $1M \Omega$
 
 
 \begin{equation}
@@ -302,11 +302,11 @@ $$ I = 1.1$\mu$A, Vdark = 1.1VDC, Mux input would see 2.2VD  if piece was placed
 
 
 \subsection{Code Flow Diagram}
-Figure \ref{fig:CFD1} shows the code flow diagram. The code starts with the display showing the user to pick a puzzle which the user will use the potentiometer to select puzzle 1-3. After the Puzzle has been selected the display will show which puzzle the user selected and open that .csv file. The code will then mapp each space to a 2x2 matrix with a cell name attached. The code will then display to the user which to place each piece on which block. LEDs will also light up to quickly help the user where to place each piece. After each piece has been placed the code will shut off each LED light and display to the user which color to go first.  
+Figure \ref{fig:CFD1} shows the code flow diagram. The code starts with the display showing the user to pick a puzzle which the user will use the Potentiometer to select puzzles 1-3. After the Puzzle has been selected the display will show which puzzle the user selected and open that .csv file. The code will then mapp each space to a 2x2 matrix with a cell name attached. The code will then display to the user where to place each piece on which block. LEDs will also light up to quickly help the user where to place each piece. After each piece has been placed the code will shut off each LED light and display to the user which color he or she will play.  
 \\
 
 
-\noindent The code will have the ability to have the user use a button to light up LEDs to show the user the hint, and a switch to show the user the answer if they get stuck. If the wrong move is made on the chess board the code will have the ability to check each move and display if the move is correct or not. If the move is correct the display will show where the user needs to move the opponent piece so the user can continue the puzzle until completion. If the move is incorrect the user will be asked to place the piece back and try again. 
+\noindent The code will have the ability to have the user use a button to light up LEDs to show the user the hint, and a switch to show the user the answer if they get stuck. If the wrong move is made on the chess board the code will have the ability to check each move and display if the move is correct or not. If the move is correct the display will show where the user needs to move the opponent pieces so the user can continue the puzzle until completion. If the move is incorrect the user will be asked to place the piece back and try again. 
 
 \begin{center}
 \begin{figure}
@@ -317,7 +317,7 @@ Figure \ref{fig:CFD1} shows the code flow diagram. The code starts with the disp
 \end{center}
 
 \section{Interface description}
-The internal interface description consist of a display, switch, button, mulitiplexer, Potentiometer, and a SD Card. More information can be found in table \ref{tab:interface}. Charlieplexing is the method that will be used to turn on and off each LED that is needed to show the user where to put each piece, show hint and or show the answer. This equation to determine how many digital I/O pins needed to do this can be found in equation \eqref{Charlieplexiing}.
+The internal interface description consist of a display, switch, button, mulitiplexer, Potentiometer, and a SD Card. More information can be found in table \ref{tab:interface}. Charlieplexing is the method that will be used to turn on and off each LED that is needed to show the user where to put each piece, and also for show hint and or show answer. This equation to determine how many digital I/O pins needed to do this can be found in equation \eqref{Charlieplexiing}.
 
 \begin{table}
 \begin{center}
@@ -344,10 +344,10 @@ $$ Pins = $\frac{1}{2•}*(1+\sqrt{1+4*L}$; L=LED=64, Pins = 8.5$$
 \end{equation}
 
 \section{Explanation of code}
-The following sub sections will describe different parts of the current code as it stands on 02/18/2021. There will be a brief explanation of the code layout which uses reference \cite{stone}. Other code explanations will be outlined in Main, Display, SDcard,Button,and Potentiometer, see sections below for more information. 
+The following sub sections will describe different parts of the current code as it stands on 02/18/2021. There will be a brief explanation of the code layout which uses reference \cite{stone}. Other code explanations will be outlined in Main, Display, SDcard, Button,and Potentiometer, see sections below for more information. 
 
 \subsection{Code layout}
-Figure \ref{fig:MCL1} shows the modulatory of the Puzzle me Chess code. Each component of the circuit has its function and for that it will get its own .h and .cpp files. As you can see in figure \ref{fig:MCL1}. This code modulatory is talked about in reference \cite{stone} and it states laying out the .h files to have a method that is used for one function. An example of this would be the Display having a method for initialization of the display, a print or draw function, and a clear function. This modulatory was done for each component a in the code and is clearly show in figure \ref{fig:MCL1}. For developing each method a .cpp file is used and these files will be discussed below in Listing \ref{main}, \ref{Display}, \ref{sdcard1}, \ref{button}, and \ref{Photentiometer}. All code below is current as of 02/18/2021 and is not finalized. 
+Figure \ref{fig:MCL1} shows the modulatory of the Puzzle me Chess code. Each component of the circuit has its function and for that it will get its own .h and .cpp files. As you can see in figure \ref{fig:MCL1}. This code modulatory is talked about in reference \cite{stone} and it states laying out the .h files to have a method that is used for one function. An example of this would be the Display having a method for initialization of the display, a print or draw function, and a clear function. This modulatory was done for each component in the code and is clearly show in figure \ref{fig:MCL1}. For developing each method a .cpp file is used and these files will be discussed below in Listing \ref{main}, \ref{Display}, \ref{sdcard1}, \ref{button}, and \ref{Photentiometer}. All code below is current as of 02/18/2021 and is not finalized. 
 
 \begin{figure}
   \includegraphics[width=\linewidth]{./Pics/code_layout.PNG}
@@ -356,10 +356,10 @@ Figure \ref{fig:MCL1} shows the modulatory of the Puzzle me Chess code. Each com
 \end{figure}
 
 \subsection{Main}
-The main.cpp file in Arduino houses the main code.  Shown in Listing \ref{main} is the current main.cpp file code for Puzzle me Chess. At the top houses all the header files. Each header file is tied to its individual methods which are used in the individual .cpp files. Looking at Listing \ref{main} you have the header files and then come the declares. In the declare section there are method callers which grab the latest value of that method at any given time.   
+The main.cpp file in Arduino houses the main code, Listing \ref{main} shows the current main.cpp file. The top of main.cpp houses all the header files. Each header file is tied to its individual methods which are used in the individual .cpp files. Looking at Listing \ref{main} you have the header files and next will come the declares. In the declare section there are method callers which grab the latest value of that method at any given time.   
 \\
 
-\noindent After the declares you call a function void setup() which generally would run one time and call most start up methods and initialization processes. Once the setup() function completes its run it then starts the main loop. In Arduino we use void loop() which loops every time it gets to the end but doesn't return any value. Currently I'm using two while loops which let the program pause as we wait for the user to enter in a value. The  first loop has the user select a puzzle and then the second loop tells the user which puzzle has been selected and then will open that .csv file. 
+\noindent After the declares you call a function void setup() which generally would run one time and call most start up methods and initialization processes. Once the setup() function completes its run it then starts the main loop. In Arduino we use void loop() which loops every time it gets to the end but doesn't return any value. Currently I'm using two while loops which let the program pause as we wait for the user to enter in a value. The first loop has the user select a puzzle and then the second loop tells the user which puzzle has been selected and then will open that .csv file. 
 
 \begin{lstlisting}[caption={Puzzle me Chess - main.cpp file},label={main}]
 //******************************************Declare****************************//
@@ -400,11 +400,10 @@ while (Button1.r_button() == 0)
   break;
 }
 } //end void loop
-
 \end{lstlisting}
 
 \subsection{Display}
-Listing \ref{Display} shows the .cpp file that holds all of the methods that are used within the main.cpp file and ran in void setup() and or void main(). Within the Display.cpp file there is the declare area which tells the code which display we are using and how to mapp the pins. After the declare the init.display() function is defined to start the display, followed by print.select.puzzle which shows the user which puzzle to select and the print.user.puzzle which will show the user which puzzle he/she selected. 
+Listing \ref{Display} shows the .cpp file that holds all display methods that are used within the main.cpp file. Within the Display.cpp file there is the declare area which tells the code which display we are using and how to mapp the pins. After the declare the init.display() function is defined to start the display, followed by print.select.puzzle which shows the user which puzzle to select and the print.user.puzzle which will show the user which puzzle he or she selected. 
 
 \begin{lstlisting}[caption={Puzzle me Chess - display.cpp file},label={Display}]
 //******************************************Declare*****************************//
@@ -445,7 +444,7 @@ u8g2.sendBuffer();
 The SD card function is a big part of the Puzzle me Chess project. The goal of this code block is to mapp each of the 64 different spots on the .csv file to a spot on the chess board. After the mapping has been complete it will be used to light up each LED to show the user where to put each chess piece. The SD card code will need to be able to expect three different .csv files and mapp each to a different chess board layout and three completely different chess puzzles. 
 \\
 
-\noindent There are three main parts of the SD card code. The first part has you initialize the SDcard using code from reference \cite{sdcard}, second you need to open the file that was selected by the user, and lastly you need to mapp the open file to a chess board layout. Listing \ref{sdcard1} shows the second part of the SD card code. The code begins with opening a name of the .csv file and then it reads the file and prints the file on the serial terminal. After it prints the file it will close the file. Next I need to figure out how to mapp the SD card to a chess board layout. Look to use a Arduino - Multi-Dimensional Arrays to mapp the SD card to the chess board. 
+\noindent There are three main parts of the SD card code. The first part has you initialize the SDcard using code from reference \cite{sdcard}, second you need to open the file that was selected by the user, and lastly you need to mapp the open file to a chess board layout. Listing \ref{sdcard1} shows the second part of the SD card code. The code begins with opening a name of the .csv file and then it reads the file and prints the file on the serial terminal. After it prints the file it will close the file. Next I need to figure out how to mapp the SD card to a chess board layout. I will look to use a Arduino - Multi-Dimensional Arrays to mapp the SD card to the chess board. 
 
 \begin{lstlisting}[caption={Puzzle me Chess - SDcard.cpp file},label={sdcard1}]
 void SDcard::open()
@@ -478,7 +477,7 @@ void SDcard::open()
 \end{lstlisting}
 
 \subsection{Button}
-The button in Puzzle me Chess is used as a user interaction button. The user will have the ability to select which puzzle he or she would like to do and also when they are done setting up the chess board with the right pieces. Listing \ref{button} shows the .cpp file that is current used in the code. You have two methods. a initialize function that sets up the button to pin 0 as an input and a read button which sets the starting value of button to be equal to 1 and then to read the button and return a value of buttonstate1. 
+The button in Puzzle me Chess is used as a user interaction button. The user will have the ability to select which puzzle he or she would like to do. Listing \ref{button} shows the .cpp file that is currently used in the code. You have two methods. a initialize function that sets up the button to pin 0 as an input and a read button which sets the starting value of button to be equal to 1 and then to read the button and return a value of buttonstate1. 
 
 \begin{lstlisting}[caption={Puzzle me Chess - button.cpp file},label={button}]
 //*****************************************Functions**************************//
@@ -540,7 +539,7 @@ Table \ref{tab:BOM} shows the build of materials (BOM) used in the Puzzle me Che
 \end{table}
 
 \subsection{Test equipment}
-The Puzzle me Chess project consist of little test equipment needed to complete this project, however the ones that will be used are listing below. Testing circuits will be used to insure the to use a Charlieplexing circuit and the sudo mulitiplexer circuit layout before assembly of the entire circuit. 
+The Puzzle me Chess project consist of little test equipment needed to complete this project, however the ones that will be used are listing below. Test circuits will be used to insure how to use a Charlieplexing circuit and the sudo mulitiplexer circuit layout before assembly of the entire circuit. 
 \begin{itemize}
 \item BK precision 2709B MM
 \item Digital Analog Discovery 2
@@ -573,8 +572,6 @@ Table \ref{tab:ording} shows the current list of items that need to be ordered. 
 \section{Development Plan and Schedule}
 Figure \ref{fig:PD} and figure \ref{fig:CBPD} show the Development plan and schedule for the Puzzle me Chess project. Figure \ref{fig:PD} shows the main part of the development plan and is set up in chronological order to finish the code. You can see Figure \ref{fig:PD} that Task 1 is complete and Tasks 2-3 have been started. Figure \ref{fig:CBPD} shows building of the physical chess board and the final demo and final documentation edits. 
 
-
-
 \begin{figure}
   \includegraphics[width=\linewidth]{./Pics/Project_Development.PNG}
   \caption{Project Development}
@@ -588,10 +585,9 @@ Figure \ref{fig:PD} and figure \ref{fig:CBPD} show the Development plan and sche
   \label{fig:CBPD}
 \end{figure}
 
-
-
 \subsection{Milestones and Schedule}
 Below shows the completed and scheduled milestones for the Puzzle me Chess project. These milestones are taken from the course website.  
+
 \begin{itemize}
 \item Completed: 5 Jan	1st Meeting; Project Concept Development
 \item Completed: 1  Feb	Project Concept Development 
@@ -615,7 +611,6 @@ Below shows the Risk that will be involved in making Puzzle me Chess.
 \item Turn on multiple LEDs to show user where to put all pieces on the chess board
 \end{itemize}
 
-
 \subsection{Risk Meditation}
 
 \begin{itemize}
@@ -627,7 +622,7 @@ Below shows the Risk that will be involved in making Puzzle me Chess.
 \end{itemize}
 
 \subsection{Conclusion}
-The Puzzle me Chess project has the capability to take in a .csv file with a standardized format and have the user select which puzzle he or she wants to do. This project also checks for completeness and will have a show hint or show answer feature. This project will challenge me and will exhaust my intelligence to complete this project. After completing this project I will be able to work with SD cards in microcontrollers, be proficient in C++ and embedded C, and be able to use Mulitiplexers with Charlieplexing method. Lastly this project will allow me to exercise my engineering and project management skills to improve for my professional engineering career. 
+The Puzzle me Chess project has the capability to take in a .csv file with a standardized format and have the user select which puzzle he or she wants to do. This project also checks for completeness and will have a show hint and show answer feature. This project will challenge me and will exhaust my intelligence to complete this project. After completing this project I will be able to work with SD cards in microcontrollers, be proficient in C++ and embedded C, and be able to use Mulitiplexers with Charlieplexing method. Lastly this project will allow me to exercise my engineering and project management skills to improve for my professional engineering career. 
 
 
 \begin{thebibliography}{2}

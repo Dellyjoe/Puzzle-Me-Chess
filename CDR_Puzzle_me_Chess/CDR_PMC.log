@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  19 FEB 2021 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.30)  20 FEB 2021 16:05
 entering extended mode
 **./CDR_PMC.tex
 (CDR_PMC.tex
@@ -499,7 +499,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 445--447
+Underfull \hbox (badness 10000) in paragraph at lines 444--446
 
  []
 
@@ -533,7 +533,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <./Pics/Project_Development.PNG, id=70, 488.95172pt x 435.50203pt>
 File: ./Pics/Project_Development.PNG Graphic file (type png)
 <use ./Pics/Project_Development.PNG>
-Package pdftex.def Info: ./Pics/Project_Development.PNG  used on input line 579
+Package pdftex.def Info: ./Pics/Project_Development.PNG  used on input line 578
 .
 (pdftex.def)             Requested size: 469.75499pt x 418.40945pt.
 <./Pics/Chess_Board_Project Demostation_Gnatt.PNG, id=71, 488.95172pt x 202.882
@@ -541,7 +541,7 @@ Package pdftex.def Info: ./Pics/Project_Development.PNG  used on input line 579
 File: ./Pics/Chess_Board_Project Demostation_Gnatt.PNG Graphic file (type png)
 <use ./Pics/Chess_Board_Project Demostation_Gnatt.PNG>
 Package pdftex.def Info: ./Pics/Chess_Board_Project Demostation_Gnatt.PNG  used
- on input line 586.
+ on input line 585.
 (pdftex.def)             Requested size: 469.75499pt x 194.92021pt.
 
 
@@ -575,11 +575,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Here is how much of TeX's memory you used:
  5559 strings out of 479618
  75883 string characters out of 2865026
- 585755 words of memory out of 3000000
+ 588755 words of memory out of 3000000
  22638 multiletter control sequences out of 15000+200000
  414737 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,74p,881b,1813s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,12n,74p,879b,1813s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Use
 rs\josep\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <
 C:\Users\josep\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti0900
@@ -598,7 +598,7 @@ y9.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmti10.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmti12.pfb><C:/Users/josep/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/amsfonts/cm/cmti9.pfb>
-Output written on CDR_PMC.pdf (17 pages, 5243072 bytes).
+Output written on CDR_PMC.pdf (17 pages, 5242924 bytes).
 PDF statistics:
  135 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
