@@ -38,21 +38,31 @@ Button Button1;
 Potentiometer Potentiometer2;
 Display Display1;
 //***************************************Start of Code*************************//
-while (Button1.r_button() == 0)
+
+ while (Button1.r_button() == 1)
 {
-  
+  //****Declare***//
   Potentiometer Potentiometer1; // moved from Declare b/c I need to pull value continuous
+
+  Display1.clear();
+  Serial.print(Button1.r_button());
+  
   Display1.print_select_puzzle(45, 30, Potentiometer1.r_pot());
-}
+  Display1.draw();
+ }
 
 delay(1000); //--> to allow for button press
 
-while (Button1.r_button() == 0)
+while (Button1.r_button() == 1)
 {
+  Display1.clear();
   Display1.print_user_puzzle(0,30, Potentiometer2.r_pot());
+  Display1.draw();
   SDcard0.open();
+  
   break;
 }
+delay(5000);
   // after selecting the puzzle hitting the butotn will send the code to exit this loop and move on
   // to mapping the vaule to the sd card. 
 
