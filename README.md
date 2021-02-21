@@ -1,7 +1,5 @@
 # Puzzle Me Chess
 
-Author: Joseph Vitale
-
 ## Description
 
 In chess there are many different ways to play the game. After each player moves three times
