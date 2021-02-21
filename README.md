@@ -23,13 +23,13 @@ puzzle is complete.
 
 * User puts correct pieces on each spot
 * Chess Board will be lit evenly with light
-* Each le added to the SDcard will be in a standardized format
+* Each file added to the SDcard will be in a standardized format
   
 ## Capabilities
 
 * LED light indicator to show user hint/show answer feature
 * OLED to describe to the user where to put pieces
-* Read a .csv le standardized format to quickly import puzzles
+* Read a .csv file standardized format to quickly import puzzles
 * User input switch to show user answer, indicated by LEDs
 * User input Button to show user the hint
 * Check board spots are correct for a given puzzle
