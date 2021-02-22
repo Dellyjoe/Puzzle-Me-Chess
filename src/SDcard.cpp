@@ -10,18 +10,22 @@ const int chipSelect = BUILTIN_SDCARD; // setting SD library to read from Intern
 //******************************************Setup******************************//
 void SDcard::int_SD()
 {
-  while (!Serial);
-  if (!SD.begin(chipSelect)) {
-    Serial.println("initialization failed. Things to check:");
-    Serial.println("1. is a card inserted?");
-    Serial.println("2. is your wiring correct?");
-    Serial.println("3. did you change the chipSelect pin to match your shield or module?");
-    Serial.println("Note: press reset or reopen this serial monitor after fixing your issue!");
-    while (true);
-  }
-  Serial.println("done!");
-  Serial.println("initialization of SD card = done.");
+    while (!Serial)
+        ;
+    if (!SD.begin(chipSelect))
+    {
+        Serial.println("initialization failed. Things to check:");
+        Serial.println("1. is a card inserted?");
+        Serial.println("2. is your wiring correct?");
+        Serial.println("3. did you change the chipSelect pin to match your shield or module?");
+        Serial.println("Note: press reset or reopen this serial monitor after fixing your issue!");
+        while (true)
+            ;
+    }
+    Serial.println("done!");
+    Serial.println("initialization of SD card = done.");
 } // end of int_SD
+
 //*****************************************Functions***************************//
 void SDcard::print_SD_info()
 {
@@ -117,7 +121,7 @@ void SDcard::openfile()
 
 void SDcard::printfiles()
 {
-// we'll use the initialization code from the utility libraries
+    // we'll use the initialization code from the utility libraries
     // since we're just testing if the card is working!
     if (!card.init(SPI_HALF_SPEED, chipSelect))
     {
@@ -132,7 +136,7 @@ void SDcard::printfiles()
         Serial.println("Wiring is correct and a card is present.");
     }
 
-     if (!volume.init(card))
+    if (!volume.init(card))
     {
         Serial.println("Could not find FAT16/FAT32 partition.\nMake sure you've formatted the card");
         return;

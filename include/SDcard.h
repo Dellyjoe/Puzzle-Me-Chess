@@ -1,11 +1,11 @@
 #include <Arduino.h>
-#include <SD.h>  // SD card library 
-#include <SPI.h> // SD card library 
+#include <SD.h>  // SD card library
+#include <SPI.h> // SD card library
 
 class SDcard
 {
 private:
-public: 
+public:
     void int_SD();
     void print_SD_info();
     void openfile();

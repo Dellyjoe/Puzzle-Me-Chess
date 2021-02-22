@@ -3,7 +3,7 @@
 class SWITCH
 {
 private:
-read();
+    read();
+
 public:
- 
 }; // end Class SWITCH
