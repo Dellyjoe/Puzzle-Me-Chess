@@ -24,46 +24,36 @@ Potentiometer Potentiometer0;
 //******************************************Setup******************************//
 void setup()
 {
-  Serial.begin(9600);
   Display0.int_display();
   SDcard0.int_SD();
  // SDcard0.print_SD_info(); //uncomment to print SD info
   SDcard0.printfiles();
+  Serial.begin(9600);
 //******************************************Inputs*****************************//
   Button0.init_button(); //setting D0 to button
-  Potentiometer0.init_pot(); // setting A0 to pot
+  Potentiometer0.init_pot(0, 1,3); // setting A0 to pot
 } // end setup
 
 void loop()
 {
-//******************************************Declare****************************//
-Button Button1;
-Potentiometer Potentiometer2;
-Display Display1;
 //***************************************Start of Code*************************//
 
- while (Button1.r_button() == 1)
-{
-  //****Declare***//
-  Potentiometer Potentiometer1; // moved from Declare b/c I need to pull value continuous
-
-  Display1.clear();
-  Display1.print_select_puzzle(45, 30, Potentiometer1.r_pot());
-  Display1.draw();
+while (Button0.r_button() == 1)
+ {
+  Display0.clear();
+  Display0.print_select_puzzle(45, 30, Potentiometer0.r_pot());
+  Display0.draw();
  }
 
-delay(1000); //--> to allow for button press
+  delay(1000); //--> to allow for button press
 
-while (Button1.r_button() == 1)
-{
-  Display1.clear();
-  Display1.print_user_puzzle(0,30, Potentiometer2.r_pot());
-  Display1.draw();
+  Display0.clear();
+  Display0.print_user_puzzle(0,30, Potentiometer0.r_pot());
+  Display0.draw();
   
-  break;
-}
-SDcard0.openfile();
-delay(5000);
+  SDcard0.openfile();
+
+  delay(5000);
 
 // change the open and close on the SDcard methods
 // make an if funtion that pulls out the 1-3 vaule on the pot and opens that file to that number
