@@ -31,7 +31,7 @@ void setup()
   SDcard0.printfiles();
   Serial.begin(9600);
   //******************************************Inputs*****************************//
-  Button0.init_button();            //setting D0 to button
+  Button0.init_button(1);           //setting D1 to button
   Potentiometer0.init_pot(0, 1, 3); // setting A0 to pot
 } // end setup
 
@@ -48,7 +48,7 @@ void loop()
   delay(1000); //--> to allow for button press
 
   Display0.clear();
-  Display0.print_user_puzzle(0, 30, Potentiometer0.r_pot());
+  Display0.print_user_puzzle(58, 43, Potentiometer0.r_pot());
   Display0.draw();
 
   SDcard0.openfile(); // take in a file name
