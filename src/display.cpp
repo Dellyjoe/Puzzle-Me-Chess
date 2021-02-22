@@ -35,9 +35,10 @@ void Display::print_user_puzzle(int a, int b, int value1)
 {
     u8g2.setFlipMode(1);
     u8g2.setFont(u8g2_font_9x18_tf);
-    u8g2.drawStr(0, 12, "User Selected");
+    u8g2.drawStr(0, 12, "Opening");
+     u8g2.drawStr(0, 28, "Selected");
     u8g2.drawStr(a, b, "#");
-    u8g2.setCursor(15, 30);
+    u8g2.setCursor(70, 43);
     u8g2.print(value1);
-    u8g2.drawStr(30, 30, "Puzzle");
+    u8g2.drawStr(0, 43, "Puzzle");
 } // end void print_user_puzzle
