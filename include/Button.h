@@ -3,10 +3,10 @@
 class Button
 {
 private:
-    const int button1 = 1;
-    int buttonstate1 = 0;
+    int button_pin_number;
+    int buttonstate;
 
 public:
     int r_button();
-    void init_button();
+    void init_button(int pinnumber);
 }; // end Class BUTTON
