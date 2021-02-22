@@ -3,8 +3,10 @@
 class Potentiometer
 {
 private:
-  const int pot1 = analogRead(0); // Local variable  pot on pin A0
+  int pot_pin_number;
+  int mapp_low;
+  int mapp_high;
 public:
   int r_pot();
-  void init_pot();
+  void init_pot(int pinnumber, int low, int high);
 }; // end Class Potentiometer
