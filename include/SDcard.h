@@ -11,7 +11,6 @@ public:
     void openfile();
     void mapp();
     void printfiles();
-    void printDirectory(File dir, int numTabs);
     void close();
 
     // figure out how to pass a spring to use close() and open() as a mobuler funtion
