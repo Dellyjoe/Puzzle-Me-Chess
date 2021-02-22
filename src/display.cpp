@@ -9,6 +9,16 @@ void Display::int_display()
     u8g2.begin(); // Start the Library code for the Display
 } // end void int_display
 //*****************************************Functions***************************//
+void Display::clear() 
+{
+ u8g2.clearBuffer(); // clear the internal memory
+} // end void clear
+
+void Display::draw() 
+{
+ u8g2.sendBuffer(); // transfer internal memory to the display
+} // end void clear
+
 void Display::print_select_puzzle(int x, int y, int value)
 {   
     u8g2.setFlipMode(1);             // Flips display 180 (1) = True
@@ -29,13 +39,3 @@ u8g2.setCursor(15, 30);
 u8g2.print(value1);
 u8g2.drawStr(30, 30, "Puzzle");
 } // end void print_user_puzzle
-
-void Display::clear() 
-{
- u8g2.clearBuffer(); // clear the internal memory
-} // end void clear
-
-void Display::draw() 
-{
- u8g2.sendBuffer(); // transfer internal memory to the display
-} // end void clear
