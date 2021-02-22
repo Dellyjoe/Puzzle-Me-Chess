@@ -27,7 +27,8 @@ void setup()
   Serial.begin(9600);
   Display0.int_display();
   SDcard0.int_SD();
-  //SDcard0.print_SD_info(); //uncomment to print SD info
+ // SDcard0.print_SD_info(); //uncomment to print SD info
+  SDcard0.printfiles();
 //******************************************Inputs*****************************//
   Button0.init_button(); //setting D0 to button
   Potentiometer0.init_pot(); // setting A0 to pot
