@@ -24,8 +24,10 @@ Potentiometer Potentiometer0;
 //******************************************Setup******************************//
 void setup()
 {
+  Serial.begin(9600);
   Display0.int_display();
   SDcard0.int_SD();
+  //SDcard0.print_SD_info(); //uncomment to print SD info
 //******************************************Inputs*****************************//
   Button0.init_button(); //setting D0 to button
   Potentiometer0.init_pot(); // setting A0 to pot
@@ -45,8 +47,6 @@ Display Display1;
   Potentiometer Potentiometer1; // moved from Declare b/c I need to pull value continuous
 
   Display1.clear();
-  Serial.print(Button1.r_button());
-  
   Display1.print_select_puzzle(45, 30, Potentiometer1.r_pot());
   Display1.draw();
  }
@@ -58,12 +58,15 @@ while (Button1.r_button() == 1)
   Display1.clear();
   Display1.print_user_puzzle(0,30, Potentiometer2.r_pot());
   Display1.draw();
-  SDcard0.open();
   
   break;
 }
+SDcard0.openfile();
 delay(5000);
-  // after selecting the puzzle hitting the butotn will send the code to exit this loop and move on
-  // to mapping the vaule to the sd card. 
+
+// change the open and close on the SDcard methods
+// make an if funtion that pulls out the 1-3 vaule on the pot and opens that file to that number
+// after selecting the puzzle hitting the butotn will send the code to exit this loop and move on
+// to mapping the vaule to the sd card. 
 
 } //end void loop

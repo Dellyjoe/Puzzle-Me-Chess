@@ -1,23 +1,30 @@
 #include <Arduino.h>
 #include <SDcard.h>
 
-//******************************************Declare*****************************//
+//******************************************Declare****************************//
 Sd2Card card;
 SdVolume volume;
 SdFile root;
 const int chipSelect = BUILTIN_SDCARD; // setting SD library to read from Internal SD card
 
-//******************************************Initializing SD Reader***************//
+//******************************************Setup******************************//
 void SDcard::int_SD()
 {
-    Serial.begin(9600);
-    while (!Serial)
-    {
-        ; // wait for serial port to connect.
-    }
-
-    Serial.print("\nInitializing SD card...");
-
+  while (!Serial);
+  if (!SD.begin(chipSelect)) {
+    Serial.println("initialization failed. Things to check:");
+    Serial.println("1. is a card inserted?");
+    Serial.println("2. is your wiring correct?");
+    Serial.println("3. did you change the chipSelect pin to match your shield or module?");
+    Serial.println("Note: press reset or reopen this serial monitor after fixing your issue!");
+    while (true);
+  }
+  Serial.println("done!");
+  Serial.println("initialization of SD card = done.");
+} // end of int_SD
+//*****************************************Functions***************************//
+void SDcard::print_SD_info()
+{
     // we'll use the initialization code from the utility libraries
     // since we're just testing if the card is working!
     if (!card.init(SPI_HALF_SPEED, chipSelect))
@@ -83,15 +90,16 @@ void SDcard::int_SD()
     // list all files in the card with date and size
     root.ls(LS_R | LS_DATE | LS_SIZE);
     root.close();
-} // end intSDReader
+} // end print_SD_info
 
-void SDcard::open()
+void SDcard::openfile()
 {
     if (!SD.begin(chipSelect))
     {
-        while (true);
+        while (true)
+            ;
     }
-    File dataFile = SD.open("1015704.CSV" ); //opening File T015704.csv
+    File dataFile = SD.open("1015704.CSV"); //opening File T015704.csv
 
     // if the file is available, write to it:
 
@@ -111,4 +119,29 @@ void SDcard::open()
     {
         Serial.println("error opening 1015704.CSV");
     }
+} // end openfile
+
+void SDcard::printDirectory(File dir, int numTabs)
+{
+while (true) {
+ 
+    File entry =  dir.openNextFile();
+    if (! entry) {
+      // no more files
+      break;
+    }
+    for (uint8_t i = 0; i < numTabs; i++) {
+      Serial.print('\t');
+    }
+    Serial.print(entry.name());
+    if (entry.isDirectory()) {
+      Serial.println("/");
+      printDirectory(entry, numTabs + 1);
+    } else {
+      // files have sizes, directories do not
+      Serial.print("\t\t");
+      Serial.println(entry.size(), DEC);
+    }
+    entry.close();
+  }
 }
