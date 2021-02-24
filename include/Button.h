@@ -7,6 +7,6 @@ private:
     int buttonstate;
 
 public:
-    void init_button(int pinnumber1);
+    void init_button(int pinnumber);
     int r_button();
-}; // end Class BUTTON
+}; // end Class BUTTON7
