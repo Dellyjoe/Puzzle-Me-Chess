@@ -18,7 +18,7 @@ int Switch::r_switch()
     // }
     // else
     // {
-    //     Serial.println("Switch Off"); // switch to Right = Low 
+    //     Serial.println("Switch Off"); // switch to Right = Low
     // }
-    return(switchstate);
+    // return (switchstate);
 } // end r_switch
