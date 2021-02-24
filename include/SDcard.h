@@ -5,6 +5,8 @@
 class SDcard
 {
 private:
+   // char Str_puzzle_name[15] ={"1015704.CSV" ,"561534.CSV", "1036958.CSV"};
+   // char mapp_arry [] [];
 public:
     void int_SD();
     void print_SD_info();
