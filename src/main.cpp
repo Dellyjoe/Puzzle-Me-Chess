@@ -38,7 +38,6 @@ void setup()
   Switch0.init_switch(0);           // seeting D0 to switch
 } // end setup
 
-
 void loop()
 {
   //***************************************Test Code*****************************//
@@ -59,7 +58,21 @@ void loop()
   Display0.print_user_puzzle(58, 43, Potentiometer0.r_pot());
   Display0.draw();
 
-  SDcard0.openfile(); //have this take in a file name
+  switch (Potentiometer0.r_pot())
+  {
+  case 1:
+    Serial.println(SDcard0.str_puzzle_name[0]); // prints index 0 in const char array
+    //SDcard0.openfile(0); //have this take in a file name
+    break;
+  case 2:
+    Serial.println(SDcard0.str_puzzle_name[1]);
+    //SDcard0.openfile("1036958.CSV");
+    break;
+  case 3:
+    Serial.println(SDcard0.str_puzzle_name[2]);
+    // SDcard0.openfile("1015704.CSV");
+    break;
+  }
 
   delay(5000);
 
