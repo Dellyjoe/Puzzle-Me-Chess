@@ -38,11 +38,15 @@ void setup()
   Switch0.init_switch(0);           // seeting D0 to switch
 } // end setup
 
-//***************************************Start of Code*************************//
 
 void loop()
 {
-  while (Button0.r_button() == 1)
+  //***************************************Test Code*****************************//
+  // Potentiometer0.r_pot();
+  // Button0.r_button();
+  // Switch0.r_switch();
+  //***************************************Start of Code*************************//
+  while (Button0.r_button() == HIGH)
   {
     Display0.clear();
     Display0.print_select_puzzle(45, 30, Potentiometer0.r_pot());
