@@ -15,12 +15,14 @@
 #include <Display.h>
 #include <SDcard.h>
 #include <Button.h>
+#include <Switch.h>
 
 //******************************************Declare****************************//
 Display Display0; // Setting Object 0 for Display
 SDcard SDcard0;
 Button Button0;
 Potentiometer Potentiometer0;
+Switch Switch0;
 
 //******************************************Setup******************************//
 void setup()
@@ -33,9 +35,11 @@ void setup()
   //******************************************Inputs*****************************//
   Button0.init_button(1);           //setting D1 to button
   Potentiometer0.init_pot(0, 1, 3); // setting A0 to pot
+  Switch0.init_switch(0);           // seeting D0 to switch
 } // end setup
 
 //***************************************Start of Code*************************//
+
 void loop()
 {
   while (Button0.r_button() == 1)
@@ -51,9 +55,12 @@ void loop()
   Display0.print_user_puzzle(58, 43, Potentiometer0.r_pot());
   Display0.draw();
 
-  SDcard0.openfile(); // take in a file name
+  SDcard0.openfile(); //have this take in a file name
 
   delay(5000);
+
+  // look into making a grid for the board that will use your Muxltiplexers
+  // to turn on or off leds and also read in voltage levels
 
   // change the open and close on the SDcard methods
   // make an if funtion that pulls out the 1-3 vaule on the pot and opens that file to that number
