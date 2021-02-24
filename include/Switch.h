@@ -1,9 +1,12 @@
 #include <Arduino.h>
 
-class SWITCH
+class Switch
 {
 private:
-    read();
-
+    int switch_pin_number;
+    int switchstate;
+    
 public:
+    void init_switch(int pinnumber);
+    int r_switch();
 }; // end Class SWITCH
