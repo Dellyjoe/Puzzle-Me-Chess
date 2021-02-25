@@ -6,7 +6,9 @@ Sd2Card card;
 SdVolume volume;
 SdFile root;
 const int chipSelect = BUILTIN_SDCARD; // setting SD library to read from Internal SD card
-
+// 11 X 8 array
+#define ROW_DIM 11
+#define COL_DIM 8
 //******************************************Setup******************************//
 void SDcard::int_SD()
 {
@@ -109,6 +111,7 @@ void SDcard::open_file(int indexer)
         {
 
             Serial.write(dataFile.read());
+
         }
         dataFile.close();
     }
@@ -117,9 +120,15 @@ void SDcard::open_file(int indexer)
 
     else
     {
-        Serial.println("error opening 1015704.CSV");
+        Serial.println("error opening file");
     }
+
+
+    
 } // end openfile
+
+
+
 
 void SDcard::print_directory()
 {
