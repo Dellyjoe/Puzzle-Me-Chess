@@ -90,14 +90,16 @@ void SDcard::print_SD_info()
 
 } // end print_SD_info
 
-void SDcard::openfile()
+void SDcard::open_file(int indexer)
 {
+    filename_index = indexer;
+
     if (!SD.begin(chipSelect))
     {
         while (true)
             ;
     }
-    File dataFile = SD.open("1015704.CSV"); //opening File T015704.csv
+    File dataFile = SD.open(str_puzzle_name[filename_index]); //opening File T015704.csv
 
     // if the file is available, write to it:
 
@@ -119,7 +121,7 @@ void SDcard::openfile()
     }
 } // end openfile
 
-void SDcard::printfiles()
+void SDcard::print_directory()
 {
     // we'll use the initialization code from the utility libraries
     // since we're just testing if the card is working!
