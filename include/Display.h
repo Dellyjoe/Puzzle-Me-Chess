@@ -6,6 +6,7 @@
 class Display
 {
 private:
+
 public:
   void int_display();
   void clear();

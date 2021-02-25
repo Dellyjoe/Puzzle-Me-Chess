@@ -63,8 +63,8 @@ void loop()
   case 1:
   
     Serial.println("Opening File 1015704.CSV"); // prints index 0 in const char array
-    Serial.println("___________________"); // line breakup for readability
-    SDcard0.open_file(0);                   // Open File indexer 0
+    Serial.println("___________________");      // line breakup for readability
+    SDcard0.open_file(0);                       // Open File indexer 0
     Serial.println("___________________"); 
     break;
   case 2:

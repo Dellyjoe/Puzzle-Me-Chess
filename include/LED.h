@@ -2,6 +2,7 @@
 class LED
 {
 private:
+
 public:
     void turnon();
     void turnoff();
