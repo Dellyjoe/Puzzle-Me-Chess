@@ -30,7 +30,7 @@ void setup()
   Display0.int_display();
   SDcard0.int_SD();
   //SDcard0.print_SD_info(); //uncomment to print SD info
-  SDcard0.printfiles();
+  SDcard0.print_directory();
   Serial.begin(9600);
   //******************************************Inputs*****************************//
   Button0.init_button(1);           //setting D1 to button
@@ -61,20 +61,27 @@ void loop()
   switch (Potentiometer0.r_pot())
   {
   case 1:
-    Serial.println(SDcard0.str_puzzle_name[0]); // prints index 0 in const char array
-    //SDcard0.openfile(0); //have this take in a file name
+  
+    Serial.println("Opening File 1015704.CSV"); // prints index 0 in const char array
+    Serial.println("___________________"); // line breakup for readability
+    SDcard0.open_file(0);                   // Open File indexer 0
+    Serial.println("___________________"); 
     break;
   case 2:
-    Serial.println(SDcard0.str_puzzle_name[1]);
-    //SDcard0.openfile("1036958.CSV");
+    Serial.println("Opening File 561534.CSV");
+    Serial.println("___________________");
+    SDcard0.open_file(1);
+    Serial.println("___________________");
     break;
   case 3:
-    Serial.println(SDcard0.str_puzzle_name[2]);
-    // SDcard0.openfile("1015704.CSV");
+    Serial.println("Opening File 1036958.CSV");
+    Serial.println("___________________"); 
+    SDcard0.open_file(2);
+    Serial.println("___________________");
     break;
   }
 
-  delay(5000);
+  delay(3000);
 
   // look into making a grid for the board that will use your Muxltiplexers
   // to turn on or off leds and also read in voltage levels
