@@ -16,6 +16,8 @@
 #include <SDcard.h>
 #include <Button.h>
 #include <Switch.h>
+#include <LED.h>
+#include <Charlieplex.h>
 
 //******************************************Declare****************************//
 Display Display0; // Setting Object 0 for Display
@@ -23,6 +25,19 @@ SDcard SDcard0;
 Button Button0;
 Potentiometer Potentiometer0;
 Switch Switch0;
+LED LED0;
+//*************************************Charlieplexing_Declare******************//
+#define NUMBER_OF_PINS 3
+byte pins[] = {24,25,26}; // 0 , 1 , 2
+Charlieplex charlieplex = Charlieplex(pins,NUMBER_OF_PINS);
+//individual 'pins' , address charlieplex pins as you would address an array
+charliePin led1 = { 0 , 1}; //led1 is indicated by current flow from 24 to 25
+charliePin led2 = { 1 , 2 };
+charliePin led3 = { 0 , 2 };
+charliePin led4 = { 1 , 0 };
+charliePin led5 = { 2 , 1 };
+charliePin led6 = { 2 , 0 };
+boolean singleOn = false;
 
 //******************************************Setup******************************//
 void setup()
@@ -32,19 +47,21 @@ void setup()
   //SDcard0.print_SD_info(); //uncomment to print SD info
   SDcard0.print_directory();
   Serial.begin(9600);
-  //******************************************Inputs*****************************//
+  //******************************************Inputs***************************//
   Button0.init_button(1);           //setting D1 to button
   Potentiometer0.init_pot(0, 1, 3); // setting A0 to pot
   Switch0.init_switch(0);           // seeting D0 to switch
 } // end setup
 
+
 void loop()
 {
-  //***************************************Test Code*****************************//
+  //***************************************Test Code***************************//
   // Potentiometer0.r_pot();
   // Button0.r_button();
   // Switch0.r_switch();
-  //***************************************Start of Code*************************//
+  //***************************************Start of Code***********************//
+
   while (Button0.r_button() == HIGH)
   {
     Display0.clear();
@@ -81,10 +98,27 @@ void loop()
     break;
   }
 
-  delay(3000);
+  while (Button0.r_button() == HIGH)
+  {
+    LED0.charlie(HIGH,LOW, -1); // -1 = setting pin to input
+    delay(1);
+    // charlie(LOW,HIGH, -1);
+    // delay(1);
+    // charlie(HIGH,-1, LOW);
+    // delay(1);
+    LED0.charlie(LOW,-1, HIGH);
+    delay(1);
+    // charlie(-1,HIGH, LOW);
+    // delay(1);
+    // charlie(-1,LOW, HIGH);
+    // delay(1);
+  }
+charlieplex.clear(); // turning off all LEDs
+delay(1000); // allow for button press
 
   // look into making a grid for the board that will use your Muxltiplexers
   // to turn on or off leds and also read in voltage levels
+  // look into maybe just using a 1d arry, instead of a 2d arry --> this might be easier in the long run
 
   // change the open and close on the SDcard methods
   // make an if funtion that pulls out the 1-3 vaule on the pot and opens that file to that number
