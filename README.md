@@ -55,5 +55,3 @@ The Puzzle me Chess project will feature a Microcontroller, one 21x21 Wooden Che
 Multiplexers, 1 Switch, 1 Potentiometer, 1 Button, and A Display. Figure 1 shows the current
 circuit layout as of 02/16/2021, this circuit doesn't show the chess board. Explanation of the
 System Block Diagram to follow.
-
-![Functional Block Diagram](Pictures_readme/Functional Block Diagram.PNG)
