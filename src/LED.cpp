@@ -2,40 +2,57 @@
 #include <LED.h>
 
 //******************************************Declare****************************//
-#define CHARLIE_A 24 // pin number
-#define CHARLIE_B 25
-#define CHARLIE_C 26
+#define CHARLIE_24 24 // pin number
+#define CHARLIE_25 25
+#define CHARLIE_26 26
+#define CHARLIE_27 27
+#define CHARLIE_28 28
+#define CHARLIE_29 29
+#define CHARLIE_30 30
+#define CHARLIE_31 31
+#define CHARLIE_32 32
 
 //******************************************Setup******************************//
 void LED::init_LED(){
 
   //******************************************Inputs***************************//
-  pinMode(CHARLIE_A, OUTPUT);
-  pinMode(CHARLIE_B, OUTPUT);
-  pinMode(CHARLIE_C, OUTPUT);
+  pinMode(CHARLIE_24, OUTPUT);
+  pinMode(CHARLIE_25, OUTPUT);
+  pinMode(CHARLIE_26, OUTPUT);
+  pinMode(CHARLIE_27, OUTPUT);
+  pinMode(CHARLIE_28, OUTPUT);
+  pinMode(CHARLIE_29, OUTPUT);
+  pinMode(CHARLIE_30, OUTPUT);
+  pinMode(CHARLIE_31, OUTPUT);
+  pinMode(CHARLIE_32, OUTPUT);
+  } // end init_LED
 
-  }
-
-void LED::charlie(int a, int b, int c ) // ,int d, int e, int f, int g, int H,
+void LED::charlie(int LEDarry[] ) // ,int d, int e, int f, int g, int H,
 {
-  if(a < 0){
-    pinMode(CHARLIE_A, INPUT);
+  index = LEDarry[0]; // Starts at A
+
+  if(index < 0){
+    pinMode(CHARLIE_24, INPUT);
   } else {
-    pinMode(CHARLIE_A, OUTPUT);
-    digitalWrite(CHARLIE_A, a);
+    pinMode(CHARLIE_24, OUTPUT);
+    digitalWrite(CHARLIE_24, index);
   }
 
-   if(b < 0){
-    pinMode(CHARLIE_B, INPUT);
+  index = LEDarry[1];
+
+   if(index < 0){
+    pinMode(CHARLIE_25, INPUT);
   } else {
-    pinMode(CHARLIE_B, OUTPUT);
-    digitalWrite(CHARLIE_B, b);
+    pinMode(CHARLIE_25, OUTPUT);
+    digitalWrite(CHARLIE_25, index);
   }
 
-   if(c < 0){
-    pinMode(CHARLIE_C, INPUT);
+  index = LEDarry[2];
+
+   if(index < 0){
+    pinMode(CHARLIE_26, INPUT);
   } else {
-    pinMode(CHARLIE_C, OUTPUT);
-    digitalWrite(CHARLIE_C, c);
+    pinMode(CHARLIE_26, OUTPUT);
+    digitalWrite(CHARLIE_26, index);
   }
-}
+} // end class charlie
