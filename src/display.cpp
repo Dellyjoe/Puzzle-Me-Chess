@@ -25,10 +25,16 @@ void Display::print_select_puzzle(int x, int y, int value)
 {
     u8g2.setFlipMode(1);             // Flips display 180 (1) = True
     u8g2.setFont(u8g2_font_9x18_tf); // choose a suitable font
-    u8g2.drawStr(0, 12, "Select Puzzle");
+    u8g2.drawStr(0, 12, "User Selection");
+    u8g2.drawStr(0, 30, "Puzzle");
     u8g2.drawStr(x, y, "#");
-    u8g2.setCursor(60, 30); // set cursor location
+    u8g2.setCursor(75, 30); // set cursor location
     u8g2.print(value);
+    u8g2.drawFrame(3,40,50,20);
+    u8g2.drawStr(6, 55, "Click");
+
+    //u8g2.setFont(u8g2_font_9x12_tf);
+   // u8g2.drawStr(0, 50, "Click Button when completed");
 } // end void print_select_puzzle
 
 void Display::print_user_puzzle(int a, int b, int value1)

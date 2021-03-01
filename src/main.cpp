@@ -60,7 +60,7 @@ void loop()
   while (Button0.r_button() == HIGH)
   {
     Display0.clear();
-    Display0.print_select_puzzle(45, 30, Potentiometer0.r_pot());
+    Display0.print_select_puzzle(60, 30, Potentiometer0.r_pot());
     Display0.draw();
   }
 
