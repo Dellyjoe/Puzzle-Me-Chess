@@ -17,8 +17,6 @@
 #include <Button.h>
 #include <Switch.h>
 #include <LED.h>
-#include <Charlieplex.h>
-
 //******************************************Declare****************************//
 Display Display0; // Setting Object 0 for Display
 SDcard SDcard0;
@@ -26,18 +24,6 @@ Button Button0;
 Potentiometer Potentiometer0;
 Switch Switch0;
 LED LED0;
-//*************************************Charlieplexing_Declare******************//
-#define NUMBER_OF_PINS 3
-byte pins[] = {24,25,26}; // 0 , 1 , 2
-Charlieplex charlieplex = Charlieplex(pins,NUMBER_OF_PINS);
-//individual 'pins' , address charlieplex pins as you would address an array
-charliePin led1 = { 0 , 1}; //led1 is indicated by current flow from 24 to 25
-charliePin led2 = { 1 , 2 };
-charliePin led3 = { 0 , 2 };
-charliePin led4 = { 1 , 0 };
-charliePin led5 = { 2 , 1 };
-charliePin led6 = { 2 , 0 };
-boolean singleOn = false;
 
 //******************************************Setup******************************//
 void setup()
@@ -52,7 +38,6 @@ void setup()
   Potentiometer0.init_pot(0, 1, 3); // setting A0 to pot
   Switch0.init_switch(0);           // seeting D0 to switch
 } // end setup
-
 
 void loop()
 {
@@ -98,23 +83,57 @@ void loop()
     break;
   }
 
-  while (Button0.r_button() == HIGH)
+  while ((Button0.r_button() == HIGH) & (Potentiometer0.r_pot() ==1)) // to set up Puzzle #1015704
   {
-    LED0.charlie(HIGH,LOW, -1); // -1 = setting pin to input
+    LED0.charlie(LED0.LEDA1);
     delay(1);
-    // charlie(LOW,HIGH, -1);
-    // delay(1);
-    // charlie(HIGH,-1, LOW);
-    // delay(1);
-    LED0.charlie(LOW,-1, HIGH);
+    LED0.charlie(LED0.LEDA2);
     delay(1);
-    // charlie(-1,HIGH, LOW);
+    LED0.charlie(LED0.LEDA3);
+    delay(1);
+    // LED0.charlie(LED0.LEDB1);
     // delay(1);
-    // charlie(-1,LOW, HIGH);
+    LED0.charlie(LED0.LEDB2);
+    delay(1);
+    // LED0.charlie(LED0.LEDB3);
     // delay(1);
   }
-charlieplex.clear(); // turning off all LEDs
-delay(1000); // allow for button press
+
+
+  while ((Button0.r_button() == HIGH) & (Potentiometer0.r_pot() ==2)) // to set up Puzzle #561534
+  {
+    LED0.charlie(LED0.LEDA1);
+    delay(1);
+    LED0.charlie(LED0.LEDA2);
+    delay(1);
+     // LED0.charlie(LED0.LEDB1);
+    // delay(1);
+    // LED0.charlie(LED0.LEDB1);
+    // delay(1);
+    LED0.charlie(LED0.LEDB2);
+    delay(1);
+    // LED0.charlie(LED0.LEDB3);
+    // delay(1);
+  }
+
+  while ((Button0.r_button() == HIGH) & (Potentiometer0.r_pot() ==3)) // to set up Puzzle #1036958
+  {
+    LED0.charlie(LED0.LEDA1);
+    delay(1);
+    // LED0.charlie(LED0.LEDA2);
+    // delay(1);
+     // LED0.charlie(LED0.LEDB1);
+    // delay(1);
+    // LED0.charlie(LED0.LEDB1);
+    // delay(1);
+    // LED0.charlie(LED0.LEDB2);
+    // delay(1);
+    // LED0.charlie(LED0.LEDB3);
+    // delay(1);
+  }
+
+  LED0.charlie(LED0.LEDclear); // clears all LEDs
+  delay(1000); // allow for button press
 
   // look into making a grid for the board that will use your Muxltiplexers
   // to turn on or off leds and also read in voltage levels
