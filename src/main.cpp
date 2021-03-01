@@ -11,10 +11,11 @@
 // puzzle a sound will play to tell the user has completed the puzzle.    *
 //*************************************************************************
 #include <Arduino.h>
-#include <Potentiometer.h>
 #include <Display.h>
 #include <SDcard.h>
 #include <Button.h>
+#include <Potentiometer.h>
+#include <Buzzer.h>
 #include <Switch.h>
 #include <LED.h>
 //******************************************Declare****************************//
@@ -22,6 +23,7 @@ Display Display0; // Setting Object 0 for Display
 SDcard SDcard0;
 Button Button0;
 Potentiometer Potentiometer0;
+Buzzer Buzzer0;
 Switch Switch0;
 LED LED0;
 
@@ -34,8 +36,9 @@ void setup()
   SDcard0.print_directory();
   Serial.begin(9600);
   //******************************************Inputs***************************//
-  Button0.init_button(1);           //setting D1 to button
+  Button0.init_button(1);           // setting D1 to button
   Potentiometer0.init_pot(0, 1, 3); // setting A0 to pot
+  Buzzer0.init_buzzer(15);           // setting A1 to buzzer
   Switch0.init_switch(0);           // seeting D0 to switch
 } // end setup
 
@@ -45,8 +48,15 @@ void loop()
   // Potentiometer0.r_pot();
   // Button0.r_button();
   // Switch0.r_switch();
-  //***************************************Start of Code***********************//
+  // while (Button0.r_button() == HIGH)
+  // {
+  //   Buzzer0.write_buzzer();
+  // }
 
+  // Buzzer0.turn_off_buzzer();
+  // delay(1000);//--> to allow for button press
+  //***************************************Start of Code***********************//
+ 
   while (Button0.r_button() == HIGH)
   {
     Display0.clear();
@@ -85,6 +95,7 @@ void loop()
 
   while ((Button0.r_button() == HIGH) & (Potentiometer0.r_pot() ==1)) // to set up Puzzle #1015704
   {
+    
     LED0.charlie(LED0.LEDA1);
     delay(1);
     LED0.charlie(LED0.LEDA2);
