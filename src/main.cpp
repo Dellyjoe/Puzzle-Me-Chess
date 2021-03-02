@@ -1,15 +1,15 @@
-//*************************************************************************
-// Programmer: Joseph __Vitale                                            *
-// Start Date: 02/08/2021                                                 *
-// Completion Date: 05/10/2021                                            *
-// Create a physical chess puzzle on a chess board. This board will       *
-// have user checkability and software mapped defined chess puzzles.      *
-// At first there will be 3 different chess puzzles ranging from easy     *
-// to hard. There will be an OLED screen to show the user where to put    *
-// the prices to set up the chess puzzle. This project will also have     *
-// a feature to show user hint or show asnwer. After completing the       *
-// puzzle a sound will play to tell the user has completed the puzzle.    *
-//*************************************************************************
+//*****************************************************************************//
+// Programmer: Joseph __Vitale                                                 //
+// Start Date: 02/08/2021                                                      //
+// Phase #1 Completion Date: 05/10/2021                                        //
+// Create a physical chess puzzle on a chess board. This board will            //
+// have user checkability and software mapped defined chess puzzles.           //
+// At first there will be 3 different chess puzzles ranging from easy          //
+// to hard. There will be an OLED screen to show the user where to put         //
+// the prices to set up the chess puzzle. This project will also have          //
+// a feature to show user hint or show asnwer. After completing the            //
+// puzzle a sound will play to tell the user has completed the puzzle.         //
+//*****************************************************************************//
 #include <Arduino.h>
 #include <Display.h>
 #include <SDcard.h>
