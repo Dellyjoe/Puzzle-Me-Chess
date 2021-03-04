@@ -18,6 +18,8 @@
 #include <Buzzer.h>
 #include <Switch.h>
 #include <LED.h>
+#include <Mulitiplexer.h>
+
 //******************************************Declare****************************//
 Display Display0; // Setting Object 0 for Display
 SDcard SDcard0;
@@ -26,6 +28,7 @@ Potentiometer Potentiometer0;
 Buzzer Buzzer0;
 Switch Switch0;
 LED LED0;
+Mulitiplexer Mulitiplexer0;
 
 //******************************************Setup******************************//
 void setup()
@@ -38,8 +41,12 @@ void setup()
   //******************************************Inputs***************************//
   Button0.init_button(1);           // setting D1 to button
   Potentiometer0.init_pot(0, 1, 3); // setting A0 to pot
-  Buzzer0.init_buzzer(15);           // setting A1 to buzzer
   Switch0.init_switch(0);           // seeting D0 to switch
+  Mulitiplexer0.init_muxs_input(36, 37, 38, 39, 23, 22, 21, 20); // pins will have to be moved
+  //******************************************Outputs**************************//
+  Buzzer0.init_buzzer(15);           // setting A1 to buzzer
+  Mulitiplexer0.init_muxs_output(35, 34, 33); // setting output channels s1 = a, s2 = b, s3 = c
+  Mulitiplexer0.init_enable(16); 
 } // end setup
 
 void loop()
@@ -55,8 +62,24 @@ void loop()
 
   // Buzzer0.turn_off_buzzer();
   // delay(1000);//--> to allow for button press
+  
+  Mulitiplexer0.channel_select(0, 0, 0); 
+  Mulitiplexer0.set_enable(0);
+
+   while (Button0.r_button() == HIGH)
+  {
+  //Mulitiplexer0.r_mux_channel(23);
+  Mulitiplexer0.r_mux_channel();
+  delay(1000);
+  // Serial.println("MuxA pin is");
+  // Serial.println(MuxA);
+  //delay(5000);
+  } // test for mux circuit 
+
+  delay(1000); //--> to allow for button press
   //***************************************Start of Code***********************//
- 
+
+
   while (Button0.r_button() == HIGH)
   {
     Display0.clear();

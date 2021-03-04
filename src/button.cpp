@@ -12,6 +12,7 @@ void Button::init_button(int pinnumber)
 int Button::r_button()
 {
   buttonstate = digitalRead(button_pin_number);
+  //***************************************Test Code***************************//
   // if (buttonstate == HIGH)
   // {
   //   Serial.println("Button is not pressed...");
