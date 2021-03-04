@@ -8,6 +8,7 @@ void Buzzer::init_buzzer(int pinnumber)
   pinMode(pinnumber,OUTPUT); // sets the digital pin pinnumber1 as Output
 } // end init_buzzer
 
+//*****************************************Functions***************************//
 void Buzzer::write_buzzer()
 {
   digitalWrite(buzzer_pin_number, HIGH);
