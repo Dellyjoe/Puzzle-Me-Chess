@@ -26,6 +26,7 @@ private:
     int channel_select_s2;
     int channel_select_s3;
     int read_a;
+    int read_b;
     
 public:
     void init_enable(int pinnumber); // set a int = 1 to enable -- enabling will turn output off Mux
