@@ -16,3 +16,19 @@ public:
 }; // end class Display
 
 //class DisplaySM::DisplaySM : Display
+
+class Smdisplay: public Display
+{
+private:
+
+public:
+
+}; // end sub class Smdisplay
+
+class Bigdisplay: public Display
+{
+private:
+
+public:
+
+}; // end sub class Bigdisplay
