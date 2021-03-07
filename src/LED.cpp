@@ -55,4 +55,5 @@ void LED::charlie(int LEDarry[] ) // ,int d, int e, int f, int g, int H,
     pinMode(CHARLIE_26, OUTPUT);
     digitalWrite(CHARLIE_26, index);
   }
+  delay(1); // adds 1ms delay to allow for caps to discharge
 } // end class charlie

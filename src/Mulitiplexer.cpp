@@ -91,6 +91,7 @@ int Mulitiplexer::r_mux_channel()
     return (read_a);
   }
   return (read_a);
+ 
 } // end r_mux_channel
 
 void Mulitiplexer::channel_select(int s1, int s2, int s3)
@@ -120,4 +121,5 @@ void Mulitiplexer::channel_select(int s1, int s2, int s3)
     Serial.println("output s3 is set to");
     Serial.println(channel_select_s3);
   }
+  delay(1); // adds 1ms delay to allow for caps to discharge
 } // end channels_select

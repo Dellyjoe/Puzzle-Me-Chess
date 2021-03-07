@@ -73,12 +73,11 @@ void loop()
     while (Button0.r_button() == HIGH)
     {
       Serial.println("Block A1");
-       Mulitiplexer0.channel_select(0, 0, 0);
-        Mulitiplexer0.r_mux_channel();
-        delay(1);
-        Serial.println("Block A2");
-        Mulitiplexer0.channel_select(1, 0, 0);
-        Mulitiplexer0.r_mux_channel();
+      Mulitiplexer0.channel_select(0, 0, 0);
+      Mulitiplexer0.r_mux_channel();
+      Serial.println("Block A2");
+      Mulitiplexer0.channel_select(1, 0, 0);
+      Mulitiplexer0.r_mux_channel();
       delay(4000);
     } // end test for mux circuit
     delay(1000); //--> to allow for button press
@@ -125,51 +124,22 @@ void loop()
 
     while ((Button0.r_button() == HIGH) & (Potentiometer0.r_pot() == 1)) // to set up Puzzle #1015704
     {
-
       LED0.charlie(LED0.LEDA1);
-      delay(1);
       LED0.charlie(LED0.LEDA2);
-      delay(1);
       LED0.charlie(LED0.LEDA3);
-      delay(1);
-      // LED0.charlie(LED0.LEDB1);
-      // delay(1);
       LED0.charlie(LED0.LEDB2);
-      delay(1);
-      // LED0.charlie(LED0.LEDB3);
-      // delay(1);
     }
 
     while ((Button0.r_button() == HIGH) & (Potentiometer0.r_pot() == 2)) // to set up Puzzle #561534
     {
       LED0.charlie(LED0.LEDA1);
-      delay(1);
       LED0.charlie(LED0.LEDA2);
-      delay(1);
-      // LED0.charlie(LED0.LEDB1);
-      // delay(1);
-      // LED0.charlie(LED0.LEDB1);
-      // delay(1);
       LED0.charlie(LED0.LEDB2);
-      delay(1);
-      // LED0.charlie(LED0.LEDB3);
-      // delay(1);
     }
 
     while ((Button0.r_button() == HIGH) & (Potentiometer0.r_pot() == 3)) // to set up Puzzle #1036958
     {
       LED0.charlie(LED0.LEDA1);
-      delay(1);
-      // LED0.charlie(LED0.LEDA2);
-      // delay(1);
-      // LED0.charlie(LED0.LEDB1);
-      // delay(1);
-      // LED0.charlie(LED0.LEDB1);
-      // delay(1);
-      // LED0.charlie(LED0.LEDB2);
-      // delay(1);
-      // LED0.charlie(LED0.LEDB3);
-      // delay(1);
     }
 
     LED0.charlie(LED0.LEDclear); // clears all LEDs
