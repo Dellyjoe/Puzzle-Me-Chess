@@ -98,8 +98,7 @@ void SDcard::open_file(int indexer)
 
     if (!SD.begin(chipSelect))
     {
-        while (true)
-            ;
+        while (true);
     }
     File dataFile = SD.open(str_puzzle_name[filename_index]); //opening File T015704.csv
 
@@ -109,9 +108,7 @@ void SDcard::open_file(int indexer)
     {
         while (dataFile.available())
         {
-
             Serial.write(dataFile.read());
-
         }
         dataFile.close();
     }
