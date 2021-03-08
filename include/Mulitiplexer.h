@@ -2,7 +2,7 @@
 // Output of the MUX is an input to my Teensy
 
 #define TurnOnChannel1 (0 0 0) // Really channel 0; Set input State C = 0 B = 0 A = 0
-#define TurnOnChannel2 (0 0 1) // Really channel 0; Set input State C = 0 B = 0 A = 1
+#define TurnOnChannel2 (1 0 0) // Really channel 0; Set input State C = 0 B = 0 A = 1
 
 //#define MuxA mux_input_pin_a
 // ...
