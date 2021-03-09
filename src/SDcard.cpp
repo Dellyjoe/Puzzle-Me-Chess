@@ -151,8 +151,8 @@ void SDcard::print_directory()
     }
 
     // print the type and size of the first FAT-type volume
-    Serial.println("\nFiles found on the card (name, date and size in bytes): ");
-    root.openRoot(volume);
+    //Serial.println("\nFiles found on the card (name, date and size in bytes): ");
+    //root.openRoot(volume);
 
     // list all files in the card with date and size
     root.ls(LS_R | LS_DATE | LS_SIZE);
