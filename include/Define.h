@@ -5,4 +5,4 @@
 #define test_code_buzzer false // change to true and uncomment the buzzer while loop in test code
 #define test_code_switch false
 #define test_code_mulitiplexer_channel false
-#define test_code_mulitiplexer_checkoutput false
+#define test_code_mulitiplexer_checkoutput true
