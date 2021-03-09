@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <SD.h>  // SD card library
 #include <SPI.h> // SD card library
+//#include "SdFat.h"
 
 class SDcard
 {
@@ -14,9 +15,7 @@ public:
     void open_file(int indexer);
     void mapp();
     void print_directory();
-    void close();
+    void close();   
     
-    
-
     // figure out how to pass a spring to use close() and open() as a mobuler funtion
 }; // end Class SDcard

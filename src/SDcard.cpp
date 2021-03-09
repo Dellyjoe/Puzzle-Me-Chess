@@ -6,9 +6,7 @@ Sd2Card card;
 SdVolume volume;
 SdFile root;
 const int chipSelect = BUILTIN_SDCARD; // setting SD library to read from Internal SD card
-// 11 X 8 array
-#define ROW_DIM 11
-#define COL_DIM 8
+
 //******************************************Setup******************************//
 void SDcard::int_SD()
 {
@@ -150,11 +148,13 @@ void SDcard::print_directory()
         return;
     }
 
-    // print the type and size of the first FAT-type volume
-    //Serial.println("\nFiles found on the card (name, date and size in bytes): ");
-    //root.openRoot(volume);
+    //print the type and size of the first FAT-type volume
+    // Serial.println("\nFiles found on the card (name, date and size in bytes): ");
+    // root.openRoot(volume);
 
     // list all files in the card with date and size
     root.ls(LS_R | LS_DATE | LS_SIZE);
     root.close();
-}
+} // end print_directory()
+
+
