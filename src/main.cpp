@@ -84,7 +84,6 @@ void loop()
   }
 
   //***************************************Start of Code***********************//
-
   if (test_code == false)
   {
     while (Button0.r_button() == HIGH)
