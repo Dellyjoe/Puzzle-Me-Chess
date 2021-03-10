@@ -1,7 +1,7 @@
 //*****************************************************************************//
 // Programmer: Joseph __Vitale                                                 //
 // Start Date: 02/08/2021                                                      //
-// Phase #1 Completion Date: 05/10/2021                                        //
+// Phase #1 Completion Date:                                                   //
 // Create a physical chess puzzle on a chess board. This board will            //
 // have user checkability and software mapped defined chess puzzles.           //
 // At first there will be 3 different chess puzzles ranging from easy          //
