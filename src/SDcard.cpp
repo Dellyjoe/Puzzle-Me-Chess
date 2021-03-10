@@ -22,7 +22,6 @@ void SDcard::int_SD()
         while (true)
             ;
     }
-    Serial.println("done!");
     Serial.println("initialization of SD card = done.");
 } // end of int_SD
 
