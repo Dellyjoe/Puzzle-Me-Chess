@@ -143,6 +143,7 @@ void loop()
 
     LED0.charlie(LED0.LEDclear); // clears all LEDs
     delay(1000);                 // allow for button press
+
   } // end  if (test_code == false)
 
   // look into making a grid for the board that will use your Muxltiplexers
