@@ -3,11 +3,18 @@
 
 //******************************************Declare****************************//
 U8G2_SH1106_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/U8X8_PIN_NONE);
+Ucglib_ST7735_18x128x160_SWSPI ucg(/*sclk=*/ 13, /*data=*/ 10, /*cd=*/ 12, /*cs=*/ 9, /*reset=*/ 8);
 
 //******************************************Setup******************************//
 void Display::int_display()
 {
     u8g2.begin(); // Start the Library code for the Display
+
+// Ucglib below
+     delay(1000);
+  ucg.begin(UCG_FONT_MODE_TRANSPARENT);
+  //ucg.begin(UCG_FONT_MODE_SOLID);
+  ucg.clearScreen();
 } // end void int_display
 
 //*****************************************Functions***************************//
@@ -48,3 +55,16 @@ void Display::print_user_puzzle(int a, int b, int value1)
     u8g2.print(value1);
     u8g2.drawStr(0, 43, "Puzzle");
 } // end void print_user_puzzle
+
+void Display::print_ucglib()
+{
+      //ucg.setRotate90();
+  ucg.setFont(ucg_font_ncenR12_tr);
+  ucg.setColor(255, 255, 255);
+  //ucg.setColor(0, 255, 0);
+  ucg.setColor(1, 255, 0,0);
+  
+  ucg.setPrintPos(0,25);
+  ucg.print("Hello World!");
+
+}
