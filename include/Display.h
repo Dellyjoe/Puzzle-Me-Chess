@@ -2,8 +2,6 @@
 #ifdef U8X8_HAVE_HW_I2C
 #endif
 #include <Wire.h>
-#include <SPI.h>
-#include "Ucglib.h"
 
 class Display
 {
@@ -15,7 +13,6 @@ public:
   void draw();
   void print_select_puzzle(int x, int y, int value); //<-- fix inputs //int x, int y, int vaule
   void print_user_puzzle(int a, int b, int value1);
-  void print_ucglib();
 }; // end class Display
 
 //class DisplaySM::DisplaySM : Display
