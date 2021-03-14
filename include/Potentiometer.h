@@ -10,4 +10,5 @@ private:
 public:
   int r_pot();
   void init_pot(int pinnumber, int low, int high);
+  void disable_pot();
 }; // end Class Potentiometer

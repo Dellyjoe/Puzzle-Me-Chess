@@ -25,3 +25,9 @@ int Potentiometer::r_pot()
  }
   return (potmap1);
 } // end r_pot
+
+void Potentiometer::disable_pot()
+{
+  pinMode(pot_pin_number, OUTPUT);
+  digitalWrite(pot_pin_number,LOW);
+} // end disable_pot
