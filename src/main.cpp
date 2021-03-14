@@ -41,19 +41,21 @@ void setup()
   Serial.begin(9600);
   SDcard0.readchesspuzzle();
   //******************************************Inputs***************************//
-  Button0.init_button(1);                                        // setting D1 to button
-  Switch0.init_switch(0);                                        // seeting D0 to switch
+  Button0.init_button(22);                                        // setting D1 to button
+  Potentiometer0.init_pot(23, 1, 3);                             // setting A9 to pot/Enabling pot
+  Switch0.init_switch(21);                                        // seeting D0 to switch
   Mulitiplexer0.init_muxs_input(36, 37, 38, 39, 23, 22, 21, 20); // pins will have to be moved
   //******************************************Outputs**************************//
   Buzzer0.init_buzzer(15);                    // setting A1 to buzzer
   Mulitiplexer0.init_muxs_output(35, 34, 33); // setting output channels s1 = a, s2 = b, s3 = c
   Mulitiplexer0.init_enable(16);
-  Potentiometer0.init_pot(0, 1, 3); // setting A0 to pot/Enabling pot
+  LED0.init_LED(); //
+  
 } // end setup
 
 void loop()
 {
-  //***************************************Test Code***************************//
+  // //***************************************Test Code***************************//
   if (test_code == true)
   {
     Potentiometer0.r_pot();
@@ -61,15 +63,15 @@ void loop()
     Switch0.r_switch();
     Mulitiplexer0.set_enable(0);
     
-  //  while (Button0.r_button() == HIGH)
-  //   {
-  //     Buzzer0.write_buzzer();
-  //     delay(1000);
-  //     Buzzer0.turn_off_buzzer();
-  //     delay(1000);
-  //   }
-  //   Buzzer0.turn_off_buzzer();
-  //   delay(1000);//--> to allow for button press
+    //  while (Button0.r_button() == HIGH)
+    //   {
+    //     Buzzer0.write_buzzer();
+    //     delay(1000);
+    //     Buzzer0.turn_off_buzzer();
+    //     delay(1000);
+    //   }
+    //   Buzzer0.turn_off_buzzer();
+    //   delay(1000);//--> to allow for button press
 
     while (Button0.r_button() == HIGH)
     {
@@ -82,6 +84,7 @@ void loop()
       delay(4000);
     } // end test for mux circuit
     delay(1000); //--> to allow for button press
+
   }
 
   //***************************************Start of Code***********************//
@@ -124,34 +127,25 @@ void loop()
 
     while ((Button0.r_button() == HIGH) & (constpot == 1)) // to set up Puzzle #1015704
     {
-      LED0.charlie(LED0.LEDA1);
-      LED0.charlie(LED0.LEDA2);
-      LED0.charlie(LED0.LEDA3);
-      LED0.charlie(LED0.LEDB2);
+      LED0.LED_on_off(LED0.LED1);
+      LED0.LED_on_off(LED0.LED3);
+      LED0.LED_on_off(LED0.LED5);
     }
 
     while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #561534
     {
-      LED0.charlie(LED0.LEDA1);
-      LED0.charlie(LED0.LEDA2);
-      LED0.charlie(LED0.LEDB2);
+      LED0.LED_on_off(LED0.LED2);
+      LED0.LED_on_off(LED0.LED4);
+      LED0.LED_on_off(LED0.LED6);
     }
 
     while ((Button0.r_button() == HIGH) & (constpot == 3)) // to set up Puzzle #1036958
     {
-      LED0.charlie(LED0.LEDA1);
+      LED0.LED_on_off(LED0.LED2);
     }
 
-    LED0.charlie(LED0.LEDclear); // clears all LEDs
-    delay(1000);                 // allow for button press
+    LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
+     delay(1000);                 // allow for button press
   } // end  if (test_code == false)
 
-  // look into making a grid for the board that will use your Muxltiplexers
-  // to turn on or off leds and also read in voltage levels
-  // look into maybe just using a 1d arry, instead of a 2d arry --> this might be easier in the long run
-
-  // change the open and close on the SDcard methods
-  // make an if funtion that pulls out the 1-3 vaule on the pot and opens that file to that number
-  // after selecting the puzzle hitting the butotn will send the code to exit this loop and move on
-  // to mapping the vaule to the sd card.
 } //end void loop
