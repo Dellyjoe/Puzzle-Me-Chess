@@ -5,14 +5,24 @@
 Sd2Card card;
 SdVolume volume;
 SdFile root;
-const int chipSelect = BUILTIN_SDCARD; // setting SD library to read from Internal SD card
+#define CS_PIN BUILTIN_SDCARD
 
+// 5 X 4 array
+#define ROW_DIM 5
+#define COL_DIM 4
+
+#define errorHalt(msg)          \
+    {                           \
+        Serial.println(F(msg)); \
+        while (1)               \
+            ;                   \
+    }
 //******************************************Setup******************************//
 void SDcard::int_SD()
 {
     while (!Serial)
         ;
-    if (!SD.begin(chipSelect))
+    if (!SD.begin(CS_PIN))
     {
         Serial.println("initialization failed. Things to check:");
         Serial.println("1. is a card inserted?");
@@ -30,7 +40,7 @@ void SDcard::print_SD_info()
 {
     // we'll use the initialization code from the utility libraries
     // since we're just testing if the card is working!
-    if (!card.init(SPI_HALF_SPEED, chipSelect))
+    if (!card.init(SPI_HALF_SPEED, CS_PIN))
     {
         Serial.println("initialization failed. Things to check:");
         Serial.println("* is a card inserted?");
@@ -93,9 +103,10 @@ void SDcard::open_file(int indexer)
 {
     filename_index = indexer;
 
-    if (!SD.begin(chipSelect))
+    if (!SD.begin(CS_PIN))
     {
-        while (true);
+        while (true)
+            ;
     }
     File dataFile = SD.open(str_puzzle_name[filename_index]); //opening File T015704.csv
 
@@ -117,18 +128,13 @@ void SDcard::open_file(int indexer)
         Serial.println("error opening file");
     }
 
-
-    
 } // end openfile
-
-
-
 
 void SDcard::print_directory()
 {
     // we'll use the initialization code from the utility libraries
     // since we're just testing if the card is working!
-    if (!card.init(SPI_HALF_SPEED, chipSelect))
+    if (!card.init(SPI_HALF_SPEED, CS_PIN))
     {
         Serial.println("initialization failed. Things to check:");
         Serial.println("* is a card inserted?");
@@ -156,4 +162,105 @@ void SDcard::print_directory()
     root.close();
 } // end print_directory()
 
+size_t SDcard::readField(File *file, char *str, size_t size, char *delim)
+{
+    char ch;
+    size_t n = 0;
+    while ((n + 1) < size && file->read(&ch, 1) == 1)
+    {
+        // Delete CR.
+        if (ch == '\r')
+        {
+            continue;
+        }
+        str[n++] = ch;
+        if (strchr(delim, ch))
+        {
+            break;
+        }
+    }
+    str[n] = '\0';
+    return n;
+}
 
+void SDcard::readchesspuzzle()
+{
+    File file;
+    // Initialize the SD.
+    if (!SD.begin(CS_PIN))
+    {
+        errorHalt("begin failed");
+    }
+    // Create or open the file.
+    file = SD.open("12READNUM.TXT", FILE_WRITE);
+    if (!file)
+    {
+        errorHalt("open failed");
+    }
+    // Rewind file so test data is not appended.
+    file.seek(0);
+
+    // Write test data.
+    file.print(F(
+        "11,12,13,14\r\n"
+        "21,22,23,24\r\n"
+        "31,32,33,34\r\n"
+        "41,42,43,44\r\n"
+        "51,52,53,54" // Allow missing endl at eof.
+        ));
+
+    // Rewind the file for read.
+    file.seek(0);
+
+    // Array for data.
+    int array[ROW_DIM][COL_DIM];
+    int i = 0;    // First array index.
+    int j = 0;    // Second array index
+    size_t n;     // Length of returned field with delimiter.
+    char str[20]; // Must hold longest field with delimiter and zero byte.
+    char *ptr;    // Test for valid field.
+
+    // Read the file and store the data.
+
+    for (i = 0; i < ROW_DIM; i++)
+    {
+        for (j = 0; j < COL_DIM; j++)
+        {
+            n = readField(&file, str, sizeof(str), ",\n");
+            if (n == 0)
+            {
+                errorHalt("Too few lines");
+            }
+            array[i][j] = strtol(str, &ptr, 10);
+            if (ptr == str)
+            {
+                errorHalt("bad number");
+            }
+            if (j < (COL_DIM - 1) && str[n - 1] != ',')
+            {
+                errorHalt("line with too few fields");
+            }
+        }
+        // Allow missing endl at eof.
+        if (str[n - 1] != '\n' && file.available())
+        {
+            errorHalt("missing endl");
+        }
+    }
+
+    // Print the array.
+    for (i = 0; i < ROW_DIM; i++)
+    {
+        for (j = 0; j < COL_DIM; j++)
+        {
+            if (j)
+            {
+                Serial.print(' ');
+            }
+            Serial.print(array[i][j]);
+        }
+        Serial.println();
+    }
+    Serial.println("Done");
+    file.close();
+}

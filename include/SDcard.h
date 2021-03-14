@@ -15,6 +15,7 @@ public:
     void mapp();
     void print_directory();
     void close();   
-    
+    size_t readField(File* file, char* str, size_t size, char* delim);
+    void readchesspuzzle();
     // figure out how to pass a spring to use close() and open() as a mobuler funtion
 }; // end Class SDcard
