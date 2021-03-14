@@ -3,6 +3,7 @@
 
 //******************************************Declare****************************//
 U8G2_SH1106_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/U8X8_PIN_NONE);
+uint8_t u8g2_UserInterfaceSelectionList(u8g2_t *u8g2, const char *title, uint8_t start_pos, const char *sl);
 
 //******************************************Setup******************************//
 void Display::int_display()
@@ -21,6 +22,13 @@ void Display::draw()
     u8g2.sendBuffer(); // transfer internal memory to the display
 } // end void clear
 
+
+
+void Display::print_Title_Test(int value1)
+{
+
+    u8g2.userInterfaceSelectionList("Title", 2, "abcdef\nghijkl\nmnopqr");
+}
 void Display::print_select_puzzle(int x, int y, int value)
 {
     u8g2.setFlipMode(1);             // Flips display 180 (1) = True
@@ -31,6 +39,7 @@ void Display::print_select_puzzle(int x, int y, int value)
     u8g2.setCursor(75, 30); // set cursor location
     u8g2.print(value);
     u8g2.drawFrame(3,40,50,20);
+    u8g2.setFontRefHeightAll();  	/* this will add some extra space for the text inside the buttons */
     u8g2.drawStr(6, 55, "Click");
 
     //u8g2.setFont(u8g2_font_9x12_tf);
