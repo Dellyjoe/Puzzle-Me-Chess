@@ -21,8 +21,6 @@
 
 //******************************************Setup******************************//
 void LED::init_LED(){
-
-  //******************************************Inputs***************************//
   pinMode(LED_Channel_1, OUTPUT);
   pinMode(LED_Channel_2, OUTPUT);
   pinMode(LED_Channel_3, OUTPUT);
