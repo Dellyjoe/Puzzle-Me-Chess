@@ -82,7 +82,7 @@ int Mulitiplexer::r_mux_channel()
   {
     if (read_a == HIGH)
     {
-      Serial.println("Nothing on square");
+      
     }
     else
     {
