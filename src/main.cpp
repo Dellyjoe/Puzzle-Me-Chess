@@ -39,15 +39,16 @@ void setup()
   //SDcard0.print_SD_info(); //uncomment to print SD info
   SDcard0.print_directory();
   Serial.begin(9600);
+  SDcard0.readchesspuzzle();
   //******************************************Inputs***************************//
   Button0.init_button(1);                                        // setting D1 to button
-  Potentiometer0.init_pot(0, 1, 3);                              // setting A0 to pot
   Switch0.init_switch(0);                                        // seeting D0 to switch
   Mulitiplexer0.init_muxs_input(36, 37, 38, 39, 23, 22, 21, 20); // pins will have to be moved
   //******************************************Outputs**************************//
   Buzzer0.init_buzzer(15);                    // setting A1 to buzzer
   Mulitiplexer0.init_muxs_output(35, 34, 33); // setting output channels s1 = a, s2 = b, s3 = c
   Mulitiplexer0.init_enable(16);
+  Potentiometer0.init_pot(0, 1, 3); // setting A0 to pot/Enabling pot
 } // end setup
 
 void loop()
@@ -59,7 +60,7 @@ void loop()
     Button0.r_button();
     Switch0.r_switch();
     Mulitiplexer0.set_enable(0);
-
+    
   //  while (Button0.r_button() == HIGH)
   //   {
   //     Buzzer0.write_buzzer();
@@ -92,14 +93,16 @@ void loop()
       Display0.print_select_puzzle(60, 30, Potentiometer0.r_pot());
       Display0.draw();
     }
-
+    
+    const int constpot = Potentiometer0.r_pot(); // making pot cost for remaining of loop
     delay(1000); //--> to allow for button press
+
 
     Display0.clear();
     Display0.print_user_puzzle(58, 43, Potentiometer0.r_pot());
     Display0.draw();
 
-    switch (Potentiometer0.r_pot())
+    switch (constpot)
     {
     case 1:
       Serial.println("Opening File 1015704.CSV"); // prints index 0 in const char array
@@ -121,7 +124,7 @@ void loop()
       break;
     }
 
-    while ((Button0.r_button() == HIGH) & (Potentiometer0.r_pot() == 1)) // to set up Puzzle #1015704
+    while ((Button0.r_button() == HIGH) & (constpot == 1)) // to set up Puzzle #1015704
     {
       LED0.charlie(LED0.LEDA1);
       LED0.charlie(LED0.LEDA2);
@@ -129,21 +132,20 @@ void loop()
       LED0.charlie(LED0.LEDB2);
     }
 
-    while ((Button0.r_button() == HIGH) & (Potentiometer0.r_pot() == 2)) // to set up Puzzle #561534
+    while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #561534
     {
       LED0.charlie(LED0.LEDA1);
       LED0.charlie(LED0.LEDA2);
       LED0.charlie(LED0.LEDB2);
     }
 
-    while ((Button0.r_button() == HIGH) & (Potentiometer0.r_pot() == 3)) // to set up Puzzle #1036958
+    while ((Button0.r_button() == HIGH) & (constpot == 3)) // to set up Puzzle #1036958
     {
       LED0.charlie(LED0.LEDA1);
     }
 
     LED0.charlie(LED0.LEDclear); // clears all LEDs
     delay(1000);                 // allow for button press
-
   } // end  if (test_code == false)
 
   // look into making a grid for the board that will use your Muxltiplexers
