@@ -99,7 +99,7 @@ void loop()
 
 
     Display0.clear();
-    Display0.print_user_puzzle(58, 43, Potentiometer0.r_pot());
+    Display0.print_user_puzzle(58, 43, constpot);
     Display0.draw();
 
     switch (constpot)
