@@ -44,12 +44,12 @@ void setup()
   Button0.init_button(22);                                        // setting D1 to button
   Potentiometer0.init_pot(23, 1, 3);                             // setting A9 to pot/Enabling pot
   Switch0.init_switch(21);                                        // seeting D0 to switch
-  Mulitiplexer0.init_muxs_input(36, 37, 38, 39, 23, 22, 21, 20); // pins will have to be moved
+  Mulitiplexer0.init_muxs_input(37, 38, 39, 39, 13, 14, 15, 16); // pins will have to be moved
   //******************************************Outputs**************************//
-  Buzzer0.init_buzzer(15);                    // setting A1 to buzzer
+  Buzzer0.init_buzzer(21);                    // setting A1 to buzzer
   Mulitiplexer0.init_muxs_output(35, 34, 33); // setting output channels s1 = a, s2 = b, s3 = c
-  Mulitiplexer0.init_enable(16);
-  LED0.init_LED(); //
+  Mulitiplexer0.init_enable(36);
+  LED0.init_LED(); 
   
 } // end setup
 
@@ -58,22 +58,54 @@ void loop()
   // //***************************************Test Code***************************//
   if (test_code == true)
   {
-    Potentiometer0.r_pot();
-    Button0.r_button();
-    Switch0.r_switch();
-    Mulitiplexer0.set_enable(0);
-    
-    //  while (Button0.r_button() == HIGH)
-    //   {
-    //     Buzzer0.write_buzzer();
-    //     delay(1000);
-    //     Buzzer0.turn_off_buzzer();
-    //     delay(1000);
-    //   }
-    //   Buzzer0.turn_off_buzzer();
-    //   delay(1000);//--> to allow for button press
+    if (test_code_potentiometer == true)
+    {
+     Potentiometer0.r_pot();
+    }
 
-    while (Button0.r_button() == HIGH)
+    if (test_code_button == true)
+    {
+     Button0.r_button();
+    }
+
+    if (test_code_switch == true)
+    {
+     Switch0.r_switch();
+    }
+
+    if (test_code_mulitiplexer_channel == true)
+    {
+     Mulitiplexer0.set_enable(0);
+    }
+    
+     while ((Button0.r_button() == HIGH) & (test_code_buzzer == true))
+      {
+        Buzzer0.write_buzzer();
+        delay(1000);
+        Buzzer0.turn_off_buzzer();
+        delay(1000);
+      }
+      Buzzer0.turn_off_buzzer();
+
+      delay(1000);//--> to allow for button press
+
+    if (test_code_LED == true)
+    {
+      LED0.LED_on_off(LED0.LED1);
+      delay(1000);
+      LED0.LED_on_off(LED0.LED2);
+      delay(1000);
+      LED0.LED_on_off(LED0.LED3);
+      delay(1000);
+      LED0.LED_on_off(LED0.LED4);
+      delay(1000);
+      LED0.LED_on_off(LED0.LED5);
+      delay(1000);
+      LED0.LED_on_off(LED0.LED6);
+    }
+     
+
+    while ((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
     {
       Serial.println("Block A1");
       Mulitiplexer0.channel_select(0, 0, 0);
@@ -83,6 +115,7 @@ void loop()
       Mulitiplexer0.r_mux_channel();
       delay(4000);
     } // end test for mux circuit
+
     delay(1000); //--> to allow for button press
 
   }
