@@ -91,17 +91,22 @@ void loop()
 
     if (test_code_LED == true)
     {
-      LED0.LED_on_off(LED0.LED1);
+      LED0.LED_on_off(LED0.LEDA1);
       delay(1000);
-      LED0.LED_on_off(LED0.LED2);
+      LED0.LED_on_off(LED0.LEDA2);
       delay(1000);
-      LED0.LED_on_off(LED0.LED3);
+      LED0.LED_on_off(LED0.LEDA3);
       delay(1000);
-      LED0.LED_on_off(LED0.LED4);
+      LED0.LED_on_off(LED0.LEDA4);
       delay(1000);
-      LED0.LED_on_off(LED0.LED5);
+      LED0.LED_on_off(LED0.LEDA5);
       delay(1000);
-      LED0.LED_on_off(LED0.LED6);
+      LED0.LED_on_off(LED0.LEDA6);
+      delay(1000);
+      LED0.LED_on_off(LED0.LEDA7);
+      delay(1000);
+      LED0.LED_on_off(LED0.LEDA8);
+      delay(1000);
     }
      
 
@@ -160,21 +165,21 @@ void loop()
 
     while ((Button0.r_button() == HIGH) & (constpot == 1)) // to set up Puzzle #1015704
     {
-      LED0.LED_on_off(LED0.LED1);
-      LED0.LED_on_off(LED0.LED3);
-      LED0.LED_on_off(LED0.LED5);
+      LED0.LED_on_off(LED0.LEDA1);
+      LED0.LED_on_off(LED0.LEDA2);
+      LED0.LED_on_off(LED0.LEDA3);
     }
 
     while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #561534
     {
-      LED0.LED_on_off(LED0.LED2);
-      LED0.LED_on_off(LED0.LED4);
-      LED0.LED_on_off(LED0.LED6);
+      LED0.LED_on_off(LED0.LEDA2);
+      LED0.LED_on_off(LED0.LEDA4);
+      LED0.LED_on_off(LED0.LEDA6);
     }
 
     while ((Button0.r_button() == HIGH) & (constpot == 3)) // to set up Puzzle #1036958
     {
-      LED0.LED_on_off(LED0.LED2);
+      LED0.LED_on_off(LED0.LEDA2);
     }
 
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
