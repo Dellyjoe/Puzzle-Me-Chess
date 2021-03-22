@@ -84,34 +84,3 @@ void LED::LED_on_off(int LEDarry[])
   delay(1);
 
 } // end LED_on
-
-// void LED::charlie(int LEDarry[] ) // ,int d, int e, int f, int g, int H,
-// {
-//   index = LEDarry[0]; // Starts at A
-
-//   if(index < 0){
-//     pinMode(CHARLIE_24, INPUT);
-//   } else {
-//     pinMode(CHARLIE_24, OUTPUT);
-//     digitalWrite(CHARLIE_24, index);
-//   }
-
-//   index = LEDarry[1];
-
-//    if(index < 0){
-//     pinMode(CHARLIE_25, INPUT);
-//   } else {
-//     pinMode(CHARLIE_25, OUTPUT);
-//     digitalWrite(CHARLIE_25, index);
-//   }
-
-//   index = LEDarry[2];
-
-//    if(index < 0){
-//     pinMode(CHARLIE_26, INPUT);
-//   } else {
-//     pinMode(CHARLIE_26, OUTPUT);
-//     digitalWrite(CHARLIE_26, index);
-//   }
-//   delay(1); // adds 1ms delay to allow for caps to discharge
-// } // end class charlie
