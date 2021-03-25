@@ -27,6 +27,12 @@ private:
     int channel_select_s3;
     int read_a;
     int read_b;
+    int read_c;
+    int read_d;
+    int read_e;
+    int read_f;
+    int read_g;
+    int read_h;
     
 public:
     void init_enable(int pinnumber); // set a int = 1 to enable -- enabling will turn output off Mux
@@ -34,7 +40,14 @@ public:
                    int pinnumber_mux_f, int pinnumber_mux_g, int pinnumber_mux_h); // output of the Mux
     void init_muxs_output(int pinnumber_s1, int pinnumber_s2, int pinnumber_s3);
     void set_enable(int enable_HL); // enable High or Low
-    int r_mux_channel(); 
+    int r_mux_A_channel();
+    int r_mux_B_channel(); 
+    int r_mux_C_channel(); 
+    int r_mux_D_channel(); 
+    int r_mux_E_channel(); 
+    int r_mux_F_channel();
+    int r_mux_G_channel(); 
+    int r_mux_H_channel(); 
     void channel_select(int s1, int s2, int s3);  // s1,s2,s3 are selectors for mux channels
 
 }; // end Class Mulitiplexer

@@ -40,6 +40,14 @@ void Mulitiplexer::init_muxs_input(int pinnumber_mux_a, int pinnumber_mux_b, int
     Serial.println(pinnumber_mux_c);
     Serial.println("Mux d input pin is");
     Serial.println(pinnumber_mux_d);
+    Serial.println("Mux e input pin is");
+    Serial.println(pinnumber_mux_e);
+    Serial.println("Mux f input pin is");
+    Serial.println(pinnumber_mux_f);
+    Serial.println("Mux g input pin is");
+    Serial.println(pinnumber_mux_g);
+    Serial.println("Mux h input pin is");
+    Serial.println(pinnumber_mux_h);
   }
 } // end init_Muxs
 
@@ -74,7 +82,7 @@ void Mulitiplexer::set_enable(int enable_HL)
 
 } // end set_enable
 
-int Mulitiplexer::r_mux_channel()
+int Mulitiplexer::r_mux_A_channel()
 {
   read_a = digitalRead(mux_input_pin_a);
   //***************************************Test Code***************************//
@@ -92,7 +100,146 @@ int Mulitiplexer::r_mux_channel()
   }
   return (read_a);
  
-} // end r_mux_channel
+} // end r_mux_A_channel
+
+int Mulitiplexer::r_mux_B_channel()
+{
+  read_b = digitalRead(mux_input_pin_b);
+  //***************************************Test Code***************************//
+  if (test_code_mulitiplexer_checkoutput == true)
+  {
+    if (read_b == HIGH)
+    {
+      
+    }
+    else
+    {
+      Serial.println("Chess Peice is on square");
+    }
+    return (read_b);
+  }
+  return (read_b);
+ 
+} // end r_mux_B_channel
+
+int Mulitiplexer::r_mux_C_channel()
+{
+  read_c = digitalRead(mux_input_pin_c);
+  //***************************************Test Code***************************//
+  if (test_code_mulitiplexer_checkoutput == true)
+  {
+    if (read_c == HIGH)
+    {
+      
+    }
+    else
+    {
+      Serial.println("Chess Peice is on square");
+    }
+    return (read_c);
+  }
+  return (read_c);
+ 
+} // end r_mux_C_channel
+
+int Mulitiplexer::r_mux_D_channel()
+{
+  read_d = digitalRead(mux_input_pin_d);
+  //***************************************Test Code***************************//
+  if (test_code_mulitiplexer_checkoutput == true)
+  {
+    if (read_d == HIGH)
+    {
+      
+    }
+    else
+    {
+      Serial.println("Chess Peice is on square");
+    }
+    return (read_d);
+  }
+  return (read_d);
+} // end r_mux_D_channel
+
+int Mulitiplexer::r_mux_E_channel()
+{
+  read_e = digitalRead(mux_input_pin_e);
+  //***************************************Test Code***************************//
+  if (test_code_mulitiplexer_checkoutput == true)
+  {
+    if (read_e == HIGH)
+    {
+      
+    }
+    else
+    {
+      Serial.println("Chess Peice is on square");
+    }
+    return (read_e);
+  }
+  return (read_e);
+ 
+} // end r_mux_E_channel
+
+int Mulitiplexer::r_mux_F_channel()
+{
+  read_f = digitalRead(mux_input_pin_f);
+  //***************************************Test Code***************************//
+  if (test_code_mulitiplexer_checkoutput == true)
+  {
+    if (read_f == HIGH)
+    {
+      
+    }
+    else
+    {
+      Serial.println("Chess Peice is on square");
+    }
+    return (read_f);
+  }
+  return (read_f);
+ 
+} // end r_mux_F_channel
+
+int Mulitiplexer::r_mux_G_channel()
+{
+  read_g = digitalRead(mux_input_pin_g);
+  //***************************************Test Code***************************//
+  if (test_code_mulitiplexer_checkoutput == true)
+  {
+    if (read_g == HIGH)
+    {
+      
+    }
+    else
+    {
+      Serial.println("Chess Peice is on square");
+    }
+    return (read_g);
+  }
+  return (read_g);
+ 
+} // end r_mux_G_channel
+
+int Mulitiplexer::r_mux_H_channel()
+{
+  read_h = digitalRead(mux_input_pin_h);
+  //***************************************Test Code***************************//
+  if (test_code_mulitiplexer_checkoutput == true)
+  {
+    if (read_h == HIGH)
+    {
+      
+    }
+    else
+    {
+      Serial.println("Chess Peice is on square");
+    }
+    return (read_h);
+  }
+  return (read_h);
+ 
+} // end r_mux_H_channel
 
 void Mulitiplexer::channel_select(int s1, int s2, int s3)
 {
