@@ -114,10 +114,10 @@ void loop()
     {
       Serial.println("Block A1");
       Mulitiplexer0.channel_select(0, 0, 0);
-      Mulitiplexer0.r_mux_channel();
+      Mulitiplexer0.r_mux_A_channel();
       Serial.println("Block A2");
       Mulitiplexer0.channel_select(1, 0, 0);
-      Mulitiplexer0.r_mux_channel();
+      Mulitiplexer0.r_mux_A_channel();
       delay(4000);
     } // end test for mux circuit
 
@@ -183,7 +183,7 @@ void loop()
     }
 
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
-     delay(1000);                 // allow for button press
+    delay(1000);                 // allow for button press
   } // end  if (test_code == false)
 
 } //end void loop
