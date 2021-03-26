@@ -149,6 +149,7 @@ void loop()
       Display0.print_select_puzzle(60, 30, Potentiometer0.r_pot());
       Display0.draw();
     }
+    
     delay(1000); //--> to allow for button press
     const int constpot = Potentiometer0.r_pot(); // making pot cost for remaining of loop
 
