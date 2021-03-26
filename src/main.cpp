@@ -112,11 +112,26 @@ void loop()
 
     while ((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
     {
-      Serial.println("Block A1");
       Mulitiplexer0.channel_select(0, 0, 0);
+      Serial.println("Block A1");
       Mulitiplexer0.r_mux_A_channel();
-      Serial.println("Block A2");
+      Serial.println("Block B1");
+      Mulitiplexer0.r_mux_B_channel();
+      Serial.println("Block C1");
+      Mulitiplexer0.r_mux_C_channel();
+      Serial.println("Block D1");
+      Mulitiplexer0.r_mux_D_channel();
+      Serial.println("Block E1");
+      Mulitiplexer0.r_mux_E_channel();
+      Serial.println("Block F1");
+      Mulitiplexer0.r_mux_F_channel();
+      Serial.println("Block G1");
+      Mulitiplexer0.r_mux_G_channel();
+      Serial.println("Block H1");
+      Mulitiplexer0.r_mux_H_channel();
+  
       Mulitiplexer0.channel_select(1, 0, 0);
+      Serial.println("Block A2");
       Mulitiplexer0.r_mux_A_channel();
       delay(4000);
     } // end test for mux circuit
