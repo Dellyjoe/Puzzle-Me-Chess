@@ -92,21 +92,21 @@ void loop()
     if (test_code_LED == true)
     {
       LED0.LED_on_off(LED0.LEDG1);
-      delay(1000);
+      delay(10);
       LED0.LED_on_off(LED0.LEDG2);
-      delay(1000);
+      delay(10);
       LED0.LED_on_off(LED0.LEDG3);
-      delay(1000);
+      delay(10);
       LED0.LED_on_off(LED0.LEDG4);
-      delay(1000);
+      delay(10);
       LED0.LED_on_off(LED0.LEDG5);
-      delay(1000);
+      delay(10);
       LED0.LED_on_off(LED0.LEDG6);
-      delay(1000);
+      delay(10);
       LED0.LED_on_off(LED0.LEDG7);
-      delay(1000);
+      delay(10);
       LED0.LED_on_off(LED0.LEDG8);
-      delay(1000);
+      delay(10);
     }
      
 
