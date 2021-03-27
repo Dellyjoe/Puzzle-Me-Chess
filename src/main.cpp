@@ -178,6 +178,8 @@ void loop()
   LED0.LED_on_off(LED0.LEDD5); delay(1); LED0.LED_on_off(LED0.LEDE5); delay(1); LED0.LED_on_off(LED0.LEDD4); delay(1); LED0.LED_on_off(LED0.LEDE4); delay(1);
   delay(2000);
 
+  LED0.LED_on_off(LED0.LEDclear);
+
 
   {
     while (Button0.r_button() == HIGH)
