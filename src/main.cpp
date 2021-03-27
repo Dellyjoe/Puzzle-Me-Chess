@@ -178,6 +178,13 @@ void loop()
   LED0.LED_on_off(LED0.LEDD5); delay(1); LED0.LED_on_off(LED0.LEDE5); delay(1); LED0.LED_on_off(LED0.LEDD4); delay(1); LED0.LED_on_off(LED0.LEDE4); delay(1);
   delay(2000);
 
+
+  while (true)
+  {
+    LED0.LED_on_off(LED0.LEDD5); delay(1); LED0.LED_on_off(LED0.LEDE5); delay(1); LED0.LED_on_off(LED0.LEDD4); delay(1); LED0.LED_on_off(LED0.LEDE4); delay(1);
+    delay(2000);
+    break;
+  }
   LED0.LED_on_off(LED0.LEDclear);
 
 
