@@ -83,4 +83,4 @@ void LED::LED_on_off(int LEDarry[])
   digitalWrite(LEDarry[17], LOW);
   delay(1);
 
-} // end LED_on
+} // end LED_on_off
