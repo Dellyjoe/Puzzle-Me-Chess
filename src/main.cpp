@@ -44,7 +44,7 @@ void setup()
   Button0.init_button(22);                                       // setting D1 to button
   Potentiometer0.init_pot(23, 1, 3);                             // setting A9 to pot/Enabling pot
   Switch0.init_switch(21);                                       // seeting D0 to switch
-  Mulitiplexer0.init_muxs_input(37, 38, 39, 13, 14, 15, 16, 17); 
+  Mulitiplexer0.init_muxs_input(15, 14, 32, 39, 38, 37, 16, 17); 
   //******************************************Outputs**************************//
   Buzzer0.init_buzzer(21);                    // setting A1 to buzzer
   Mulitiplexer0.init_muxs_output(35, 34, 33); // setting output channels s1 = a, s2 = b, s3 = c
@@ -89,7 +89,7 @@ void loop()
 
       delay(1000);//--> to allow for button press
 
-    if (test_code_LED == true)
+    while((Button0.r_button() == HIGH) & (test_code_LED == true))
     {
       LED0.LED_on_off(LED0.LEDA1); delay(15); LED0.LED_on_off(LED0.LEDA2); delay(15); LED0.LED_on_off(LED0.LEDA3); delay(15); LED0.LED_on_off(LED0.LEDA4); delay(15); 
       LED0.LED_on_off(LED0.LEDA5); delay(15); LED0.LED_on_off(LED0.LEDA6); delay(15); LED0.LED_on_off(LED0.LEDA7); delay(15); LED0.LED_on_off(LED0.LEDA8); delay(15);
@@ -113,33 +113,44 @@ void loop()
       LED0.LED_on_off(LED0.LEDG5); delay(15); LED0.LED_on_off(LED0.LEDG6); delay(15); LED0.LED_on_off(LED0.LEDG7); delay(15); LED0.LED_on_off(LED0.LEDG8); delay(15);
 
       LED0.LED_on_off(LED0.LEDH1); delay(15); LED0.LED_on_off(LED0.LEDH2); delay(15); LED0.LED_on_off(LED0.LEDH3); delay(15); LED0.LED_on_off(LED0.LEDH4); delay(15); 
-      LED0.LED_on_off(LED0.LEDH5); delay(15); LED0.LED_on_off(LED0.LEDH6); delay(15); LED0.LED_on_off(LED0.LEDH7); delay(15); LED0.LED_on_off(LED0.LEDH8); delay(15);
-    }
+      LED0.LED_on_off(LED0.LEDH5); delay(15); LED0.LED_on_off(LED0.LEDH6); delay(15); LED0.LED_on_off(LED0.LEDH7); delay(15); LED0.LED_on_off(LED0.LEDH8); delay(1000);
+     }
 
     while ((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
     {
-      Mulitiplexer0.channel_select(0, 0, 0);
+      Mulitiplexer0.channel_select(0, 0, 0); // 000
       Serial.println("Block A1");
       Mulitiplexer0.r_mux_A_channel();
-      Serial.println("Block B1");
-      Mulitiplexer0.r_mux_B_channel();
-      Serial.println("Block C1");
-      Mulitiplexer0.r_mux_C_channel();
-      Serial.println("Block D1");
-      Mulitiplexer0.r_mux_D_channel();
-      Serial.println("Block E1");
-      Mulitiplexer0.r_mux_E_channel();
-      Serial.println("Block F1");
-      Mulitiplexer0.r_mux_F_channel();
-      Serial.println("Block G1");
-      Mulitiplexer0.r_mux_G_channel();
-      Serial.println("Block H1");
-      Mulitiplexer0.r_mux_H_channel();
-  
-      Mulitiplexer0.channel_select(1, 0, 0);
-      Serial.println("Block A2");
-      Mulitiplexer0.r_mux_A_channel();
-      delay(4000);
+       delay(10);
+      Mulitiplexer0.channel_select(1, 0, 0); // 100
+       Serial.println("Block B2");
+       Mulitiplexer0.r_mux_B_channel();
+      delay(10);
+       Mulitiplexer0.channel_select(0, 1, 0); // 010
+       Serial.println("Block C3");
+       Mulitiplexer0.r_mux_C_channel();
+       delay(10);
+       Mulitiplexer0.channel_select(1, 1, 0); // 110
+       Serial.println("Block D4");
+       Mulitiplexer0.r_mux_D_channel();
+       delay(10);
+       Mulitiplexer0.channel_select(0, 0, 1); // 001
+       Serial.println("Block E5");
+       Mulitiplexer0.r_mux_E_channel();
+       delay(10);
+       Mulitiplexer0.channel_select(1, 0, 1); // 101
+       Serial.println("Block F6");
+       Mulitiplexer0.r_mux_F_channel();
+       delay(10);
+       Mulitiplexer0.channel_select(0, 1, 1); // 011
+       Serial.println("Block G7");
+       Mulitiplexer0.r_mux_G_channel();
+       delay(10);
+       Mulitiplexer0.channel_select(1, 1, 1); // 111
+       Serial.println("Block H8");
+       Mulitiplexer0.r_mux_H_channel();
+       Serial.println("_____________________");
+      delay(1000);
     } // end test for mux circuit
 
     delay(1000); //--> to allow for button press
@@ -175,6 +186,7 @@ void loop()
   LED0.LED_on_off(LED0.LEDA8); delay(15); LED0.LED_on_off(LED0.LEDH8); delay(15); LED0.LED_on_off(LED0.LEDA1); delay(15); LED0.LED_on_off(LED0.LEDH8); delay(15); 
   LED0.LED_on_off(LED0.LEDB7); delay(15); LED0.LED_on_off(LED0.LEDG7); delay(15); LED0.LED_on_off(LED0.LEDB2); delay(15); LED0.LED_on_off(LED0.LEDG2); delay(15); 
   LED0.LED_on_off(LED0.LEDC6); delay(15); LED0.LED_on_off(LED0.LEDF6); delay(15); LED0.LED_on_off(LED0.LEDC3); delay(15); LED0.LED_on_off(LED0.LEDF3); delay(15);
+
   
   while (true)
   {
