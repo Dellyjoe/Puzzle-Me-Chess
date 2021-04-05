@@ -91,29 +91,29 @@ void loop()
 
     while((Button0.r_button() == HIGH) & (test_code_LED == true))
     {
-      LED0.LED_on_off(LED0.LEDA1); delay(15); LED0.LED_on_off(LED0.LEDA2); delay(15); LED0.LED_on_off(LED0.LEDA3); delay(15); LED0.LED_on_off(LED0.LEDA4); delay(15); 
-      LED0.LED_on_off(LED0.LEDA5); delay(15); LED0.LED_on_off(LED0.LEDA6); delay(15); LED0.LED_on_off(LED0.LEDA7); delay(15); LED0.LED_on_off(LED0.LEDA8); delay(15);
+      LED0.LED_on_off(LED0.LEDA1); delay(500); LED0.LED_on_off(LED0.LEDA2); delay(500); LED0.LED_on_off(LED0.LEDA3); delay(500); LED0.LED_on_off(LED0.LEDA4); delay(500); 
+      LED0.LED_on_off(LED0.LEDA5); delay(500); LED0.LED_on_off(LED0.LEDA6); delay(500); LED0.LED_on_off(LED0.LEDA7); delay(500); LED0.LED_on_off(LED0.LEDA8); delay(500);
 
-      LED0.LED_on_off(LED0.LEDB1); delay(15); LED0.LED_on_off(LED0.LEDB2); delay(15); LED0.LED_on_off(LED0.LEDB3); delay(15); LED0.LED_on_off(LED0.LEDB4); delay(15); 
-      LED0.LED_on_off(LED0.LEDB5); delay(15); LED0.LED_on_off(LED0.LEDB6); delay(15); LED0.LED_on_off(LED0.LEDB7); delay(15); LED0.LED_on_off(LED0.LEDB8); delay(15);
+      LED0.LED_on_off(LED0.LEDB1); delay(500); LED0.LED_on_off(LED0.LEDB2); delay(500); LED0.LED_on_off(LED0.LEDB3); delay(500); LED0.LED_on_off(LED0.LEDB4); delay(500); 
+      LED0.LED_on_off(LED0.LEDB5); delay(500); LED0.LED_on_off(LED0.LEDB6); delay(500); LED0.LED_on_off(LED0.LEDB7); delay(500); LED0.LED_on_off(LED0.LEDB8); delay(500);
 
-      LED0.LED_on_off(LED0.LEDC1); delay(15); LED0.LED_on_off(LED0.LEDC2); delay(15); LED0.LED_on_off(LED0.LEDC3); delay(15); LED0.LED_on_off(LED0.LEDC4); delay(15); 
-      LED0.LED_on_off(LED0.LEDC5); delay(15); LED0.LED_on_off(LED0.LEDC6); delay(15); LED0.LED_on_off(LED0.LEDC7); delay(15); LED0.LED_on_off(LED0.LEDC8); delay(15);
+      LED0.LED_on_off(LED0.LEDC1); delay(500); LED0.LED_on_off(LED0.LEDC2); delay(500); LED0.LED_on_off(LED0.LEDC3); delay(500); LED0.LED_on_off(LED0.LEDC4); delay(500); 
+      LED0.LED_on_off(LED0.LEDC5); delay(500); LED0.LED_on_off(LED0.LEDC6); delay(500); LED0.LED_on_off(LED0.LEDC7); delay(500); LED0.LED_on_off(LED0.LEDC8); delay(500);
 
-      LED0.LED_on_off(LED0.LEDD1); delay(15); LED0.LED_on_off(LED0.LEDD2); delay(15); LED0.LED_on_off(LED0.LEDD3); delay(15); LED0.LED_on_off(LED0.LEDD4); delay(15); 
-      LED0.LED_on_off(LED0.LEDD5); delay(15); LED0.LED_on_off(LED0.LEDD6); delay(15); LED0.LED_on_off(LED0.LEDD7); delay(15); LED0.LED_on_off(LED0.LEDD8); delay(15);
+      LED0.LED_on_off(LED0.LEDD1); delay(500); LED0.LED_on_off(LED0.LEDD2); delay(500); LED0.LED_on_off(LED0.LEDD3); delay(500); LED0.LED_on_off(LED0.LEDD4); delay(500); 
+      LED0.LED_on_off(LED0.LEDD5); delay(500); LED0.LED_on_off(LED0.LEDD6); delay(500); LED0.LED_on_off(LED0.LEDD7); delay(500); LED0.LED_on_off(LED0.LEDD8); delay(500);
 
-      LED0.LED_on_off(LED0.LEDE1); delay(15); LED0.LED_on_off(LED0.LEDE2); delay(15); LED0.LED_on_off(LED0.LEDE3); delay(15); LED0.LED_on_off(LED0.LEDE4); delay(15); 
-      LED0.LED_on_off(LED0.LEDE5); delay(15); LED0.LED_on_off(LED0.LEDE6); delay(15); LED0.LED_on_off(LED0.LEDE7); delay(15); LED0.LED_on_off(LED0.LEDE8); delay(15);
+      LED0.LED_on_off(LED0.LEDE1); delay(500); LED0.LED_on_off(LED0.LEDE2); delay(500); LED0.LED_on_off(LED0.LEDE3); delay(500); LED0.LED_on_off(LED0.LEDE4); delay(500); 
+      LED0.LED_on_off(LED0.LEDE5); delay(500); LED0.LED_on_off(LED0.LEDE6); delay(500); LED0.LED_on_off(LED0.LEDE7); delay(500); LED0.LED_on_off(LED0.LEDE8); delay(500);
 
-      LED0.LED_on_off(LED0.LEDF1); delay(15); LED0.LED_on_off(LED0.LEDF2); delay(15); LED0.LED_on_off(LED0.LEDF3); delay(15); LED0.LED_on_off(LED0.LEDF4); delay(15); 
-      LED0.LED_on_off(LED0.LEDF5); delay(15); LED0.LED_on_off(LED0.LEDF6); delay(15); LED0.LED_on_off(LED0.LEDF7); delay(15); LED0.LED_on_off(LED0.LEDF8); delay(15);
+      LED0.LED_on_off(LED0.LEDF1); delay(500); LED0.LED_on_off(LED0.LEDF2); delay(500); LED0.LED_on_off(LED0.LEDF3); delay(500); LED0.LED_on_off(LED0.LEDF4); delay(500); 
+      LED0.LED_on_off(LED0.LEDF5); delay(500); LED0.LED_on_off(LED0.LEDF6); delay(500); LED0.LED_on_off(LED0.LEDF7); delay(500); LED0.LED_on_off(LED0.LEDF8); delay(500);
 
-      LED0.LED_on_off(LED0.LEDG1); delay(15); LED0.LED_on_off(LED0.LEDG2); delay(15); LED0.LED_on_off(LED0.LEDG3); delay(15); LED0.LED_on_off(LED0.LEDG4); delay(15); 
-      LED0.LED_on_off(LED0.LEDG5); delay(15); LED0.LED_on_off(LED0.LEDG6); delay(15); LED0.LED_on_off(LED0.LEDG7); delay(15); LED0.LED_on_off(LED0.LEDG8); delay(15);
+      LED0.LED_on_off(LED0.LEDG1); delay(500); LED0.LED_on_off(LED0.LEDG2); delay(500); LED0.LED_on_off(LED0.LEDG3); delay(500); LED0.LED_on_off(LED0.LEDG4); delay(500); 
+      LED0.LED_on_off(LED0.LEDG5); delay(500); LED0.LED_on_off(LED0.LEDG6); delay(500); LED0.LED_on_off(LED0.LEDG7); delay(500); LED0.LED_on_off(LED0.LEDG8); delay(500);
 
-      LED0.LED_on_off(LED0.LEDH1); delay(15); LED0.LED_on_off(LED0.LEDH2); delay(15); LED0.LED_on_off(LED0.LEDH3); delay(15); LED0.LED_on_off(LED0.LEDH4); delay(15); 
-      LED0.LED_on_off(LED0.LEDH5); delay(15); LED0.LED_on_off(LED0.LEDH6); delay(15); LED0.LED_on_off(LED0.LEDH7); delay(15); LED0.LED_on_off(LED0.LEDH8); delay(1000);
+      LED0.LED_on_off(LED0.LEDH1); delay(500); LED0.LED_on_off(LED0.LEDH2); delay(500); LED0.LED_on_off(LED0.LEDH3); delay(500); LED0.LED_on_off(LED0.LEDH4); delay(500); 
+      LED0.LED_on_off(LED0.LEDH5); delay(500); LED0.LED_on_off(LED0.LEDH6); delay(500); LED0.LED_on_off(LED0.LEDH7); delay(500); LED0.LED_on_off(LED0.LEDH8); delay(1000);
      }
 
     while ((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
@@ -159,46 +159,43 @@ void loop()
 
   //***************************************Start of Code***********************//
   if (test_code == false)
-  LED0.LED_on_off(LED0.LEDA1); delay(15); LED0.LED_on_off(LED0.LEDA2); delay(15); LED0.LED_on_off(LED0.LEDA3); delay(15); LED0.LED_on_off(LED0.LEDA4); delay(15); 
-  LED0.LED_on_off(LED0.LEDA5); delay(15); LED0.LED_on_off(LED0.LEDA6); delay(15); LED0.LED_on_off(LED0.LEDA7); delay(15); LED0.LED_on_off(LED0.LEDA8); delay(15);
-
-  LED0.LED_on_off(LED0.LEDB1); delay(15); LED0.LED_on_off(LED0.LEDB2); delay(15); LED0.LED_on_off(LED0.LEDB3); delay(15); LED0.LED_on_off(LED0.LEDB4); delay(15); 
-  LED0.LED_on_off(LED0.LEDB5); delay(15); LED0.LED_on_off(LED0.LEDB6); delay(15); LED0.LED_on_off(LED0.LEDB7); delay(15); LED0.LED_on_off(LED0.LEDB8); delay(15);
-
-  LED0.LED_on_off(LED0.LEDC1); delay(15); LED0.LED_on_off(LED0.LEDC2); delay(15); LED0.LED_on_off(LED0.LEDC3); delay(15); LED0.LED_on_off(LED0.LEDC4); delay(15); 
-  LED0.LED_on_off(LED0.LEDC5); delay(15); LED0.LED_on_off(LED0.LEDC6); delay(15); LED0.LED_on_off(LED0.LEDC7); delay(15); LED0.LED_on_off(LED0.LEDC8); delay(15);
-
-  LED0.LED_on_off(LED0.LEDD1); delay(15); LED0.LED_on_off(LED0.LEDD2); delay(15); LED0.LED_on_off(LED0.LEDD3); delay(15); LED0.LED_on_off(LED0.LEDD4); delay(15); 
-  LED0.LED_on_off(LED0.LEDD5); delay(15); LED0.LED_on_off(LED0.LEDD6); delay(15); LED0.LED_on_off(LED0.LEDD7); delay(15); LED0.LED_on_off(LED0.LEDD8); delay(15);
-
-  LED0.LED_on_off(LED0.LEDE1); delay(15); LED0.LED_on_off(LED0.LEDE2); delay(15); LED0.LED_on_off(LED0.LEDE3); delay(15); LED0.LED_on_off(LED0.LEDE4); delay(15); 
-  LED0.LED_on_off(LED0.LEDE5); delay(15); LED0.LED_on_off(LED0.LEDE6); delay(15); LED0.LED_on_off(LED0.LEDE7); delay(15); LED0.LED_on_off(LED0.LEDE8); delay(15);
-
-  LED0.LED_on_off(LED0.LEDF1); delay(15); LED0.LED_on_off(LED0.LEDF2); delay(15); LED0.LED_on_off(LED0.LEDF3); delay(15); LED0.LED_on_off(LED0.LEDF4); delay(15); 
-  LED0.LED_on_off(LED0.LEDF5); delay(15); LED0.LED_on_off(LED0.LEDF6); delay(15); LED0.LED_on_off(LED0.LEDF7); delay(15); LED0.LED_on_off(LED0.LEDF8); delay(15);
-
-  LED0.LED_on_off(LED0.LEDG1); delay(15); LED0.LED_on_off(LED0.LEDG2); delay(15); LED0.LED_on_off(LED0.LEDG3); delay(15); LED0.LED_on_off(LED0.LEDG4); delay(15); 
-  LED0.LED_on_off(LED0.LEDG5); delay(15); LED0.LED_on_off(LED0.LEDG6); delay(15); LED0.LED_on_off(LED0.LEDG7); delay(15); LED0.LED_on_off(LED0.LEDG8); delay(15);
-
-  LED0.LED_on_off(LED0.LEDH1); delay(15); LED0.LED_on_off(LED0.LEDH2); delay(15); LED0.LED_on_off(LED0.LEDH3); delay(15); LED0.LED_on_off(LED0.LEDH4); delay(15); 
-  LED0.LED_on_off(LED0.LEDH5); delay(15); LED0.LED_on_off(LED0.LEDH6); delay(15); LED0.LED_on_off(LED0.LEDH7); delay(15); LED0.LED_on_off(LED0.LEDH8); delay(15);
-
-  LED0.LED_on_off(LED0.LEDA8); delay(15); LED0.LED_on_off(LED0.LEDH8); delay(15); LED0.LED_on_off(LED0.LEDA1); delay(15); LED0.LED_on_off(LED0.LEDH8); delay(15); 
-  LED0.LED_on_off(LED0.LEDB7); delay(15); LED0.LED_on_off(LED0.LEDG7); delay(15); LED0.LED_on_off(LED0.LEDB2); delay(15); LED0.LED_on_off(LED0.LEDG2); delay(15); 
-  LED0.LED_on_off(LED0.LEDC6); delay(15); LED0.LED_on_off(LED0.LEDF6); delay(15); LED0.LED_on_off(LED0.LEDC3); delay(15); LED0.LED_on_off(LED0.LEDF3); delay(15);
-
-  
-  for(int i = 1; i<600; i++)
   {
-    LED0.LED_on_off(LED0.LEDD5); 
-    LED0.LED_on_off(LED0.LEDE5); 
-    LED0.LED_on_off(LED0.LEDD4); 
-    LED0.LED_on_off(LED0.LEDE4);  
-  }
+    //*************LED Start up code*************//
+    for(int i = 1; i<200; i++)
+      {
+        LED0.LED_on_off(LED0.LEDA8); 
+        LED0.LED_on_off(LED0.LEDH8); 
+        LED0.LED_on_off(LED0.LEDA1); 
+        LED0.LED_on_off(LED0.LEDH1); 
+      } // end of for loop
+      
+      for(int i = 1; i<200; i++)
+      {
+        LED0.LED_on_off(LED0.LEDB7); 
+        LED0.LED_on_off(LED0.LEDG7);  
+        LED0.LED_on_off(LED0.LEDB2); 
+        LED0.LED_on_off(LED0.LEDG2); 
+      } // end of for loop
 
-  LED0.LED_on_off(LED0.LEDclear);
+      for(int i = 1; i<200; i++)
+      {
+        LED0.LED_on_off(LED0.LEDC6); 
+        LED0.LED_on_off(LED0.LEDF6); 
+        LED0.LED_on_off(LED0.LEDC3); 
+        LED0.LED_on_off(LED0.LEDF3);
+      } // end of for loop
 
-  {
+      for(int i = 1; i<450; i++)
+      {
+        LED0.LED_on_off(LED0.LEDD5); 
+        LED0.LED_on_off(LED0.LEDE5); 
+        LED0.LED_on_off(LED0.LEDD4); 
+        LED0.LED_on_off(LED0.LEDE4);  
+      } // end of for loop
+
+    LED0.LED_on_off(LED0.LEDclear);
+    //*******End of LED Start up code code*******//
+    
     while (Button0.r_button() == HIGH)
     {
       Display0.clear();
@@ -216,13 +213,13 @@ void loop()
     switch (constpot)
     {
     case 1:
-      Serial.println("Opening File 1015704.CSV"); // prints index 0 in const char array
+      Serial.println("Opening File 10500704.CSV"); // prints index 0 in const char array
       Serial.println("___________________");      // line breakup for readability
       SDcard0.open_file(0);                       // Open File indexer 0
       Serial.println("___________________");
       break;
     case 2:
-      Serial.println("Opening File 561534.CSV");
+      Serial.println("Opening File 5650034.CSV");
       Serial.println("___________________");
       SDcard0.open_file(1);
       Serial.println("___________________");
@@ -235,14 +232,14 @@ void loop()
       break;
     }
 
-    while ((Button0.r_button() == HIGH) & (constpot == 1)) // to set up Puzzle #1015704
+    while ((Button0.r_button() == HIGH) & (constpot == 1)) // to set up Puzzle #10500704
     {
       LED0.LED_on_off(LED0.LEDA1);
       LED0.LED_on_off(LED0.LEDA2);
       LED0.LED_on_off(LED0.LEDA3);
     }
 
-    while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #561534
+    while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #5650034
     {
       LED0.LED_on_off(LED0.LEDA2);
       LED0.LED_on_off(LED0.LEDA4);
@@ -256,6 +253,7 @@ void loop()
 
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
     delay(1000);                 // allow for button press
+    
   } // end  if (test_code == false)
 
 } //end void loop
