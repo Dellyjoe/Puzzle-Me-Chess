@@ -188,12 +188,14 @@ void loop()
   LED0.LED_on_off(LED0.LEDC6); delay(15); LED0.LED_on_off(LED0.LEDF6); delay(15); LED0.LED_on_off(LED0.LEDC3); delay(15); LED0.LED_on_off(LED0.LEDF3); delay(15);
 
   
-  while (true)
+  for(int i = 1; i<300; i++)
   {
-    LED0.LED_on_off(LED0.LEDD5); delay(1); LED0.LED_on_off(LED0.LEDE5); delay(1); LED0.LED_on_off(LED0.LEDD4); delay(1); LED0.LED_on_off(LED0.LEDE4); delay(1);
-    delay(2000);
-    break;
+    LED0.LED_on_off(LED0.LEDD5); 
+    LED0.LED_on_off(LED0.LEDE5); 
+    LED0.LED_on_off(LED0.LEDD4); 
+    LED0.LED_on_off(LED0.LEDE4);  
   }
+
   LED0.LED_on_off(LED0.LEDclear);
 
   {
