@@ -37,7 +37,7 @@ private:
 public:
     void init_enable(int pinnumber); // set a int = 1 to enable -- enabling will turn output off Mux
     void init_muxs_input(int pinnumber_mux_a, int pinnumber_mux_b, int pinnumber_mux_c, int pinnumber_mux_d, int pinnumber_mux_e, 
-                   int pinnumber_mux_f, int pinnumber_mux_g, int pinnumber_mux_h); // output of the Mux
+                         int pinnumber_mux_f, int pinnumber_mux_g, int pinnumber_mux_h); // output of the Mux
     void init_muxs_output(int pinnumber_s1, int pinnumber_s2, int pinnumber_s3);
     void set_enable(int enable_HL); // enable High or Low
     int r_mux_A_channel();
@@ -56,10 +56,10 @@ public:
 // a = 0, b = 0 , c = 0 channel 0 
 // a = 1, b = 0 , c = 0 channel 1
 // a = 0, b = 1 , c = 0 channel 2
-// a = 0, b = 0 , c = 1 channel 3
-// a = 1, b = 0 , c = 0 channel 4
+// a = 1, b = 1 , c = 0 channel 3
+// a = 0, b = 0 , c = 1 channel 4
 // a = 1, b = 0 , c = 1 channel 5
-// a = 1, b = 1 , c = 0 channel 6
+// a = 0, b = 1 , c = 1 channel 6
 // a = 1, b = 1 , c = 1 channel 7
 // a = x, b = x , c = x channel none Enable = 1
 //*****************************************************************************//
