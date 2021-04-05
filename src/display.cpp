@@ -31,7 +31,7 @@ void Display::print_Title_Test(int value1)
 }
 void Display::print_select_puzzle(int x, int y, int value)
 {
-    u8g2.setFlipMode(1);             // Flips display 180 (1) = True
+    u8g2.setFlipMode(0);             // Flips display 180 (1) = True
     u8g2.setFont(u8g2_font_9x18_tf); // choose a suitable font
     u8g2.drawStr(0, 12, "User Selection");
     u8g2.drawStr(0, 30, "Puzzle");
@@ -48,7 +48,7 @@ void Display::print_select_puzzle(int x, int y, int value)
 
 void Display::print_user_puzzle(int a, int b, int value1)
 {
-    u8g2.setFlipMode(1);
+    u8g2.setFlipMode(0);
     u8g2.setFont(u8g2_font_9x18_tf);
     u8g2.drawStr(0, 12, "Opening");
      u8g2.drawStr(0, 28, "Selected");
