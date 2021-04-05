@@ -238,7 +238,7 @@ int Mulitiplexer::r_mux_H_channel()
     return (read_h);
   }
   return (read_h);
- 
+ //delay(10);
 } // end r_mux_H_channel
 
 void Mulitiplexer::channel_select(int s1, int s2, int s3)
