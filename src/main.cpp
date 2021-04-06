@@ -196,6 +196,7 @@ void loop()
     LED0.LED_on_off(LED0.LEDclear);
     //*******End of LED Start up code code*******//
     
+    //*******User Picks which puzzle he/she would like to do*******//
     while (Button0.r_button() == HIGH)
     {
       Display0.clear();
@@ -232,11 +233,18 @@ void loop()
       break;
     }
 
+
+
     while ((Button0.r_button() == HIGH) & (constpot == 1)) // to set up Puzzle #10500704
     {
-      LED0.LED_on_off(LED0.LEDA1);
-      LED0.LED_on_off(LED0.LEDA2);
-      LED0.LED_on_off(LED0.LEDA3);
+      LED0.LED_on_off(LED0.LEDA8); LED0.LED_on_off(LED0.LEDC8); LED0.LED_on_off(LED0.LEDD8); LED0.LED_on_off(LED0.LEDF8); LED0.LED_on_off(LED0.LEDH8);
+      LED0.LED_on_off(LED0.LEDA7); LED0.LED_on_off(LED0.LEDB7); LED0.LED_on_off(LED0.LEDC7); LED0.LED_on_off(LED0.LEDD7); LED0.LED_on_off(LED0.LEDF7); LED0.LED_on_off(LED0.LEDG7); LED0.LED_on_off(LED0.LEDH7);
+      LED0.LED_on_off(LED0.LEDC6); LED0.LED_on_off(LED0.LEDG6);
+      LED0.LED_on_off(LED0.LEDC5);
+      LED0.LED_on_off(LED0.LEDC4); LED0.LED_on_off(LED0.LEDE4);
+      LED0.LED_on_off(LED0.LEDC3);
+      LED0.LED_on_off(LED0.LEDA2); LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDC2); LED0.LED_on_off(LED0.LEDD2); LED0.LED_on_off(LED0.LEDF2); LED0.LED_on_off(LED0.LEDG2); LED0.LED_on_off(LED0.LEDH2);
+      LED0.LED_on_off(LED0.LEDC1); LED0.LED_on_off(LED0.LEDD1); LED0.LED_on_off(LED0.LEDH1);
     }
 
     while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #5650034
