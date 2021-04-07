@@ -118,52 +118,60 @@ void loop()
 
     while ((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
     {
-     
+     int colmA_Master[8] = {0, 1, 0, 0, 0, 0, 1, 1};
+     int colmA_Total[8];
 
       Mulitiplexer0.channel_select(0, 0, 0); // 000
       Serial.println("Block A1");
-      int Acolm_1 = Mulitiplexer0.r_mux_A_channel()+10;
-       delay(10);
+      colmA_Total[0] = Mulitiplexer0.r_mux_A_channel();
+      delay(10);
 
       Mulitiplexer0.channel_select(1, 0, 0); // 100
       Serial.println("Block A2");
-      int Acolm_2  = Mulitiplexer0.r_mux_A_channel()+20;
+      colmA_Total[1]  = Mulitiplexer0.r_mux_A_channel();
       delay(10);
 
        Mulitiplexer0.channel_select(0, 1, 0); // 010
        Serial.println("Block A3");
-       int Acolm_3 = Mulitiplexer0.r_mux_A_channel()+30;
+       colmA_Total[2] = Mulitiplexer0.r_mux_A_channel();
        delay(10);
 
        Mulitiplexer0.channel_select(1, 1, 0); // 110
        Serial.println("Block A4");
-       int Acolm_4 = Mulitiplexer0.r_mux_A_channel()+40;
+       colmA_Total[3] = Mulitiplexer0.r_mux_A_channel();
        delay(10);
 
        Mulitiplexer0.channel_select(0, 0, 1); // 001
        Serial.println("Block A5");
-       int Acolm_5 = Mulitiplexer0.r_mux_A_channel()+50;
+       colmA_Total[4]= Mulitiplexer0.r_mux_A_channel();
        delay(10);
 
        Mulitiplexer0.channel_select(1, 0, 1); // 101
        Serial.println("Block A6");
-       int Acolm_6 = Mulitiplexer0.r_mux_A_channel()+60;
+       colmA_Total[5] = Mulitiplexer0.r_mux_A_channel();
        delay(10);
 
        Mulitiplexer0.channel_select(0, 1, 1); // 011
        Serial.println("Block A7");
-       int Acolm_7 = Mulitiplexer0.r_mux_A_channel()+70;
+       colmA_Total[6] = Mulitiplexer0.r_mux_A_channel();
        delay(10);
 
        Mulitiplexer0.channel_select(1, 1, 1); // 111
        Serial.println("Block A8");
-       int Acolm_8 = Mulitiplexer0.r_mux_A_channel()+80;
+       colmA_Total[7] = Mulitiplexer0.r_mux_A_channel();
        Serial.println("_____________________");
        Serial.println();
 
-       int colmA_Total = Acolm_1 + Acolm_2 + Acolm_3 + Acolm_4 + Acolm_5 + Acolm_6 + Acolm_7 + Acolm_8;
-       Serial.println(colmA_Total);
+       Serial.println("ColmA_Total ");
+       Serial.println(colmA_Total[8]);
+   
+       Serial.println("colmA_Master ");
+       Serial.println(colmA_Master[8]);
 
+       if (colmA_Total == colmA_Master)
+       {
+         Serial.println("ColmA is equal turn off all LEDs");
+       }
        delay(1000);
     } // end test for mux circuit
 
