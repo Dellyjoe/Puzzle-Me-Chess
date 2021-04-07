@@ -118,43 +118,45 @@ void loop()
 
     while ((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
     {
-      int colmA_Master[8] = {0, 1, 0, 0, 0, 0, 1, 1}; // 
+      int colmA_Master[8] = {1, 0, 1, 1, 1, 1, 0, 0}; // 
       int colmA_Total[8];
-
+        LED0.LED_on_off(LED0.LEDA2); 
+        LED0.LED_on_off(LED0.LEDA7); 
+        LED0.LED_on_off(LED0.LEDA8); 
       Mulitiplexer0.channel_select(0, 0, 0); // 000
       Serial.println("Block A1");
       colmA_Total[0] = Mulitiplexer0.r_mux_A_channel();
-      delay(10);
+      //delay(10);
 
       Mulitiplexer0.channel_select(1, 0, 0); // 100
       Serial.println("Block A2");
       colmA_Total[1]  = Mulitiplexer0.r_mux_A_channel();
-      delay(10);
+      //delay(10);
 
        Mulitiplexer0.channel_select(0, 1, 0); // 010
        Serial.println("Block A3");
        colmA_Total[2] = Mulitiplexer0.r_mux_A_channel();
-       delay(10);
+       //delay(10);
 
        Mulitiplexer0.channel_select(1, 1, 0); // 110
        Serial.println("Block A4");
        colmA_Total[3] = Mulitiplexer0.r_mux_A_channel();
-       delay(10);
+       //delay(10);
 
        Mulitiplexer0.channel_select(0, 0, 1); // 001
        Serial.println("Block A5");
        colmA_Total[4]= Mulitiplexer0.r_mux_A_channel();
-       delay(10);
+       //delay(10);
 
        Mulitiplexer0.channel_select(1, 0, 1); // 101
        Serial.println("Block A6");
        colmA_Total[5] = Mulitiplexer0.r_mux_A_channel();
-       delay(10);
+       //delay(10);
 
        Mulitiplexer0.channel_select(0, 1, 1); // 011
        Serial.println("Block A7");
        colmA_Total[6] = Mulitiplexer0.r_mux_A_channel();
-       delay(10);
+       //delay(10);
 
        Mulitiplexer0.channel_select(1, 1, 1); // 111
        Serial.println("Block A8");
@@ -162,22 +164,17 @@ void loop()
        Serial.println("_____________________");
        Serial.println();
 
-       Serial.println("ColmA_Total ");
-       Serial.println(colmA_Total[8]);
-   
-       Serial.println("colmA_Master ");
-       Serial.println(colmA_Master[8]);
-
        if ((colmA_Total[1] == colmA_Master[1]) & (colmA_Total[6] == colmA_Master[6]) & (colmA_Total[7] == colmA_Master[7]))
        {
          Serial.println("ColmA is equal turn off all LEDs");
+         LED0.LED_on_off(LED0.LEDclear);
        }
        else
-       {
+       { 
          Serial.println("Master Key requirements not met");
        }
 
-       delay(1000);
+       //delay(1000);
     } // end test for mux circuit
 
     delay(1000); //--> to allow for button press
