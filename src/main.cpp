@@ -118,7 +118,7 @@ void loop()
 
     while ((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
     {
-      int colmA_Master[8] = {1, 0, 1, 1, 1, 1, 0, 0}; // 
+      int colmA_Master[8] = {1, 0, 1, 1, 1, 1, 0, 0}; // 0 = Peice is on Chess board
       int colmA_Total[8];
 
       LED0.LED_on_off(LED0.LEDA2); // Turning on Master key LEDs
