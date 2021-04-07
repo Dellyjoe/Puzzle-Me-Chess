@@ -118,8 +118,8 @@ void loop()
 
     while ((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
     {
-     int colmA_Master[8] = {0, 1, 0, 0, 0, 0, 1, 1};
-     int colmA_Total[8];
+      int colmA_Master[8] = {0, 1, 0, 0, 0, 0, 1, 1}; // 
+      int colmA_Total[8];
 
       Mulitiplexer0.channel_select(0, 0, 0); // 000
       Serial.println("Block A1");
@@ -168,10 +168,15 @@ void loop()
        Serial.println("colmA_Master ");
        Serial.println(colmA_Master[8]);
 
-       if (colmA_Total == colmA_Master)
+       if ((colmA_Total[1] == colmA_Master[1]) & (colmA_Total[6] == colmA_Master[6]) & (colmA_Total[7] == colmA_Master[7]))
        {
          Serial.println("ColmA is equal turn off all LEDs");
        }
+       else
+       {
+         Serial.println("Master Key requirements not met");
+       }
+
        delay(1000);
     } // end test for mux circuit
 
