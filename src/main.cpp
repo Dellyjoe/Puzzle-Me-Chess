@@ -168,13 +168,13 @@ void loop()
        {
          Serial.println("ColmA is equal turn off all LEDs");
          LED0.LED_on_off(LED0.LEDclear);
+         delay(5000); // Added to show visual cue
        }
        else
        { 
          Serial.println("Master Key requirements not met");
        }
 
-       //delay(1000);
     } // end test for mux circuit
 
     delay(1000); //--> to allow for button press
