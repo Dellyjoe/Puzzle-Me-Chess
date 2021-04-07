@@ -118,39 +118,53 @@ void loop()
 
     while ((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
     {
+     
+
       Mulitiplexer0.channel_select(0, 0, 0); // 000
       Serial.println("Block A1");
-      Mulitiplexer0.r_mux_A_channel();
+      int Acolm_1 = Mulitiplexer0.r_mux_A_channel()+10;
        delay(10);
+
       Mulitiplexer0.channel_select(1, 0, 0); // 100
-       Serial.println("Block B2");
-       Mulitiplexer0.r_mux_B_channel();
+      Serial.println("Block A2");
+      int Acolm_2  = Mulitiplexer0.r_mux_A_channel()+20;
       delay(10);
+
        Mulitiplexer0.channel_select(0, 1, 0); // 010
-       Serial.println("Block C3");
-       Mulitiplexer0.r_mux_C_channel();
+       Serial.println("Block A3");
+       int Acolm_3 = Mulitiplexer0.r_mux_A_channel()+30;
        delay(10);
+
        Mulitiplexer0.channel_select(1, 1, 0); // 110
-       Serial.println("Block D4");
-       Mulitiplexer0.r_mux_D_channel();
+       Serial.println("Block A4");
+       int Acolm_4 = Mulitiplexer0.r_mux_A_channel()+40;
        delay(10);
+
        Mulitiplexer0.channel_select(0, 0, 1); // 001
-       Serial.println("Block E5");
-       Mulitiplexer0.r_mux_E_channel();
+       Serial.println("Block A5");
+       int Acolm_5 = Mulitiplexer0.r_mux_A_channel()+50;
        delay(10);
+
        Mulitiplexer0.channel_select(1, 0, 1); // 101
-       Serial.println("Block F6");
-       Mulitiplexer0.r_mux_F_channel();
+       Serial.println("Block A6");
+       int Acolm_6 = Mulitiplexer0.r_mux_A_channel()+60;
        delay(10);
+
        Mulitiplexer0.channel_select(0, 1, 1); // 011
-       Serial.println("Block G7");
-       Mulitiplexer0.r_mux_G_channel();
+       Serial.println("Block A7");
+       int Acolm_7 = Mulitiplexer0.r_mux_A_channel()+70;
        delay(10);
+
        Mulitiplexer0.channel_select(1, 1, 1); // 111
-       Serial.println("Block H8");
-       Mulitiplexer0.r_mux_H_channel();
+       Serial.println("Block A8");
+       int Acolm_8 = Mulitiplexer0.r_mux_A_channel()+80;
        Serial.println("_____________________");
-      delay(1000);
+       Serial.println();
+
+       int colmA_Total = Acolm_1 + Acolm_2 + Acolm_3 + Acolm_4 + Acolm_5 + Acolm_6 + Acolm_7 + Acolm_8;
+       Serial.println(colmA_Total);
+
+       delay(1000);
     } // end test for mux circuit
 
     delay(1000); //--> to allow for button press
@@ -235,12 +249,12 @@ void loop()
 
 
 
-    while ((Button0.r_button() == HIGH) & (constpot == 1)) // to set up Puzzle #10500704
+    while ((Button0.r_button() == HIGH) & (constpot == 1)) // to set up Puzzle #136829
     {
       LED0.LED_on_off(LED0.LEDA8); LED0.LED_on_off(LED0.LEDC8); LED0.LED_on_off(LED0.LEDD8); LED0.LED_on_off(LED0.LEDF8); LED0.LED_on_off(LED0.LEDH8);
       LED0.LED_on_off(LED0.LEDA7); LED0.LED_on_off(LED0.LEDB7); LED0.LED_on_off(LED0.LEDC7); LED0.LED_on_off(LED0.LEDD7); LED0.LED_on_off(LED0.LEDF7); LED0.LED_on_off(LED0.LEDG7); LED0.LED_on_off(LED0.LEDH7);
       LED0.LED_on_off(LED0.LEDC6); LED0.LED_on_off(LED0.LEDG6);
-      LED0.LED_on_off(LED0.LEDC5);
+      LED0.LED_on_off(LED0.LEDG5);
       LED0.LED_on_off(LED0.LEDC4); LED0.LED_on_off(LED0.LEDE4);
       LED0.LED_on_off(LED0.LEDC3);
       LED0.LED_on_off(LED0.LEDA2); LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDC2); LED0.LED_on_off(LED0.LEDD2); LED0.LED_on_off(LED0.LEDF2); LED0.LED_on_off(LED0.LEDG2); LED0.LED_on_off(LED0.LEDH2);
