@@ -118,48 +118,51 @@ void loop()
 
     while ((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
     {
-      int colmA_Master[8] = {1, 0, 1, 1, 1, 1, 0, 0}; // 0 = Peice is on Chess board
-      int colmA_Total[8];
+      // int colmA_Master[8] = {1, 0, 1, 1, 1, 1, 0, 0}; // 0 = Peice is on Chess board
+      // int colmA_Total[8];
 
       LED0.LED_on_off(LED0.LEDA2); // Turning on Master key LEDs
       LED0.LED_on_off(LED0.LEDA7); 
       LED0.LED_on_off(LED0.LEDA8); 
 
-      Mulitiplexer0.channel_select(0, 0, 0); // 000
-      Serial.println("Block A1");
-      colmA_Total[0] = Mulitiplexer0.r_mux_A_channel();
+      Mulitiplexer0.r_mux_A_channel();
+      
+      // Mulitiplexer0.channel_select(0, 0, 0); // 000
+      // Serial.println("Block A1");
+      // colmA_Total[0] = Mulitiplexer0.r_mux_A_channel();
 
-      Mulitiplexer0.channel_select(1, 0, 0); // 100
-      Serial.println("Block A2");
-      colmA_Total[1]  = Mulitiplexer0.r_mux_A_channel();
+      // Mulitiplexer0.channel_select(1, 0, 0); // 100
+      // Serial.println("Block A2");
+      // colmA_Total[1]  = Mulitiplexer0.r_mux_A_channel();
 
-      Mulitiplexer0.channel_select(0, 1, 0); // 010
-      Serial.println("Block A3");
-      colmA_Total[2] = Mulitiplexer0.r_mux_A_channel();
+      // Mulitiplexer0.channel_select(0, 1, 0); // 010
+      // Serial.println("Block A3");
+      // colmA_Total[2] = Mulitiplexer0.r_mux_A_channel();
 
-      Mulitiplexer0.channel_select(1, 1, 0); // 110
-      Serial.println("Block A4");
-      colmA_Total[3] = Mulitiplexer0.r_mux_A_channel();
+      // Mulitiplexer0.channel_select(1, 1, 0); // 110
+      // Serial.println("Block A4");
+      // colmA_Total[3] = Mulitiplexer0.r_mux_A_channel();
 
-      Mulitiplexer0.channel_select(0, 0, 1); // 001
-      Serial.println("Block A5");
-      colmA_Total[4]= Mulitiplexer0.r_mux_A_channel();
+      // Mulitiplexer0.channel_select(0, 0, 1); // 001
+      // Serial.println("Block A5");
+      // colmA_Total[4]= Mulitiplexer0.r_mux_A_channel();
 
-      Mulitiplexer0.channel_select(1, 0, 1); // 101
-      Serial.println("Block A6");
-      colmA_Total[5] = Mulitiplexer0.r_mux_A_channel();
+      // Mulitiplexer0.channel_select(1, 0, 1); // 101
+      // Serial.println("Block A6");
+      // colmA_Total[5] = Mulitiplexer0.r_mux_A_channel();
 
-      Mulitiplexer0.channel_select(0, 1, 1); // 011
-      Serial.println("Block A7");
-      colmA_Total[6] = Mulitiplexer0.r_mux_A_channel();
+      // Mulitiplexer0.channel_select(0, 1, 1); // 011
+      // Serial.println("Block A7");
+      // colmA_Total[6] = Mulitiplexer0.r_mux_A_channel();
 
-      Mulitiplexer0.channel_select(1, 1, 1); // 111
-      Serial.println("Block A8");
-      colmA_Total[7] = Mulitiplexer0.r_mux_A_channel();
-      Serial.println("_____________________");
-      Serial.println();
+      // Mulitiplexer0.channel_select(1, 1, 1); // 111
+      // Serial.println("Block A8");
+      // colmA_Total[7] = Mulitiplexer0.r_mux_A_channel();
+      // Serial.println("_____________________");
+      // Serial.println();
 
-      if ((colmA_Total[1] == colmA_Master[1]) & (colmA_Total[6] == colmA_Master[6]) & (colmA_Total[7] == colmA_Master[7]))
+      if ((Mulitiplexer0.colmA_key_1[1] == Mulitiplexer0.colmA_master_1[1]) & (Mulitiplexer0.colmA_key_1[6] == Mulitiplexer0.colmA_master_1[6]) & 
+          (Mulitiplexer0.colmA_key_1[7] == Mulitiplexer0.colmA_master_1[7]))
       {
         Serial.println("ColmA is equal turn off all LEDs");
         LED0.LED_on_off(LED0.LEDclear);
@@ -226,10 +229,6 @@ void loop()
     delay(1000); //--> to allow for button press
     const int constpot = Potentiometer0.r_pot(); // making pot cost for remaining of loop
 
-    Display0.clear();
-    Display0.print_user_puzzle(58, 43, constpot);
-    Display0.draw();
-
     switch (constpot)
     {
     case 1:
@@ -252,18 +251,22 @@ void loop()
       break;
     }
 
+    Display0.clear();
+    Display0.print_user_puzzle(58, 43, constpot);
+    Display0.draw();
 
-
-    while ((Button0.r_button() == HIGH) & (constpot == 1)) // to set up Puzzle #136829
+    if(constpot == 1) // to set up Puzzle #136829
     {
-      LED0.LED_on_off(LED0.LEDA8); LED0.LED_on_off(LED0.LEDC8); LED0.LED_on_off(LED0.LEDD8); LED0.LED_on_off(LED0.LEDF8); LED0.LED_on_off(LED0.LEDH8);
-      LED0.LED_on_off(LED0.LEDA7); LED0.LED_on_off(LED0.LEDB7); LED0.LED_on_off(LED0.LEDC7); LED0.LED_on_off(LED0.LEDD7); LED0.LED_on_off(LED0.LEDF7); LED0.LED_on_off(LED0.LEDG7); LED0.LED_on_off(LED0.LEDH7);
-      LED0.LED_on_off(LED0.LEDC6); LED0.LED_on_off(LED0.LEDG6);
-      LED0.LED_on_off(LED0.LEDG5);
-      LED0.LED_on_off(LED0.LEDC4); LED0.LED_on_off(LED0.LEDE4);
-      LED0.LED_on_off(LED0.LEDC3);
-      LED0.LED_on_off(LED0.LEDA2); LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDC2); LED0.LED_on_off(LED0.LEDD2); LED0.LED_on_off(LED0.LEDF2); LED0.LED_on_off(LED0.LEDG2); LED0.LED_on_off(LED0.LEDH2);
-      LED0.LED_on_off(LED0.LEDC1); LED0.LED_on_off(LED0.LEDD1); LED0.LED_on_off(LED0.LEDH1);
+
+       LED0.LED_on_off(LED0.LEDA2); LED0.LED_on_off(LED0.LEDA7); LED0.LED_on_off(LED0.LEDA8); 
+       LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
+       LED0.LED_on_off(LED0.LEDC1); LED0.LED_on_off(LED0.LEDC2); LED0.LED_on_off(LED0.LEDC3); LED0.LED_on_off(LED0.LEDC4); LED0.LED_on_off(LED0.LEDC6); LED0.LED_on_off(LED0.LEDC7);  LED0.LED_on_off(LED0.LEDC8);
+       LED0.LED_on_off(LED0.LEDD1); LED0.LED_on_off(LED0.LEDD2); LED0.LED_on_off(LED0.LEDD7); LED0.LED_on_off(LED0.LEDD8);
+       LED0.LED_on_off(LED0.LEDE4); LED0.LED_on_off(LED0.LEDE8);
+       LED0.LED_on_off(LED0.LEDF2); LED0.LED_on_off(LED0.LEDF7);
+       LED0.LED_on_off(LED0.LEDG2); LED0.LED_on_off(LED0.LEDG5); LED0.LED_on_off(LED0.LEDG6); LED0.LED_on_off(LED0.LEDG7);
+       LED0.LED_on_off(LED0.LEDH1); LED0.LED_on_off(LED0.LEDH2); LED0.LED_on_off(LED0.LEDH7); LED0.LED_on_off(LED0.LEDH8);
+
     }
 
     while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #5650034
