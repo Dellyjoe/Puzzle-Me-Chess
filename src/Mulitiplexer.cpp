@@ -114,58 +114,81 @@ void Mulitiplexer::channel_select(int s1, int s2, int s3)
 
 int Mulitiplexer::r_mux_A_channel()
 {
-  read_a = digitalRead(mux_input_pin_a);
-
+  
   channel_select(0, 0, 0); // 000
   Serial.println("Block A1");
+  read_a = digitalRead(mux_input_pin_a);
   colmA_key_1[0] = read_a;
+  Serial.println(colmA_key_1[0]);
 
   channel_select(1, 0, 0); // 100
   Serial.println("Block A2");
+  read_a = digitalRead(mux_input_pin_a);
   colmA_key_1[1]  = read_a;
+  Serial.println(colmA_key_1[1]);
 
   channel_select(0, 1, 0); // 010
   Serial.println("Block A3");
+  read_a = digitalRead(mux_input_pin_a);
   colmA_key_1[2] = read_a;
+  Serial.println(colmA_key_1[2]);
 
   channel_select(1, 1, 0); // 110
   Serial.println("Block A4");
+  read_a = digitalRead(mux_input_pin_a);
   colmA_key_1[3] = read_a;
+  Serial.println(colmA_key_1[3]);
 
   channel_select(0, 0, 1); // 001
   Serial.println("Block A5");
+  read_a = digitalRead(mux_input_pin_a);
   colmA_key_1[4]= read_a;
+  Serial.println(colmA_key_1[4]);
 
   channel_select(1, 0, 1); // 101
   Serial.println("Block A6");
+  read_a = digitalRead(mux_input_pin_a);
   colmA_key_1[5] = read_a;
+  Serial.println(colmA_key_1[5]);
 
   channel_select(0, 1, 1); // 011
   Serial.println("Block A7");
+  read_a = digitalRead(mux_input_pin_a);
   colmA_key_1[6] = read_a;
+  Serial.println(colmA_key_1[6]);
 
   channel_select(1, 1, 1); // 111
   Serial.println("Block A8");
+  read_a = digitalRead(mux_input_pin_a);
   colmA_key_1[7] = read_a;
-  Serial.println("_____________________");
   Serial.println(colmA_key_1[7]);
   Serial.println("_____________________");
-  Serial.println();
+ 
+      if ((colmA_key_1[0] == colmA_master_1[0]) & (colmA_key_1[1] == colmA_master_1[1]) & (colmA_key_1[2] == colmA_master_1[2]) & (colmA_key_1[3] == colmA_master_1[3]) &
+          (colmA_key_1[4] == colmA_master_1[4]) & (colmA_key_1[5] == colmA_master_1[5]) & (colmA_key_1[6] == colmA_master_1[6]) & (colmA_key_1[7] == colmA_master_1[7]))
+           {
+              Serial.println("ColmA is equal turn off all LEDs");
+              return (true) ;
+           }
+           else
+           {
+             Serial.println("Master Key requirements not met");
+             return(false);
+           }
 
-  //***************************************Test Code***************************//
-  if (test_code_mulitiplexer_checkoutput == true)
-  {
-    if (read_a == HIGH)
-    {
+  // //***************************************Test Code***************************//
+  // if (test_code_mulitiplexer_checkoutput == true)
+  // {
+  //   if (read_a == HIGH)
+  //   {
       
-    }
-    else
-    {
-      Serial.println("Chess Peice is on square");
-    }
-    return (read_a);
-  }
-  return (read_a);
+  //   }
+  //   else
+  //   {
+  //     Serial.println("Chess Peice is on square");
+  //   }
+  //   return (read_a);
+  // }
  
 } // end r_mux_A_channel
 
