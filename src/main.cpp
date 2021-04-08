@@ -118,64 +118,33 @@ void loop()
 
     while ((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
     {
-      // int colmA_Master[8] = {1, 0, 1, 1, 1, 1, 0, 0}; // 0 = Peice is on Chess board
-      // int colmA_Total[8];
-
+      while(Mulitiplexer0.r_mux_A_channel() == false)
+      {
       LED0.LED_on_off(LED0.LEDA2); // Turning on Master key LEDs
       LED0.LED_on_off(LED0.LEDA7); 
       LED0.LED_on_off(LED0.LEDA8); 
-
-      Mulitiplexer0.r_mux_A_channel();
-      
-      // Mulitiplexer0.channel_select(0, 0, 0); // 000
-      // Serial.println("Block A1");
-      // colmA_Total[0] = Mulitiplexer0.r_mux_A_channel();
-
-      // Mulitiplexer0.channel_select(1, 0, 0); // 100
-      // Serial.println("Block A2");
-      // colmA_Total[1]  = Mulitiplexer0.r_mux_A_channel();
-
-      // Mulitiplexer0.channel_select(0, 1, 0); // 010
-      // Serial.println("Block A3");
-      // colmA_Total[2] = Mulitiplexer0.r_mux_A_channel();
-
-      // Mulitiplexer0.channel_select(1, 1, 0); // 110
-      // Serial.println("Block A4");
-      // colmA_Total[3] = Mulitiplexer0.r_mux_A_channel();
-
-      // Mulitiplexer0.channel_select(0, 0, 1); // 001
-      // Serial.println("Block A5");
-      // colmA_Total[4]= Mulitiplexer0.r_mux_A_channel();
-
-      // Mulitiplexer0.channel_select(1, 0, 1); // 101
-      // Serial.println("Block A6");
-      // colmA_Total[5] = Mulitiplexer0.r_mux_A_channel();
-
-      // Mulitiplexer0.channel_select(0, 1, 1); // 011
-      // Serial.println("Block A7");
-      // colmA_Total[6] = Mulitiplexer0.r_mux_A_channel();
-
-      // Mulitiplexer0.channel_select(1, 1, 1); // 111
-      // Serial.println("Block A8");
-      // colmA_Total[7] = Mulitiplexer0.r_mux_A_channel();
-      // Serial.println("_____________________");
-      // Serial.println();
-
-      if ((Mulitiplexer0.colmA_key_1[1] == Mulitiplexer0.colmA_master_1[1]) & (Mulitiplexer0.colmA_key_1[6] == Mulitiplexer0.colmA_master_1[6]) & 
-          (Mulitiplexer0.colmA_key_1[7] == Mulitiplexer0.colmA_master_1[7]))
+    
+      if (Mulitiplexer0.r_mux_A_channel() == true)
       {
-        Serial.println("ColmA is equal turn off all LEDs");
         LED0.LED_on_off(LED0.LEDclear);
-        delay(5000); // Added to show visual cue
       }
       else
-      { 
-        Serial.println("Master Key requirements not met");
+      {
+        // call display funtion that will tell the user which peices go where. 
       }
 
-    } // end test for mux circuit
+      }// end of while loop Mux A
+
+        while ((Button0.r_button() == HIGH))
+    {
+       LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
+
+    } // end of while loop Mux B
 
     delay(1000); //--> to allow for button press
+    } // end test_code_mulitiplexer_checkoutput == true
+
+  
 
   } // end  if (test_code == true)
 
