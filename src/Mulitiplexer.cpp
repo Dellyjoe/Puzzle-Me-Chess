@@ -79,7 +79,6 @@ void Mulitiplexer::set_enable(int enable_HL)
       Serial.println("Mux's are on");
     }
   }
-
 } // end set_enable
 
 void Mulitiplexer::channel_select(int s1, int s2, int s3)
@@ -114,7 +113,6 @@ void Mulitiplexer::channel_select(int s1, int s2, int s3)
 
 int Mulitiplexer::r_mux_A_channel()
 {
-  
   channel_select(0, 0, 0); // 000
   Serial.println("Block A1");
   read_a = digitalRead(mux_input_pin_a);
@@ -164,32 +162,17 @@ int Mulitiplexer::r_mux_A_channel()
   Serial.println(colmA_key_1[7]);
   Serial.println("_____________________");
  
-      if ((colmA_key_1[0] == colmA_master_1[0]) & (colmA_key_1[1] == colmA_master_1[1]) & (colmA_key_1[2] == colmA_master_1[2]) & (colmA_key_1[3] == colmA_master_1[3]) &
-          (colmA_key_1[4] == colmA_master_1[4]) & (colmA_key_1[5] == colmA_master_1[5]) & (colmA_key_1[6] == colmA_master_1[6]) & (colmA_key_1[7] == colmA_master_1[7]))
-           {
-              Serial.println("ColmA is equal turn off all LEDs");
-              return (true) ;
-           }
-           else
-           {
-             Serial.println("Master Key requirements not met");
-             return(false);
-           }
-
-  // //***************************************Test Code***************************//
-  // if (test_code_mulitiplexer_checkoutput == true)
-  // {
-  //   if (read_a == HIGH)
-  //   {
-      
-  //   }
-  //   else
-  //   {
-  //     Serial.println("Chess Peice is on square");
-  //   }
-  //   return (read_a);
-  // }
- 
+  if ((colmA_key_1[0] == colmA_master_1[0]) & (colmA_key_1[1] == colmA_master_1[1]) & (colmA_key_1[2] == colmA_master_1[2]) & (colmA_key_1[3] == colmA_master_1[3]) &
+      (colmA_key_1[4] == colmA_master_1[4]) & (colmA_key_1[5] == colmA_master_1[5]) & (colmA_key_1[6] == colmA_master_1[6]) & (colmA_key_1[7] == colmA_master_1[7]))
+  {
+    Serial.println("ColmA is equal turn off all LEDs");
+    return (true) ;
+  }
+  else
+  {
+    Serial.println("Master Key requirements not met");
+    return(false);
+  }
 } // end r_mux_A_channel
 
 int Mulitiplexer::r_mux_B_channel()
@@ -209,7 +192,6 @@ int Mulitiplexer::r_mux_B_channel()
     return (read_b);
   }
   return (read_b);
- 
 } // end r_mux_B_channel
 
 int Mulitiplexer::r_mux_C_channel()
@@ -229,7 +211,6 @@ int Mulitiplexer::r_mux_C_channel()
     return (read_c);
   }
   return (read_c);
- 
 } // end r_mux_C_channel
 
 int Mulitiplexer::r_mux_D_channel()
@@ -268,7 +249,6 @@ int Mulitiplexer::r_mux_E_channel()
     return (read_e);
   }
   return (read_e);
- 
 } // end r_mux_E_channel
 
 int Mulitiplexer::r_mux_F_channel()
@@ -288,7 +268,6 @@ int Mulitiplexer::r_mux_F_channel()
     return (read_f);
   }
   return (read_f);
- 
 } // end r_mux_F_channel
 
 int Mulitiplexer::r_mux_G_channel()
@@ -308,7 +287,6 @@ int Mulitiplexer::r_mux_G_channel()
     return (read_g);
   }
   return (read_g);
- 
 } // end r_mux_G_channel
 
 int Mulitiplexer::r_mux_H_channel()
@@ -328,7 +306,6 @@ int Mulitiplexer::r_mux_H_channel()
     return (read_h);
   }
   return (read_h);
- //delay(10);
 } // end r_mux_H_channel
 
 
