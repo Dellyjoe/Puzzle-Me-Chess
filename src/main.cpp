@@ -78,16 +78,16 @@ void loop()
      Mulitiplexer0.set_enable(0);
     }
     
-     while ((Button0.r_button() == HIGH) & (test_code_buzzer == true))
-      {
-        Buzzer0.write_buzzer();
-        delay(1000);
-        Buzzer0.turn_off_buzzer();
-        delay(1000);
-      }
+    while ((Button0.r_button() == HIGH) & (test_code_buzzer == true))
+    {
+      Buzzer0.write_buzzer();
+      delay(1000);
       Buzzer0.turn_off_buzzer();
+      delay(1000);
+    }
+    Buzzer0.turn_off_buzzer();
 
-      delay(1000);//--> to allow for button press
+    delay(1000);//--> to allow for button press
 
     while((Button0.r_button() == HIGH) & (test_code_LED == true))
     {
@@ -114,37 +114,35 @@ void loop()
 
       LED0.LED_on_off(LED0.LEDH1); delay(500); LED0.LED_on_off(LED0.LEDH2); delay(500); LED0.LED_on_off(LED0.LEDH3); delay(500); LED0.LED_on_off(LED0.LEDH4); delay(500); 
       LED0.LED_on_off(LED0.LEDH5); delay(500); LED0.LED_on_off(LED0.LEDH6); delay(500); LED0.LED_on_off(LED0.LEDH7); delay(500); LED0.LED_on_off(LED0.LEDH8); delay(1000);
-     }
+    }
 
-    while ((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
+    while((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
     {
       while(Mulitiplexer0.r_mux_A_channel() == false)
       {
-      LED0.LED_on_off(LED0.LEDA2); // Turning on Master key LEDs
-      LED0.LED_on_off(LED0.LEDA7); 
-      LED0.LED_on_off(LED0.LEDA8); 
+        LED0.LED_on_off(LED0.LEDA2); // Turning on Master key LEDs
+        LED0.LED_on_off(LED0.LEDA7); 
+        LED0.LED_on_off(LED0.LEDA8); 
     
-      if (Mulitiplexer0.r_mux_A_channel() == true)
-      {
-        LED0.LED_on_off(LED0.LEDclear);
-      }
-      else
-      {
-        // call display funtion that will tell the user which peices go where. 
-      }
+        if (Mulitiplexer0.r_mux_A_channel() == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+          // call display funtion that will tell the user which peices go where. 
+        }
 
       }// end of while loop Mux A
 
-        while ((Button0.r_button() == HIGH))
-    {
-       LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
+      while ((Button0.r_button() == HIGH)) // change this when you set up Mux B
+      {
+        LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
 
-    } // end of while loop Mux B
+      } // end of while loop Mux B
 
-    delay(1000); //--> to allow for button press
+      delay(1000); //--> to allow for button press
     } // end test_code_mulitiplexer_checkoutput == true
-
-  
 
   } // end  if (test_code == true)
 
@@ -153,36 +151,36 @@ void loop()
   {
     //*************LED Start up code*************//
     for(int i = 1; i<200; i++)
-      {
-        LED0.LED_on_off(LED0.LEDA8); 
-        LED0.LED_on_off(LED0.LEDH8); 
-        LED0.LED_on_off(LED0.LEDA1); 
-        LED0.LED_on_off(LED0.LEDH1); 
-      } // end of for loop
+    {
+      LED0.LED_on_off(LED0.LEDA8); 
+      LED0.LED_on_off(LED0.LEDH8); 
+      LED0.LED_on_off(LED0.LEDA1); 
+      LED0.LED_on_off(LED0.LEDH1); 
+    } // end of for loop
       
-      for(int i = 1; i<200; i++)
-      {
-        LED0.LED_on_off(LED0.LEDB7); 
-        LED0.LED_on_off(LED0.LEDG7);  
-        LED0.LED_on_off(LED0.LEDB2); 
-        LED0.LED_on_off(LED0.LEDG2); 
-      } // end of for loop
+    for(int i = 1; i<200; i++)
+    {
+      LED0.LED_on_off(LED0.LEDB7); 
+      LED0.LED_on_off(LED0.LEDG7);  
+      LED0.LED_on_off(LED0.LEDB2); 
+      LED0.LED_on_off(LED0.LEDG2); 
+    } // end of for loop
 
-      for(int i = 1; i<200; i++)
-      {
-        LED0.LED_on_off(LED0.LEDC6); 
-        LED0.LED_on_off(LED0.LEDF6); 
-        LED0.LED_on_off(LED0.LEDC3); 
-        LED0.LED_on_off(LED0.LEDF3);
-      } // end of for loop
+    for(int i = 1; i<200; i++)
+    {
+      LED0.LED_on_off(LED0.LEDC6); 
+      LED0.LED_on_off(LED0.LEDF6); 
+      LED0.LED_on_off(LED0.LEDC3); 
+      LED0.LED_on_off(LED0.LEDF3);
+    } // end of for loop
 
-      for(int i = 1; i<450; i++)
-      {
-        LED0.LED_on_off(LED0.LEDD5); 
-        LED0.LED_on_off(LED0.LEDE5); 
-        LED0.LED_on_off(LED0.LEDD4); 
-        LED0.LED_on_off(LED0.LEDE4);  
-      } // end of for loop
+    for(int i = 1; i<450; i++)
+    {
+      LED0.LED_on_off(LED0.LEDD5); 
+      LED0.LED_on_off(LED0.LEDE5); 
+      LED0.LED_on_off(LED0.LEDD4); 
+      LED0.LED_on_off(LED0.LEDE4);  
+    } // end of for loop
 
     LED0.LED_on_off(LED0.LEDclear);
     //*******End of LED Start up code code*******//
@@ -227,14 +225,14 @@ void loop()
     if(constpot == 1) // to set up Puzzle #136829
     {
 
-       LED0.LED_on_off(LED0.LEDA2); LED0.LED_on_off(LED0.LEDA7); LED0.LED_on_off(LED0.LEDA8); 
-       LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
-       LED0.LED_on_off(LED0.LEDC1); LED0.LED_on_off(LED0.LEDC2); LED0.LED_on_off(LED0.LEDC3); LED0.LED_on_off(LED0.LEDC4); LED0.LED_on_off(LED0.LEDC6); LED0.LED_on_off(LED0.LEDC7);  LED0.LED_on_off(LED0.LEDC8);
-       LED0.LED_on_off(LED0.LEDD1); LED0.LED_on_off(LED0.LEDD2); LED0.LED_on_off(LED0.LEDD7); LED0.LED_on_off(LED0.LEDD8);
-       LED0.LED_on_off(LED0.LEDE4); LED0.LED_on_off(LED0.LEDE8);
-       LED0.LED_on_off(LED0.LEDF2); LED0.LED_on_off(LED0.LEDF7);
-       LED0.LED_on_off(LED0.LEDG2); LED0.LED_on_off(LED0.LEDG5); LED0.LED_on_off(LED0.LEDG6); LED0.LED_on_off(LED0.LEDG7);
-       LED0.LED_on_off(LED0.LEDH1); LED0.LED_on_off(LED0.LEDH2); LED0.LED_on_off(LED0.LEDH7); LED0.LED_on_off(LED0.LEDH8);
+      LED0.LED_on_off(LED0.LEDA2); LED0.LED_on_off(LED0.LEDA7); LED0.LED_on_off(LED0.LEDA8); 
+      LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
+      LED0.LED_on_off(LED0.LEDC1); LED0.LED_on_off(LED0.LEDC2); LED0.LED_on_off(LED0.LEDC3); LED0.LED_on_off(LED0.LEDC4); LED0.LED_on_off(LED0.LEDC6); LED0.LED_on_off(LED0.LEDC7);  LED0.LED_on_off(LED0.LEDC8);
+      LED0.LED_on_off(LED0.LEDD1); LED0.LED_on_off(LED0.LEDD2); LED0.LED_on_off(LED0.LEDD7); LED0.LED_on_off(LED0.LEDD8);
+      LED0.LED_on_off(LED0.LEDE4); LED0.LED_on_off(LED0.LEDE8);
+      LED0.LED_on_off(LED0.LEDF2); LED0.LED_on_off(LED0.LEDF7);
+      LED0.LED_on_off(LED0.LEDG2); LED0.LED_on_off(LED0.LEDG5); LED0.LED_on_off(LED0.LEDG6); LED0.LED_on_off(LED0.LEDG7);
+      LED0.LED_on_off(LED0.LEDH1); LED0.LED_on_off(LED0.LEDH2); LED0.LED_on_off(LED0.LEDH7); LED0.LED_on_off(LED0.LEDH8);
 
     }
 
