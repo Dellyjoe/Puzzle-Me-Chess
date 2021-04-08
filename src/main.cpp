@@ -132,18 +132,15 @@ void loop()
         {
           // call display funtion that will tell the user which peices go where. 
         }
-
       }// end of while loop Mux A
 
       while ((Button0.r_button() == HIGH)) // change this when you set up Mux B
       {
         LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
-
       } // end of while loop Mux B
 
       delay(1000); //--> to allow for button press
     } // end test_code_mulitiplexer_checkoutput == true
-
   } // end  if (test_code == true)
 
   //***************************************Start of Code***********************//
@@ -224,7 +221,6 @@ void loop()
 
     if(constpot == 1) // to set up Puzzle #136829
     {
-
       LED0.LED_on_off(LED0.LEDA2); LED0.LED_on_off(LED0.LEDA7); LED0.LED_on_off(LED0.LEDA8); 
       LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
       LED0.LED_on_off(LED0.LEDC1); LED0.LED_on_off(LED0.LEDC2); LED0.LED_on_off(LED0.LEDC3); LED0.LED_on_off(LED0.LEDC4); LED0.LED_on_off(LED0.LEDC6); LED0.LED_on_off(LED0.LEDC7);  LED0.LED_on_off(LED0.LEDC8);
@@ -233,7 +229,6 @@ void loop()
       LED0.LED_on_off(LED0.LEDF2); LED0.LED_on_off(LED0.LEDF7);
       LED0.LED_on_off(LED0.LEDG2); LED0.LED_on_off(LED0.LEDG5); LED0.LED_on_off(LED0.LEDG6); LED0.LED_on_off(LED0.LEDG7);
       LED0.LED_on_off(LED0.LEDH1); LED0.LED_on_off(LED0.LEDH2); LED0.LED_on_off(LED0.LEDH7); LED0.LED_on_off(LED0.LEDH8);
-
     }
 
     while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #5650034
@@ -250,7 +245,5 @@ void loop()
 
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
     delay(1000);                 // allow for button press
-    
   } // end  if (test_code == false)
-
 } //end void loop
