@@ -1,11 +1,6 @@
 #include <Arduino.h>
 // Output of the MUX is an input to my Teensy
 
-#define TurnOnChannel1 (0 0 0) // Really channel 0; Set input State C = 0 B = 0 A = 0
-#define TurnOnChannel2 (1 0 0) // Really channel 0; Set input State C = 0 B = 0 A = 1
-
-//#define MuxA mux_input_pin_a
-// ...
 class Mulitiplexer
 {
 private:
@@ -49,8 +44,35 @@ public:
     int r_mux_G_channel(); 
     int r_mux_H_channel(); 
     void channel_select(int s1, int s2, int s3);  // s1,s2,s3 are selectors for mux channels
-
+    
+    //**************Puzzle 1*************************************//
+    //********* Coml A*************//
+    int colmA_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 0}; // 0 = Peice is on Chess board
+    int colmA_key_1[8];
+    //********* Coml B*************//
+    int colmB_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 1}; 
+    int colmB_key_1[8];
+    //********* Coml C*************//
+    int colmC_master_1[8] = {0, 0, 0, 0, 1, 0, 0, 0}; 
+    int colmC_key_1[8];
+    //********* Coml D*************//
+    int colmD_master_1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
+    int colmD_key_1[8];
+    //********* Coml E*************//
+    int colmE_master_1[8] = {1, 1, 1, 0, 1, 1, 1, 0}; 
+    int colmE_key_1[8];
+    //********* Coml F*************//
+    int colmF_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 1}; 
+    int colmF_key_1[8];
+    //********* Coml G*************//
+    int colmG_master_1[8] = {1, 0, 1, 1, 0, 0, 0, 1}; 
+    int colmG_key_1[8];
+    //********* Coml H*************//
+    int colmH_master_1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
+    int colmH_key_1[8];
 }; // end Class Mulitiplexer
+
+
 
 //******************************************Output*****************************//
 // a = 0, b = 0 , c = 0 channel 0 

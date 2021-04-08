@@ -78,16 +78,16 @@ void loop()
      Mulitiplexer0.set_enable(0);
     }
     
-     while ((Button0.r_button() == HIGH) & (test_code_buzzer == true))
-      {
-        Buzzer0.write_buzzer();
-        delay(1000);
-        Buzzer0.turn_off_buzzer();
-        delay(1000);
-      }
+    while ((Button0.r_button() == HIGH) & (test_code_buzzer == true))
+    {
+      Buzzer0.write_buzzer();
+      delay(1000);
       Buzzer0.turn_off_buzzer();
+      delay(1000);
+    }
+    Buzzer0.turn_off_buzzer();
 
-      delay(1000);//--> to allow for button press
+    delay(1000);//--> to allow for button press
 
     while((Button0.r_button() == HIGH) & (test_code_LED == true))
     {
@@ -114,106 +114,70 @@ void loop()
 
       LED0.LED_on_off(LED0.LEDH1); delay(500); LED0.LED_on_off(LED0.LEDH2); delay(500); LED0.LED_on_off(LED0.LEDH3); delay(500); LED0.LED_on_off(LED0.LEDH4); delay(500); 
       LED0.LED_on_off(LED0.LEDH5); delay(500); LED0.LED_on_off(LED0.LEDH6); delay(500); LED0.LED_on_off(LED0.LEDH7); delay(500); LED0.LED_on_off(LED0.LEDH8); delay(1000);
-     }
+    }
 
-    while ((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
+    while((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
     {
-     int colmA_Master[8] = {0, 1, 0, 0, 0, 0, 1, 1};
-     int colmA_Total[8];
+      while(Mulitiplexer0.r_mux_A_channel() == false)
+      {
+        LED0.LED_on_off(LED0.LEDA2); // Turning on Master key LEDs
+        LED0.LED_on_off(LED0.LEDA7); 
+        LED0.LED_on_off(LED0.LEDA8); 
+    
+        if (Mulitiplexer0.r_mux_A_channel() == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+          // call display funtion that will tell the user which peices go where. 
+        }
+      }// end of while loop Mux A
 
-      Mulitiplexer0.channel_select(0, 0, 0); // 000
-      Serial.println("Block A1");
-      colmA_Total[0] = Mulitiplexer0.r_mux_A_channel();
-      delay(10);
+      while ((Button0.r_button() == HIGH)) // change this when you set up Mux B
+      {
+        LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
+      } // end of while loop Mux B
 
-      Mulitiplexer0.channel_select(1, 0, 0); // 100
-      Serial.println("Block A2");
-      colmA_Total[1]  = Mulitiplexer0.r_mux_A_channel();
-      delay(10);
-
-       Mulitiplexer0.channel_select(0, 1, 0); // 010
-       Serial.println("Block A3");
-       colmA_Total[2] = Mulitiplexer0.r_mux_A_channel();
-       delay(10);
-
-       Mulitiplexer0.channel_select(1, 1, 0); // 110
-       Serial.println("Block A4");
-       colmA_Total[3] = Mulitiplexer0.r_mux_A_channel();
-       delay(10);
-
-       Mulitiplexer0.channel_select(0, 0, 1); // 001
-       Serial.println("Block A5");
-       colmA_Total[4]= Mulitiplexer0.r_mux_A_channel();
-       delay(10);
-
-       Mulitiplexer0.channel_select(1, 0, 1); // 101
-       Serial.println("Block A6");
-       colmA_Total[5] = Mulitiplexer0.r_mux_A_channel();
-       delay(10);
-
-       Mulitiplexer0.channel_select(0, 1, 1); // 011
-       Serial.println("Block A7");
-       colmA_Total[6] = Mulitiplexer0.r_mux_A_channel();
-       delay(10);
-
-       Mulitiplexer0.channel_select(1, 1, 1); // 111
-       Serial.println("Block A8");
-       colmA_Total[7] = Mulitiplexer0.r_mux_A_channel();
-       Serial.println("_____________________");
-       Serial.println();
-
-       Serial.println("ColmA_Total ");
-       Serial.println(colmA_Total[8]);
-   
-       Serial.println("colmA_Master ");
-       Serial.println(colmA_Master[8]);
-
-       if (colmA_Total == colmA_Master)
-       {
-         Serial.println("ColmA is equal turn off all LEDs");
-       }
-       delay(1000);
-    } // end test for mux circuit
-
-    delay(1000); //--> to allow for button press
-
-  }
+      delay(1000); //--> to allow for button press
+    } // end test_code_mulitiplexer_checkoutput == true
+  } // end  if (test_code == true)
 
   //***************************************Start of Code***********************//
   if (test_code == false)
   {
     //*************LED Start up code*************//
     for(int i = 1; i<200; i++)
-      {
-        LED0.LED_on_off(LED0.LEDA8); 
-        LED0.LED_on_off(LED0.LEDH8); 
-        LED0.LED_on_off(LED0.LEDA1); 
-        LED0.LED_on_off(LED0.LEDH1); 
-      } // end of for loop
+    {
+      LED0.LED_on_off(LED0.LEDA8); 
+      LED0.LED_on_off(LED0.LEDH8); 
+      LED0.LED_on_off(LED0.LEDA1); 
+      LED0.LED_on_off(LED0.LEDH1); 
+    } // end of for loop
       
-      for(int i = 1; i<200; i++)
-      {
-        LED0.LED_on_off(LED0.LEDB7); 
-        LED0.LED_on_off(LED0.LEDG7);  
-        LED0.LED_on_off(LED0.LEDB2); 
-        LED0.LED_on_off(LED0.LEDG2); 
-      } // end of for loop
+    for(int i = 1; i<200; i++)
+    {
+      LED0.LED_on_off(LED0.LEDB7); 
+      LED0.LED_on_off(LED0.LEDG7);  
+      LED0.LED_on_off(LED0.LEDB2); 
+      LED0.LED_on_off(LED0.LEDG2); 
+    } // end of for loop
 
-      for(int i = 1; i<200; i++)
-      {
-        LED0.LED_on_off(LED0.LEDC6); 
-        LED0.LED_on_off(LED0.LEDF6); 
-        LED0.LED_on_off(LED0.LEDC3); 
-        LED0.LED_on_off(LED0.LEDF3);
-      } // end of for loop
+    for(int i = 1; i<200; i++)
+    {
+      LED0.LED_on_off(LED0.LEDC6); 
+      LED0.LED_on_off(LED0.LEDF6); 
+      LED0.LED_on_off(LED0.LEDC3); 
+      LED0.LED_on_off(LED0.LEDF3);
+    } // end of for loop
 
-      for(int i = 1; i<450; i++)
-      {
-        LED0.LED_on_off(LED0.LEDD5); 
-        LED0.LED_on_off(LED0.LEDE5); 
-        LED0.LED_on_off(LED0.LEDD4); 
-        LED0.LED_on_off(LED0.LEDE4);  
-      } // end of for loop
+    for(int i = 1; i<450; i++)
+    {
+      LED0.LED_on_off(LED0.LEDD5); 
+      LED0.LED_on_off(LED0.LEDE5); 
+      LED0.LED_on_off(LED0.LEDD4); 
+      LED0.LED_on_off(LED0.LEDE4);  
+    } // end of for loop
 
     LED0.LED_on_off(LED0.LEDclear);
     //*******End of LED Start up code code*******//
@@ -228,10 +192,6 @@ void loop()
     
     delay(1000); //--> to allow for button press
     const int constpot = Potentiometer0.r_pot(); // making pot cost for remaining of loop
-
-    Display0.clear();
-    Display0.print_user_puzzle(58, 43, constpot);
-    Display0.draw();
 
     switch (constpot)
     {
@@ -255,18 +215,20 @@ void loop()
       break;
     }
 
+    Display0.clear();
+    Display0.print_user_puzzle(58, 43, constpot);
+    Display0.draw();
 
-
-    while ((Button0.r_button() == HIGH) & (constpot == 1)) // to set up Puzzle #136829
+    if(constpot == 1) // to set up Puzzle #136829
     {
-      LED0.LED_on_off(LED0.LEDA8); LED0.LED_on_off(LED0.LEDC8); LED0.LED_on_off(LED0.LEDD8); LED0.LED_on_off(LED0.LEDF8); LED0.LED_on_off(LED0.LEDH8);
-      LED0.LED_on_off(LED0.LEDA7); LED0.LED_on_off(LED0.LEDB7); LED0.LED_on_off(LED0.LEDC7); LED0.LED_on_off(LED0.LEDD7); LED0.LED_on_off(LED0.LEDF7); LED0.LED_on_off(LED0.LEDG7); LED0.LED_on_off(LED0.LEDH7);
-      LED0.LED_on_off(LED0.LEDC6); LED0.LED_on_off(LED0.LEDG6);
-      LED0.LED_on_off(LED0.LEDG5);
-      LED0.LED_on_off(LED0.LEDC4); LED0.LED_on_off(LED0.LEDE4);
-      LED0.LED_on_off(LED0.LEDC3);
-      LED0.LED_on_off(LED0.LEDA2); LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDC2); LED0.LED_on_off(LED0.LEDD2); LED0.LED_on_off(LED0.LEDF2); LED0.LED_on_off(LED0.LEDG2); LED0.LED_on_off(LED0.LEDH2);
-      LED0.LED_on_off(LED0.LEDC1); LED0.LED_on_off(LED0.LEDD1); LED0.LED_on_off(LED0.LEDH1);
+      LED0.LED_on_off(LED0.LEDA2); LED0.LED_on_off(LED0.LEDA7); LED0.LED_on_off(LED0.LEDA8); 
+      LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
+      LED0.LED_on_off(LED0.LEDC1); LED0.LED_on_off(LED0.LEDC2); LED0.LED_on_off(LED0.LEDC3); LED0.LED_on_off(LED0.LEDC4); LED0.LED_on_off(LED0.LEDC6); LED0.LED_on_off(LED0.LEDC7);  LED0.LED_on_off(LED0.LEDC8);
+      LED0.LED_on_off(LED0.LEDD1); LED0.LED_on_off(LED0.LEDD2); LED0.LED_on_off(LED0.LEDD7); LED0.LED_on_off(LED0.LEDD8);
+      LED0.LED_on_off(LED0.LEDE4); LED0.LED_on_off(LED0.LEDE8);
+      LED0.LED_on_off(LED0.LEDF2); LED0.LED_on_off(LED0.LEDF7);
+      LED0.LED_on_off(LED0.LEDG2); LED0.LED_on_off(LED0.LEDG5); LED0.LED_on_off(LED0.LEDG6); LED0.LED_on_off(LED0.LEDG7);
+      LED0.LED_on_off(LED0.LEDH1); LED0.LED_on_off(LED0.LEDH2); LED0.LED_on_off(LED0.LEDH7); LED0.LED_on_off(LED0.LEDH8);
     }
 
     while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #5650034
@@ -283,7 +245,5 @@ void loop()
 
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
     delay(1000);                 // allow for button press
-    
   } // end  if (test_code == false)
-
 } //end void loop
