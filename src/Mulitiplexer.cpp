@@ -82,9 +82,76 @@ void Mulitiplexer::set_enable(int enable_HL)
 
 } // end set_enable
 
+void Mulitiplexer::channel_select(int s1, int s2, int s3)
+{
+  channel_select_s1 = s1;
+  channel_select_s2 = s2;
+  channel_select_s3 = s3;
+
+  digitalWrite(output_pin_channel_s1, channel_select_s1);
+  digitalWrite(output_pin_channel_s2, channel_select_s2);
+  digitalWrite(output_pin_channel_s3, channel_select_s3);
+
+  //***************************************Test Code***************************//
+   if (test_code_mulitiplexer_channel == true)
+  {
+    Serial.println("output pin for channel s1 is");
+    Serial.println(output_pin_channel_s1);
+    Serial.println("output pin for channel s2 is");
+    Serial.println(output_pin_channel_s2);
+    Serial.println("output pin for channel s3 is");
+    Serial.println(output_pin_channel_s3);
+
+    Serial.println("output s1 is set to");
+    Serial.println(channel_select_s1);
+    Serial.println("output s2 is set to");
+    Serial.println(channel_select_s2);
+    Serial.println("output s3 is set to");
+    Serial.println(channel_select_s3);
+  }
+  delay(1); // adds 1ms delay to allow for caps to discharge
+} // end channels_select
+
 int Mulitiplexer::r_mux_A_channel()
 {
   read_a = digitalRead(mux_input_pin_a);
+
+  channel_select(0, 0, 0); // 000
+  Serial.println("Block A1");
+  colmA_key_1[0] = read_a;
+
+  channel_select(1, 0, 0); // 100
+  Serial.println("Block A2");
+  colmA_key_1[1]  = read_a;
+
+  channel_select(0, 1, 0); // 010
+  Serial.println("Block A3");
+  colmA_key_1[2] = read_a;
+
+  channel_select(1, 1, 0); // 110
+  Serial.println("Block A4");
+  colmA_key_1[3] = read_a;
+
+  channel_select(0, 0, 1); // 001
+  Serial.println("Block A5");
+  colmA_key_1[4]= read_a;
+
+  channel_select(1, 0, 1); // 101
+  Serial.println("Block A6");
+  colmA_key_1[5] = read_a;
+
+  channel_select(0, 1, 1); // 011
+  Serial.println("Block A7");
+  colmA_key_1[6] = read_a;
+
+  channel_select(1, 1, 1); // 111
+  Serial.println("Block A8");
+  colmA_key_1[7] = read_a;
+  Serial.println("_____________________");
+  Serial.println(colmA_key_1[7]);
+  Serial.println("_____________________");
+  Serial.println();
+
   //***************************************Test Code***************************//
   if (test_code_mulitiplexer_checkoutput == true)
   {
@@ -241,32 +308,4 @@ int Mulitiplexer::r_mux_H_channel()
  //delay(10);
 } // end r_mux_H_channel
 
-void Mulitiplexer::channel_select(int s1, int s2, int s3)
-{
-  channel_select_s1 = s1;
-  channel_select_s2 = s2;
-  channel_select_s3 = s3;
 
-  digitalWrite(output_pin_channel_s1, channel_select_s1);
-  digitalWrite(output_pin_channel_s2, channel_select_s2);
-  digitalWrite(output_pin_channel_s3, channel_select_s3);
-
-  //***************************************Test Code***************************//
-   if (test_code_mulitiplexer_channel == true)
-  {
-    Serial.println("output pin for channel s1 is");
-    Serial.println(output_pin_channel_s1);
-    Serial.println("output pin for channel s2 is");
-    Serial.println(output_pin_channel_s2);
-    Serial.println("output pin for channel s3 is");
-    Serial.println(output_pin_channel_s3);
-
-    Serial.println("output s1 is set to");
-    Serial.println(channel_select_s1);
-    Serial.println("output s2 is set to");
-    Serial.println(channel_select_s2);
-    Serial.println("output s3 is set to");
-    Serial.println(channel_select_s3);
-  }
-  delay(1); // adds 1ms delay to allow for caps to discharge
-} // end channels_select
