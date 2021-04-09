@@ -175,8 +175,8 @@ void loop()
     {
     case 1:
       Serial.println("Opening File 10500704.CSV"); // prints index 0 in const char array
-      Serial.println("___________________");      // line breakup for readability
-      SDcard0.open_file(0);                       // Open File indexer 0
+      Serial.println("___________________");       // line breakup for readability
+      SDcard0.open_file(0);                        // Open File indexer 0
       Serial.println("___________________");
       break;
     case 2:
@@ -198,6 +198,7 @@ void loop()
     Display0.draw();
     delay(3000); // to allow for user to view OLED
 
+     //***********************Puzzle 1*******************************************//
     if(constpot == 1) // to set up Puzzle #136829
     {
 
@@ -212,7 +213,7 @@ void loop()
         }
         else
         {
-          // call display funtion that will tell the user which peices go where. 
+          Display0.print_piece_location("Colm A Piece Location ", "BA4", "PA2");
         }
       }// end of while loop Mux A
 
@@ -315,19 +316,26 @@ void loop()
       } // end of while loop Mux H
     } // end constpot == 1
 
-    while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #5650034
+     //***********************Puzzle 2*******************************************//
+    if(constpot == 2) // to set up Puzzle #****
     {
-      LED0.LED_on_off(LED0.LEDA2);
-      LED0.LED_on_off(LED0.LEDA4);
-      LED0.LED_on_off(LED0.LEDA6);
-    }
+      while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #5650034
+      {
+        LED0.LED_on_off(LED0.LEDA2);
+        LED0.LED_on_off(LED0.LEDA4);
+        LED0.LED_on_off(LED0.LEDA6);
+      }
+    } // end constpot == 2
 
-    while ((Button0.r_button() == HIGH) & (constpot == 3)) // to set up Puzzle #1036958
+    //***********************Puzzle 3*******************************************//
+    if(constpot == 3) // to set up Puzzle #****
     {
-      LED0.LED_on_off(LED0.LEDA2);
-    }
+      while ((Button0.r_button() == HIGH) & (constpot == 3)) // to set up Puzzle #1036958
+      {
+        LED0.LED_on_off(LED0.LEDA2);
+      }
+    } // end constpot == 3
 
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
-    
   } // end  if (test_code == false)
 } //end void loop
