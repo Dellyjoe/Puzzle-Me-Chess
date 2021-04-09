@@ -165,7 +165,7 @@ int Mulitiplexer::r_mux_A_channel()
   if ((colmA_key_1[0] == colmA_master_1[0]) & (colmA_key_1[1] == colmA_master_1[1]) & (colmA_key_1[2] == colmA_master_1[2]) & (colmA_key_1[3] == colmA_master_1[3]) &
       (colmA_key_1[4] == colmA_master_1[4]) & (colmA_key_1[5] == colmA_master_1[5]) & (colmA_key_1[6] == colmA_master_1[6]) & (colmA_key_1[7] == colmA_master_1[7]))
   {
-    Serial.println("ColmA is equal turn off all LEDs");
+    Serial.println("Colm A is equal turn off all LEDs");
     return (true) ;
   }
   else
@@ -212,7 +212,7 @@ int Mulitiplexer::r_mux_B_channel()
   if ((colmB_key_1[0] == colmB_master_1[0]) & (colmB_key_1[1] == colmB_master_1[1]) & (colmB_key_1[2] == colmB_master_1[2]) & (colmB_key_1[3] == colmB_master_1[3]) &
       (colmB_key_1[4] == colmB_master_1[4]) & (colmB_key_1[5] == colmB_master_1[5]) & (colmB_key_1[6] == colmB_master_1[6]) & (colmB_key_1[7] == colmB_master_1[7]))
   {
-    Serial.println("ColmB is equal turn off all LEDs");
+    Serial.println("Colm B is equal turn off all LEDs");
     return (true) ;
   }
   else
@@ -224,116 +224,284 @@ int Mulitiplexer::r_mux_B_channel()
 
 int Mulitiplexer::r_mux_C_channel()
 {
+  channel_select(0, 0, 0); // 000
   read_c = digitalRead(mux_input_pin_c);
-  //***************************************Test Code***************************//
-  if (test_code_mulitiplexer_checkoutput == true)
+  colmC_key_1[0] = read_c;
+
+  channel_select(1, 0, 0); // 100
+  read_c = digitalRead(mux_input_pin_c);
+  colmC_key_1[1] = read_c;
+
+  channel_select(0, 1, 0); // 010
+  read_c = digitalRead(mux_input_pin_c);
+  colmC_key_1[2] = read_c;
+
+  channel_select(1, 1, 0); // 110
+  read_c = digitalRead(mux_input_pin_c);
+  colmC_key_1[3] = read_c;
+
+  channel_select(0, 0, 1); // 001
+  read_c = digitalRead(mux_input_pin_c);
+  colmC_key_1[4] = read_c;
+
+  channel_select(1, 0, 1); // 101
+  read_c = digitalRead(mux_input_pin_c);
+  colmC_key_1[5] = read_c;
+
+  channel_select(0, 1, 1); // 011
+  read_c = digitalRead(mux_input_pin_c);
+  colmC_key_1[6] = read_c;
+
+  channel_select(1, 1, 1); // 111
+  read_c = digitalRead(mux_input_pin_c);
+  colmC_key_1[7] = read_c;
+ 
+  if ((colmC_key_1[0] == colmC_master_1[0]) & (colmC_key_1[1] == colmC_master_1[1]) & (colmC_key_1[2] == colmC_master_1[2]) & (colmC_key_1[3] == colmC_master_1[3]) &
+      (colmC_key_1[4] == colmC_master_1[4]) & (colmC_key_1[5] == colmC_master_1[5]) & (colmC_key_1[6] == colmC_master_1[6]) & (colmC_key_1[7] == colmC_master_1[7]))
   {
-    if (read_c == HIGH)
-    {
-      
-    }
-    else
-    {
-      Serial.println("Chess Peice is on square");
-    }
-    return (read_c);
+    Serial.println("Colm C is equal turn off all LEDs");
+    return (true) ;
   }
-  return (read_c);
+  else
+  {
+    Serial.println("Master Key requirements not met");
+    return(false);
+  }
 } // end r_mux_C_channel
 
 int Mulitiplexer::r_mux_D_channel()
 {
+  channel_select(0, 0, 0); // 000
   read_d = digitalRead(mux_input_pin_d);
-  //***************************************Test Code***************************//
-  if (test_code_mulitiplexer_checkoutput == true)
+  colmD_key_1[0] = read_d;
+
+  channel_select(1, 0, 0); // 100
+  read_d = digitalRead(mux_input_pin_d);
+  colmD_key_1[1] = read_d;
+
+  channel_select(0, 1, 0); // 010
+  read_d = digitalRead(mux_input_pin_d);
+  colmD_key_1[2] = read_d;
+
+  channel_select(1, 1, 0); // 110
+  read_d = digitalRead(mux_input_pin_d);
+  colmD_key_1[3] = read_d;
+
+  channel_select(0, 0, 1); // 001
+  read_d = digitalRead(mux_input_pin_d);
+  colmD_key_1[4] = read_d;
+
+  channel_select(1, 0, 1); // 101
+  read_d = digitalRead(mux_input_pin_d);
+  colmD_key_1[5] = read_d;
+
+  channel_select(0, 1, 1); // 011
+  read_d = digitalRead(mux_input_pin_d);
+  colmD_key_1[6] = read_d;
+
+  channel_select(1, 1, 1); // 111
+  read_d = digitalRead(mux_input_pin_d);
+  colmD_key_1[7] = read_d;
+ 
+  if ((colmD_key_1[0] == colmD_master_1[0]) & (colmD_key_1[1] == colmD_master_1[1]) & (colmD_key_1[2] == colmD_master_1[2]) & (colmD_key_1[3] == colmD_master_1[3]) &
+      (colmD_key_1[4] == colmD_master_1[4]) & (colmD_key_1[5] == colmD_master_1[5]) & (colmD_key_1[6] == colmD_master_1[6]) & (colmD_key_1[7] == colmD_master_1[7]))
   {
-    if (read_d == HIGH)
-    {
-      
-    }
-    else
-    {
-      Serial.println("Chess Peice is on square");
-    }
-    return (read_d);
+    Serial.println("Colm D is equal turn off all LEDs");
+    return (true) ;
   }
-  return (read_d);
+  else
+  {
+    Serial.println("Master Key requirements not met");
+    return(false);
+  }
 } // end r_mux_D_channel
 
 int Mulitiplexer::r_mux_E_channel()
 {
+  channel_select(0, 0, 0); // 000
   read_e = digitalRead(mux_input_pin_e);
-  //***************************************Test Code***************************//
-  if (test_code_mulitiplexer_checkoutput == true)
+  colmE_key_1[0] = read_e;
+
+  channel_select(1, 0, 0); // 100
+  read_e = digitalRead(mux_input_pin_e);
+  colmE_key_1[1] = read_e;
+
+  channel_select(0, 1, 0); // 010
+  read_e = digitalRead(mux_input_pin_e);
+  colmE_key_1[2] = read_e;
+
+  channel_select(1, 1, 0); // 110
+  read_e = digitalRead(mux_input_pin_e);
+  colmE_key_1[3] = read_e;
+
+  channel_select(0, 0, 1); // 001
+  read_e = digitalRead(mux_input_pin_e);
+  colmE_key_1[4] = read_e;
+
+  channel_select(1, 0, 1); // 101
+  read_e = digitalRead(mux_input_pin_e);
+  colmE_key_1[5] = read_e;
+
+  channel_select(0, 1, 1); // 011
+  read_e = digitalRead(mux_input_pin_e);
+  colmE_key_1[6] = read_e;
+
+  channel_select(1, 1, 1); // 111
+  read_e = digitalRead(mux_input_pin_e);
+  colmE_key_1[7] = read_e;
+ 
+  if ((colmE_key_1[0] == colmE_master_1[0]) & (colmE_key_1[1] == colmE_master_1[1]) & (colmE_key_1[2] == colmE_master_1[2]) & (colmE_key_1[3] == colmE_master_1[3]) &
+      (colmE_key_1[4] == colmE_master_1[4]) & (colmE_key_1[5] == colmE_master_1[5]) & (colmE_key_1[6] == colmE_master_1[6]) & (colmE_key_1[7] == colmE_master_1[7]))
   {
-    if (read_e == HIGH)
-    {
-      
-    }
-    else
-    {
-      Serial.println("Chess Peice is on square");
-    }
-    return (read_e);
+    Serial.println("Colm E is equal turn off all LEDs");
+    return (true) ;
   }
-  return (read_e);
+  else
+  {
+    Serial.println("Master Key requirements not met");
+    return(false);
+  }
 } // end r_mux_E_channel
 
 int Mulitiplexer::r_mux_F_channel()
 {
+  channel_select(0, 0, 0); // 000
   read_f = digitalRead(mux_input_pin_f);
-  //***************************************Test Code***************************//
-  if (test_code_mulitiplexer_checkoutput == true)
+  colmF_key_1[0] = read_f;
+
+  channel_select(1, 0, 0); // 100
+  read_f = digitalRead(mux_input_pin_f);
+  colmF_key_1[1] = read_f;
+
+  channel_select(0, 1, 0); // 010
+  read_f = digitalRead(mux_input_pin_f);
+  colmF_key_1[2] = read_f;
+
+  channel_select(1, 1, 0); // 110
+  read_f = digitalRead(mux_input_pin_f);
+  colmF_key_1[3] = read_f;
+
+  channel_select(0, 0, 1); // 001
+  read_f = digitalRead(mux_input_pin_f);
+  colmF_key_1[4] = read_f;
+
+  channel_select(1, 0, 1); // 101
+  read_f = digitalRead(mux_input_pin_f);
+  colmF_key_1[5] = read_f;
+
+  channel_select(0, 1, 1); // 011
+  read_f = digitalRead(mux_input_pin_f);
+  colmF_key_1[6] = read_f;
+
+  channel_select(1, 1, 1); // 111
+  read_f = digitalRead(mux_input_pin_f);
+  colmF_key_1[7] = read_f;
+ 
+  if ((colmF_key_1[0] == colmF_master_1[0]) & (colmF_key_1[1] == colmF_master_1[1]) & (colmF_key_1[2] == colmF_master_1[2]) & (colmF_key_1[3] == colmF_master_1[3]) &
+      (colmF_key_1[4] == colmF_master_1[4]) & (colmF_key_1[5] == colmF_master_1[5]) & (colmF_key_1[6] == colmF_master_1[6]) & (colmF_key_1[7] == colmF_master_1[7]))
   {
-    if (read_f == HIGH)
-    {
-      
-    }
-    else
-    {
-      Serial.println("Chess Peice is on square");
-    }
-    return (read_f);
+    Serial.println("Colm F is equal turn off all LEDs");
+    return (true) ;
   }
-  return (read_f);
+  else
+  {
+    Serial.println("Master Key requirements not met");
+    return(false);
+  }
 } // end r_mux_F_channel
 
 int Mulitiplexer::r_mux_G_channel()
 {
+  channel_select(0, 0, 0); // 000
   read_g = digitalRead(mux_input_pin_g);
-  //***************************************Test Code***************************//
-  if (test_code_mulitiplexer_checkoutput == true)
+  colmG_key_1[0] = read_g;
+
+  channel_select(1, 0, 0); // 100
+  read_g = digitalRead(mux_input_pin_g);
+  colmG_key_1[1] = read_g;
+
+  channel_select(0, 1, 0); // 010
+  read_g = digitalRead(mux_input_pin_g);
+  colmG_key_1[2] = read_g;
+
+  channel_select(1, 1, 0); // 110
+  read_g = digitalRead(mux_input_pin_g);
+  colmG_key_1[3] = read_g;
+
+  channel_select(0, 0, 1); // 001
+  read_g = digitalRead(mux_input_pin_g);
+  colmG_key_1[4] = read_g;
+
+  channel_select(1, 0, 1); // 101
+  read_g = digitalRead(mux_input_pin_g);
+  colmG_key_1[5] = read_g;
+
+  channel_select(0, 1, 1); // 011
+  read_g = digitalRead(mux_input_pin_g);
+  colmG_key_1[6] = read_g;
+
+  channel_select(1, 1, 1); // 111
+  read_g = digitalRead(mux_input_pin_g);
+  colmG_key_1[7] = read_g;
+ 
+  if ((colmG_key_1[0] == colmG_master_1[0]) & (colmG_key_1[1] == colmG_master_1[1]) & (colmG_key_1[2] == colmG_master_1[2]) & (colmG_key_1[3] == colmG_master_1[3]) &
+      (colmG_key_1[4] == colmG_master_1[4]) & (colmG_key_1[5] == colmG_master_1[5]) & (colmG_key_1[6] == colmG_master_1[6]) & (colmG_key_1[7] == colmG_master_1[7]))
   {
-    if (read_g == HIGH)
-    {
-      
-    }
-    else
-    {
-      Serial.println("Chess Peice is on square");
-    }
-    return (read_g);
+    Serial.println("Colm G is equal turn off all LEDs");
+    return (true) ;
   }
-  return (read_g);
+  else
+  {
+    Serial.println("Master Key requirements not met");
+    return(false);
+  }
 } // end r_mux_G_channel
 
 int Mulitiplexer::r_mux_H_channel()
 {
+  channel_select(0, 0, 0); // 000
   read_h = digitalRead(mux_input_pin_h);
-  //***************************************Test Code***************************//
-  if (test_code_mulitiplexer_checkoutput == true)
+  colmH_key_1[0] = read_h;
+
+  channel_select(1, 0, 0); // 100
+  read_h = digitalRead(mux_input_pin_h);
+  colmH_key_1[1] = read_h;
+
+  channel_select(0, 1, 0); // 010
+  read_h = digitalRead(mux_input_pin_h);
+  colmH_key_1[2] = read_h;
+
+  channel_select(1, 1, 0); // 110
+  read_h = digitalRead(mux_input_pin_h);
+  colmH_key_1[3] = read_h;
+
+  channel_select(0, 0, 1); // 001
+  read_h = digitalRead(mux_input_pin_h);
+  colmH_key_1[4] = read_h;
+
+  channel_select(1, 0, 1); // 101
+  read_h = digitalRead(mux_input_pin_h);
+  colmH_key_1[5] = read_h;
+
+  channel_select(0, 1, 1); // 011
+  read_h = digitalRead(mux_input_pin_h);
+  colmH_key_1[6] = read_h;
+
+  channel_select(1, 1, 1); // 111
+  read_h = digitalRead(mux_input_pin_h);
+  colmH_key_1[7] = read_h;
+ 
+  if ((colmH_key_1[0] == colmH_master_1[0]) & (colmH_key_1[1] == colmH_master_1[1]) & (colmH_key_1[2] == colmH_master_1[2]) & (colmH_key_1[3] == colmH_master_1[3]) &
+      (colmH_key_1[4] == colmH_master_1[4]) & (colmH_key_1[5] == colmH_master_1[5]) & (colmH_key_1[6] == colmH_master_1[6]) & (colmH_key_1[7] == colmH_master_1[7]))
   {
-    if (read_h == HIGH)
-    {
-      
-    }
-    else
-    {
-      Serial.println("Chess Peice is on square");
-    }
-    return (read_h);
+    Serial.println("Colm H is equal turn off all LEDs");
+    return (true) ;
   }
-  return (read_h);
+  else
+  {
+    Serial.println("Master Key requirements not met");
+    return(false);
+  }
 } // end r_mux_H_channel
 
 
