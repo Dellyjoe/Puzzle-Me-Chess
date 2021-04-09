@@ -29,7 +29,6 @@ void Mulitiplexer::init_muxs_input(int pinnumber_mux_a, int pinnumber_mux_b, int
   pinMode(pinnumber_mux_f, INPUT);
   pinMode(pinnumber_mux_g, INPUT);
   pinMode(pinnumber_mux_h, INPUT);
-
   //***************************************Test Code***************************//
   if (test_code_mulitiplexer_channel == true)
   {
@@ -68,7 +67,6 @@ void Mulitiplexer::set_enable(int enable_HL)
 {
   set_enable_HL = enable_HL;
   digitalWrite(enable_pin_number, set_enable_HL);
-  
   //***************************************Test Code***************************//
   if (test_code_mulitiplexer_channel == true)
   {
@@ -167,10 +165,8 @@ int Mulitiplexer::r_mux_A_channel()
   if ((colmA_key_1[0] == colmA_master_1[0]) & (colmA_key_1[1] == colmA_master_1[1]) & (colmA_key_1[2] == colmA_master_1[2]) & (colmA_key_1[3] == colmA_master_1[3]) &
       (colmA_key_1[4] == colmA_master_1[4]) & (colmA_key_1[5] == colmA_master_1[5]) & (colmA_key_1[6] == colmA_master_1[6]) & (colmA_key_1[7] == colmA_master_1[7]))
   {
-    
-    Serial.println("ColmA is equal turn off all LEDs");
-    return (true);
-
+    Serial.println("Colm A is equal turn off all LEDs");
+    return (true) ;
   }
   else
   {
@@ -184,7 +180,6 @@ int Mulitiplexer::r_mux_B_channel()
   channel_select(0, 0, 0); // 000
   read_b = digitalRead(mux_input_pin_b);
   colmB_key_1[0] = read_b;
-  Serial.println(colmB_key_1[0]);
 
   channel_select(1, 0, 0); // 100
   read_b = digitalRead(mux_input_pin_b);
@@ -217,8 +212,8 @@ int Mulitiplexer::r_mux_B_channel()
   if ((colmB_key_1[0] == colmB_master_1[0]) & (colmB_key_1[1] == colmB_master_1[1]) & (colmB_key_1[2] == colmB_master_1[2]) & (colmB_key_1[3] == colmB_master_1[3]) &
       (colmB_key_1[4] == colmB_master_1[4]) & (colmB_key_1[5] == colmB_master_1[5]) & (colmB_key_1[6] == colmB_master_1[6]) & (colmB_key_1[7] == colmB_master_1[7]))
   {
-    Serial.println("ColmB is equal turn off all LEDs");
-    return (true);
+    Serial.println("Colm B is equal turn off all LEDs");
+    return (true) ;
   }
   else
   {
@@ -508,5 +503,3 @@ int Mulitiplexer::r_mux_H_channel()
     return(false);
   }
 } // end r_mux_H_channel
-
-

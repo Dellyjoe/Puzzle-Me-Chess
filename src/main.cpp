@@ -236,11 +236,9 @@ void loop()
         {
           // call display funtion that will tell the user which peices go where. 
         }
-      }// end of while loop Colm A
+      }// end of while loop Mux A
 
-
-      while (Mulitiplexer0.r_mux_B_channel() == false) 
-
+      while (Mulitiplexer0.r_mux_B_channel() == false)
       {
         LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
 
@@ -252,14 +250,21 @@ void loop()
         {
           // call display funtion that will tell the user which peices go where. 
         }
-      } // end of while loop Colm B
+      } // end of while loop Mux B
 
       while (Mulitiplexer0.r_mux_C_channel() == false)
       {
         LED0.LED_on_off(LED0.LEDC1); LED0.LED_on_off(LED0.LEDC2); LED0.LED_on_off(LED0.LEDC3); LED0.LED_on_off(LED0.LEDC4); LED0.LED_on_off(LED0.LEDC6); LED0.LED_on_off(LED0.LEDC7);  LED0.LED_on_off(LED0.LEDC8);
-
-      } // end of while loop Colm C
-
+       
+        if (Mulitiplexer0.r_mux_C_channel() == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+          // call display funtion that will tell the user which peices go where. 
+        }
+      } // end of while loop Mux C
      
       while (Mulitiplexer0.r_mux_D_channel() == false)
       {
@@ -345,6 +350,6 @@ void loop()
     }
 
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
-    delay(1000);  // allow for button press
+    delay(1000);                 // allow for button press
   } // end  if (test_code == false)
 } //end void loop
