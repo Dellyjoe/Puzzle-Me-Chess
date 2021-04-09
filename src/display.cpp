@@ -47,11 +47,12 @@ void Display::print_user_puzzle(int a, int b, int value1)
   u8g2.drawStr(0, 43, "Puzzle");
 } // end void print_user_puzzle
 
-void Display::print_piece_location(String line_one, String line_two, String line_three)
+void Display::print_piece_location(String line_one, String line_two, String line_three, String line_four)
 {
-  
-  u8g2.setFlipMode(0);                        // Flips display 180 (1) = True
-  u8g2.setFont(u8g2_font_9x18_tf);            // choose a suitable font
-  u8g2.drawStr(0, 12, "line_one" );
-
-}
+  u8g2.setFlipMode(0);           
+  u8g2.setFont(u8g2_font_t0_14_me);
+  u8g2.drawStr(0, 14, line_one.c_str());
+  u8g2.drawStr(0, 30, line_two.c_str());
+  u8g2.drawStr(0, 44, line_three.c_str());
+  u8g2.drawStr(0, 58, line_four.c_str());
+} // end print_piece_location
