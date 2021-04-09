@@ -91,29 +91,7 @@ void loop()
 
     while((Button0.r_button() == HIGH) & (test_code_LED == true))
     {
-      LED0.LED_on_off(LED0.LEDA1); delay(500); LED0.LED_on_off(LED0.LEDA2); delay(500); LED0.LED_on_off(LED0.LEDA3); delay(500); LED0.LED_on_off(LED0.LEDA4); delay(500); 
-      LED0.LED_on_off(LED0.LEDA5); delay(500); LED0.LED_on_off(LED0.LEDA6); delay(500); LED0.LED_on_off(LED0.LEDA7); delay(500); LED0.LED_on_off(LED0.LEDA8); delay(500);
-
-      LED0.LED_on_off(LED0.LEDB1); delay(500); LED0.LED_on_off(LED0.LEDB2); delay(500); LED0.LED_on_off(LED0.LEDB3); delay(500); LED0.LED_on_off(LED0.LEDB4); delay(500); 
-      LED0.LED_on_off(LED0.LEDB5); delay(500); LED0.LED_on_off(LED0.LEDB6); delay(500); LED0.LED_on_off(LED0.LEDB7); delay(500); LED0.LED_on_off(LED0.LEDB8); delay(500);
-
-      LED0.LED_on_off(LED0.LEDC1); delay(500); LED0.LED_on_off(LED0.LEDC2); delay(500); LED0.LED_on_off(LED0.LEDC3); delay(500); LED0.LED_on_off(LED0.LEDC4); delay(500); 
-      LED0.LED_on_off(LED0.LEDC5); delay(500); LED0.LED_on_off(LED0.LEDC6); delay(500); LED0.LED_on_off(LED0.LEDC7); delay(500); LED0.LED_on_off(LED0.LEDC8); delay(500);
-
-      LED0.LED_on_off(LED0.LEDD1); delay(500); LED0.LED_on_off(LED0.LEDD2); delay(500); LED0.LED_on_off(LED0.LEDD3); delay(500); LED0.LED_on_off(LED0.LEDD4); delay(500); 
-      LED0.LED_on_off(LED0.LEDD5); delay(500); LED0.LED_on_off(LED0.LEDD6); delay(500); LED0.LED_on_off(LED0.LEDD7); delay(500); LED0.LED_on_off(LED0.LEDD8); delay(500);
-
-      LED0.LED_on_off(LED0.LEDE1); delay(500); LED0.LED_on_off(LED0.LEDE2); delay(500); LED0.LED_on_off(LED0.LEDE3); delay(500); LED0.LED_on_off(LED0.LEDE4); delay(500); 
-      LED0.LED_on_off(LED0.LEDE5); delay(500); LED0.LED_on_off(LED0.LEDE6); delay(500); LED0.LED_on_off(LED0.LEDE7); delay(500); LED0.LED_on_off(LED0.LEDE8); delay(500);
-
-      LED0.LED_on_off(LED0.LEDF1); delay(500); LED0.LED_on_off(LED0.LEDF2); delay(500); LED0.LED_on_off(LED0.LEDF3); delay(500); LED0.LED_on_off(LED0.LEDF4); delay(500); 
-      LED0.LED_on_off(LED0.LEDF5); delay(500); LED0.LED_on_off(LED0.LEDF6); delay(500); LED0.LED_on_off(LED0.LEDF7); delay(500); LED0.LED_on_off(LED0.LEDF8); delay(500);
-
-      LED0.LED_on_off(LED0.LEDG1); delay(500); LED0.LED_on_off(LED0.LEDG2); delay(500); LED0.LED_on_off(LED0.LEDG3); delay(500); LED0.LED_on_off(LED0.LEDG4); delay(500); 
-      LED0.LED_on_off(LED0.LEDG5); delay(500); LED0.LED_on_off(LED0.LEDG6); delay(500); LED0.LED_on_off(LED0.LEDG7); delay(500); LED0.LED_on_off(LED0.LEDG8); delay(500);
-
-      LED0.LED_on_off(LED0.LEDH1); delay(500); LED0.LED_on_off(LED0.LEDH2); delay(500); LED0.LED_on_off(LED0.LEDH3); delay(500); LED0.LED_on_off(LED0.LEDH4); delay(500); 
-      LED0.LED_on_off(LED0.LEDH5); delay(500); LED0.LED_on_off(LED0.LEDH6); delay(500); LED0.LED_on_off(LED0.LEDH7); delay(500); LED0.LED_on_off(LED0.LEDH8); delay(1000);
+      LED0.test_all_LEDs();
     }
 
     while((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
