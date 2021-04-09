@@ -126,7 +126,6 @@ void loop()
      Display0.print_piece_location("Colm A Placement", "WB23, WB23, WB23,", "WB23, WB23, WB23,", "BB23, BB23");
      Display0.draw();
     } // end of While Loop Display
-
   } // end  if (test_code == true)
 
   //***************************************Start of Code***********************//
@@ -229,6 +228,8 @@ void loop()
         }
       }// end of while loop Mux A
 
+      // call display funtion that will tell the user which peices go where. 
+
       while (Mulitiplexer0.r_mux_B_channel() == false)
       {
         LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
@@ -239,9 +240,11 @@ void loop()
         }
         else
         {
-          // call display funtion that will tell the user which peices go where. 
+          
         }
       } // end of while loop Mux B
+
+      // call display funtion that will tell the user which peices go where. 
 
       while (Mulitiplexer0.r_mux_C_channel() == false)
       {
@@ -253,10 +256,12 @@ void loop()
         }
         else
         {
-          // call display funtion that will tell the user which peices go where. 
+          
         }
       } // end of while loop Mux C
-     
+
+      // call display funtion that will tell the user which peices go where.
+
       while (Mulitiplexer0.r_mux_D_channel() == false)
       {
         LED0.LED_on_off(LED0.LEDD1); LED0.LED_on_off(LED0.LEDD2); LED0.LED_on_off(LED0.LEDD7); LED0.LED_on_off(LED0.LEDD8);
@@ -267,7 +272,7 @@ void loop()
         }
         else
         {
-          // call display funtion that will tell the user which peices go where. 
+         
         }
       } // end of while loop Mux D
     
@@ -281,9 +286,11 @@ void loop()
         }
         else
         {
-          // call display funtion that will tell the user which peices go where. 
+        
         }
       } // end of while loop Mux E
+
+      // call display funtion that will tell the user which peices go where. 
 
       while (Mulitiplexer0.r_mux_F_channel() == false)
       {
@@ -295,9 +302,11 @@ void loop()
         }
         else
         {
-          // call display funtion that will tell the user which peices go where. 
+        
         }
       } // end of while loop Mux F
+      
+      // call display funtion that will tell the user which peices go where. 
 
       while (Mulitiplexer0.r_mux_G_channel() == false)
       {
@@ -309,9 +318,11 @@ void loop()
         }
         else
         {
-          // call display funtion that will tell the user which peices go where. 
+        
         }
       } // end of while loop Mux G
+
+      // call display funtion that will tell the user which peices go where. 
 
       while (Mulitiplexer0.r_mux_H_channel() == false)
       {
@@ -323,7 +334,7 @@ void loop()
         }
         else
         {
-          // call display funtion that will tell the user which peices go where. 
+           
         }
       } // end of while loop Mux H
     } // end constpot == 1
