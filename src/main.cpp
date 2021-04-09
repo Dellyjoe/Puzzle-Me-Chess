@@ -213,7 +213,9 @@ void loop()
         }
         else
         {
+          Display0.clear();
           Display0.print_piece_location("Colm A Piece Location ", "BA4", "PA2");
+          Display0.draw();
         }
       }// end of while loop Mux A
 
