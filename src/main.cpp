@@ -196,18 +196,124 @@ void loop()
     Display0.clear();
     Display0.print_user_puzzle(58, 43, constpot);
     Display0.draw();
+    delay(3000); // to allow for user to view OLED
 
     if(constpot == 1) // to set up Puzzle #136829
     {
-      LED0.LED_on_off(LED0.LEDA2); LED0.LED_on_off(LED0.LEDA7); LED0.LED_on_off(LED0.LEDA8); 
-      LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
-      LED0.LED_on_off(LED0.LEDC1); LED0.LED_on_off(LED0.LEDC2); LED0.LED_on_off(LED0.LEDC3); LED0.LED_on_off(LED0.LEDC4); LED0.LED_on_off(LED0.LEDC6); LED0.LED_on_off(LED0.LEDC7);  LED0.LED_on_off(LED0.LEDC8);
-      LED0.LED_on_off(LED0.LEDD1); LED0.LED_on_off(LED0.LEDD2); LED0.LED_on_off(LED0.LEDD7); LED0.LED_on_off(LED0.LEDD8);
-      LED0.LED_on_off(LED0.LEDE4); LED0.LED_on_off(LED0.LEDE8);
-      LED0.LED_on_off(LED0.LEDF2); LED0.LED_on_off(LED0.LEDF7);
-      LED0.LED_on_off(LED0.LEDG2); LED0.LED_on_off(LED0.LEDG5); LED0.LED_on_off(LED0.LEDG6); LED0.LED_on_off(LED0.LEDG7);
-      LED0.LED_on_off(LED0.LEDH1); LED0.LED_on_off(LED0.LEDH2); LED0.LED_on_off(LED0.LEDH7); LED0.LED_on_off(LED0.LEDH8);
-    }
+
+      while(Mulitiplexer0.r_mux_A_channel() == false)
+      {
+        // Turning on Master key LEDs
+        LED0.LED_on_off(LED0.LEDA2); LED0.LED_on_off(LED0.LEDA7); LED0.LED_on_off(LED0.LEDA8); 
+    
+        if (Mulitiplexer0.r_mux_A_channel() == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+          // call display funtion that will tell the user which peices go where. 
+        }
+      }// end of while loop Mux A
+
+      while (Mulitiplexer0.r_mux_B_channel() == false)
+      {
+        LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
+
+        if (Mulitiplexer0.r_mux_B_channel() == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+          // call display funtion that will tell the user which peices go where. 
+        }
+      } // end of while loop Mux B
+
+      while (Mulitiplexer0.r_mux_C_channel() == false)
+      {
+        LED0.LED_on_off(LED0.LEDC1); LED0.LED_on_off(LED0.LEDC2); LED0.LED_on_off(LED0.LEDC3); LED0.LED_on_off(LED0.LEDC4); LED0.LED_on_off(LED0.LEDC6); LED0.LED_on_off(LED0.LEDC7);  LED0.LED_on_off(LED0.LEDC8);
+       
+        if (Mulitiplexer0.r_mux_C_channel() == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+          // call display funtion that will tell the user which peices go where. 
+        }
+      } // end of while loop Mux C
+     
+      while (Mulitiplexer0.r_mux_D_channel() == false)
+      {
+        LED0.LED_on_off(LED0.LEDD1); LED0.LED_on_off(LED0.LEDD2); LED0.LED_on_off(LED0.LEDD7); LED0.LED_on_off(LED0.LEDD8);
+      
+        if (Mulitiplexer0.r_mux_D_channel() == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+          // call display funtion that will tell the user which peices go where. 
+        }
+      } // end of while loop Mux D
+    
+      while (Mulitiplexer0.r_mux_E_channel() == false)
+      {
+        LED0.LED_on_off(LED0.LEDE4); LED0.LED_on_off(LED0.LEDE8);
+      
+        if (Mulitiplexer0.r_mux_E_channel() == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+          // call display funtion that will tell the user which peices go where. 
+        }
+      } // end of while loop Mux E
+
+      while (Mulitiplexer0.r_mux_F_channel() == false)
+      {
+        LED0.LED_on_off(LED0.LEDF2); LED0.LED_on_off(LED0.LEDF7);
+      
+        if (Mulitiplexer0.r_mux_F_channel() == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+          // call display funtion that will tell the user which peices go where. 
+        }
+      } // end of while loop Mux F
+
+      while (Mulitiplexer0.r_mux_G_channel() == false)
+      {
+        LED0.LED_on_off(LED0.LEDG2); LED0.LED_on_off(LED0.LEDG5); LED0.LED_on_off(LED0.LEDG6); LED0.LED_on_off(LED0.LEDG7);
+      
+        if (Mulitiplexer0.r_mux_G_channel() == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+          // call display funtion that will tell the user which peices go where. 
+        }
+      } // end of while loop Mux G
+
+      while (Mulitiplexer0.r_mux_H_channel() == false)
+      {
+        LED0.LED_on_off(LED0.LEDH1); LED0.LED_on_off(LED0.LEDH2); LED0.LED_on_off(LED0.LEDH7); LED0.LED_on_off(LED0.LEDH8);
+
+        if (Mulitiplexer0.r_mux_H_channel() == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+          // call display funtion that will tell the user which peices go where. 
+        }
+      } // end of while loop Mux H
+    } // end constpot == 1
 
     while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #5650034
     {
@@ -222,6 +328,6 @@ void loop()
     }
 
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
-    delay(1000);                 // allow for button press
+    
   } // end  if (test_code == false)
 } //end void loop

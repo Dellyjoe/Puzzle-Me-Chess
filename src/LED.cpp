@@ -60,7 +60,6 @@ void LED::init_LED(){
 
 void LED::LED_on_off(int LEDarry[])
 {
-
   pinMode(LED_Channel_1, LEDarry[0]);
   pinMode(LED_Channel_2, LEDarry[1]);
   pinMode(LED_Channel_3, LEDarry[2]);

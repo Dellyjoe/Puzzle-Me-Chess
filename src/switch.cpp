@@ -25,6 +25,6 @@ int Switch::r_switch()
             Serial.println("Switch Off"); // switch to Right = Low
         }
         return (switchstate);
-    }
+    } // end test_code_switch == true
     return (switchstate);
 } // end r_switch
