@@ -5,5 +5,5 @@
 #define test_code_buzzer false 
 #define test_code_switch false
 #define test_code_mulitiplexer_channel false
-#define test_code_mulitiplexer_checkoutput true
-#define test_code_LED false
+#define test_code_mulitiplexer_checkoutput false
+#define test_code_LED true
