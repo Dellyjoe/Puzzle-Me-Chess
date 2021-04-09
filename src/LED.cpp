@@ -56,12 +56,10 @@ void LED::init_LED(){
   digitalWrite(LED_Channel_25, HIGH);
   digitalWrite(LED_Channel_26, HIGH);
   digitalWrite(LED_Channel_27, HIGH);
-
 } // end init_LED
 
 void LED::LED_on_off(int LEDarry[])
 {
-
   pinMode(LED_Channel_1, LEDarry[0]);
   pinMode(LED_Channel_2, LEDarry[1]);
   pinMode(LED_Channel_3, LEDarry[2]);
@@ -82,5 +80,4 @@ void LED::LED_on_off(int LEDarry[])
   digitalWrite(LEDarry[16], HIGH);
   digitalWrite(LEDarry[17], LOW);
   delay(1);
-
 } // end LED_on_off

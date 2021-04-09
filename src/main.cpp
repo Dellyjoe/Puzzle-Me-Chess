@@ -224,9 +224,8 @@ void loop()
 
       while(Mulitiplexer0.r_mux_A_channel() == false)
       {
-        LED0.LED_on_off(LED0.LEDA2); // Turning on Master key LEDs
-        LED0.LED_on_off(LED0.LEDA7); 
-        LED0.LED_on_off(LED0.LEDA8); 
+        // Turning on Master key LEDs
+        LED0.LED_on_off(LED0.LEDA2); LED0.LED_on_off(LED0.LEDA7); LED0.LED_on_off(LED0.LEDA8); 
     
         if (Mulitiplexer0.r_mux_A_channel() == true)
         {

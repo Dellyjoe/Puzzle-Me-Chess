@@ -48,7 +48,7 @@ void Mulitiplexer::init_muxs_input(int pinnumber_mux_a, int pinnumber_mux_b, int
     Serial.println(pinnumber_mux_g);
     Serial.println("Mux h input pin is");
     Serial.println(pinnumber_mux_h);
-  }
+  } // end test_code_mulitiplexer_channel == true
 } // end init_Muxs
 
 void Mulitiplexer::init_muxs_output(int pinnumber_s1, int pinnumber_s2, int pinnumber_s3)
@@ -78,7 +78,7 @@ void Mulitiplexer::set_enable(int enable_HL)
     {
       Serial.println("Mux's are on");
     }
-  }
+  } // end test_code_mulitiplexer_channel == true
 } // end set_enable
 
 void Mulitiplexer::channel_select(int s1, int s2, int s3)
@@ -107,7 +107,7 @@ void Mulitiplexer::channel_select(int s1, int s2, int s3)
     Serial.println(channel_select_s2);
     Serial.println("output s3 is set to");
     Serial.println(channel_select_s3);
-  }
+  } // end test_code_mulitiplexer_channel == true
   delay(1); // adds 1ms delay to allow for caps to discharge
 } // end channels_select
 
