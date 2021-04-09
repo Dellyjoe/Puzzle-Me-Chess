@@ -235,9 +235,9 @@ void loop()
         {
           // call display funtion that will tell the user which peices go where. 
         }
-      }// end of while loop Mux A
+      }// end of while loop Colm A
 
-      while (Mulitiplexer0.r_mux_B_channel() == false) // change this when you set up Mux B
+      while (Mulitiplexer0.r_mux_B_channel() == false) 
       {
         LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
 
@@ -249,13 +249,12 @@ void loop()
         {
           // call display funtion that will tell the user which peices go where. 
         }
-      } // end of while loop Mux B
+      } // end of while loop Colm B
 
       while ((Button0.r_button() == HIGH)) // change this when you set up Mux C
       {
         LED0.LED_on_off(LED0.LEDC1); LED0.LED_on_off(LED0.LEDC2); LED0.LED_on_off(LED0.LEDC3); LED0.LED_on_off(LED0.LEDC4); LED0.LED_on_off(LED0.LEDC6); LED0.LED_on_off(LED0.LEDC7);  LED0.LED_on_off(LED0.LEDC8);
-      
-      }
+      } // end of while loop Colm C
      
     
       LED0.LED_on_off(LED0.LEDD1); LED0.LED_on_off(LED0.LEDD2); LED0.LED_on_off(LED0.LEDD7); LED0.LED_on_off(LED0.LEDD8);

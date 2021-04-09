@@ -166,7 +166,7 @@ int Mulitiplexer::r_mux_A_channel()
       (colmA_key_1[4] == colmA_master_1[4]) & (colmA_key_1[5] == colmA_master_1[5]) & (colmA_key_1[6] == colmA_master_1[6]) & (colmA_key_1[7] == colmA_master_1[7]))
   {
     Serial.println("ColmA is equal turn off all LEDs");
-    return (true) ;
+    return (true);
   }
   else
   {
@@ -180,6 +180,7 @@ int Mulitiplexer::r_mux_B_channel()
   channel_select(0, 0, 0); // 000
   read_b = digitalRead(mux_input_pin_b);
   colmB_key_1[0] = read_b;
+  Serial.println(colmB_key_1[0]);
 
   channel_select(1, 0, 0); // 100
   read_b = digitalRead(mux_input_pin_b);
@@ -213,7 +214,7 @@ int Mulitiplexer::r_mux_B_channel()
       (colmB_key_1[4] == colmB_master_1[4]) & (colmB_key_1[5] == colmB_master_1[5]) & (colmB_key_1[6] == colmB_master_1[6]) & (colmB_key_1[7] == colmB_master_1[7]))
   {
     Serial.println("ColmB is equal turn off all LEDs");
-    return (true) ;
+    return (true);
   }
   else
   {
