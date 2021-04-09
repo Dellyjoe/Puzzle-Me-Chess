@@ -350,6 +350,6 @@ void loop()
     }
 
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
-    delay(1000);                 // allow for button press
+    delay(1000);  // allow for button press
   } // end  if (test_code == false)
 } //end void loop

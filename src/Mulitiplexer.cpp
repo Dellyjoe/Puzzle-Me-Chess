@@ -29,6 +29,7 @@ void Mulitiplexer::init_muxs_input(int pinnumber_mux_a, int pinnumber_mux_b, int
   pinMode(pinnumber_mux_f, INPUT);
   pinMode(pinnumber_mux_g, INPUT);
   pinMode(pinnumber_mux_h, INPUT);
+
   //***************************************Test Code***************************//
   if (test_code_mulitiplexer_channel == true)
   {
@@ -67,6 +68,7 @@ void Mulitiplexer::set_enable(int enable_HL)
 {
   set_enable_HL = enable_HL;
   digitalWrite(enable_pin_number, set_enable_HL);
+  
   //***************************************Test Code***************************//
   if (test_code_mulitiplexer_channel == true)
   {
