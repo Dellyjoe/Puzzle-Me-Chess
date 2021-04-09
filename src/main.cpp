@@ -119,6 +119,14 @@ void loop()
 
       delay(1000); //--> to allow for button press
     } // end test_code_mulitiplexer_checkoutput == true
+
+    while ((Button0.r_button() == HIGH) & (test_code_Display == true))
+    {
+     Display0.clear();
+     Display0.print_piece_location("Colm A Placement", "WB23, WB23, WB23,", "WB23, WB23, WB23,", "BB23, BB23");
+     Display0.draw();
+    } // end of While Loop Display
+
   } // end  if (test_code == true)
 
   //***************************************Start of Code***********************//
@@ -198,7 +206,11 @@ void loop()
     Display0.draw();
     delay(3000); // to allow for user to view OLED
 
-     //***********************Puzzle 1*******************************************//
+    //***********************Puzzle 1*******************************************//
+    Display0.clear();
+    Display0.print_piece_location("Colm A Placement", "WPA2", "BPA7, BRA8", " ");
+    Display0.draw();
+
     if(constpot == 1) // to set up Puzzle #136829
     {
 
@@ -213,9 +225,7 @@ void loop()
         }
         else
         {
-          Display0.clear();
-          Display0.print_piece_location("Colm A Piece Location ", "BA4", "PA2");
-          Display0.draw();
+          
         }
       }// end of while loop Mux A
 
