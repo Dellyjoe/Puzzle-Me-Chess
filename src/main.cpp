@@ -206,12 +206,11 @@ void loop()
     delay(3000); // to allow for user to view OLED
 
     //***********************Puzzle 1*******************************************//
-    Display0.clear();
-    Display0.print_piece_location("Colm A Placement", "WPA2", "BPA7, BRA8", " ");
-    Display0.draw();
-
     if(constpot == 1) // to set up Puzzle #136829
     {
+      Display0.clear();
+      Display0.print_piece_location("Colm A Placement", "WPA2", "BPA7, BRA8", " ");
+      Display0.draw();
 
       while(Mulitiplexer0.r_mux_A_channel() == false)
       {
@@ -228,7 +227,9 @@ void loop()
         }
       }// end of while loop Mux A
 
-      // call display funtion that will tell the user which peices go where. 
+      Display0.clear();
+      Display0.print_piece_location("Colm B Placement", "WPB2", "BPA7", " ");
+      Display0.draw(); 
 
       while (Mulitiplexer0.r_mux_B_channel() == false)
       {
@@ -244,7 +245,9 @@ void loop()
         }
       } // end of while loop Mux B
 
-      // call display funtion that will tell the user which peices go where. 
+      Display0.clear();
+      Display0.print_piece_location("Colm C Placement", "WkC1, WPC2, WNC3", "WBC4, BNC6", "BPC7, BBC8 ");
+      Display0.draw();
 
       while (Mulitiplexer0.r_mux_C_channel() == false)
       {
@@ -260,7 +263,9 @@ void loop()
         }
       } // end of while loop Mux C
 
-      // call display funtion that will tell the user which peices go where.
+      Display0.clear();
+      Display0.print_piece_location("Colm D Placement", "WRD1, WBD2", "BPD7, DQD8", "");
+      Display0.draw();
 
       while (Mulitiplexer0.r_mux_D_channel() == false)
       {
@@ -275,6 +280,10 @@ void loop()
          
         }
       } // end of while loop Mux D
+
+      Display0.clear();
+      Display0.print_piece_location("Colm E Placement", "WPE4", "BRE8", "");
+      Display0.draw();
     
       while (Mulitiplexer0.r_mux_E_channel() == false)
       {
@@ -290,7 +299,9 @@ void loop()
         }
       } // end of while loop Mux E
 
-      // call display funtion that will tell the user which peices go where. 
+      Display0.clear();
+      Display0.print_piece_location("Colm F Placement", "BNF2", "WQF7", "");
+      Display0.draw(); 
 
       while (Mulitiplexer0.r_mux_F_channel() == false)
       {
@@ -306,7 +317,9 @@ void loop()
         }
       } // end of while loop Mux F
       
-      // call display funtion that will tell the user which peices go where. 
+      Display0.clear();
+      Display0.print_piece_location("Colm G Placement", "WPG2, WNG5", "BPG6, BBG7", "");
+      Display0.draw(); 
 
       while (Mulitiplexer0.r_mux_G_channel() == false)
       {
@@ -322,7 +335,9 @@ void loop()
         }
       } // end of while loop Mux G
 
-      // call display funtion that will tell the user which peices go where. 
+      Display0.clear();
+      Display0.print_piece_location("Colm H Placement", "WRH1, WPH2", "BPH7, BKH8", "");
+      Display0.draw();
 
       while (Mulitiplexer0.r_mux_H_channel() == false)
       {
@@ -337,6 +352,8 @@ void loop()
            
         }
       } // end of while loop Mux H
+
+      
     } // end constpot == 1
 
      //***********************Puzzle 2*******************************************//
