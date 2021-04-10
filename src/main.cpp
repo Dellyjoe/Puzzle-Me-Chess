@@ -352,8 +352,14 @@ void loop()
            
         }
       } // end of while loop Mux H
-
       
+      Display0.clear();
+      Display0.print_piece_location("Set up Complete", "White to move", "", "");
+      Display0.draw();
+
+      // Figure out how to make the frist and second move. 
+
+
     } // end constpot == 1
 
      //***********************Puzzle 2*******************************************//
