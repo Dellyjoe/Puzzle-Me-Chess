@@ -94,9 +94,9 @@ void loop()
       LED0.test_all_LEDs();
     }
 
-    while((Button0.r_button() == HIGH) & (test_code_mulitiplexer_checkoutput == true))
+    while(test_code_mulitiplexer_checkoutput == true)
     {
-      while(Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_1_M1[0], Mulitiplexer0.colmA_Master_1_M1[1], Mulitiplexer0.colmA_Master_1_M1[2], Mulitiplexer0.colmA_Master_1_M1[3],
+      while((Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_1_M1[0], Mulitiplexer0.colmA_Master_1_M1[1], Mulitiplexer0.colmA_Master_1_M1[2], Mulitiplexer0.colmA_Master_1_M1[3],
                                            Mulitiplexer0.colmA_Master_1_M1[4], Mulitiplexer0.colmA_Master_1_M1[5], Mulitiplexer0.colmA_Master_1_M1[6], Mulitiplexer0.colmA_Master_1_M1[7],
                                            Mulitiplexer0.colmB_Master_1_M1[0], Mulitiplexer0.colmB_Master_1_M1[1], Mulitiplexer0.colmB_Master_1_M1[2], Mulitiplexer0.colmB_Master_1_M1[3],
                                            Mulitiplexer0.colmB_Master_1_M1[4], Mulitiplexer0.colmB_Master_1_M1[5], Mulitiplexer0.colmB_Master_1_M1[6], Mulitiplexer0.colmB_Master_1_M1[7],
@@ -111,7 +111,7 @@ void loop()
                                            Mulitiplexer0.colmG_Master_1_M1[0], Mulitiplexer0.colmG_Master_1_M1[1], Mulitiplexer0.colmG_Master_1_M1[2], Mulitiplexer0.colmG_Master_1_M1[3],
                                            Mulitiplexer0.colmG_Master_1_M1[4], Mulitiplexer0.colmG_Master_1_M1[5], Mulitiplexer0.colmG_Master_1_M1[6], Mulitiplexer0.colmG_Master_1_M1[7],
                                            Mulitiplexer0.colmH_Master_1_M1[0], Mulitiplexer0.colmH_Master_1_M1[1], Mulitiplexer0.colmH_Master_1_M1[2], Mulitiplexer0.colmH_Master_1_M1[3],
-                                           Mulitiplexer0.colmH_Master_1_M1[4], Mulitiplexer0.colmH_Master_1_M1[5], Mulitiplexer0.colmH_Master_1_M1[6], Mulitiplexer0.colmH_Master_1_M1[7]) == false)
+                                           Mulitiplexer0.colmH_Master_1_M1[4], Mulitiplexer0.colmH_Master_1_M1[5], Mulitiplexer0.colmH_Master_1_M1[6], Mulitiplexer0.colmH_Master_1_M1[7]) == false) & (Button0.r_button() == HIGH))
       {
     
         if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_1_M1[0], Mulitiplexer0.colmA_Master_1_M1[1], Mulitiplexer0.colmA_Master_1_M1[2], Mulitiplexer0.colmA_Master_1_M1[3],
@@ -139,11 +139,16 @@ void loop()
         }
       }// end of while loop Mux A
 
+     Display0.clear();
+     Display0.print_piece_location("Correct Move Now", "Black Moves,", "RF8 to G8,", "");
+     Display0.draw();
+
       while ((Button0.r_button() == HIGH)) // change this when you set up Mux B
       {
         LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
       } // end of while loop Mux B
-
+      
+      LED0.LED_on_off(LED0.LEDclear);
       delay(1000); //--> to allow for button press
     } // end test_code_mulitiplexer_checkoutput == true
 
