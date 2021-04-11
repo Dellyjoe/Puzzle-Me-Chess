@@ -20,6 +20,8 @@
 #include <Switch.h>
 #include <LED.h>
 #include <Mulitiplexer.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
 
 //******************************************Declare****************************//
 Display Display0; // Setting Object 0 for Display
@@ -30,6 +32,15 @@ Buzzer Buzzer0;
 Switch Switch0;
 LED LED0;
 Mulitiplexer Mulitiplexer0;
+
+
+//************************************Interrupt Funtions***********************//
+void show_answer()
+{
+  Display0.clear();
+  Display0.print_piece_location("This is Show", "Answer Interrupt", "", "");
+  Display0.draw();
+} // end show_answer
 
 //******************************************Setup******************************//
 void setup()
@@ -43,15 +54,18 @@ void setup()
   //******************************************Inputs***************************//
   Button0.init_button(22);                                       // setting D1 to button
   Potentiometer0.init_pot(23, 1, 3);                             // setting A9 to pot/Enabling pot
-  Switch0.init_switch(21);                                       // seeting D0 to switch
+  //Switch0.init_switch(21);                                       // seeting D0 to switch
   Mulitiplexer0.init_muxs_input(15, 14, 32, 39, 38, 37, 16, 17); 
   //******************************************Outputs**************************//
   Buzzer0.init_buzzer(21);                    // setting A1 to buzzer
   Mulitiplexer0.init_muxs_output(35, 34, 33); // setting output channels s1 = a, s2 = b, s3 = c
   Mulitiplexer0.init_enable(36);
   LED0.init_LED(); 
-  
+  //******************************************Interrupts***********************//
+  pinMode(21, INPUT);
+  attachInterrupt(digitalPinToInterrupt(21), show_answer, HIGH);
 } // end setup
+
 
 void loop()
 {
