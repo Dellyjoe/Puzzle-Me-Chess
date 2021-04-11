@@ -529,7 +529,7 @@ void loop()
                                            else
                                            {
                                              Display0.clear();
-                                             Display0.print_piece_location("Now Move ", "Black Bishop", " On F8 to G8", "");
+                                             Display0.print_piece_location("Now Move ", "Black Bishop", "On F8 to G8", "");
                                              Display0.draw();
                                              delay(1000);
                                            }
