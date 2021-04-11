@@ -136,6 +136,7 @@ void loop()
      Display0.clear();
      Display0.print_piece_location("Correct Move: ", "now move", "Black", "RF8 to G8");
      Display0.draw();
+     delay(1000); // allow for button press
 
       while ((Button0.r_button() == HIGH)) // change this when you set up Mux B
       {
