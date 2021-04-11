@@ -96,22 +96,11 @@ void loop()
 
     while(test_code_mulitiplexer_checkoutput == true)
     {
-      while((Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_1_M1[0], Mulitiplexer0.colmA_Master_1_M1[1], Mulitiplexer0.colmA_Master_1_M1[2], Mulitiplexer0.colmA_Master_1_M1[3],
-                                           Mulitiplexer0.colmA_Master_1_M1[4], Mulitiplexer0.colmA_Master_1_M1[5], Mulitiplexer0.colmA_Master_1_M1[6], Mulitiplexer0.colmA_Master_1_M1[7],
-                                           Mulitiplexer0.colmB_Master_1_M1[0], Mulitiplexer0.colmB_Master_1_M1[1], Mulitiplexer0.colmB_Master_1_M1[2], Mulitiplexer0.colmB_Master_1_M1[3],
-                                           Mulitiplexer0.colmB_Master_1_M1[4], Mulitiplexer0.colmB_Master_1_M1[5], Mulitiplexer0.colmB_Master_1_M1[6], Mulitiplexer0.colmB_Master_1_M1[7],
-                                           Mulitiplexer0.colmC_Master_1_M1[0], Mulitiplexer0.colmC_Master_1_M1[1], Mulitiplexer0.colmC_Master_1_M1[2], Mulitiplexer0.colmC_Master_1_M1[3],
-                                           Mulitiplexer0.colmC_Master_1_M1[4], Mulitiplexer0.colmC_Master_1_M1[5], Mulitiplexer0.colmC_Master_1_M1[6], Mulitiplexer0.colmC_Master_1_M1[7],
-                                           Mulitiplexer0.colmD_Master_1_M1[0], Mulitiplexer0.colmD_Master_1_M1[1], Mulitiplexer0.colmD_Master_1_M1[2], Mulitiplexer0.colmD_Master_1_M1[3],
-                                           Mulitiplexer0.colmD_Master_1_M1[4], Mulitiplexer0.colmD_Master_1_M1[5], Mulitiplexer0.colmD_Master_1_M1[6], Mulitiplexer0.colmD_Master_1_M1[7],
-                                           Mulitiplexer0.colmE_Master_1_M1[0], Mulitiplexer0.colmE_Master_1_M1[1], Mulitiplexer0.colmE_Master_1_M1[2], Mulitiplexer0.colmE_Master_1_M1[3],
-                                           Mulitiplexer0.colmE_Master_1_M1[4], Mulitiplexer0.colmE_Master_1_M1[5], Mulitiplexer0.colmE_Master_1_M1[6], Mulitiplexer0.colmE_Master_1_M1[7],
-                                           Mulitiplexer0.colmF_Master_1_M1[0], Mulitiplexer0.colmF_Master_1_M1[1], Mulitiplexer0.colmF_Master_1_M1[2], Mulitiplexer0.colmF_Master_1_M1[3],
-                                           Mulitiplexer0.colmF_Master_1_M1[4], Mulitiplexer0.colmF_Master_1_M1[5], Mulitiplexer0.colmF_Master_1_M1[6], Mulitiplexer0.colmF_Master_1_M1[7],
-                                           Mulitiplexer0.colmG_Master_1_M1[0], Mulitiplexer0.colmG_Master_1_M1[1], Mulitiplexer0.colmG_Master_1_M1[2], Mulitiplexer0.colmG_Master_1_M1[3],
-                                           Mulitiplexer0.colmG_Master_1_M1[4], Mulitiplexer0.colmG_Master_1_M1[5], Mulitiplexer0.colmG_Master_1_M1[6], Mulitiplexer0.colmG_Master_1_M1[7],
-                                           Mulitiplexer0.colmH_Master_1_M1[0], Mulitiplexer0.colmH_Master_1_M1[1], Mulitiplexer0.colmH_Master_1_M1[2], Mulitiplexer0.colmH_Master_1_M1[3],
-                                           Mulitiplexer0.colmH_Master_1_M1[4], Mulitiplexer0.colmH_Master_1_M1[5], Mulitiplexer0.colmH_Master_1_M1[6], Mulitiplexer0.colmH_Master_1_M1[7]) == false) & (Button0.r_button() == HIGH))
+      Display0.clear();
+      Display0.print_piece_location("Set up Complete", "White to move", "", "");
+      Display0.draw();
+
+      while((Button0.r_button() == HIGH))
       {
     
         if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_1_M1[0], Mulitiplexer0.colmA_Master_1_M1[1], Mulitiplexer0.colmA_Master_1_M1[2], Mulitiplexer0.colmA_Master_1_M1[3],
@@ -131,13 +120,14 @@ void loop()
                                            Mulitiplexer0.colmH_Master_1_M1[0], Mulitiplexer0.colmH_Master_1_M1[1], Mulitiplexer0.colmH_Master_1_M1[2], Mulitiplexer0.colmH_Master_1_M1[3],
                                            Mulitiplexer0.colmH_Master_1_M1[4], Mulitiplexer0.colmH_Master_1_M1[5], Mulitiplexer0.colmH_Master_1_M1[6], Mulitiplexer0.colmH_Master_1_M1[7]) == true)
         {
-          LED0.LED_on_off(LED0.LEDclear);
+          Serial.println("Waiting for Button Press");
         }
         else
         {
-          // call display funtion that will tell the user which peices go where. 
+          Serial.println("Waiting for Move");
+          delay(1000);
         }
-      }// end of while loop Mux A
+      }// end Button0.r_button() == HIGH
 
      Display0.clear();
      Display0.print_piece_location("Correct Move Now", "Black Moves,", "RF8 to G8,", "");
