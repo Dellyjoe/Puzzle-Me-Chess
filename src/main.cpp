@@ -495,7 +495,7 @@ void loop()
         else
         {
           Display0.clear();
-          Display0.print_piece_location("Waiting for ", "Correct Move,", "", "");
+          Display0.print_piece_location("Set up Complete", "White to Move,", "Waiting for", "Correct Move");
           Display0.draw();
           delay(1000);
         }
@@ -529,7 +529,7 @@ void loop()
                                            else
                                            {
                                              Display0.clear();
-                                             Display0.print_piece_location("Now Move ", "Black", "RF8 to G8", "");
+                                             Display0.print_piece_location("Now Move ", "Black Bishop", " On F8 to G8", "");
                                              Display0.draw();
                                              delay(1000);
                                            }
@@ -558,7 +558,7 @@ void loop()
                                            Mulitiplexer0.colmH_Master_1_M2[4], Mulitiplexer0.colmH_Master_1_M2[5], Mulitiplexer0.colmH_Master_1_M2[6], Mulitiplexer0.colmH_Master_1_M2[7]) == true)
         {
           Display0.clear();
-          Display0.print_piece_location("Check Mate", "Press Blue Button", "To Complete", "Puzzle");
+          Display0.print_piece_location("Check Mate", "Congratulations", "You Compelted", "The Puzzle");
           Display0.draw();
           Buzzer0.write_buzzer();
           delay(1000);
