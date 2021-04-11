@@ -503,3 +503,19 @@ int Mulitiplexer::r_mux_H_channel(int comlH_array0, int comlH_array1, int comlH_
     return(false);
   }
 } // end r_mux_H_channel
+
+int Mulitiplexer::read_chess_board(int comlA_array0, int comlA_array1, int comlA_array2, int comlA_array3, int comlA_array4, int comlA_array5, int comlA_array6, int comlA_array7)
+{
+    
+  if (r_mux_G_channel(comlA_array0, comlA_array1, comlA_array2, comlA_array3, comlA_array4, comlA_array5, comlA_array6, comlA_array7) == true)
+  {
+    Serial.println("This is working");
+    return (true) ;
+  }
+  else
+  {
+      Serial.println("Not Working");
+      return (false) ;
+  }
+
+}// end read_chess_board
