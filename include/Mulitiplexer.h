@@ -35,7 +35,8 @@ public:
                          int pinnumber_mux_f, int pinnumber_mux_g, int pinnumber_mux_h); // output of the Mux
     void init_muxs_output(int pinnumber_s1, int pinnumber_s2, int pinnumber_s3);
     void set_enable(int enable_HL); // enable High or Low
-    int r_mux_A_channel();
+    int r_mux_A_channel(int comlA_array0, int comlA_array1, int comlA_array2, int comlA_array3,
+                                  int comlA_array4, int comlA_array5, int comlA_array6, int comlA_array7);
     int r_mux_B_channel(); 
     int r_mux_C_channel(); 
     int r_mux_D_channel(); 

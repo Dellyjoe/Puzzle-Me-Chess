@@ -111,7 +111,8 @@ void Mulitiplexer::channel_select(int s1, int s2, int s3)
   delay(1); // adds 1ms delay to allow for caps to discharge
 } // end channels_select
 
-int Mulitiplexer::r_mux_A_channel()
+int Mulitiplexer::r_mux_A_channel(int comlA_array0, int comlA_array1, int comlA_array2, int comlA_array3,
+                                  int comlA_array4, int comlA_array5, int comlA_array6, int comlA_array7)
 {
   channel_select(0, 0, 0); // 000
   Serial.println("Block A1");
@@ -162,8 +163,8 @@ int Mulitiplexer::r_mux_A_channel()
   Serial.println(colmA_key_1[7]);
   Serial.println("_____________________");
  
-  if ((colmA_key_1[0] == colmA_master_1[0]) & (colmA_key_1[1] == colmA_master_1[1]) & (colmA_key_1[2] == colmA_master_1[2]) & (colmA_key_1[3] == colmA_master_1[3]) &
-      (colmA_key_1[4] == colmA_master_1[4]) & (colmA_key_1[5] == colmA_master_1[5]) & (colmA_key_1[6] == colmA_master_1[6]) & (colmA_key_1[7] == colmA_master_1[7]))
+  if ((colmA_key_1[0] == comlA_array0) & (colmA_key_1[1] == comlA_array1) & (colmA_key_1[2] == comlA_array2) & (colmA_key_1[3] == comlA_array3) &
+      (colmA_key_1[4] == comlA_array4) & (colmA_key_1[5] == comlA_array5) & (colmA_key_1[6] == comlA_array6) & (colmA_key_1[7] == comlA_array7))
   {
     Serial.println("Colm A is equal turn off all LEDs");
     return (true) ;
