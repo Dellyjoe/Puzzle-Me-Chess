@@ -53,7 +53,7 @@ void show_answer()
   else if (constpot == 3)
   {
     Display0.clear();
-    Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "2");
+    Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "3");
     Display0.draw();
   }
   else
