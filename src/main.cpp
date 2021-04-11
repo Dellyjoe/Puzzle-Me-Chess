@@ -360,10 +360,9 @@ void loop()
        while ((Mulitiplexer0.r_mux_A_channel() == false) & (Mulitiplexer0.r_mux_B_channel() == false) & (Mulitiplexer0.r_mux_C_channel() == false) & (Mulitiplexer0.r_mux_D_channel() == false) &
               (Mulitiplexer0.r_mux_E_channel() == false) & (Mulitiplexer0.r_mux_F_channel() == false) & (Mulitiplexer0.r_mux_G_channel() == false) & (Mulitiplexer0.r_mux_H_channel() == false))
       {
-        if ((Mulitiplexer0.r_mux_A_channel() == true) & (Mulitiplexer0.r_mux_B_channel() == true) & (Mulitiplexer0.r_mux_C_channel() == true) & (Mulitiplexer0.r_mux_D_channel() == true) &
-            (Mulitiplexer0.r_mux_E_channel() == true) & (Mulitiplexer0.r_mux_F_channel() == true) & (Mulitiplexer0.r_mux_G_channel() == true) & (Mulitiplexer0.r_mux_H_channel() == true))
+        if ((Mulitiplexer0.colmA_key_1 == Mulitiplexer0.colmA_Master_1_M1) & (Mulitiplexer0.colmB_key_1 == Mulitiplexer0.colmB_Master_1_M1) & (Mulitiplexer0.colmC_key_1 == Mulitiplexer0.colmC_Master_1_M1) & (Mulitiplexer0.colmD_key_1 == Mulitiplexer0.colmD_Master_1_M1) &
+            (Mulitiplexer0.colmE_key_1 == Mulitiplexer0.colmE_Master_1_M1) & (Mulitiplexer0.colmF_key_1 == Mulitiplexer0.colmF_Master_1_M1) & (Mulitiplexer0.colmG_key_1== Mulitiplexer0.colmG_Master_1_M1) & (Mulitiplexer0.colmH_key_1 == Mulitiplexer0.colmH_Master_1_M1))
         {
-
         }
         else
         {
