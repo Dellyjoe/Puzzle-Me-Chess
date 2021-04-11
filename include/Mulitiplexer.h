@@ -70,6 +70,19 @@ public:
     //********* Coml H*************//
     int colmH_master_1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
     int colmH_key_1[8];
+    //*********Move one*************//
+    int colmA_Master_1_M1[8] = {1, 0, 1, 1, 1, 1, 0, 0};
+    int colmB_Master_1_M1[8] = {1, 0, 1, 1, 1, 1, 0, 1}; 
+    int colmC_Master_1_M1[8] = {0, 0, 0, 0, 1, 0, 0, 0}; 
+    int colmD_Master_1_M1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
+    int colmE_Master_1_M1[8] = {1, 1, 1, 0, 1, 1, 1, 1}; 
+    int colmF_Master_1_M1[8] = {1, 0, 1, 1, 1, 1, 1, 1}; 
+    int colmG_Master_1_M1[8] = {1, 0, 1, 1, 0, 0, 0, 0}; 
+    int colmH_Master_1_M1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
+
+    
+    
+    }
 }; // end Class Mulitiplexer
 
 

@@ -357,7 +357,21 @@ void loop()
       Display0.print_piece_location("Set up Complete", "White to move", "", "");
       Display0.draw();
 
-      // Figure out how to make the frist and second move. 
+       while ((Mulitiplexer0.r_mux_A_channel() == false) & (Mulitiplexer0.r_mux_B_channel() == false) & (Mulitiplexer0.r_mux_C_channel() == false) & (Mulitiplexer0.r_mux_D_channel() == false) &
+              (Mulitiplexer0.r_mux_E_channel() == false) & (Mulitiplexer0.r_mux_F_channel() == false) & (Mulitiplexer0.r_mux_G_channel() == false) & (Mulitiplexer0.r_mux_H_channel() == false))
+      {
+        if ((Mulitiplexer0.r_mux_A_channel() == true) & (Mulitiplexer0.r_mux_B_channel() == true) & (Mulitiplexer0.r_mux_C_channel() == true) & (Mulitiplexer0.r_mux_D_channel() == true) &
+            (Mulitiplexer0.r_mux_E_channel() == true) & (Mulitiplexer0.r_mux_F_channel() == true) & (Mulitiplexer0.r_mux_G_channel() == true) & (Mulitiplexer0.r_mux_H_channel() == true))
+        {
+
+        }
+        else
+        {
+          Display0.clear();
+          Display0.print_piece_location("Set up Complete", "White to move", "waiting for ", "correct move");
+          Display0.draw();
+        }
+      }
 
 
     } // end constpot == 1
