@@ -133,10 +133,6 @@ void loop()
         }
       }// end Button0.r_button() == HIGH
 
-     Display0.clear();
-     Display0.print_piece_location("Correct Move: ", "now move", "Black", "RF8 to G8");
-     Display0.draw();
-
      delay(1000); // allow for button press
 
         while((Button0.r_button() == HIGH))
@@ -165,7 +161,7 @@ void loop()
                                            else
                                            {
                                              Display0.clear();
-                                             Display0.print_piece_location("Waiting for ", "Correct Move,", "", "");
+                                             Display0.print_piece_location("Correct Move: ", "now move", "Black", "RF8 to G8");
                                              Display0.draw();
                                              delay(1000);
                                            }
@@ -194,7 +190,7 @@ void loop()
                                            Mulitiplexer0.colmH_Master_1_M2[4], Mulitiplexer0.colmH_Master_1_M2[5], Mulitiplexer0.colmH_Master_1_M2[6], Mulitiplexer0.colmH_Master_1_M2[7]) == true)
         {
           Display0.clear();
-          Display0.print_piece_location("Check Mate", "Press,", "Blue Button", " To Complete Puzzle");
+          Display0.print_piece_location("Check Mate", "Press Blue Button", "To Complete", "Puzzle");
           Display0.draw();
           Buzzer0.write_buzzer();
           delay(1000);
@@ -206,7 +202,7 @@ void loop()
         else
         {
           Display0.clear();
-          Display0.print_piece_location("Waiting for ", "Correct Move,", "", "");
+          Display0.print_piece_location("Whites Move:", "Waiting for", "Correct Move", "");
           Display0.draw();
           delay(1000);
         }
