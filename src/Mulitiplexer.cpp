@@ -170,7 +170,6 @@ int Mulitiplexer::r_mux_A_channel()
   }
   else
   {
-    Serial.println("Master Key requirements not met");
     return(false);
   }
 } // end r_mux_A_channel
@@ -217,7 +216,6 @@ int Mulitiplexer::r_mux_B_channel()
   }
   else
   {
-    Serial.println("Master Key requirements not met");
     return(false);
   }
 } // end r_mux_B_channel
@@ -264,7 +262,6 @@ int Mulitiplexer::r_mux_C_channel()
   }
   else
   {
-    Serial.println("Master Key requirements not met");
     return(false);
   }
 } // end r_mux_C_channel
@@ -311,7 +308,6 @@ int Mulitiplexer::r_mux_D_channel()
   }
   else
   {
-    Serial.println("Master Key requirements not met");
     return(false);
   }
 } // end r_mux_D_channel
@@ -358,7 +354,6 @@ int Mulitiplexer::r_mux_E_channel()
   }
   else
   {
-    Serial.println("Master Key requirements not met");
     return(false);
   }
 } // end r_mux_E_channel
@@ -405,7 +400,6 @@ int Mulitiplexer::r_mux_F_channel()
   }
   else
   {
-    Serial.println("Master Key requirements not met");
     return(false);
   }
 } // end r_mux_F_channel
@@ -452,7 +446,6 @@ int Mulitiplexer::r_mux_G_channel()
   }
   else
   {
-    Serial.println("Master Key requirements not met");
     return(false);
   }
 } // end r_mux_G_channel
@@ -499,7 +492,6 @@ int Mulitiplexer::r_mux_H_channel()
   }
   else
   {
-    Serial.println("Master Key requirements not met");
     return(false);
   }
 } // end r_mux_H_channel
