@@ -505,11 +505,23 @@ int Mulitiplexer::r_mux_H_channel(int comlH_array0, int comlH_array1, int comlH_
 } // end r_mux_H_channel
 
 int Mulitiplexer::read_chess_board(int comlA_array0, int comlA_array1, int comlA_array2, int comlA_array3, int comlA_array4, int comlA_array5, int comlA_array6, int comlA_array7,
-                                   int comlB_array0, int comlB_array1, int comlB_array2, int comlB_array3, int comlB_array4, int comlB_array5, int comlB_array6, int comlB_array7)
+                                   int comlB_array0, int comlB_array1, int comlB_array2, int comlB_array3, int comlB_array4, int comlB_array5, int comlB_array6, int comlB_array7,
+                                   int comlC_array0, int comlC_array1, int comlC_array2, int comlC_array3, int comlC_array4, int comlC_array5, int comlC_array6, int comlC_array7,
+                                   int comlD_array0, int comlD_array1, int comlD_array2, int comlD_array3, int comlD_array4, int comlD_array5, int comlD_array6, int comlD_array7,
+                                   int comlE_array0, int comlE_array1, int comlE_array2, int comlE_array3, int comlE_array4, int comlE_array5, int comlE_array6, int comlE_array7,
+                                   int comlF_array0, int comlF_array1, int comlF_array2, int comlF_array3, int comlF_array4, int comlF_array5, int comlF_array6, int comlF_array7,
+                                   int comlG_array0, int comlG_array1, int comlG_array2, int comlG_array3, int comlG_array4, int comlG_array5, int comlG_array6, int comlG_array7,
+                                   int comlH_array0, int comlH_array1, int comlH_array2, int comlH_array3, int comlH_array4, int comlH_array5, int comlH_array6, int comlH_array7)
 {
     
-  if ((r_mux_G_channel(comlA_array0, comlA_array1, comlA_array2, comlA_array3, comlA_array4, comlA_array5, comlA_array6, comlA_array7) == true) &
-      (r_mux_F_channel(comlB_array0, comlB_array1, comlB_array2, comlB_array3, comlB_array4, comlB_array5, comlB_array6, comlB_array7) == true))
+  if ((r_mux_A_channel(comlA_array0, comlA_array1, comlA_array2, comlA_array3, comlA_array4, comlA_array5, comlA_array6, comlA_array7) == true) &
+      (r_mux_B_channel(comlB_array0, comlB_array1, comlB_array2, comlB_array3, comlB_array4, comlB_array5, comlB_array6, comlB_array7) == true) &
+      (r_mux_C_channel(comlC_array0, comlC_array1, comlC_array2, comlC_array3, comlC_array4, comlC_array5, comlC_array6, comlC_array7) == true) &
+      (r_mux_D_channel(comlD_array0, comlD_array1, comlD_array2, comlD_array3, comlD_array4, comlD_array5, comlD_array6, comlD_array7) == true) &
+      (r_mux_E_channel(comlE_array0, comlE_array1, comlE_array2, comlE_array3, comlE_array4, comlE_array5, comlE_array6, comlE_array7) == true) &
+      (r_mux_F_channel(comlF_array0, comlF_array1, comlF_array2, comlF_array3, comlF_array4, comlF_array5, comlF_array6, comlF_array7) == true) &
+      (r_mux_G_channel(comlG_array0, comlG_array1, comlG_array2, comlG_array3, comlG_array4, comlG_array5, comlG_array6, comlG_array7) == true) &
+      (r_mux_H_channel(comlH_array0, comlH_array1, comlH_array2, comlH_array3, comlH_array4, comlH_array5, comlH_array6, comlH_array7) == true))
   {
     Serial.println("This is working");
     return (true) ;

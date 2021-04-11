@@ -53,7 +53,13 @@ public:
     int r_mux_H_channel(int comlH_array0, int comlH_array1, int comlH_array2, int comlH_array3,
                         int comlH_array4, int comlH_array5, int comlH_array6, int comlH_array7); 
     int read_chess_board(int comlA_array0, int comlA_array1, int comlA_array2, int comlA_array3, int comlA_array4, int comlA_array5, int comlA_array6, int comlA_array7,
-                         int comlB_array0, int comlB_array1, int comlB_array2, int comlB_array3, int comlB_array4, int comlB_array5, int comlB_array6, int comlB_array7);
+                         int comlB_array0, int comlB_array1, int comlB_array2, int comlB_array3, int comlB_array4, int comlB_array5, int comlB_array6, int comlB_array7,
+                         int comlC_array0, int comlC_array1, int comlC_array2, int comlC_array3, int comlC_array4, int comlC_array5, int comlC_array6, int comlC_array7,
+                         int comlD_array0, int comlD_array1, int comlD_array2, int comlD_array3, int comlD_array4, int comlD_array5, int comlD_array6, int comlD_array7,
+                         int comlE_array0, int comlE_array1, int comlE_array2, int comlE_array3, int comlE_array4, int comlE_array5, int comlE_array6, int comlE_array7,
+                         int comlF_array0, int comlF_array1, int comlF_array2, int comlF_array3, int comlF_array4, int comlF_array5, int comlF_array6, int comlF_array7,
+                         int comlG_array0, int comlG_array1, int comlG_array2, int comlG_array3, int comlG_array4, int comlG_array5, int comlG_array6, int comlG_array7,
+                         int comlH_array0, int comlH_array1, int comlH_array2, int comlH_array3, int comlH_array4, int comlH_array5, int comlH_array6, int comlH_array7);
    
     //**************Puzzle 1*************************************//
     //********* Coml A*************//
