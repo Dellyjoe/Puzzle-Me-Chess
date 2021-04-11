@@ -104,7 +104,6 @@ public:
     int colmF_Master_1_M1_2[8] = {1, 0, 1, 1, 1, 1, 1, 1}; 
     int colmG_Master_1_M1_2[8] = {1, 0, 1, 1, 0, 0, 0, 0}; 
     int colmH_Master_1_M1_2[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
-
     //*********Turn two*************//
     int colmA_Master_1_M2[8] = {1, 0, 1, 1, 1, 1, 0, 0};
     int colmB_Master_1_M2[8] = {1, 0, 1, 1, 1, 1, 0, 1}; 
