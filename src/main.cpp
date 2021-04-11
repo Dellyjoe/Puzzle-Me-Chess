@@ -246,7 +246,7 @@ void loop()
       } // end of while loop Mux B
 
       Display0.clear();
-      Display0.print_piece_location("Colm C Placement", "WkC1, WPC2, WNC3", "WBC4, BNC6", "BPC7, BBC8 ");
+      Display0.print_piece_location("Colm C Placement", "WKC1, WPC2, WNC3", "WBC4, BNC6", "BPC7, BBC8 ");
       Display0.draw();
 
       while (Mulitiplexer0.r_mux_C_channel() == false)
@@ -282,12 +282,12 @@ void loop()
       } // end of while loop Mux D
 
       Display0.clear();
-      Display0.print_piece_location("Colm E Placement", "WPE4", "BRE8", "");
+      Display0.print_piece_location("Colm E Placement", "WPE4", "", "");
       Display0.draw();
     
       while (Mulitiplexer0.r_mux_E_channel() == false)
       {
-        LED0.LED_on_off(LED0.LEDE4); LED0.LED_on_off(LED0.LEDE8);
+        LED0.LED_on_off(LED0.LEDE4);
       
         if (Mulitiplexer0.r_mux_E_channel() == true)
         {
@@ -300,7 +300,7 @@ void loop()
       } // end of while loop Mux E
 
       Display0.clear();
-      Display0.print_piece_location("Colm F Placement", "BNF2", "WQF7", "");
+      Display0.print_piece_location("Colm F Placement", "BNF2, WQF7", "BRF8", "");
       Display0.draw(); 
 
       while (Mulitiplexer0.r_mux_F_channel() == false)

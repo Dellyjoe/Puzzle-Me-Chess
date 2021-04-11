@@ -59,10 +59,10 @@ public:
     int colmD_master_1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
     int colmD_key_1[8];
     //********* Coml E*************//
-    int colmE_master_1[8] = {1, 1, 1, 0, 1, 1, 1, 0}; 
+    int colmE_master_1[8] = {1, 1, 1, 0, 1, 1, 1, 1}; 
     int colmE_key_1[8];
     //********* Coml F*************//
-    int colmF_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 1}; 
+    int colmF_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 0}; 
     int colmF_key_1[8];
     //********* Coml G*************//
     int colmG_master_1[8] = {1, 0, 1, 1, 0, 0, 0, 1}; 
