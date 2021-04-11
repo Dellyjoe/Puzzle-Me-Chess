@@ -305,7 +305,7 @@ void loop()
 
       while (Mulitiplexer0.r_mux_F_channel() == false)
       {
-        LED0.LED_on_off(LED0.LEDF2); LED0.LED_on_off(LED0.LEDF7);
+        LED0.LED_on_off(LED0.LEDF2); LED0.LED_on_off(LED0.LEDF7); LED0.LED_on_off(LED0.LEDF8);
       
         if (Mulitiplexer0.r_mux_F_channel() == true)
         {
