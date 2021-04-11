@@ -52,7 +52,7 @@ public:
                         int comlG_array4, int comlG_array5, int comlG_array6, int comlG_array7); 
     int r_mux_H_channel(int comlH_array0, int comlH_array1, int comlH_array2, int comlH_array3,
                         int comlH_array4, int comlH_array5, int comlH_array6, int comlH_array7); 
-
+   
     //**************Puzzle 1*************************************//
     //********* Coml A*************//
     int colmA_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 0}; // 0 = Peice is on Chess board
@@ -84,7 +84,7 @@ public:
     int colmC_Master_1_M1[8] = {0, 0, 0, 0, 1, 0, 0, 0}; 
     int colmD_Master_1_M1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
     int colmE_Master_1_M1[8] = {1, 1, 1, 0, 1, 1, 1, 1}; 
-    int colmF_Master_1_M1[8] = {1, 0, 1, 1, 1, 1, 1, 1}; 
+    int colmF_Master_1_M1[8] = {1, 0, 1, 1, 1, 1, 1, 0}; 
     int colmG_Master_1_M1[8] = {1, 0, 1, 1, 0, 0, 0, 0}; 
     int colmH_Master_1_M1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
 }; // end Class Mulitiplexer
