@@ -120,24 +120,62 @@ void loop()
                                            Mulitiplexer0.colmH_Master_1_M1[0], Mulitiplexer0.colmH_Master_1_M1[1], Mulitiplexer0.colmH_Master_1_M1[2], Mulitiplexer0.colmH_Master_1_M1[3],
                                            Mulitiplexer0.colmH_Master_1_M1[4], Mulitiplexer0.colmH_Master_1_M1[5], Mulitiplexer0.colmH_Master_1_M1[6], Mulitiplexer0.colmH_Master_1_M1[7]) == true)
         {
-          Serial.println("Waiting for Button Press");
+          Display0.clear();
+          Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
+          Display0.draw();
         }
         else
         {
-          Serial.println("Waiting for Move");
+          Display0.clear();
+          Display0.print_piece_location("Waiting for ", "Correct Move,", "", "");
+          Display0.draw();
           delay(1000);
         }
       }// end Button0.r_button() == HIGH
 
      Display0.clear();
-     Display0.print_piece_location("Correct Move Now", "Black Moves,", "RF8 to G8,", "");
+     Display0.print_piece_location("Correct Move: ", "now move", "Black", "RF8 to G8");
      Display0.draw();
 
       while ((Button0.r_button() == HIGH)) // change this when you set up Mux B
       {
-        LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB7);
+        if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_1_M2[0], Mulitiplexer0.colmA_Master_1_M2[1], Mulitiplexer0.colmA_Master_1_M2[2], Mulitiplexer0.colmA_Master_1_M2[3],
+                                           Mulitiplexer0.colmA_Master_1_M2[4], Mulitiplexer0.colmA_Master_1_M2[5], Mulitiplexer0.colmA_Master_1_M2[6], Mulitiplexer0.colmA_Master_1_M2[7],
+                                           Mulitiplexer0.colmB_Master_1_M2[0], Mulitiplexer0.colmB_Master_1_M2[1], Mulitiplexer0.colmB_Master_1_M2[2], Mulitiplexer0.colmB_Master_1_M2[3],
+                                           Mulitiplexer0.colmB_Master_1_M2[4], Mulitiplexer0.colmB_Master_1_M2[5], Mulitiplexer0.colmB_Master_1_M2[6], Mulitiplexer0.colmB_Master_1_M2[7],
+                                           Mulitiplexer0.colmC_Master_1_M2[0], Mulitiplexer0.colmC_Master_1_M2[1], Mulitiplexer0.colmC_Master_1_M2[2], Mulitiplexer0.colmC_Master_1_M2[3],
+                                           Mulitiplexer0.colmC_Master_1_M2[4], Mulitiplexer0.colmC_Master_1_M2[5], Mulitiplexer0.colmC_Master_1_M2[6], Mulitiplexer0.colmC_Master_1_M2[7],
+                                           Mulitiplexer0.colmD_Master_1_M2[0], Mulitiplexer0.colmD_Master_1_M2[1], Mulitiplexer0.colmD_Master_1_M2[2], Mulitiplexer0.colmD_Master_1_M2[3],
+                                           Mulitiplexer0.colmD_Master_1_M2[4], Mulitiplexer0.colmD_Master_1_M2[5], Mulitiplexer0.colmD_Master_1_M2[6], Mulitiplexer0.colmD_Master_1_M2[7],
+                                           Mulitiplexer0.colmE_Master_1_M2[0], Mulitiplexer0.colmE_Master_1_M2[1], Mulitiplexer0.colmE_Master_1_M2[2], Mulitiplexer0.colmE_Master_1_M2[3],
+                                           Mulitiplexer0.colmE_Master_1_M2[4], Mulitiplexer0.colmE_Master_1_M2[5], Mulitiplexer0.colmE_Master_1_M2[6], Mulitiplexer0.colmE_Master_1_M2[7],
+                                           Mulitiplexer0.colmF_Master_1_M2[0], Mulitiplexer0.colmF_Master_1_M2[1], Mulitiplexer0.colmF_Master_1_M2[2], Mulitiplexer0.colmF_Master_1_M2[3],
+                                           Mulitiplexer0.colmF_Master_1_M2[4], Mulitiplexer0.colmF_Master_1_M2[5], Mulitiplexer0.colmF_Master_1_M2[6], Mulitiplexer0.colmF_Master_1_M2[7],
+                                           Mulitiplexer0.colmG_Master_1_M2[0], Mulitiplexer0.colmG_Master_1_M2[1], Mulitiplexer0.colmG_Master_1_M2[2], Mulitiplexer0.colmG_Master_1_M2[3],
+                                           Mulitiplexer0.colmG_Master_1_M2[4], Mulitiplexer0.colmG_Master_1_M2[5], Mulitiplexer0.colmG_Master_1_M2[6], Mulitiplexer0.colmG_Master_1_M2[7],
+                                           Mulitiplexer0.colmH_Master_1_M2[0], Mulitiplexer0.colmH_Master_1_M2[1], Mulitiplexer0.colmH_Master_1_M2[2], Mulitiplexer0.colmH_Master_1_M2[3],
+                                           Mulitiplexer0.colmH_Master_1_M2[4], Mulitiplexer0.colmH_Master_1_M2[5], Mulitiplexer0.colmH_Master_1_M2[6], Mulitiplexer0.colmH_Master_1_M2[7]) == true)
+        {
+          Display0.clear();
+          Display0.print_piece_location("Check Mate", "Press,", "Blue Button", " To Complete Puzzle");
+          Display0.draw();
+          Buzzer0.write_buzzer();
+          delay(1000);
+          Buzzer0.turn_off_buzzer();
+          delay(1000);
+          Buzzer0.write_buzzer();
+
+        }
+        else
+        {
+          Display0.clear();
+          Display0.print_piece_location("Waiting for ", "Correct Move,", "", "");
+          Display0.draw();
+          delay(1000);
+        }
       } // end of while loop Mux B
       
+      Buzzer0.turn_off_buzzer();
       LED0.LED_on_off(LED0.LEDclear);
       delay(1000); //--> to allow for button press
     } // end test_code_mulitiplexer_checkoutput == true
