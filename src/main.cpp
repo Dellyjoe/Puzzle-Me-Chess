@@ -32,14 +32,37 @@ Buzzer Buzzer0;
 Switch Switch0;
 LED LED0;
 Mulitiplexer Mulitiplexer0;
+int constpot = 0;
 
 
 //************************************Interrupt Funtions***********************//
 void show_answer()
 {
-  Display0.clear();
-  Display0.print_piece_location("This is Show", "Answer Interrupt", "", "");
-  Display0.draw();
+  if (constpot == 1)
+  {
+     Display0.clear();
+     Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "1");
+     Display0.draw();
+  }
+  else if (constpot == 2)
+  {
+    Display0.clear();
+    Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "2");
+    Display0.draw();
+  }
+  else if (constpot == 3)
+  {
+    Display0.clear();
+    Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "2");
+    Display0.draw();
+  }
+  else
+  {
+    Display0.clear();
+    Display0.print_piece_location("error", "", "", "");
+    Display0.draw();
+  }
+  
 } // end show_answer
 
 //******************************************Setup******************************//
@@ -283,7 +306,7 @@ void loop()
     }
     
     delay(1000); //--> to allow for button press
-    const int constpot = Potentiometer0.r_pot(); // making pot cost for remaining of loop
+    constpot = Potentiometer0.r_pot(); // making pot cost for remaining of loop
 
     switch (constpot)
     {
