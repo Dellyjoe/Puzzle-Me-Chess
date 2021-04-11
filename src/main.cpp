@@ -99,9 +99,11 @@ void loop()
       while(Mulitiplexer0.read_chess_board(Mulitiplexer0.colmG_Master_1_M1[0], Mulitiplexer0.colmG_Master_1_M1[1], Mulitiplexer0.colmG_Master_1_M1[2], Mulitiplexer0.colmG_Master_1_M1[3],
                                            Mulitiplexer0.colmG_Master_1_M1[4], Mulitiplexer0.colmG_Master_1_M1[5], Mulitiplexer0.colmG_Master_1_M1[6], Mulitiplexer0.colmG_Master_1_M1[7]) == false)
       {
-        LED0.LED_on_off(LED0.LEDA2); // Turning on Master key LEDs
-        LED0.LED_on_off(LED0.LEDA7); 
-        LED0.LED_on_off(LED0.LEDA8); 
+        LED0.LED_on_off(LED0.LEDG2); // Turning on Master key LEDs
+        LED0.LED_on_off(LED0.LEDG5); 
+        LED0.LED_on_off(LED0.LEDG6); 
+        LED0.LED_on_off(LED0.LEDG7); 
+        LED0.LED_on_off(LED0.LEDG8); 
     
         if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmG_Master_1_M1[0], Mulitiplexer0.colmG_Master_1_M1[1], Mulitiplexer0.colmG_Master_1_M1[2], Mulitiplexer0.colmG_Master_1_M1[3],
                                            Mulitiplexer0.colmG_Master_1_M1[4], Mulitiplexer0.colmG_Master_1_M1[5], Mulitiplexer0.colmG_Master_1_M1[6], Mulitiplexer0.colmG_Master_1_M1[7]) == true)
