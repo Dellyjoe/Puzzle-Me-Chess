@@ -461,7 +461,8 @@ void loop()
            
         }
       } // end of while loop Mux H
-      
+
+      LED0.LED_on_off(LED0.LEDclear);
       //*********Move one*************//
       Display0.clear();
       Display0.print_piece_location("Set up Complete", "White to move", "", "");
@@ -528,7 +529,7 @@ void loop()
                                            else
                                            {
                                              Display0.clear();
-                                             Display0.print_piece_location("Correct Move: ", "now move", "Black", "RF8 to G8");
+                                             Display0.print_piece_location("Now Move ", "Black", "RF8 to G8", "");
                                              Display0.draw();
                                              delay(1000);
                                            }
@@ -564,7 +565,9 @@ void loop()
           Buzzer0.turn_off_buzzer();
           delay(1000);
           Buzzer0.write_buzzer();
-          
+          delay(1000);
+          Buzzer0.turn_off_buzzer();
+          break;
         }
         else
         {
