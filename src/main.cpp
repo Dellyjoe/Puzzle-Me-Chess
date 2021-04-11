@@ -376,22 +376,10 @@ void loop()
       Display0.print_piece_location("Set up Complete", "White to move", "", "");
       Display0.draw();
 
-       while ((Mulitiplexer0.r_mux_A_channel(Mulitiplexer0.colmA_Master_1_M1[0], Mulitiplexer0.colmA_Master_1_M1[1], Mulitiplexer0.colmA_Master_1_M1[2], Mulitiplexer0.colmA_Master_1_M1[3],
-                                             Mulitiplexer0.colmA_Master_1_M1[4], Mulitiplexer0.colmA_Master_1_M1[5], Mulitiplexer0.colmA_Master_1_M1[6], Mulitiplexer0.colmA_Master_1_M1[7]) == false) & 
-              (Mulitiplexer0.r_mux_B_channel(Mulitiplexer0.colmB_Master_1_M1[0], Mulitiplexer0.colmB_Master_1_M1[1], Mulitiplexer0.colmB_Master_1_M1[2], Mulitiplexer0.colmB_Master_1_M1[3],
-                                             Mulitiplexer0.colmB_Master_1_M1[4], Mulitiplexer0.colmB_Master_1_M1[5], Mulitiplexer0.colmB_Master_1_M1[6], Mulitiplexer0.colmB_Master_1_M1[7]) == false) & 
-              (Mulitiplexer0.r_mux_C_channel(Mulitiplexer0.colmC_Master_1_M1[0], Mulitiplexer0.colmC_Master_1_M1[1], Mulitiplexer0.colmC_Master_1_M1[2], Mulitiplexer0.colmC_Master_1_M1[3],
-                                             Mulitiplexer0.colmC_Master_1_M1[4], Mulitiplexer0.colmC_Master_1_M1[5], Mulitiplexer0.colmC_Master_1_M1[6], Mulitiplexer0.colmC_Master_1_M1[7]) == false) & 
-              (Mulitiplexer0.r_mux_D_channel(Mulitiplexer0.colmD_Master_1_M1[0], Mulitiplexer0.colmD_Master_1_M1[1], Mulitiplexer0.colmD_Master_1_M1[2], Mulitiplexer0.colmD_Master_1_M1[3],
-                                             Mulitiplexer0.colmD_Master_1_M1[4], Mulitiplexer0.colmD_Master_1_M1[5], Mulitiplexer0.colmD_Master_1_M1[6], Mulitiplexer0.colmD_Master_1_M1[7]) == false) &
-              (Mulitiplexer0.r_mux_E_channel(Mulitiplexer0.colmE_Master_1_M1[0], Mulitiplexer0.colmE_Master_1_M1[1], Mulitiplexer0.colmE_Master_1_M1[2], Mulitiplexer0.colmE_Master_1_M1[3],
-                                             Mulitiplexer0.colmE_Master_1_M1[4], Mulitiplexer0.colmE_Master_1_M1[5], Mulitiplexer0.colmE_Master_1_M1[6], Mulitiplexer0.colmE_Master_1_M1[7]) == false) & 
-              (Mulitiplexer0.r_mux_F_channel(Mulitiplexer0.colmF_Master_1_M1[0], Mulitiplexer0.colmF_Master_1_M1[1], Mulitiplexer0.colmF_Master_1_M1[2], Mulitiplexer0.colmF_Master_1_M1[3],
+       while ((Mulitiplexer0.r_mux_F_channel(Mulitiplexer0.colmF_Master_1_M1[0], Mulitiplexer0.colmF_Master_1_M1[1], Mulitiplexer0.colmF_Master_1_M1[2], Mulitiplexer0.colmF_Master_1_M1[3],
                                              Mulitiplexer0.colmF_Master_1_M1[4], Mulitiplexer0.colmF_Master_1_M1[5], Mulitiplexer0.colmF_Master_1_M1[6], Mulitiplexer0.colmF_Master_1_M1[7]) == false) & 
               (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_Master_1_M1[0], Mulitiplexer0.colmG_Master_1_M1[1], Mulitiplexer0.colmG_Master_1_M1[2], Mulitiplexer0.colmG_Master_1_M1[3],
-                                             Mulitiplexer0.colmG_Master_1_M1[4], Mulitiplexer0.colmG_Master_1_M1[5], Mulitiplexer0.colmG_Master_1_M1[6], Mulitiplexer0.colmG_Master_1_M1[7]) == false) & 
-              (Mulitiplexer0.r_mux_H_channel(Mulitiplexer0.colmH_Master_1_M1[0], Mulitiplexer0.colmH_Master_1_M1[1], Mulitiplexer0.colmH_Master_1_M1[2], Mulitiplexer0.colmH_Master_1_M1[3],
-                                             Mulitiplexer0.colmH_Master_1_M1[4], Mulitiplexer0.colmH_Master_1_M1[5], Mulitiplexer0.colmH_Master_1_M1[6], Mulitiplexer0.colmH_Master_1_M1[7]) == false))
+                                             Mulitiplexer0.colmG_Master_1_M1[4], Mulitiplexer0.colmG_Master_1_M1[5], Mulitiplexer0.colmG_Master_1_M1[6], Mulitiplexer0.colmG_Master_1_M1[7]) == false))
       {
         if ((Mulitiplexer0.r_mux_A_channel(Mulitiplexer0.colmA_Master_1_M1[0], Mulitiplexer0.colmA_Master_1_M1[1], Mulitiplexer0.colmA_Master_1_M1[2], Mulitiplexer0.colmA_Master_1_M1[3],
                                              Mulitiplexer0.colmA_Master_1_M1[4], Mulitiplexer0.colmA_Master_1_M1[5], Mulitiplexer0.colmA_Master_1_M1[6], Mulitiplexer0.colmA_Master_1_M1[7]) == true) & 
