@@ -504,10 +504,12 @@ int Mulitiplexer::r_mux_H_channel(int comlH_array0, int comlH_array1, int comlH_
   }
 } // end r_mux_H_channel
 
-int Mulitiplexer::read_chess_board(int comlA_array0, int comlA_array1, int comlA_array2, int comlA_array3, int comlA_array4, int comlA_array5, int comlA_array6, int comlA_array7)
+int Mulitiplexer::read_chess_board(int comlA_array0, int comlA_array1, int comlA_array2, int comlA_array3, int comlA_array4, int comlA_array5, int comlA_array6, int comlA_array7,
+                                   int comlB_array0, int comlB_array1, int comlB_array2, int comlB_array3, int comlB_array4, int comlB_array5, int comlB_array6, int comlB_array7)
 {
     
-  if (r_mux_G_channel(comlA_array0, comlA_array1, comlA_array2, comlA_array3, comlA_array4, comlA_array5, comlA_array6, comlA_array7) == true)
+  if ((r_mux_G_channel(comlA_array0, comlA_array1, comlA_array2, comlA_array3, comlA_array4, comlA_array5, comlA_array6, comlA_array7) == true) &
+       r_mux_F_channel(comlB_array0, comlB_array1, comlB_array2, comlB_array3, comlB_array4, comlB_array5, comlB_array6, comlB_array7) == true)
   {
     Serial.println("This is working");
     return (true) ;
