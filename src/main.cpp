@@ -136,7 +136,43 @@ void loop()
      Display0.clear();
      Display0.print_piece_location("Correct Move: ", "now move", "Black", "RF8 to G8");
      Display0.draw();
+
      delay(1000); // allow for button press
+
+        while((Button0.r_button() == HIGH))
+      {
+        if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_1_M1_2[0], Mulitiplexer0.colmA_Master_1_M1_2[1], Mulitiplexer0.colmA_Master_1_M1_2[2], Mulitiplexer0.colmA_Master_1_M1_2[3],
+                                           Mulitiplexer0.colmA_Master_1_M1_2[4], Mulitiplexer0.colmA_Master_1_M1_2[5], Mulitiplexer0.colmA_Master_1_M1_2[6], Mulitiplexer0.colmA_Master_1_M1_2[7],
+                                           Mulitiplexer0.colmB_Master_1_M1_2[0], Mulitiplexer0.colmB_Master_1_M1_2[1], Mulitiplexer0.colmB_Master_1_M1_2[2], Mulitiplexer0.colmB_Master_1_M1_2[3],
+                                           Mulitiplexer0.colmB_Master_1_M1_2[4], Mulitiplexer0.colmB_Master_1_M1_2[5], Mulitiplexer0.colmB_Master_1_M1_2[6], Mulitiplexer0.colmB_Master_1_M1_2[7],
+                                           Mulitiplexer0.colmC_Master_1_M1_2[0], Mulitiplexer0.colmC_Master_1_M1_2[1], Mulitiplexer0.colmC_Master_1_M1_2[2], Mulitiplexer0.colmC_Master_1_M1_2[3],
+                                           Mulitiplexer0.colmC_Master_1_M1_2[4], Mulitiplexer0.colmC_Master_1_M1_2[5], Mulitiplexer0.colmC_Master_1_M1_2[6], Mulitiplexer0.colmC_Master_1_M1_2[7],
+                                           Mulitiplexer0.colmD_Master_1_M1_2[0], Mulitiplexer0.colmD_Master_1_M1_2[1], Mulitiplexer0.colmD_Master_1_M1_2[2], Mulitiplexer0.colmD_Master_1_M1_2[3],
+                                           Mulitiplexer0.colmD_Master_1_M1_2[4], Mulitiplexer0.colmD_Master_1_M1_2[5], Mulitiplexer0.colmD_Master_1_M1_2[6], Mulitiplexer0.colmD_Master_1_M1_2[7],
+                                           Mulitiplexer0.colmE_Master_1_M1_2[0], Mulitiplexer0.colmE_Master_1_M1_2[1], Mulitiplexer0.colmE_Master_1_M1_2[2], Mulitiplexer0.colmE_Master_1_M1_2[3],
+                                           Mulitiplexer0.colmE_Master_1_M1_2[4], Mulitiplexer0.colmE_Master_1_M1_2[5], Mulitiplexer0.colmE_Master_1_M1_2[6], Mulitiplexer0.colmE_Master_1_M1_2[7],
+                                           Mulitiplexer0.colmF_Master_1_M1_2[0], Mulitiplexer0.colmF_Master_1_M1_2[1], Mulitiplexer0.colmF_Master_1_M1_2[2], Mulitiplexer0.colmF_Master_1_M1_2[3],
+                                           Mulitiplexer0.colmF_Master_1_M1_2[4], Mulitiplexer0.colmF_Master_1_M1_2[5], Mulitiplexer0.colmF_Master_1_M1_2[6], Mulitiplexer0.colmF_Master_1_M1_2[7],
+                                           Mulitiplexer0.colmG_Master_1_M1_2[0], Mulitiplexer0.colmG_Master_1_M1_2[1], Mulitiplexer0.colmG_Master_1_M1_2[2], Mulitiplexer0.colmG_Master_1_M1_2[3],
+                                           Mulitiplexer0.colmG_Master_1_M1_2[4], Mulitiplexer0.colmG_Master_1_M1_2[5], Mulitiplexer0.colmG_Master_1_M1_2[6], Mulitiplexer0.colmG_Master_1_M1_2[7],
+                                           Mulitiplexer0.colmH_Master_1_M1_2[0], Mulitiplexer0.colmH_Master_1_M1_2[1], Mulitiplexer0.colmH_Master_1_M1_2[2], Mulitiplexer0.colmH_Master_1_M1_2[3],
+                                           Mulitiplexer0.colmH_Master_1_M1_2[4], Mulitiplexer0.colmH_Master_1_M1_2[5], Mulitiplexer0.colmH_Master_1_M1_2[6], Mulitiplexer0.colmH_Master_1_M1_2[7]) == true)
+                                           {
+                                              Display0.clear();
+                                              Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
+                                              Display0.draw();
+                                           }
+                                           else
+                                           {
+                                             Display0.clear();
+                                             Display0.print_piece_location("Waiting for ", "Correct Move,", "", "");
+                                             Display0.draw();
+                                             delay(1000);
+                                           }
+
+      }
+      
+      delay(1000); // allow for button press
 
       while ((Button0.r_button() == HIGH)) // change this when you set up Mux B
       {

@@ -86,7 +86,7 @@ public:
     //********* Coml H*************//
     int colmH_master_1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
     int colmH_key_1[8];
-    //*********Turn one*************//
+    //*********Turn one White*************//
     int colmA_Master_1_M1[8] = {1, 0, 1, 1, 1, 1, 0, 0};
     int colmB_Master_1_M1[8] = {1, 0, 1, 1, 1, 1, 0, 1}; 
     int colmC_Master_1_M1[8] = {0, 0, 0, 0, 1, 0, 0, 0}; 
@@ -95,6 +95,16 @@ public:
     int colmF_Master_1_M1[8] = {1, 0, 1, 1, 1, 1, 1, 0}; 
     int colmG_Master_1_M1[8] = {1, 0, 1, 1, 0, 0, 0, 0}; 
     int colmH_Master_1_M1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
+    //*********Turn one Black*************//
+    int colmA_Master_1_M1_2[8] = {1, 0, 1, 1, 1, 1, 0, 0};
+    int colmB_Master_1_M1_2[8] = {1, 0, 1, 1, 1, 1, 0, 1}; 
+    int colmC_Master_1_M1_2[8] = {0, 0, 0, 0, 1, 0, 0, 0}; 
+    int colmD_Master_1_M1_2[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
+    int colmE_Master_1_M1_2[8] = {1, 1, 1, 0, 1, 1, 1, 1}; 
+    int colmF_Master_1_M1_2[8] = {1, 0, 1, 1, 1, 1, 1, 1}; 
+    int colmG_Master_1_M1_2[8] = {1, 0, 1, 1, 0, 0, 0, 0}; 
+    int colmH_Master_1_M1_2[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
+
     //*********Turn two*************//
     int colmA_Master_1_M2[8] = {1, 0, 1, 1, 1, 1, 0, 0};
     int colmB_Master_1_M2[8] = {1, 0, 1, 1, 1, 1, 0, 1}; 
