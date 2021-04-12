@@ -60,32 +60,26 @@ public:
                          int comlF_array0, int comlF_array1, int comlF_array2, int comlF_array3, int comlF_array4, int comlF_array5, int comlF_array6, int comlF_array7,
                          int comlG_array0, int comlG_array1, int comlG_array2, int comlG_array3, int comlG_array4, int comlG_array5, int comlG_array6, int comlG_array7,
                          int comlH_array0, int comlH_array1, int comlH_array2, int comlH_array3, int comlH_array4, int comlH_array5, int comlH_array6, int comlH_array7);
-   
-    //**************Puzzle 1*************************************//
-    //********* Coml A*************//
-    int colmA_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 0}; // 0 = Peice is on Chess board
+    
     int colmA_key_1[8];
-    //********* Coml B*************//
-    int colmB_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 1}; 
     int colmB_key_1[8];
-    //********* Coml C*************//
-    int colmC_master_1[8] = {0, 0, 0, 0, 1, 0, 0, 0}; 
     int colmC_key_1[8];
-    //********* Coml D*************//
-    int colmD_master_1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
     int colmD_key_1[8];
-    //********* Coml E*************//
-    int colmE_master_1[8] = {1, 1, 1, 0, 1, 1, 1, 1}; 
     int colmE_key_1[8];
-    //********* Coml F*************//
-    int colmF_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 0}; 
     int colmF_key_1[8];
-    //********* Coml G*************//
-    int colmG_master_1[8] = {1, 0, 1, 1, 0, 0, 0, 1}; 
     int colmG_key_1[8];
-    //********* Coml H*************//
-    int colmH_master_1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
     int colmH_key_1[8];
+    //**************Puzzle 1*************************************//
+     //*********Start up position*********//
+    int colmA_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 0}; // 0 = Peice is on Chess board
+    int colmB_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 1}; 
+    int colmC_master_1[8] = {0, 0, 0, 0, 1, 0, 0, 0}; 
+    int colmD_master_1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
+    int colmE_master_1[8] = {1, 1, 1, 0, 1, 1, 1, 1}; 
+    int colmF_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 0}; 
+    int colmG_master_1[8] = {1, 0, 1, 1, 0, 0, 0, 1}; 
+    int colmH_master_1[8] = {0, 0, 1, 1, 1, 1, 0, 0}; 
+    
     //*********Turn one White*************//
     int colmA_Master_1_M1[8] = {1, 0, 1, 1, 1, 1, 0, 0};
     int colmB_Master_1_M1[8] = {1, 0, 1, 1, 1, 1, 0, 1}; 
