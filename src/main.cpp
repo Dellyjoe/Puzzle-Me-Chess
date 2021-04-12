@@ -20,6 +20,8 @@
 #include <Switch.h>
 #include <LED.h>
 #include <Mulitiplexer.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
 
 //******************************************Declare****************************//
 Display Display0; // Setting Object 0 for Display
@@ -30,6 +32,51 @@ Buzzer Buzzer0;
 Switch Switch0;
 LED LED0;
 Mulitiplexer Mulitiplexer0;
+int constpot = 0;
+
+
+//************************************Interrupt Funtions***********************//
+void show_answer()
+{
+  if (constpot == 1)
+  {
+     if(Mulitiplexer0.r_mux_F_channel(Mulitiplexer0.colmF_master_1[0], Mulitiplexer0.colmF_master_1[1], Mulitiplexer0.colmF_master_1[2], Mulitiplexer0.colmF_master_1[3],
+                                      Mulitiplexer0.colmF_master_1[4], Mulitiplexer0.colmF_master_1[5], Mulitiplexer0.colmF_master_1[6], Mulitiplexer0.colmF_master_1[7]) == true)
+     {
+       LED0.LED_on_off(LED0.LEDF7); LED0.LED_on_off(LED0.LEDG8); 
+     }
+     else if (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_Master_1_M1_2[0], Mulitiplexer0.colmG_Master_1_M1_2[1], Mulitiplexer0.colmG_Master_1_M1_2[2], Mulitiplexer0.colmG_Master_1_M1_2[3],
+                                            Mulitiplexer0.colmG_Master_1_M1_2[4], Mulitiplexer0.colmG_Master_1_M1_2[5], Mulitiplexer0.colmG_Master_1_M1_2[6], Mulitiplexer0.colmG_Master_1_M1_2[7]) == true) 
+     {
+       LED0.LED_on_off(LED0.LEDG5); LED0.LED_on_off(LED0.LEDF7);
+     }
+     else
+     {
+       Display0.clear();
+       Display0.print_piece_location("Error State", "Please", "Restart Puzzle", "");
+       Display0.draw();
+     }
+  }
+  else if (constpot == 2)
+  {
+    Display0.clear();
+    Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "2");
+    Display0.draw();
+  }
+  else if (constpot == 3)
+  {
+    Display0.clear();
+    Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "3");
+    Display0.draw();
+  }
+  else
+  {
+    Display0.clear();
+    Display0.print_piece_location("error", "", "", "");
+    Display0.draw();
+  }
+  LED0.LED_on_off(LED0.LEDclear);
+} // end show_answer
 
 //******************************************Setup******************************//
 void setup()
@@ -43,15 +90,18 @@ void setup()
   //******************************************Inputs***************************//
   Button0.init_button(22);                                       // setting D1 to button
   Potentiometer0.init_pot(23, 1, 3);                             // setting A9 to pot/Enabling pot
-  Switch0.init_switch(21);                                       // seeting D0 to switch
+  //Switch0.init_switch(21);                                       // seeting D0 to switch
   Mulitiplexer0.init_muxs_input(15, 14, 32, 39, 38, 37, 16, 17); 
   //******************************************Outputs**************************//
-  Buzzer0.init_buzzer(21);                    // setting A1 to buzzer
+  Buzzer0.init_buzzer(31);                    // setting A1 to buzzer
   Mulitiplexer0.init_muxs_output(35, 34, 33); // setting output channels s1 = a, s2 = b, s3 = c
   Mulitiplexer0.init_enable(36);
   LED0.init_LED(); 
-  
+  //******************************************Interrupts***********************//
+  pinMode(21, INPUT);
+  attachInterrupt(digitalPinToInterrupt(20), show_answer, HIGH);
 } // end setup
+
 
 void loop()
 {
@@ -78,7 +128,7 @@ void loop()
      Mulitiplexer0.set_enable(0);
     }
     
-    while ((Button0.r_button() == HIGH) & (test_code_buzzer == true))
+    while ((Button0.r_button() == HIGH) && (test_code_buzzer == true))
     {
       Buzzer0.write_buzzer();
       delay(1000);
@@ -89,7 +139,7 @@ void loop()
 
     delay(1000);//--> to allow for button press
 
-    while((Button0.r_button() == HIGH) & (test_code_LED == true))
+    while((Button0.r_button() == HIGH) && (test_code_LED == true))
     {
       LED0.test_all_LEDs();
     }
@@ -213,7 +263,7 @@ void loop()
       delay(1000); //--> to allow for button press
     } // end test_code_mulitiplexer_checkoutput == true
 
-    while ((Button0.r_button() == HIGH) & (test_code_Display == true))
+    while ((Button0.r_button() == HIGH) && (test_code_Display == true))
     {
      Display0.clear();
      Display0.print_piece_location("Colm A Placement", "WB23, WB23, WB23,", "WB23, WB23, WB23,", "BB23, BB23");
@@ -269,7 +319,7 @@ void loop()
     }
     
     delay(1000); //--> to allow for button press
-    const int constpot = Potentiometer0.r_pot(); // making pot cost for remaining of loop
+    constpot = Potentiometer0.r_pot(); // making pot cost for remaining of loop
 
     switch (constpot)
     {
@@ -587,7 +637,7 @@ void loop()
      //***********************Puzzle 2*******************************************//
     if(constpot == 2) // to set up Puzzle #****
     {
-      while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #5650034
+      while ((Button0.r_button() == HIGH) && (constpot == 2)) // to set up Puzzle #5650034
       {
         LED0.LED_on_off(LED0.LEDA2);
         LED0.LED_on_off(LED0.LEDA4);
@@ -598,7 +648,7 @@ void loop()
     //***********************Puzzle 3*******************************************//
     if(constpot == 3) // to set up Puzzle #****
     {
-      while ((Button0.r_button() == HIGH) & (constpot == 3)) // to set up Puzzle #1036958
+      while ((Button0.r_button() == HIGH) && (constpot == 3)) // to set up Puzzle #1036958
       {
         LED0.LED_on_off(LED0.LEDA2);
       }
