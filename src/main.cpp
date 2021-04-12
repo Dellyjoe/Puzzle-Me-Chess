@@ -45,8 +45,8 @@ void show_answer()
      {
        LED0.LED_on_off(LED0.LEDF7); LED0.LED_on_off(LED0.LEDG8); 
      }
-     else if (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_master_1[0], Mulitiplexer0.colmG_master_1[1], Mulitiplexer0.colmG_master_1[2], Mulitiplexer0.colmG_master_1[3],
-                                            Mulitiplexer0.colmG_master_1[4], Mulitiplexer0.colmG_master_1[5], Mulitiplexer0.colmG_master_1[6], Mulitiplexer0.colmG_master_1[7]) == true) 
+     else if (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_Master_1_M1_2[0], Mulitiplexer0.colmG_Master_1_M1_2[1], Mulitiplexer0.colmG_Master_1_M1_2[2], Mulitiplexer0.colmG_Master_1_M1_2[3],
+                                            Mulitiplexer0.colmG_Master_1_M1_2[4], Mulitiplexer0.colmG_Master_1_M1_2[5], Mulitiplexer0.colmG_Master_1_M1_2[6], Mulitiplexer0.colmG_Master_1_M1_2[7]) == true) 
      {
        LED0.LED_on_off(LED0.LEDG5); LED0.LED_on_off(LED0.LEDF7);
      }
@@ -579,7 +579,7 @@ void loop()
                                            else
                                            {
                                              Display0.clear();
-                                             Display0.print_piece_location("Now Move ", "Black Bishop", " On F8 to G8", "");
+                                             Display0.print_piece_location("Now Move ", "Black Bishop", "On F8 to G8", "");
                                              Display0.draw();
                                              delay(1000);
                                            }
