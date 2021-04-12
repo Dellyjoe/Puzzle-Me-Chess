@@ -48,7 +48,13 @@ void show_answer()
      else if (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_master_1[0], Mulitiplexer0.colmG_master_1[1], Mulitiplexer0.colmG_master_1[2], Mulitiplexer0.colmG_master_1[3],
                                             Mulitiplexer0.colmG_master_1[4], Mulitiplexer0.colmG_master_1[5], Mulitiplexer0.colmG_master_1[6], Mulitiplexer0.colmG_master_1[7]) == true) 
      {
-
+       LED0.LED_on_off(LED0.LEDG5); LED0.LED_on_off(LED0.LEDF7);
+     }
+     else
+     {
+       Display0.clear();
+       Display0.print_piece_location("Error State", "Please", "Restart Puzzle", "");
+       Display0.draw();
      }
   }
   else if (constpot == 2)
