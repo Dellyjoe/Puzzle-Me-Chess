@@ -117,54 +117,54 @@ int Mulitiplexer::r_mux_A_channel(int comlA_array0, int comlA_array1, int comlA_
   channel_select(0, 0, 0); // 000
   Serial.println("Block A1");
   read_a = digitalRead(mux_input_pin_a);
-  colmA_key_1[0] = read_a;
-  Serial.println(colmA_key_1[0]);
+  colmA_key[0] = read_a;
+  Serial.println(colmA_key[0]);
 
   channel_select(1, 0, 0); // 100
   Serial.println("Block A2");
   read_a = digitalRead(mux_input_pin_a);
-  colmA_key_1[1]  = read_a;
-  Serial.println(colmA_key_1[1]);
+  colmA_key[1]  = read_a;
+  Serial.println(colmA_key[1]);
 
   channel_select(0, 1, 0); // 010
   Serial.println("Block A3");
   read_a = digitalRead(mux_input_pin_a);
-  colmA_key_1[2] = read_a;
-  Serial.println(colmA_key_1[2]);
+  colmA_key[2] = read_a;
+  Serial.println(colmA_key[2]);
 
   channel_select(1, 1, 0); // 110
   Serial.println("Block A4");
   read_a = digitalRead(mux_input_pin_a);
-  colmA_key_1[3] = read_a;
-  Serial.println(colmA_key_1[3]);
+  colmA_key[3] = read_a;
+  Serial.println(colmA_key[3]);
 
   channel_select(0, 0, 1); // 001
   Serial.println("Block A5");
   read_a = digitalRead(mux_input_pin_a);
-  colmA_key_1[4]= read_a;
-  Serial.println(colmA_key_1[4]);
+  colmA_key[4]= read_a;
+  Serial.println(colmA_key[4]);
 
   channel_select(1, 0, 1); // 101
   Serial.println("Block A6");
   read_a = digitalRead(mux_input_pin_a);
-  colmA_key_1[5] = read_a;
-  Serial.println(colmA_key_1[5]);
+  colmA_key[5] = read_a;
+  Serial.println(colmA_key[5]);
 
   channel_select(0, 1, 1); // 011
   Serial.println("Block A7");
   read_a = digitalRead(mux_input_pin_a);
-  colmA_key_1[6] = read_a;
-  Serial.println(colmA_key_1[6]);
+  colmA_key[6] = read_a;
+  Serial.println(colmA_key[6]);
 
   channel_select(1, 1, 1); // 111
   Serial.println("Block A8");
   read_a = digitalRead(mux_input_pin_a);
-  colmA_key_1[7] = read_a;
-  Serial.println(colmA_key_1[7]);
+  colmA_key[7] = read_a;
+  Serial.println(colmA_key[7]);
   Serial.println("_____________________");
  
-  if ((colmA_key_1[0] == comlA_array0) & (colmA_key_1[1] == comlA_array1) & (colmA_key_1[2] == comlA_array2) & (colmA_key_1[3] == comlA_array3) &
-      (colmA_key_1[4] == comlA_array4) & (colmA_key_1[5] == comlA_array5) & (colmA_key_1[6] == comlA_array6) & (colmA_key_1[7] == comlA_array7))
+  if ((colmA_key[0] == comlA_array0) & (colmA_key[1] == comlA_array1) & (colmA_key[2] == comlA_array2) & (colmA_key[3] == comlA_array3) &
+      (colmA_key[4] == comlA_array4) & (colmA_key[5] == comlA_array5) & (colmA_key[6] == comlA_array6) & (colmA_key[7] == comlA_array7))
   {
     Serial.println("Colm A is equal turn off all LEDs");
     return (true) ;
@@ -180,38 +180,38 @@ int Mulitiplexer::r_mux_B_channel(int comlB_array0, int comlB_array1, int comlB_
 {
   channel_select(0, 0, 0); // 000
   read_b = digitalRead(mux_input_pin_b);
-  colmB_key_1[0] = read_b;
+  colmB_key[0] = read_b;
 
   channel_select(1, 0, 0); // 100
   read_b = digitalRead(mux_input_pin_b);
-  colmB_key_1[1] = read_b;
+  colmB_key[1] = read_b;
 
   channel_select(0, 1, 0); // 010
   read_b = digitalRead(mux_input_pin_b);
-  colmB_key_1[2] = read_b;
+  colmB_key[2] = read_b;
 
   channel_select(1, 1, 0); // 110
   read_b = digitalRead(mux_input_pin_b);
-  colmB_key_1[3] = read_b;
+  colmB_key[3] = read_b;
 
   channel_select(0, 0, 1); // 001
   read_b = digitalRead(mux_input_pin_b);
-  colmB_key_1[4] = read_b;
+  colmB_key[4] = read_b;
 
   channel_select(1, 0, 1); // 101
   read_b = digitalRead(mux_input_pin_b);
-  colmB_key_1[5] = read_b;
+  colmB_key[5] = read_b;
 
   channel_select(0, 1, 1); // 011
   read_b = digitalRead(mux_input_pin_b);
-  colmB_key_1[6] = read_b;
+  colmB_key[6] = read_b;
 
   channel_select(1, 1, 1); // 111
   read_b = digitalRead(mux_input_pin_b);
-  colmB_key_1[7] = read_b;
+  colmB_key[7] = read_b;
  
-  if ((colmB_key_1[0] == comlB_array0) & (colmB_key_1[1] == comlB_array1) & (colmB_key_1[2] == comlB_array2) & (colmB_key_1[3] == comlB_array3) &
-      (colmB_key_1[4] == comlB_array4) & (colmB_key_1[5] == comlB_array5) & (colmB_key_1[6] == comlB_array6) & (colmB_key_1[7] == comlB_array7))
+  if ((colmB_key[0] == comlB_array0) & (colmB_key[1] == comlB_array1) & (colmB_key[2] == comlB_array2) & (colmB_key[3] == comlB_array3) &
+      (colmB_key[4] == comlB_array4) & (colmB_key[5] == comlB_array5) & (colmB_key[6] == comlB_array6) & (colmB_key[7] == comlB_array7))
   {
     Serial.println("Colm B is equal turn off all LEDs");
     return (true) ;
@@ -227,38 +227,38 @@ int Mulitiplexer::r_mux_C_channel(int comlC_array0, int comlC_array1, int comlC_
 {
   channel_select(0, 0, 0); // 000
   read_c = digitalRead(mux_input_pin_c);
-  colmC_key_1[0] = read_c;
+  colmC_key[0] = read_c;
 
   channel_select(1, 0, 0); // 100
   read_c = digitalRead(mux_input_pin_c);
-  colmC_key_1[1] = read_c;
+  colmC_key[1] = read_c;
 
   channel_select(0, 1, 0); // 010
   read_c = digitalRead(mux_input_pin_c);
-  colmC_key_1[2] = read_c;
+  colmC_key[2] = read_c;
 
   channel_select(1, 1, 0); // 110
   read_c = digitalRead(mux_input_pin_c);
-  colmC_key_1[3] = read_c;
+  colmC_key[3] = read_c;
 
   channel_select(0, 0, 1); // 001
   read_c = digitalRead(mux_input_pin_c);
-  colmC_key_1[4] = read_c;
+  colmC_key[4] = read_c;
 
   channel_select(1, 0, 1); // 101
   read_c = digitalRead(mux_input_pin_c);
-  colmC_key_1[5] = read_c;
+  colmC_key[5] = read_c;
 
   channel_select(0, 1, 1); // 011
   read_c = digitalRead(mux_input_pin_c);
-  colmC_key_1[6] = read_c;
+  colmC_key[6] = read_c;
 
   channel_select(1, 1, 1); // 111
   read_c = digitalRead(mux_input_pin_c);
-  colmC_key_1[7] = read_c;
+  colmC_key[7] = read_c;
  
-  if ((colmC_key_1[0] == comlC_array0) & (colmC_key_1[1] == comlC_array1) & (colmC_key_1[2] == comlC_array2) & (colmC_key_1[3] == comlC_array3) &
-      (colmC_key_1[4] == comlC_array4) & (colmC_key_1[5] == comlC_array5) & (colmC_key_1[6] == comlC_array6) & (colmC_key_1[7] == comlC_array7))
+  if ((colmC_key[0] == comlC_array0) & (colmC_key[1] == comlC_array1) & (colmC_key[2] == comlC_array2) & (colmC_key[3] == comlC_array3) &
+      (colmC_key[4] == comlC_array4) & (colmC_key[5] == comlC_array5) & (colmC_key[6] == comlC_array6) & (colmC_key[7] == comlC_array7))
   {
     Serial.println("Colm C is equal turn off all LEDs");
     return (true) ;
@@ -274,38 +274,38 @@ int Mulitiplexer::r_mux_D_channel(int comlD_array0, int comlD_array1, int comlD_
 {
   channel_select(0, 0, 0); // 000
   read_d = digitalRead(mux_input_pin_d);
-  colmD_key_1[0] = read_d;
+  colmD_key[0] = read_d;
 
   channel_select(1, 0, 0); // 100
   read_d = digitalRead(mux_input_pin_d);
-  colmD_key_1[1] = read_d;
+  colmD_key[1] = read_d;
 
   channel_select(0, 1, 0); // 010
   read_d = digitalRead(mux_input_pin_d);
-  colmD_key_1[2] = read_d;
+  colmD_key[2] = read_d;
 
   channel_select(1, 1, 0); // 110
   read_d = digitalRead(mux_input_pin_d);
-  colmD_key_1[3] = read_d;
+  colmD_key[3] = read_d;
 
   channel_select(0, 0, 1); // 001
   read_d = digitalRead(mux_input_pin_d);
-  colmD_key_1[4] = read_d;
+  colmD_key[4] = read_d;
 
   channel_select(1, 0, 1); // 101
   read_d = digitalRead(mux_input_pin_d);
-  colmD_key_1[5] = read_d;
+  colmD_key[5] = read_d;
 
   channel_select(0, 1, 1); // 011
   read_d = digitalRead(mux_input_pin_d);
-  colmD_key_1[6] = read_d;
+  colmD_key[6] = read_d;
 
   channel_select(1, 1, 1); // 111
   read_d = digitalRead(mux_input_pin_d);
-  colmD_key_1[7] = read_d;
+  colmD_key[7] = read_d;
  
-  if ((colmD_key_1[0] == comlD_array0) & (colmD_key_1[1] == comlD_array1) & (colmD_key_1[2] == comlD_array2) & (colmD_key_1[3] == comlD_array3) &
-      (colmD_key_1[4] == comlD_array4) & (colmD_key_1[5] == comlD_array5) & (colmD_key_1[6] == comlD_array6) & (colmD_key_1[7] == comlD_array7))
+  if ((colmD_key[0] == comlD_array0) & (colmD_key[1] == comlD_array1) & (colmD_key[2] == comlD_array2) & (colmD_key[3] == comlD_array3) &
+      (colmD_key[4] == comlD_array4) & (colmD_key[5] == comlD_array5) & (colmD_key[6] == comlD_array6) & (colmD_key[7] == comlD_array7))
   {
     Serial.println("Colm D is equal turn off all LEDs");
     return (true);
@@ -321,38 +321,38 @@ int Mulitiplexer::r_mux_E_channel(int comlE_array0, int comlE_array1, int comlE_
 {
   channel_select(0, 0, 0); // 000
   read_e = digitalRead(mux_input_pin_e);
-  colmE_key_1[0] = read_e;
+  colmE_key[0] = read_e;
 
   channel_select(1, 0, 0); // 100
   read_e = digitalRead(mux_input_pin_e);
-  colmE_key_1[1] = read_e;
+  colmE_key[1] = read_e;
 
   channel_select(0, 1, 0); // 010
   read_e = digitalRead(mux_input_pin_e);
-  colmE_key_1[2] = read_e;
+  colmE_key[2] = read_e;
 
   channel_select(1, 1, 0); // 110
   read_e = digitalRead(mux_input_pin_e);
-  colmE_key_1[3] = read_e;
+  colmE_key[3] = read_e;
 
   channel_select(0, 0, 1); // 001
   read_e = digitalRead(mux_input_pin_e);
-  colmE_key_1[4] = read_e;
+  colmE_key[4] = read_e;
 
   channel_select(1, 0, 1); // 101
   read_e = digitalRead(mux_input_pin_e);
-  colmE_key_1[5] = read_e;
+  colmE_key[5] = read_e;
 
   channel_select(0, 1, 1); // 011
   read_e = digitalRead(mux_input_pin_e);
-  colmE_key_1[6] = read_e;
+  colmE_key[6] = read_e;
 
   channel_select(1, 1, 1); // 111
   read_e = digitalRead(mux_input_pin_e);
-  colmE_key_1[7] = read_e;
+  colmE_key[7] = read_e;
  
-  if ((colmE_key_1[0] == comlE_array0) & (colmE_key_1[1] == comlE_array1) & (colmE_key_1[2] == comlE_array2) & (colmE_key_1[3] == comlE_array3) &
-      (colmE_key_1[4] == comlE_array4) & (colmE_key_1[5] == comlE_array5) & (colmE_key_1[6] == comlE_array6) & (colmE_key_1[7] == comlE_array7))
+  if ((colmE_key[0] == comlE_array0) & (colmE_key[1] == comlE_array1) & (colmE_key[2] == comlE_array2) & (colmE_key[3] == comlE_array3) &
+      (colmE_key[4] == comlE_array4) & (colmE_key[5] == comlE_array5) & (colmE_key[6] == comlE_array6) & (colmE_key[7] == comlE_array7))
   {
     Serial.println("Colm E is equal turn off all LEDs");
     return (true) ;
@@ -368,38 +368,38 @@ int Mulitiplexer::r_mux_F_channel(int comlF_array0, int comlF_array1, int comlF_
 {
   channel_select(0, 0, 0); // 000
   read_f = digitalRead(mux_input_pin_f);
-  colmF_key_1[0] = read_f;
+  colmF_key[0] = read_f;
 
   channel_select(1, 0, 0); // 100
   read_f = digitalRead(mux_input_pin_f);
-  colmF_key_1[1] = read_f;
+  colmF_key[1] = read_f;
 
   channel_select(0, 1, 0); // 010
   read_f = digitalRead(mux_input_pin_f);
-  colmF_key_1[2] = read_f;
+  colmF_key[2] = read_f;
 
   channel_select(1, 1, 0); // 110
   read_f = digitalRead(mux_input_pin_f);
-  colmF_key_1[3] = read_f;
+  colmF_key[3] = read_f;
 
   channel_select(0, 0, 1); // 001
   read_f = digitalRead(mux_input_pin_f);
-  colmF_key_1[4] = read_f;
+  colmF_key[4] = read_f;
 
   channel_select(1, 0, 1); // 101
   read_f = digitalRead(mux_input_pin_f);
-  colmF_key_1[5] = read_f;
+  colmF_key[5] = read_f;
 
   channel_select(0, 1, 1); // 011
   read_f = digitalRead(mux_input_pin_f);
-  colmF_key_1[6] = read_f;
+  colmF_key[6] = read_f;
 
   channel_select(1, 1, 1); // 111
   read_f = digitalRead(mux_input_pin_f);
-  colmF_key_1[7] = read_f;
+  colmF_key[7] = read_f;
  
-  if ((colmF_key_1[0] == comlF_array0) & (colmF_key_1[1] == comlF_array1) & (colmF_key_1[2] == comlF_array2) & (colmF_key_1[3] == comlF_array3) &
-      (colmF_key_1[4] == comlF_array4) & (colmF_key_1[5] == comlF_array5) & (colmF_key_1[6] == comlF_array6) & (colmF_key_1[7] == comlF_array7))
+  if ((colmF_key[0] == comlF_array0) & (colmF_key[1] == comlF_array1) & (colmF_key[2] == comlF_array2) & (colmF_key[3] == comlF_array3) &
+      (colmF_key[4] == comlF_array4) & (colmF_key[5] == comlF_array5) & (colmF_key[6] == comlF_array6) & (colmF_key[7] == comlF_array7))
   {
     Serial.println("Colm F is equal turn off all LEDs");
     return (true) ;
@@ -415,38 +415,38 @@ int Mulitiplexer::r_mux_G_channel(int comlG_array0, int comlG_array1, int comlG_
 {
   channel_select(0, 0, 0); // 000
   read_g = digitalRead(mux_input_pin_g);
-  colmG_key_1[0] = read_g;
+  colmG_key[0] = read_g;
 
   channel_select(1, 0, 0); // 100
   read_g = digitalRead(mux_input_pin_g);
-  colmG_key_1[1] = read_g;
+  colmG_key[1] = read_g;
 
   channel_select(0, 1, 0); // 010
   read_g = digitalRead(mux_input_pin_g);
-  colmG_key_1[2] = read_g;
+  colmG_key[2] = read_g;
 
   channel_select(1, 1, 0); // 110
   read_g = digitalRead(mux_input_pin_g);
-  colmG_key_1[3] = read_g;
+  colmG_key[3] = read_g;
 
   channel_select(0, 0, 1); // 001
   read_g = digitalRead(mux_input_pin_g);
-  colmG_key_1[4] = read_g;
+  colmG_key[4] = read_g;
 
   channel_select(1, 0, 1); // 101
   read_g = digitalRead(mux_input_pin_g);
-  colmG_key_1[5] = read_g;
+  colmG_key[5] = read_g;
 
   channel_select(0, 1, 1); // 011
   read_g = digitalRead(mux_input_pin_g);
-  colmG_key_1[6] = read_g;
+  colmG_key[6] = read_g;
 
   channel_select(1, 1, 1); // 111
   read_g = digitalRead(mux_input_pin_g);
-  colmG_key_1[7] = read_g;
+  colmG_key[7] = read_g;
  
-  if ((colmG_key_1[0] == comlG_array0) & (colmG_key_1[1] == comlG_array1) & (colmG_key_1[2] == comlG_array2) & (colmG_key_1[3] == comlG_array3) &
-      (colmG_key_1[4] == comlG_array4) & (colmG_key_1[5] == comlG_array5) & (colmG_key_1[6] == comlG_array6) & (colmG_key_1[7] == comlG_array7))
+  if ((colmG_key[0] == comlG_array0) & (colmG_key[1] == comlG_array1) & (colmG_key[2] == comlG_array2) & (colmG_key[3] == comlG_array3) &
+      (colmG_key[4] == comlG_array4) & (colmG_key[5] == comlG_array5) & (colmG_key[6] == comlG_array6) & (colmG_key[7] == comlG_array7))
   {
     Serial.println("Colm G is equal turn off all LEDs");
     return (true) ;
@@ -462,38 +462,38 @@ int Mulitiplexer::r_mux_H_channel(int comlH_array0, int comlH_array1, int comlH_
 {
   channel_select(0, 0, 0); // 000
   read_h = digitalRead(mux_input_pin_h);
-  colmH_key_1[0] = read_h;
+  colmH_key[0] = read_h;
 
   channel_select(1, 0, 0); // 100
   read_h = digitalRead(mux_input_pin_h);
-  colmH_key_1[1] = read_h;
+  colmH_key[1] = read_h;
 
   channel_select(0, 1, 0); // 010
   read_h = digitalRead(mux_input_pin_h);
-  colmH_key_1[2] = read_h;
+  colmH_key[2] = read_h;
 
   channel_select(1, 1, 0); // 110
   read_h = digitalRead(mux_input_pin_h);
-  colmH_key_1[3] = read_h;
+  colmH_key[3] = read_h;
 
   channel_select(0, 0, 1); // 001
   read_h = digitalRead(mux_input_pin_h);
-  colmH_key_1[4] = read_h;
+  colmH_key[4] = read_h;
 
   channel_select(1, 0, 1); // 101
   read_h = digitalRead(mux_input_pin_h);
-  colmH_key_1[5] = read_h;
+  colmH_key[5] = read_h;
 
   channel_select(0, 1, 1); // 011
   read_h = digitalRead(mux_input_pin_h);
-  colmH_key_1[6] = read_h;
+  colmH_key[6] = read_h;
 
   channel_select(1, 1, 1); // 111
   read_h = digitalRead(mux_input_pin_h);
-  colmH_key_1[7] = read_h;
+  colmH_key[7] = read_h;
  
-  if ((colmH_key_1[0] == comlH_array0) & (colmH_key_1[1] == comlH_array1) & (colmH_key_1[2] == comlH_array2) & (colmH_key_1[3] == comlH_array3) &
-      (colmH_key_1[4] == comlH_array4) & (colmH_key_1[5] == comlH_array5) & (colmH_key_1[6] == comlH_array6) & (colmH_key_1[7] == comlH_array7))
+  if ((colmH_key[0] == comlH_array0) & (colmH_key[1] == comlH_array1) & (colmH_key[2] == comlH_array2) & (colmH_key[3] == comlH_array3) &
+      (colmH_key[4] == comlH_array4) & (colmH_key[5] == comlH_array5) & (colmH_key[6] == comlH_array6) & (colmH_key[7] == comlH_array7))
   {
     Serial.println("Colm H is equal turn off all LEDs");
     return (true) ;

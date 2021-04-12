@@ -61,14 +61,14 @@ public:
                          int comlG_array0, int comlG_array1, int comlG_array2, int comlG_array3, int comlG_array4, int comlG_array5, int comlG_array6, int comlG_array7,
                          int comlH_array0, int comlH_array1, int comlH_array2, int comlH_array3, int comlH_array4, int comlH_array5, int comlH_array6, int comlH_array7);
     
-    int colmA_key_1[8];
-    int colmB_key_1[8];
-    int colmC_key_1[8];
-    int colmD_key_1[8];
-    int colmE_key_1[8];
-    int colmF_key_1[8];
-    int colmG_key_1[8];
-    int colmH_key_1[8];
+    int colmA_key[8];
+    int colmB_key[8];
+    int colmC_key[8];
+    int colmD_key[8];
+    int colmE_key[8];
+    int colmF_key[8];
+    int colmG_key[8];
+    int colmH_key[8];
     //**************Puzzle 1*************************************//
      //*********Start up position*********//
     int colmA_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 0}; // 0 = Peice is on Chess board
