@@ -45,6 +45,10 @@ void show_answer()
      {
        LED0.LED_on_off(LED0.LEDF7); LED0.LED_on_off(LED0.LEDG8); 
      }
+     else if () // to add the next move in the Puzzle
+     {
+      
+     }
   }
   else if (constpot == 2)
   {
@@ -64,7 +68,7 @@ void show_answer()
     Display0.print_piece_location("error", "", "", "");
     Display0.draw();
   }
-  
+  LED0.LED_on_off(LED0.LEDclear);
 } // end show_answer
 
 //******************************************Setup******************************//
