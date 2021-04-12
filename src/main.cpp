@@ -40,9 +40,11 @@ void show_answer()
 {
   if (constpot == 1)
   {
-     Display0.clear();
-     Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "1");
-     Display0.draw();
+     if(Mulitiplexer0.r_mux_F_channel(Mulitiplexer0.colmF_master_1[0], Mulitiplexer0.colmF_master_1[1], Mulitiplexer0.colmF_master_1[2], Mulitiplexer0.colmF_master_1[3],
+                                      Mulitiplexer0.colmF_master_1[4], Mulitiplexer0.colmF_master_1[5], Mulitiplexer0.colmF_master_1[6], Mulitiplexer0.colmF_master_1[7]) == true)
+     {
+       LED0.LED_on_off(LED0.LEDF7); LED0.LED_on_off(LED0.LEDG8); 
+     }
   }
   else if (constpot == 2)
   {
