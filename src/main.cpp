@@ -45,9 +45,10 @@ void show_answer()
      {
        LED0.LED_on_off(LED0.LEDF7); LED0.LED_on_off(LED0.LEDG8); 
      }
-     else if () // to add the next move in the Puzzle
+     else if (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_master_1[0], Mulitiplexer0.colmG_master_1[1], Mulitiplexer0.colmG_master_1[2], Mulitiplexer0.colmG_master_1[3],
+                                            Mulitiplexer0.colmG_master_1[4], Mulitiplexer0.colmG_master_1[5], Mulitiplexer0.colmG_master_1[6], Mulitiplexer0.colmG_master_1[7]) == true) 
      {
-      
+
      }
   }
   else if (constpot == 2)
@@ -121,7 +122,7 @@ void loop()
      Mulitiplexer0.set_enable(0);
     }
     
-    while ((Button0.r_button() == HIGH) & (test_code_buzzer == true))
+    while ((Button0.r_button() == HIGH) && (test_code_buzzer == true))
     {
       Buzzer0.write_buzzer();
       delay(1000);
@@ -132,7 +133,7 @@ void loop()
 
     delay(1000);//--> to allow for button press
 
-    while((Button0.r_button() == HIGH) & (test_code_LED == true))
+    while((Button0.r_button() == HIGH) && (test_code_LED == true))
     {
       LED0.test_all_LEDs();
     }
@@ -256,7 +257,7 @@ void loop()
       delay(1000); //--> to allow for button press
     } // end test_code_mulitiplexer_checkoutput == true
 
-    while ((Button0.r_button() == HIGH) & (test_code_Display == true))
+    while ((Button0.r_button() == HIGH) && (test_code_Display == true))
     {
      Display0.clear();
      Display0.print_piece_location("Colm A Placement", "WB23, WB23, WB23,", "WB23, WB23, WB23,", "BB23, BB23");
@@ -630,7 +631,7 @@ void loop()
      //***********************Puzzle 2*******************************************//
     if(constpot == 2) // to set up Puzzle #****
     {
-      while ((Button0.r_button() == HIGH) & (constpot == 2)) // to set up Puzzle #5650034
+      while ((Button0.r_button() == HIGH) && (constpot == 2)) // to set up Puzzle #5650034
       {
         LED0.LED_on_off(LED0.LEDA2);
         LED0.LED_on_off(LED0.LEDA4);
@@ -641,7 +642,7 @@ void loop()
     //***********************Puzzle 3*******************************************//
     if(constpot == 3) // to set up Puzzle #****
     {
-      while ((Button0.r_button() == HIGH) & (constpot == 3)) // to set up Puzzle #1036958
+      while ((Button0.r_button() == HIGH) && (constpot == 3)) // to set up Puzzle #1036958
       {
         LED0.LED_on_off(LED0.LEDA2);
       }
