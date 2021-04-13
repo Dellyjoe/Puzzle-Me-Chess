@@ -324,19 +324,19 @@ void loop()
     switch (constpot)
     {
     case 1:
-      Serial.println("Opening File 10500704.CSV"); // prints index 0 in const char array
+      Serial.println("Opening File 136829.CSV"); // prints index 0 in const char array
       Serial.println("___________________");       // line breakup for readability
       SDcard0.open_file(0);                        // Open File indexer 0
       Serial.println("___________________");
       break;
     case 2:
-      Serial.println("Opening File 5650034.CSV");
+      Serial.println("Opening File 1022136.CSV");
       Serial.println("___________________");
       SDcard0.open_file(1);
       Serial.println("___________________");
       break;
     case 3:
-      Serial.println("Opening File 1036958.CSV");
+      Serial.println("Opening File 764878.CSV");
       Serial.println("___________________");
       SDcard0.open_file(2);
       Serial.println("___________________");

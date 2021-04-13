@@ -5,7 +5,7 @@
 class SDcard
 {
 private:
-    const char* str_puzzle_name[12] = {"1015704.CSV","561534.CSV","1036958.CSV"};
+    const char* str_puzzle_name[12] = {"136829.CSV","1022136.CSV","764878.CSV"};
     int filename_index;
 
 public:
