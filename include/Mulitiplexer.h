@@ -70,7 +70,7 @@ public:
     int colmG_key[8];
     int colmH_key[8];
     //**************Puzzle 1*************************************//
-     //*********Start up position*********//
+    //*********Start up position*********//
     int colmA_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 0}; // 0 = Peice is on Chess board
     int colmB_master_1[8] = {1, 0, 1, 1, 1, 1, 0, 1}; 
     int colmC_master_1[8] = {0, 0, 0, 0, 1, 0, 0, 0}; 
@@ -107,6 +107,65 @@ public:
     int colmF_Master_1_M2[8] = {1, 0, 1, 1, 1, 1, 0, 1}; 
     int colmG_Master_1_M2[8] = {1, 0, 1, 1, 1, 0, 0, 0}; 
     int colmH_Master_1_M2[8] = {0, 0, 1, 1, 1, 1, 0, 0};
+
+    //**************Puzzle 2*************************************//
+    //*********Start up position*********//
+    int colmA_master_2[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmB_master_2[8] = {1, 0, 0, 1, 1, 1, 0, 1}; 
+    int colmC_master_2[8] = {1, 1, 1, 1, 0, 1, 1, 1}; 
+    int colmD_master_2[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmE_master_2[8] = {1, 0, 1, 1, 1, 1, 1, 1}; 
+    int colmF_master_2[8] = {1, 1, 1, 1, 1, 1, 1, 0}; 
+    int colmG_master_2[8] = {1, 1, 1, 0, 1, 0, 0, 0}; 
+    int colmH_master_2[8] = {0, 1, 0, 1, 1, 1, 1, 1}; 
+    //*********Turn one White*************//
+    int colmA_master_2_M1[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmB_master_2_M1[8] = {1, 0, 0, 1, 1, 1, 0, 1}; 
+    int colmC_master_2_M1[8] = {1, 1, 1, 1, 0, 1, 1, 1}; 
+    int colmD_master_2_M1[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmE_master_2_M1[8] = {1, 0, 1, 1, 1, 1, 1, 1}; 
+    int colmF_master_2_M1[8] = {1, 1, 1, 1, 1, 0, 1, 0}; 
+    int colmG_master_2_M1[8] = {1, 1, 1, 1, 1, 0, 0, 0}; 
+    int colmH_master_2_M1[8] = {0, 1, 0, 1, 1, 1, 1, 1};
+    //*********Turn one Black*************//
+    int colmA_master_2_M1_2[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmB_master_2_M1_2[8] = {1, 0, 0, 1, 1, 1, 0, 1}; 
+    int colmC_master_2_M1_2[8] = {1, 1, 1, 1, 0, 1, 1, 1}; 
+    int colmD_master_2_M1_2[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmE_master_2_M1_2[8] = {1, 0, 1, 1, 1, 1, 1, 1}; 
+    int colmF_master_2_M1_2[8] = {1, 1, 1, 1, 1, 0, 1, 0}; 
+    int colmG_master_2_M1_2[8] = {1, 1, 1, 1, 1, 0, 0, 1}; 
+    int colmH_master_2_M1_2[8] = {0, 1, 0, 1, 1, 1, 1, 0};
+    //*********Turn Two White*************//
+    int colmA_master_2_M2[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmB_master_2_M2[8] = {1, 0, 0, 1, 1, 1, 0, 1}; 
+    int colmC_master_2_M2[8] = {1, 1, 1, 1, 0, 1, 1, 1}; 
+    int colmD_master_2_M2[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmE_master_2_M2[8] = {1, 0, 1, 1, 1, 1, 1, 1}; 
+    int colmF_master_2_M2[8] = {1, 1, 1, 1, 1, 0, 1, 0}; 
+    int colmG_master_2_M2[8] = {1, 1, 1, 1, 1, 1, 0, 1}; 
+    int colmH_master_2_M2[8] = {0, 1, 0, 1, 1, 0, 1, 0};
+    //*********Turn Two Black*************//
+    int colmA_master_2_M2_2[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmB_master_2_M2_2[8] = {1, 0, 0, 1, 1, 1, 0, 1}; 
+    int colmC_master_2_M2_2[8] = {1, 1, 1, 1, 0, 1, 1, 1}; 
+    int colmD_master_2_M2_2[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmE_master_2_M2_2[8] = {1, 0, 1, 1, 1, 1, 1, 1}; 
+    int colmF_master_2_M2_2[8] = {1, 1, 1, 1, 1, 0, 1, 0}; 
+    int colmG_master_2_M2_2[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmH_master_2_M2_2[8] = {0, 1, 0, 1, 1, 0, 1, 0};
+    //*********Turn Three White***********//
+    int colmA_master_2_M3[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmB_master_2_M3[8] = {1, 0, 0, 1, 1, 1, 1, 1}; 
+    int colmC_master_2_M3[8] = {1, 1, 1, 1, 0, 1, 1, 1}; 
+    int colmD_master_2_M3[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmE_master_2_M3[8] = {1, 0, 1, 1, 1, 1, 1, 1}; 
+    int colmF_master_2_M3[8] = {1, 1, 1, 1, 1, 0, 1, 0}; 
+    int colmG_master_2_M3[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
+    int colmH_master_2_M3[8] = {0, 0, 0, 1, 1, 0, 1, 0};
+
+    //**************Puzzle 3*************************************//
+    //*********Start up position*********//
 }; // end Class Mulitiplexer
 
 //******************************************Output*****************************//
