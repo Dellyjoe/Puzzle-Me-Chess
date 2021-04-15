@@ -635,14 +635,133 @@ void loop()
     } // end constpot == 1
 
      //***********************Puzzle 2*******************************************//
-    if(constpot == 2) // to set up Puzzle #****
+    if(constpot == 2) // to set up Puzzle #1022136
     {
-      while ((Button0.r_button() == HIGH) && (constpot == 2)) // to set up Puzzle #5650034
+      Display0.clear();
+      Display0.print_piece_location("Colm B Placement", "BRB2", "WPB3, WRB7", " ");
+      Display0.draw(); 
+
+      while (Mulitiplexer0.r_mux_B_channel(Mulitiplexer0.colmB_master_2[0], Mulitiplexer0.colmB_master_2[1], Mulitiplexer0.colmB_master_2[2], Mulitiplexer0.colmB_master_2[3],
+                                           Mulitiplexer0.colmB_master_2[4], Mulitiplexer0.colmB_master_2[5], Mulitiplexer0.colmB_master_2[6], Mulitiplexer0.colmB_master_2[7]) == false)
       {
-        LED0.LED_on_off(LED0.LEDA2);
-        LED0.LED_on_off(LED0.LEDA4);
-        LED0.LED_on_off(LED0.LEDA6);
-      }
+        LED0.LED_on_off(LED0.LEDB2); LED0.LED_on_off(LED0.LEDB3); LED0.LED_on_off(LED0.LEDB7);
+
+        if (Mulitiplexer0.r_mux_B_channel(Mulitiplexer0.colmB_master_2[0], Mulitiplexer0.colmB_master_2[1], Mulitiplexer0.colmB_master_2[2], Mulitiplexer0.colmB_master_2[3],
+                                          Mulitiplexer0.colmB_master_2[4], Mulitiplexer0.colmB_master_2[5], Mulitiplexer0.colmB_master_2[6], Mulitiplexer0.colmB_master_2[7])== true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+          
+        }
+      } // end of while loop Mux B
+
+      Display0.clear();
+      Display0.print_piece_location("Colm C Placement", "BPC5", "", "");
+      Display0.draw();
+
+      while (Mulitiplexer0.r_mux_C_channel(Mulitiplexer0.colmC_master_2[0], Mulitiplexer0.colmC_master_2[1], Mulitiplexer0.colmC_master_2[2], Mulitiplexer0.colmC_master_2[3],
+                                           Mulitiplexer0.colmC_master_2[4], Mulitiplexer0.colmC_master_2[5], Mulitiplexer0.colmC_master_2[6], Mulitiplexer0.colmC_master_2[7]) == false)
+      {
+        LED0.LED_on_off(LED0.LEDC5);
+        if (Mulitiplexer0.r_mux_C_channel(Mulitiplexer0.colmC_master_2[0], Mulitiplexer0.colmC_master_2[1], Mulitiplexer0.colmC_master_2[2], Mulitiplexer0.colmC_master_2[3],
+                                          Mulitiplexer0.colmC_master_2[4], Mulitiplexer0.colmC_master_2[5], Mulitiplexer0.colmC_master_2[6], Mulitiplexer0.colmC_master_2[7]) == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+          
+        }
+      } // end of while loop Mux C
+
+      Display0.clear();
+      Display0.print_piece_location("Colm E Placement", "WBE2", "", "");
+      Display0.draw();
+    
+      while (Mulitiplexer0.r_mux_E_channel(Mulitiplexer0.colmE_master_2[0], Mulitiplexer0.colmE_master_2[1], Mulitiplexer0.colmE_master_2[2], Mulitiplexer0.colmE_master_2[3],
+                                           Mulitiplexer0.colmE_master_2[4], Mulitiplexer0.colmE_master_2[5], Mulitiplexer0.colmE_master_2[6], Mulitiplexer0.colmE_master_2[7]) == false)
+      {
+        LED0.LED_on_off(LED0.LEDE2);
+      
+        if (Mulitiplexer0.r_mux_E_channel(Mulitiplexer0.colmE_master_2[0], Mulitiplexer0.colmE_master_2[1], Mulitiplexer0.colmE_master_2[2], Mulitiplexer0.colmE_master_2[3],
+                                          Mulitiplexer0.colmE_master_2[4], Mulitiplexer0.colmE_master_2[5], Mulitiplexer0.colmE_master_2[6], Mulitiplexer0.colmE_master_2[7]) == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+        
+        }
+      } // end of while loop Mux E
+
+      Display0.clear();
+      Display0.print_piece_location("Colm F Placement", "BBF8", "", "");
+      Display0.draw(); 
+
+      while (Mulitiplexer0.r_mux_F_channel(Mulitiplexer0.colmF_master_2[0], Mulitiplexer0.colmF_master_2[1], Mulitiplexer0.colmF_master_2[2], Mulitiplexer0.colmF_master_2[3],
+                                           Mulitiplexer0.colmF_master_2[4], Mulitiplexer0.colmF_master_2[5], Mulitiplexer0.colmF_master_2[6], Mulitiplexer0.colmF_master_2[7]) == false)
+      {
+        LED0.LED_on_off(LED0.LEDF8); 
+      
+        if (Mulitiplexer0.r_mux_F_channel(Mulitiplexer0.colmF_master_2[0], Mulitiplexer0.colmF_master_2[1], Mulitiplexer0.colmF_master_2[2], Mulitiplexer0.colmF_master_2[3],
+                                          Mulitiplexer0.colmF_master_2[4], Mulitiplexer0.colmF_master_2[5], Mulitiplexer0.colmF_master_2[6], Mulitiplexer0.colmF_master_2[7]) == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+        
+        }
+      } // end of while loop Mux F
+      
+      Display0.clear();
+      Display0.print_piece_location("Colm G Placement", "WNG4, WBG6", "BPG7, BKG8", "");
+      Display0.draw(); 
+
+      while (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_master_2[0], Mulitiplexer0.colmG_master_2[1], Mulitiplexer0.colmG_master_2[2], Mulitiplexer0.colmG_master_2[3],
+                                           Mulitiplexer0.colmG_master_2[4], Mulitiplexer0.colmG_master_2[5], Mulitiplexer0.colmG_master_2[6], Mulitiplexer0.colmG_master_2[7]) == false)
+      {
+        LED0.LED_on_off(LED0.LEDG4); LED0.LED_on_off(LED0.LEDG6); LED0.LED_on_off(LED0.LEDG7); LED0.LED_on_off(LED0.LEDG8);
+      
+        if (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_master_2[0], Mulitiplexer0.colmG_master_2[1], Mulitiplexer0.colmG_master_2[2], Mulitiplexer0.colmG_master_2[3],
+                                          Mulitiplexer0.colmG_master_2[4], Mulitiplexer0.colmG_master_2[5], Mulitiplexer0.colmG_master_2[6], Mulitiplexer0.colmG_master_2[7]) == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+        
+        }
+      } // end of while loop Mux G
+
+      Display0.clear();
+      Display0.print_piece_location("Colm H Placement", "WKH1, WPH3", "", "");
+      Display0.draw();
+
+      while (Mulitiplexer0.r_mux_H_channel(Mulitiplexer0.colmH_master_2[0], Mulitiplexer0.colmH_master_2[1], Mulitiplexer0.colmH_master_2[2], Mulitiplexer0.colmH_master_2[3],
+                                           Mulitiplexer0.colmH_master_2[4], Mulitiplexer0.colmH_master_2[5], Mulitiplexer0.colmH_master_2[6], Mulitiplexer0.colmH_master_2[7]) == false)
+      {
+        LED0.LED_on_off(LED0.LEDH1); LED0.LED_on_off(LED0.LEDH3);
+
+        if (Mulitiplexer0.r_mux_H_channel(Mulitiplexer0.colmH_master_2[0], Mulitiplexer0.colmH_master_2[1], Mulitiplexer0.colmH_master_2[2], Mulitiplexer0.colmH_master_2[3],
+                                          Mulitiplexer0.colmH_master_2[4], Mulitiplexer0.colmH_master_2[5], Mulitiplexer0.colmH_master_2[6], Mulitiplexer0.colmH_master_2[7]) == true)
+        {
+          LED0.LED_on_off(LED0.LEDclear);
+        }
+        else
+        {
+           
+        }
+      } // end of while loop Mux H
+
+      LED0.LED_on_off(LED0.LEDclear);
+      //*********Move one*************//
+      Display0.clear();
+      Display0.print_piece_location("Set up Complete", "White to move", "", "");
+      Display0.draw();
+      delay(1000); // take out after testing is completed
     } // end constpot == 2
 
     //***********************Puzzle 3*******************************************//
