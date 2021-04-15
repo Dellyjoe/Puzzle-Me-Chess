@@ -162,7 +162,7 @@ public:
     int colmE_Master_2_M3[8] = {1, 0, 1, 1, 1, 1, 1, 1}; 
     int colmF_Master_2_M3[8] = {1, 1, 1, 1, 1, 0, 1, 0}; 
     int colmG_Master_2_M3[8] = {1, 1, 1, 1, 1, 1, 1, 1}; 
-    int colmH_Master_2_M3[8] = {0, 0, 0, 1, 1, 0, 1, 0};
+    int colmH_Master_2_M3[8] = {0, 1, 0, 1, 1, 0, 0, 0};
 
     //**************Puzzle 3*************************************//
     //*********Start up position*********//
