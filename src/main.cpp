@@ -717,7 +717,7 @@ void loop()
       } // end of while loop Mux F
       
       Display0.clear();
-      Display0.print_piece_location("Colm G Placement", "WNG4, WBG6", "BPG7, BKG8", "");
+      Display0.print_piece_location("Colm G Placement", "WNG4, WRG6", "BPG7, BKG8", "");
       Display0.draw(); 
 
       while (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_master_2[0], Mulitiplexer0.colmG_master_2[1], Mulitiplexer0.colmG_master_2[2], Mulitiplexer0.colmG_master_2[3],
