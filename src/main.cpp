@@ -1,7 +1,7 @@
 //*****************************************************************************//
 // Programmer: Joseph __Vitale                                                 //
 // Start Date: 02/08/2021                                                      //
-// Phase #1 Completion Date:                                                   //
+// Phase #1 Completion Date:  05/10/2021                                       //
 // Create a physical chess puzzle on a chess board. This board will            //
 // have user checkability and software mapped defined chess puzzles.           //
 // At first there will be 3 different chess puzzles ranging from easy          //
@@ -152,7 +152,6 @@ void loop()
 
       while((Button0.r_button() == HIGH))
       {
-    
         if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_1_M1[0], Mulitiplexer0.colmA_Master_1_M1[1], Mulitiplexer0.colmA_Master_1_M1[2], Mulitiplexer0.colmA_Master_1_M1[3],
                                            Mulitiplexer0.colmA_Master_1_M1[4], Mulitiplexer0.colmA_Master_1_M1[5], Mulitiplexer0.colmA_Master_1_M1[6], Mulitiplexer0.colmA_Master_1_M1[7],
                                            Mulitiplexer0.colmB_Master_1_M1[0], Mulitiplexer0.colmB_Master_1_M1[1], Mulitiplexer0.colmB_Master_1_M1[2], Mulitiplexer0.colmB_Master_1_M1[3],
@@ -185,7 +184,7 @@ void loop()
 
      delay(1000); // allow for button press
 
-        while((Button0.r_button() == HIGH))
+      while((Button0.r_button() == HIGH))
       {
         if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_1_M1_2[0], Mulitiplexer0.colmA_Master_1_M1_2[1], Mulitiplexer0.colmA_Master_1_M1_2[2], Mulitiplexer0.colmA_Master_1_M1_2[3],
                                            Mulitiplexer0.colmA_Master_1_M1_2[4], Mulitiplexer0.colmA_Master_1_M1_2[5], Mulitiplexer0.colmA_Master_1_M1_2[6], Mulitiplexer0.colmA_Master_1_M1_2[7],
@@ -203,20 +202,19 @@ void loop()
                                            Mulitiplexer0.colmG_Master_1_M1_2[4], Mulitiplexer0.colmG_Master_1_M1_2[5], Mulitiplexer0.colmG_Master_1_M1_2[6], Mulitiplexer0.colmG_Master_1_M1_2[7],
                                            Mulitiplexer0.colmH_Master_1_M1_2[0], Mulitiplexer0.colmH_Master_1_M1_2[1], Mulitiplexer0.colmH_Master_1_M1_2[2], Mulitiplexer0.colmH_Master_1_M1_2[3],
                                            Mulitiplexer0.colmH_Master_1_M1_2[4], Mulitiplexer0.colmH_Master_1_M1_2[5], Mulitiplexer0.colmH_Master_1_M1_2[6], Mulitiplexer0.colmH_Master_1_M1_2[7]) == true)
-                                           {
-                                              Display0.clear();
-                                              Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
-                                              Display0.draw();
-                                           }
-                                           else
-                                           {
-                                             Display0.clear();
-                                             Display0.print_piece_location("Correct Move: ", "now move", "Black", "RF8 to G8");
-                                             Display0.draw();
-                                             delay(1000);
-                                           }
-
-      }
+        {
+          Display0.clear();
+          Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
+          Display0.draw();
+        }
+        else
+        {
+          Display0.clear();
+          Display0.print_piece_location("Correct Move: ", "now move", "Black", "RF8 to G8");
+          Display0.draw();
+          delay(1000);
+        }
+      } // end Button0.r_button() == HIGH
       
       delay(1000); // allow for button press
 
@@ -321,6 +319,7 @@ void loop()
     delay(1000); //--> to allow for button press
     constpot = Potentiometer0.r_pot(); // making pot cost for remaining of loop
 
+    //*******Opening Selected Puzzle*******//
     switch (constpot)
     {
     case 1:
@@ -370,7 +369,7 @@ void loop()
         {
           
         }
-      }// end of while loop Mux A
+      }// end of while loop Mux A Puzzle 1
 
       Display0.clear();
       Display0.print_piece_location("Colm B Placement", "WPB2", "BPA7", " ");
@@ -390,7 +389,7 @@ void loop()
         {
           
         }
-      } // end of while loop Mux B
+      } // end of while loop Mux B Puzzle 1
 
       Display0.clear();
       Display0.print_piece_location("Colm C Placement", "WKC1, WPC2, WNC3", "WBC4, BNC6", "BPC7, BBC8 ");
@@ -410,7 +409,7 @@ void loop()
         {
           
         }
-      } // end of while loop Mux C
+      } // end of while loop Mux C Puzzle 1
 
       Display0.clear();
       Display0.print_piece_location("Colm D Placement", "WRD1, WBD2", "BPD7, DQD8", "");
@@ -430,7 +429,7 @@ void loop()
         {
          
         }
-      } // end of while loop Mux D
+      } // end of while loop Mux D Puzzle 1
 
       Display0.clear();
       Display0.print_piece_location("Colm E Placement", "WPE4", "", "");
@@ -450,7 +449,7 @@ void loop()
         {
         
         }
-      } // end of while loop Mux E
+      } // end of while loop Mux E Puzzle 1
 
       Display0.clear();
       Display0.print_piece_location("Colm F Placement", "BNF2, WQF7", "BRF8", "");
@@ -470,7 +469,7 @@ void loop()
         {
         
         }
-      } // end of while loop Mux F
+      } // end of while loop Mux F Puzzle 1
       
       Display0.clear();
       Display0.print_piece_location("Colm G Placement", "WPG2, WNG5", "BPG6, BBG7", "");
@@ -490,7 +489,7 @@ void loop()
         {
         
         }
-      } // end of while loop Mux G
+      } // end of while loop Mux G Puzzle 1
 
       Display0.clear();
       Display0.print_piece_location("Colm H Placement", "WRH1, WPH2", "BPH7, BKH8", "");
@@ -510,7 +509,7 @@ void loop()
         {
            
         }
-      } // end of while loop Mux H
+      } // end of while loop Mux H Puzzle 1
 
       LED0.LED_on_off(LED0.LEDclear);
       //*********Move one*************//
@@ -549,11 +548,11 @@ void loop()
           Display0.draw();
           delay(1000);
         }
-      }// end Button0.r_button() == HIGH
+      } // end of White Move 1  Puzzle 1
 
      delay(1000); // allow for button press
 
-        while((Button0.r_button() == HIGH))
+      while((Button0.r_button() == HIGH))
       {
         if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_1_M1_2[0], Mulitiplexer0.colmA_Master_1_M1_2[1], Mulitiplexer0.colmA_Master_1_M1_2[2], Mulitiplexer0.colmA_Master_1_M1_2[3],
                                            Mulitiplexer0.colmA_Master_1_M1_2[4], Mulitiplexer0.colmA_Master_1_M1_2[5], Mulitiplexer0.colmA_Master_1_M1_2[6], Mulitiplexer0.colmA_Master_1_M1_2[7],
@@ -571,20 +570,19 @@ void loop()
                                            Mulitiplexer0.colmG_Master_1_M1_2[4], Mulitiplexer0.colmG_Master_1_M1_2[5], Mulitiplexer0.colmG_Master_1_M1_2[6], Mulitiplexer0.colmG_Master_1_M1_2[7],
                                            Mulitiplexer0.colmH_Master_1_M1_2[0], Mulitiplexer0.colmH_Master_1_M1_2[1], Mulitiplexer0.colmH_Master_1_M1_2[2], Mulitiplexer0.colmH_Master_1_M1_2[3],
                                            Mulitiplexer0.colmH_Master_1_M1_2[4], Mulitiplexer0.colmH_Master_1_M1_2[5], Mulitiplexer0.colmH_Master_1_M1_2[6], Mulitiplexer0.colmH_Master_1_M1_2[7]) == true)
-                                           {
-                                              Display0.clear();
-                                              Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
-                                              Display0.draw();
-                                           }
-                                           else
-                                           {
-                                             Display0.clear();
-                                             Display0.print_piece_location("Now Move ", "Black Bishop", "On F8 to G8", "");
-                                             Display0.draw();
-                                             delay(1000);
-                                           }
-
-      }
+        {
+          Display0.clear();
+          Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
+          Display0.draw();
+        }
+        else
+        {
+          Display0.clear();
+          Display0.print_piece_location("Now Move ", "Black Bishop", "On F8 to G8", "");
+          Display0.draw();
+          delay(1000);
+        }
+      }  // end of Black Move 1 Puzzle 1
       
       delay(1000); // allow for button press
 
@@ -626,7 +624,7 @@ void loop()
           Display0.draw();
           delay(1000); // do we need to have this here, test after completing puzzle 2
         }
-      } // end of while loop Mux B
+      }   // end of White Move 2 Check Mate end of puzzle 1
       
       Buzzer0.turn_off_buzzer();
       LED0.LED_on_off(LED0.LEDclear);
@@ -655,7 +653,7 @@ void loop()
         {
           
         }
-      } // end of while loop Mux B
+      } // end of while loop Mux B Puzzle 2
 
       Display0.clear();
       Display0.print_piece_location("Colm C Placement", "BPC5", "", "");
@@ -674,7 +672,7 @@ void loop()
         {
           
         }
-      } // end of while loop Mux C
+      } // end of while loop Mux C Puzzle 2
 
       Display0.clear();
       Display0.print_piece_location("Colm E Placement", "WBE2", "", "");
@@ -694,7 +692,7 @@ void loop()
         {
         
         }
-      } // end of while loop Mux E
+      } // end of while loop Mux E Puzzle 2
 
       Display0.clear();
       Display0.print_piece_location("Colm F Placement", "BBF8", "", "");
@@ -714,7 +712,7 @@ void loop()
         {
         
         }
-      } // end of while loop Mux F
+      } // end of while loop Mux F Puzzle 2
       
       Display0.clear();
       Display0.print_piece_location("Colm G Placement", "WNG4, WRG6", "BPG7, BKG8", "");
@@ -734,7 +732,7 @@ void loop()
         {
         
         }
-      } // end of while loop Mux G
+      } // end of while loop Mux G Puzzle 2
 
       Display0.clear();
       Display0.print_piece_location("Colm H Placement", "WKH1, WPH3", "", "");
@@ -754,7 +752,7 @@ void loop()
         {
            
         }
-      } // end of while loop Mux H
+      } // end of while loop Mux H Puzzle 2
 
       LED0.LED_on_off(LED0.LEDclear);
       
@@ -765,7 +763,6 @@ void loop()
 
       while((Button0.r_button() == HIGH))
       {
-    
         if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_2_M1[0], Mulitiplexer0.colmA_Master_2_M1[1], Mulitiplexer0.colmA_Master_2_M1[2], Mulitiplexer0.colmA_Master_2_M1[3],
                                            Mulitiplexer0.colmA_Master_2_M1[4], Mulitiplexer0.colmA_Master_2_M1[5], Mulitiplexer0.colmA_Master_2_M1[6], Mulitiplexer0.colmA_Master_2_M1[7],
                                            Mulitiplexer0.colmB_Master_2_M1[0], Mulitiplexer0.colmB_Master_2_M1[1], Mulitiplexer0.colmB_Master_2_M1[2], Mulitiplexer0.colmB_Master_2_M1[3],
@@ -794,7 +791,7 @@ void loop()
           Display0.draw();
           delay(1000);
         }
-      }// end Button0.r_button() == HIGH
+      } // end of White Move 1 Puzzle 2
 
      delay(1000); // allow for button press
 
@@ -816,20 +813,19 @@ void loop()
                                            Mulitiplexer0.colmG_Master_2_M1_2[4], Mulitiplexer0.colmG_Master_2_M1_2[5], Mulitiplexer0.colmG_Master_2_M1_2[6], Mulitiplexer0.colmG_Master_2_M1_2[7],
                                            Mulitiplexer0.colmH_Master_2_M1_2[0], Mulitiplexer0.colmH_Master_2_M1_2[1], Mulitiplexer0.colmH_Master_2_M1_2[2], Mulitiplexer0.colmH_Master_2_M1_2[3],
                                            Mulitiplexer0.colmH_Master_2_M1_2[4], Mulitiplexer0.colmH_Master_2_M1_2[5], Mulitiplexer0.colmH_Master_2_M1_2[6], Mulitiplexer0.colmH_Master_2_M1_2[7]) == true)
-                                           {
-                                              Display0.clear();
-                                              Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
-                                              Display0.draw();
-                                           }
-                                           else
-                                           {
-                                             Display0.clear();
-                                             Display0.print_piece_location("Now Move ", "Black King", "On G8 to H8", "");
-                                             Display0.draw();
-                                             delay(1000);
-                                           }
-
-      }
+        {
+          Display0.clear();
+          Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
+          Display0.draw();
+        }
+        else
+        {
+          Display0.clear();
+          Display0.print_piece_location("Now Move ", "Black King", "On G8 to H8", "");
+          Display0.draw();
+          delay(1000);
+        }
+      } // end of Black Move 1 Puzzle 2
       
       delay(1000); // allow for button press
 
@@ -865,7 +861,7 @@ void loop()
           Display0.draw();
           delay(1000);
         }
-      }// end Button0.r_button() == HIGH
+      } // end of White Move 2 Puzzle 2
 
      delay(1000); // allow for button press
 
@@ -887,20 +883,19 @@ void loop()
                                            Mulitiplexer0.colmG_Master_2_M2_2[4], Mulitiplexer0.colmG_Master_2_M2_2[5], Mulitiplexer0.colmG_Master_2_M2_2[6], Mulitiplexer0.colmG_Master_2_M2_2[7],
                                            Mulitiplexer0.colmH_Master_2_M2_2[0], Mulitiplexer0.colmH_Master_2_M2_2[1], Mulitiplexer0.colmH_Master_2_M2_2[2], Mulitiplexer0.colmH_Master_2_M2_2[3],
                                            Mulitiplexer0.colmH_Master_2_M2_2[4], Mulitiplexer0.colmH_Master_2_M2_2[5], Mulitiplexer0.colmH_Master_2_M2_2[6], Mulitiplexer0.colmH_Master_2_M2_2[7]) == true)
-                                           {
-                                              Display0.clear();
-                                              Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
-                                              Display0.draw();
-                                           }
-                                           else
-                                           {
-                                             Display0.clear();
-                                             Display0.print_piece_location("Now Move ", "Black Pawn", "On G7 to H6", "");
-                                             Display0.draw();
-                                             delay(1000);
-                                           }
-
-      }
+        {
+          Display0.clear();
+          Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
+          Display0.draw();
+        }
+        else
+        {
+          Display0.clear();
+          Display0.print_piece_location("Now Move ", "Black Pawn", "On G7 to H6", "");
+          Display0.draw();
+          delay(1000);
+        }
+      } // end of Black Move 2 Puzzle 2
       
       delay(1000); // allow for button press
 
@@ -943,7 +938,7 @@ void loop()
           Display0.draw();
           delay(1000);
         }
-      } // end of while loop Mux B
+      } // end of White Move 3 Check Mate end of puzzle 2
       
       Buzzer0.turn_off_buzzer();
       LED0.LED_on_off(LED0.LEDclear);
