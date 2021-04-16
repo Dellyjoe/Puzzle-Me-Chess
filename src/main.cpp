@@ -72,7 +72,7 @@ void show_answer()
   else
   {
     Display0.clear();
-    Display0.print_piece_location("error", "", "", "");
+    Display0.print_piece_location("Please Select Puzzle", "and Complete Setup", "Before using this switch", "");
     Display0.draw();
   }
   LED0.LED_on_off(LED0.LEDclear);
