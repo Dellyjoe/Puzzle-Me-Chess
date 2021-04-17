@@ -116,13 +116,13 @@ void show_hint()
 
     // }
   } // end (constpot == 1)
-  else if (constpot ==2)
+  else if (constpot == 2)
   {
     Display0.clear();
     Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "2");
     Display0.draw();
   }
-  else if (constpot =3)
+  else if (constpot == 3)
   {
     Display0.clear();
     Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "3");
@@ -158,7 +158,7 @@ void setup()
   //******************************************Interrupts***********************//
   pinMode(21, INPUT);
   attachInterrupt(digitalPinToInterrupt(20), show_answer, HIGH);
-  attachInterrupt(digitalPinToInterrupt(20), show_hint, HIGH);
+  attachInterrupt(digitalPinToInterrupt(30), show_hint, LOW);
 } // end setup
 
 
@@ -174,7 +174,7 @@ void loop()
 
     if (test_code_button == true)
     {
-     Button1.r_button();
+     Button0.r_button();
     }
 
     if (test_code_switch == true)
