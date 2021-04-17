@@ -490,7 +490,7 @@ void loop()
       } // end of while loop Mux C Puzzle 1
 
       Display0.clear();
-      Display0.print_piece_location("Colm D Placement", "WRD1, WBD2", "BPD7, DQD8", "");
+      Display0.print_piece_location("Colm D Placement", "WRD1, WBD2", "BPD7, BQD8", "");
       Display0.draw();
 
       while (Mulitiplexer0.r_mux_D_channel(Mulitiplexer0.colmD_Master_1[0], Mulitiplexer0.colmD_Master_1[1], Mulitiplexer0.colmD_Master_1[2], Mulitiplexer0.colmD_Master_1[3],
@@ -1034,5 +1034,6 @@ void loop()
     } // end constpot == 3
 
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
+    constpot = 0; // resetting pot to init value
   } // end  if (test_code == false)
 } //end void loop
