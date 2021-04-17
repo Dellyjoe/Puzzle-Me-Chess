@@ -19,12 +19,12 @@ int Button::r_button()
     if (buttonstate == HIGH)
     {
       Serial.println("Button is not pressed...");
+      return (buttonstate);
     }
     else
     {
       Serial.println("Button pressed!");
+      return (buttonstate);
     }
-    return (buttonstate);
   }
-  return (buttonstate);
 } // end r_button
