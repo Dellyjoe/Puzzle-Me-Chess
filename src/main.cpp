@@ -199,7 +199,7 @@ void loop()
           Display0.draw();
           delay(1000);
         }
-      }// end Button0.r_button() == HIGH
+      }// end Button0.r_button() == HIGH White to Move
 
      delay(1000); // allow for button press
 
@@ -233,7 +233,7 @@ void loop()
           Display0.draw();
           delay(1000);
         }
-      } // end Button0.r_button() == HIGH
+      } // end Button0.r_button() == HIGH Black to Move
       
       delay(1000); // allow for button press
 
@@ -273,7 +273,7 @@ void loop()
           Display0.draw();
           delay(1000);
         }
-      } // end of while loop Mux B
+      } // end of while loop Check Mate
       
       Buzzer0.turn_off_buzzer();
       LED0.LED_on_off(LED0.LEDclear);
