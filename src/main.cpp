@@ -27,7 +27,6 @@
 Display Display0; // Setting Object 0 for Display
 SDcard SDcard0;
 Button Button0;
-Button Button1;
 Potentiometer Potentiometer0;
 Buzzer Buzzer0;
 Switch Switch0;
@@ -57,7 +56,7 @@ void show_answer()
        Display0.print_piece_location("Error State", "Please", "Restart Puzzle", "");
        Display0.draw();
      }
-  }
+  } // end (constpot == 1)
   else if (constpot == 2)
   {
     if(Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_Master_2[0], Mulitiplexer0.colmG_Master_2[1], Mulitiplexer0.colmG_Master_2[2], Mulitiplexer0.colmG_Master_2[3],
@@ -81,7 +80,7 @@ void show_answer()
        Display0.print_piece_location("Error State", "Please", "Restart Puzzle 2", "");
        Display0.draw();
      }
-  }
+  } // end (constpot == 2)
   else if (constpot == 3)
   {
     Display0.clear();
@@ -97,6 +96,47 @@ void show_answer()
   LED0.LED_on_off(LED0.LEDclear);
 } // end show_answer
 
+void show_hint()
+{
+   if (constpot == 1)
+  {
+    Display0.clear();
+    Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "1");
+    Display0.draw();
+    // if (:)
+    // {
+    //   /* code */
+    // }
+    // else if (:)
+    // {
+
+    // }
+    // else
+    // {
+
+    // }
+  } // end (constpot == 1)
+  else if (constpot ==2)
+  {
+    Display0.clear();
+    Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "2");
+    Display0.draw();
+  }
+  else if (constpot =3)
+  {
+    Display0.clear();
+    Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "3");
+    Display0.draw();
+  }
+  else
+  {
+    Display0.clear();
+    Display0.print_piece_location("Please Select", "Puzzle & Complete", "Setup Before using", "this switch!");
+    Display0.draw();
+  }
+  LED0.LED_on_off(LED0.LEDclear);
+} // end show_hint
+
 //******************************************Setup******************************//
 void setup()
 {
@@ -108,7 +148,6 @@ void setup()
   SDcard0.readchesspuzzle();
   //******************************************Inputs***************************//
   Button0.init_button(22);                                       
-  Button1.init_button(30);
   Potentiometer0.init_pot(23, 1, 3);                             // setting A9 to pot/Enabling pot
   Mulitiplexer0.init_muxs_input(15, 14, 32, 39, 38, 37, 16, 17); 
   //******************************************Outputs**************************//
@@ -119,6 +158,7 @@ void setup()
   //******************************************Interrupts***********************//
   pinMode(21, INPUT);
   attachInterrupt(digitalPinToInterrupt(20), show_answer, HIGH);
+  attachInterrupt(digitalPinToInterrupt(20), show_hint, HIGH);
 } // end setup
 
 
