@@ -23,15 +23,15 @@ void Display::draw()
 
 void Display::print_select_puzzle(int x, int y, int value)
 {
-  u8g2.setFlipMode(0);                        // Flips display 180 (1) = True
-  u8g2.setFont(u8g2_font_9x18_tf);            // choose a suitable font
+  u8g2.setFlipMode(0);             // Flips display 180 (1) = True
+  u8g2.setFont(u8g2_font_9x18_tf); // choose a suitable font
   u8g2.drawStr(0, 12, "User Selection");
   u8g2.drawStr(0, 30, "Puzzle");
   u8g2.drawStr(x, y, "#");
-  u8g2.setCursor(75, 30);                     // set cursor location
+  u8g2.setCursor(75, 30); // set cursor location
   u8g2.print(value);
-  u8g2.drawFrame(3,40,50,20);
-  u8g2.setFontRefHeightAll();  	/* this will add some extra space for the text inside the buttons */
+  u8g2.drawFrame(3, 40, 50, 20);
+  u8g2.setFontRefHeightAll(); /* this will add some extra space for the text inside the buttons */
   u8g2.drawStr(6, 55, "Click");
 } // end void print_select_puzzle
 
@@ -49,7 +49,7 @@ void Display::print_user_puzzle(int a, int b, int value1)
 
 void Display::print_piece_location(String line_one, String line_two, String line_three, String line_four)
 {
-  u8g2.setFlipMode(0);           
+  u8g2.setFlipMode(0);
   u8g2.setFont(u8g2_font_t0_14_me);
   u8g2.drawStr(0, 14, line_one.c_str());
   u8g2.drawStr(0, 30, line_two.c_str());

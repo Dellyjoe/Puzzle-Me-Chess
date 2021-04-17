@@ -2,16 +2,17 @@
 class LED
 {
 private:
-    int index = 0; 
+    int index = 0;
+
 public:
     void init_LED();
     void LED_on_off(int LEDarry[]);
     void test_all_LEDs();
 
-//******************************************LEDS***************************/
-//**LED Arry Number   0       1      2       3     4      5      6      7      8       9      10     11     12     13     14    15    16 17//
-//**LED Pin Number    1       2      3       4     5      6      7      8      9       10     11     12     24     25     26    27    
-//**Col A LEDS**//                                                              A
+    //******************************************LEDS***************************/
+    //**LED Arry Number   0       1      2       3     4      5      6      7      8       9      10     11     12     13     14    15    16 17//
+    //**LED Pin Number    1       2      3       4     5      6      7      8      9       10     11     12     24     25     26    27
+    //**Col A LEDS**//                                                              A
     int LEDA1[18] = {OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 9, 1};
     int LEDA2[18] = {INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 9, 2};
     int LEDA3[18] = {INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 9, 3};
@@ -20,7 +21,7 @@ public:
     int LEDA6[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 9, 6};
     int LEDA7[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 9, 7};
     int LEDA8[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 9, 8};
-//**Col B LEDS**//                                                                      B
+    //**Col B LEDS**//                                                                      B
     int LEDB1[18] = {OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 10, 1};
     int LEDB2[18] = {INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 10, 2};
     int LEDB3[18] = {INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 10, 3};
@@ -29,7 +30,7 @@ public:
     int LEDB6[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 10, 6};
     int LEDB7[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 10, 7};
     int LEDB8[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 10, 8};
-//**Col C LEDS**//                                                                             c
+    //**Col C LEDS**//                                                                             c
     int LEDC1[18] = {OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 11, 1};
     int LEDC2[18] = {INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 11, 2};
     int LEDC3[18] = {INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 3, 11}; // changed for hardware issues
@@ -38,7 +39,7 @@ public:
     int LEDC6[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 11, 6};
     int LEDC7[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 11, 7};
     int LEDC8[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 11, 8};
-//**Col D LEDS**//                                                                                    D
+    //**Col D LEDS**//                                                                                    D
     int LEDD1[18] = {OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, 12, 1};
     int LEDD2[18] = {INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, 12, 2};
     int LEDD3[18] = {INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, 12, 3};
@@ -47,7 +48,7 @@ public:
     int LEDD6[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, 12, 6};
     int LEDD7[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, 12, 7};
     int LEDD8[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, 12, 8};
-//**Col E LEDS**//                                                                                           E
+    //**Col E LEDS**//                                                                                           E
     int LEDE1[18] = {OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, 24, 1};
     int LEDE2[18] = {INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, 24, 2};
     int LEDE3[18] = {INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, 24, 3};
@@ -56,7 +57,7 @@ public:
     int LEDE6[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, 24, 6};
     int LEDE7[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, 24, 7};
     int LEDE8[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, 24, 8};
-//**Col F LEDS**//                                                                                                  F
+    //**Col F LEDS**//                                                                                                  F
     int LEDF1[18] = {OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, 25, 1};
     int LEDF2[18] = {INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, 25, 2};
     int LEDF3[18] = {INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, 25, 3};
@@ -65,7 +66,7 @@ public:
     int LEDF6[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, 25, 6};
     int LEDF7[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, 25, 7};
     int LEDF8[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, 25, 8};
-//**Col G LEDS**//                                                                                                         G
+    //**Col G LEDS**//                                                                                                         G
     int LEDG1[18] = {OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, 26, 1};
     int LEDG2[18] = {INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, 26, 2};
     int LEDG3[18] = {INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, 26, 3};
@@ -74,7 +75,7 @@ public:
     int LEDG6[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, 26, 6};
     int LEDG7[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, 26, 7};
     int LEDG8[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, 26, 8};
-//**Col H LEDS**//                                                                                                                H
+    //**Col H LEDS**//                                                                                                                H
     int LEDH1[18] = {OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, 27, 1};
     int LEDH2[18] = {INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, 27, 2};
     int LEDH3[18] = {INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, 27, 3};
@@ -83,6 +84,6 @@ public:
     int LEDH6[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, 27, 6};
     int LEDH7[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, 27, 7};
     int LEDH8[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, 27, 8};
-// ********* LED Clear *****//
-    int LEDclear[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 0 , 0};
+    // ********* LED Clear *****//
+    int LEDclear[18] = {INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 0, 0};
 }; // end Class LED

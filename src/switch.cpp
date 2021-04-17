@@ -5,9 +5,9 @@
 //******************************************Setup******************************//
 void Switch::init_switch(int pinnumber)
 {
- //   switch_pin_number = pinnumber;
-  //  pinMode(switch_pin_number, INPUT);
-  //  attachInterrupt(digitalPinToInterrupt(switch_pin_number), blink, HIGH);
+    switch_pin_number = pinnumber;
+    pinMode(switch_pin_number, INPUT);
+    attachInterrupt(digitalPinToInterrupt(switch_pin_number), blink, HIGH);
 } // end init_switch
 
 //*****************************************Functions***************************//

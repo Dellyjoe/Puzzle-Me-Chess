@@ -26,6 +26,6 @@ int Button::r_button()
     }
     return (buttonstate);
   }
-  
+
   return (buttonstate);
 } // end r_button
