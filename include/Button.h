@@ -9,4 +9,4 @@ private:
 public:
     void init_button(int pinnumber);
     int r_button();
-}; // end Class BUTTON7
+}; // end Class BUTTON
