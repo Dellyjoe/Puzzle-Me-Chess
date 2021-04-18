@@ -87,10 +87,37 @@ void show_answer()
   } // end (constpot == 2)
   else if (constpot == 3)
   {
-    Display0.clear();
-    Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "3");
-    Display0.draw();
-  }
+    if (Mulitiplexer0.r_mux_F_channel(Mulitiplexer0.colmF_Master_3[0], Mulitiplexer0.colmF_Master_3[1], Mulitiplexer0.colmF_Master_3[2], Mulitiplexer0.colmF_Master_3[3],
+                                      Mulitiplexer0.colmF_Master_3[4], Mulitiplexer0.colmF_Master_3[5], Mulitiplexer0.colmF_Master_3[6], Mulitiplexer0.colmF_Master_3[7]) == true)
+    {
+      LED0.LED_on_off(LED0.LEDF4);
+      LED0.LED_on_off(LED0.LEDF5);
+    }
+    else if (Mulitiplexer0.r_mux_F_channel(Mulitiplexer0.colmF_Master_3_M1[0], Mulitiplexer0.colmF_Master_3_M1[1], Mulitiplexer0.colmF_Master_3_M1[2], Mulitiplexer0.colmF_Master_3_M1[3],
+                                           Mulitiplexer0.colmF_Master_3_M1[4], Mulitiplexer0.colmF_Master_3_M1[5], Mulitiplexer0.colmF_Master_3_M1[6], Mulitiplexer0.colmF_Master_3_M1[7]) == true)
+    {
+      LED0.LED_on_off(LED0.LEDG3);
+      LED0.LED_on_off(LED0.LEDF1);
+    }
+    else if (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_Master_3_M2[0], Mulitiplexer0.colmG_Master_3_M2[1], Mulitiplexer0.colmG_Master_3_M2[2], Mulitiplexer0.colmG_Master_3_M2[3],
+                                           Mulitiplexer0.colmG_Master_3_M2[4], Mulitiplexer0.colmG_Master_3_M2[5], Mulitiplexer0.colmG_Master_3_M2[6], Mulitiplexer0.colmG_Master_3_M2[7]) == true)
+    {
+      LED0.LED_on_off(LED0.LEDF5);
+      LED0.LED_on_off(LED0.LEDH3);
+    }
+    else if (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_Master_3_M3_2[0], Mulitiplexer0.colmG_Master_3_M3_2[1], Mulitiplexer0.colmG_Master_3_M3_2[2], Mulitiplexer0.colmG_Master_3_M3_2[3],
+                                           Mulitiplexer0.colmG_Master_3_M3_2[4], Mulitiplexer0.colmG_Master_3_M3_2[5], Mulitiplexer0.colmG_Master_3_M3_2[6], Mulitiplexer0.colmG_Master_3_M3_2[7]) == true)
+    {
+      LED0.LED_on_off(LED0.LEDG8);
+      LED0.LED_on_off(LED0.LEDG1);
+    }
+    else
+    {
+      Display0.clear();
+      Display0.print_piece_location("Error State", "Please", "Restart Puzzle 3", "");
+      Display0.draw();
+    }
+  } // end (constpot == 3)
   else
   {
     Display0.clear();
@@ -147,10 +174,33 @@ void show_hint()
   } // end (constpot == 2)
   else if (constpot == 3)
   {
-    Display0.clear();
-    Display0.print_piece_location("This is Show", "Answer Interrupt", "constpot = ", "3");
-    Display0.draw();
-  }
+    if (Mulitiplexer0.r_mux_F_channel(Mulitiplexer0.colmF_Master_3[0], Mulitiplexer0.colmF_Master_3[1], Mulitiplexer0.colmF_Master_3[2], Mulitiplexer0.colmF_Master_3[3],
+                                      Mulitiplexer0.colmF_Master_3[4], Mulitiplexer0.colmF_Master_3[5], Mulitiplexer0.colmF_Master_3[6], Mulitiplexer0.colmF_Master_3[7]) == true)
+    {
+      LED0.LED_on_off(LED0.LEDF4);
+    }
+    else if (Mulitiplexer0.r_mux_F_channel(Mulitiplexer0.colmF_Master_3_M1[0], Mulitiplexer0.colmF_Master_3_M1[1], Mulitiplexer0.colmF_Master_3_M1[2], Mulitiplexer0.colmF_Master_3_M1[3],
+                                           Mulitiplexer0.colmF_Master_3_M1[4], Mulitiplexer0.colmF_Master_3_M1[5], Mulitiplexer0.colmF_Master_3_M1[6], Mulitiplexer0.colmF_Master_3_M1[7]) == true)
+    {
+      LED0.LED_on_off(LED0.LEDG3);
+    }
+    else if (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_Master_3_M2[0], Mulitiplexer0.colmG_Master_3_M2[1], Mulitiplexer0.colmG_Master_3_M2[2], Mulitiplexer0.colmG_Master_3_M2[3],
+                                           Mulitiplexer0.colmG_Master_3_M2[4], Mulitiplexer0.colmG_Master_3_M2[5], Mulitiplexer0.colmG_Master_3_M2[6], Mulitiplexer0.colmG_Master_3_M2[7]) == true)
+    {
+      LED0.LED_on_off(LED0.LEDF5);
+    }
+    else if (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_Master_3_M3_2[0], Mulitiplexer0.colmG_Master_3_M3_2[1], Mulitiplexer0.colmG_Master_3_M3_2[2], Mulitiplexer0.colmG_Master_3_M3_2[3],
+                                           Mulitiplexer0.colmG_Master_3_M3_2[4], Mulitiplexer0.colmG_Master_3_M3_2[5], Mulitiplexer0.colmG_Master_3_M3_2[6], Mulitiplexer0.colmG_Master_3_M3_2[7]) == true)
+    {
+      LED0.LED_on_off(LED0.LEDG8);
+    }
+    else
+    {
+      Display0.clear();
+      Display0.print_piece_location("Error State", "Please", "Restart Puzzle 3", "");
+      Display0.draw();
+    }
+  } // end (constpot == 3)
   else
   {
     Display0.clear();
