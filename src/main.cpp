@@ -93,14 +93,14 @@ void show_answer()
       LED0.LED_on_off(LED0.LEDF4);
       LED0.LED_on_off(LED0.LEDF5);
     }
-    else if (Mulitiplexer0.r_mux_F_channel(Mulitiplexer0.colmF_Master_3_M1[0], Mulitiplexer0.colmF_Master_3_M1[1], Mulitiplexer0.colmF_Master_3_M1[2], Mulitiplexer0.colmF_Master_3_M1[3],
-                                           Mulitiplexer0.colmF_Master_3_M1[4], Mulitiplexer0.colmF_Master_3_M1[5], Mulitiplexer0.colmF_Master_3_M1[6], Mulitiplexer0.colmF_Master_3_M1[7]) == true)
+    else if (Mulitiplexer0.r_mux_H_channel(Mulitiplexer0.colmH_Master_3_M1_2[0], Mulitiplexer0.colmH_Master_3_M1_2[1], Mulitiplexer0.colmH_Master_3_M1_2[2], Mulitiplexer0.colmH_Master_3_M1_2[3],
+                                           Mulitiplexer0.colmH_Master_3_M1_2[4], Mulitiplexer0.colmH_Master_3_M1_2[5], Mulitiplexer0.colmH_Master_3_M1_2[6], Mulitiplexer0.colmH_Master_3_M1_2[7]) == true)
     {
       LED0.LED_on_off(LED0.LEDG3);
       LED0.LED_on_off(LED0.LEDF1);
     }
-    else if (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_Master_3_M2[0], Mulitiplexer0.colmG_Master_3_M2[1], Mulitiplexer0.colmG_Master_3_M2[2], Mulitiplexer0.colmG_Master_3_M2[3],
-                                           Mulitiplexer0.colmG_Master_3_M2[4], Mulitiplexer0.colmG_Master_3_M2[5], Mulitiplexer0.colmG_Master_3_M2[6], Mulitiplexer0.colmG_Master_3_M2[7]) == true)
+    else if (Mulitiplexer0.r_mux_H_channel(Mulitiplexer0.colmH_Master_3_M2_2[0], Mulitiplexer0.colmH_Master_3_M2_2[1], Mulitiplexer0.colmH_Master_3_M2_2[2], Mulitiplexer0.colmH_Master_3_M2_2[3],
+                                           Mulitiplexer0.colmH_Master_3_M2_2[4], Mulitiplexer0.colmH_Master_3_M2_2[5], Mulitiplexer0.colmH_Master_3_M2_2[6], Mulitiplexer0.colmH_Master_3_M2_2[7]) == true)
     {
       LED0.LED_on_off(LED0.LEDF5);
       LED0.LED_on_off(LED0.LEDH3);
@@ -179,13 +179,13 @@ void show_hint()
     {
       LED0.LED_on_off(LED0.LEDF4);
     }
-    else if (Mulitiplexer0.r_mux_F_channel(Mulitiplexer0.colmF_Master_3_M1[0], Mulitiplexer0.colmF_Master_3_M1[1], Mulitiplexer0.colmF_Master_3_M1[2], Mulitiplexer0.colmF_Master_3_M1[3],
-                                           Mulitiplexer0.colmF_Master_3_M1[4], Mulitiplexer0.colmF_Master_3_M1[5], Mulitiplexer0.colmF_Master_3_M1[6], Mulitiplexer0.colmF_Master_3_M1[7]) == true)
+    else if (Mulitiplexer0.r_mux_H_channel(Mulitiplexer0.colmH_Master_3_M1_2[0], Mulitiplexer0.colmH_Master_3_M1_2[1], Mulitiplexer0.colmH_Master_3_M1_2[2], Mulitiplexer0.colmH_Master_3_M1_2[3],
+                                           Mulitiplexer0.colmH_Master_3_M1_2[4], Mulitiplexer0.colmH_Master_3_M1_2[5], Mulitiplexer0.colmH_Master_3_M1_2[6], Mulitiplexer0.colmH_Master_3_M1_2[7]) == true)
     {
       LED0.LED_on_off(LED0.LEDG3);
     }
-    else if (Mulitiplexer0.r_mux_G_channel(Mulitiplexer0.colmG_Master_3_M2[0], Mulitiplexer0.colmG_Master_3_M2[1], Mulitiplexer0.colmG_Master_3_M2[2], Mulitiplexer0.colmG_Master_3_M2[3],
-                                           Mulitiplexer0.colmG_Master_3_M2[4], Mulitiplexer0.colmG_Master_3_M2[5], Mulitiplexer0.colmG_Master_3_M2[6], Mulitiplexer0.colmG_Master_3_M2[7]) == true)
+    else if (Mulitiplexer0.r_mux_H_channel(Mulitiplexer0.colmH_Master_3_M2_2[0], Mulitiplexer0.colmH_Master_3_M2_2[1], Mulitiplexer0.colmH_Master_3_M2_2[2], Mulitiplexer0.colmH_Master_3_M2_2[3],
+                                           Mulitiplexer0.colmH_Master_3_M2_2[4], Mulitiplexer0.colmH_Master_3_M2_2[5], Mulitiplexer0.colmH_Master_3_M2_2[6], Mulitiplexer0.colmH_Master_3_M2_2[7]) == true)
     {
       LED0.LED_on_off(LED0.LEDF5);
     }
@@ -1257,7 +1257,260 @@ void loop()
 
       LED0.LED_on_off(LED0.LEDclear);
 
-    } // end constpot == 3
+      //*********Move one*************//
+      Display0.clear();
+      Display0.print_piece_location("Set up Complete", "Black to move", "", "");
+      Display0.draw();
+
+      while ((Button0.r_button() == HIGH))
+      {
+        if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_3_M1[0], Mulitiplexer0.colmA_Master_3_M1[1], Mulitiplexer0.colmA_Master_3_M1[2], Mulitiplexer0.colmA_Master_3_M1[3],
+                                           Mulitiplexer0.colmA_Master_3_M1[4], Mulitiplexer0.colmA_Master_3_M1[5], Mulitiplexer0.colmA_Master_3_M1[6], Mulitiplexer0.colmA_Master_3_M1[7],
+                                           Mulitiplexer0.colmB_Master_3_M1[0], Mulitiplexer0.colmB_Master_3_M1[1], Mulitiplexer0.colmB_Master_3_M1[2], Mulitiplexer0.colmB_Master_3_M1[3],
+                                           Mulitiplexer0.colmB_Master_3_M1[4], Mulitiplexer0.colmB_Master_3_M1[5], Mulitiplexer0.colmB_Master_3_M1[6], Mulitiplexer0.colmB_Master_3_M1[7],
+                                           Mulitiplexer0.colmC_Master_3_M1[0], Mulitiplexer0.colmC_Master_3_M1[1], Mulitiplexer0.colmC_Master_3_M1[2], Mulitiplexer0.colmC_Master_3_M1[3],
+                                           Mulitiplexer0.colmC_Master_3_M1[4], Mulitiplexer0.colmC_Master_3_M1[5], Mulitiplexer0.colmC_Master_3_M1[6], Mulitiplexer0.colmC_Master_3_M1[7],
+                                           Mulitiplexer0.colmD_Master_3_M1[0], Mulitiplexer0.colmD_Master_3_M1[1], Mulitiplexer0.colmD_Master_3_M1[2], Mulitiplexer0.colmD_Master_3_M1[3],
+                                           Mulitiplexer0.colmD_Master_3_M1[4], Mulitiplexer0.colmD_Master_3_M1[5], Mulitiplexer0.colmD_Master_3_M1[6], Mulitiplexer0.colmD_Master_3_M1[7],
+                                           Mulitiplexer0.colmE_Master_3_M1[0], Mulitiplexer0.colmE_Master_3_M1[1], Mulitiplexer0.colmE_Master_3_M1[2], Mulitiplexer0.colmE_Master_3_M1[3],
+                                           Mulitiplexer0.colmE_Master_3_M1[4], Mulitiplexer0.colmE_Master_3_M1[5], Mulitiplexer0.colmE_Master_3_M1[6], Mulitiplexer0.colmE_Master_3_M1[7],
+                                           Mulitiplexer0.colmF_Master_3_M1[0], Mulitiplexer0.colmF_Master_3_M1[1], Mulitiplexer0.colmF_Master_3_M1[2], Mulitiplexer0.colmF_Master_3_M1[3],
+                                           Mulitiplexer0.colmF_Master_3_M1[4], Mulitiplexer0.colmF_Master_3_M1[5], Mulitiplexer0.colmF_Master_3_M1[6], Mulitiplexer0.colmF_Master_3_M1[7],
+                                           Mulitiplexer0.colmG_Master_3_M1[0], Mulitiplexer0.colmG_Master_3_M1[1], Mulitiplexer0.colmG_Master_3_M1[2], Mulitiplexer0.colmG_Master_3_M1[3],
+                                           Mulitiplexer0.colmG_Master_3_M1[4], Mulitiplexer0.colmG_Master_3_M1[5], Mulitiplexer0.colmG_Master_3_M1[6], Mulitiplexer0.colmG_Master_3_M1[7],
+                                           Mulitiplexer0.colmH_Master_3_M1[0], Mulitiplexer0.colmH_Master_3_M1[1], Mulitiplexer0.colmH_Master_3_M1[2], Mulitiplexer0.colmH_Master_3_M1[3],
+                                           Mulitiplexer0.colmH_Master_3_M1[4], Mulitiplexer0.colmH_Master_3_M1[5], Mulitiplexer0.colmH_Master_3_M1[6], Mulitiplexer0.colmH_Master_3_M1[7]) == true)
+        {
+          Display0.clear();
+          Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
+          Display0.draw();
+        }
+        else
+        {
+          Display0.clear();
+          Display0.print_piece_location("Set up Complete", "Black to Move,", "Waiting for", "Correct Move");
+          Display0.draw();
+          delay(1000);
+        }
+      } // end of Black Move 1 Puzzle 3
+
+      delay(1000); // allow for button press
+
+      while ((Button0.r_button() == HIGH))
+      {
+        if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_3_M1_2[0], Mulitiplexer0.colmA_Master_3_M1_2[1], Mulitiplexer0.colmA_Master_3_M1_2[2], Mulitiplexer0.colmA_Master_3_M1_2[3],
+                                           Mulitiplexer0.colmA_Master_3_M1_2[4], Mulitiplexer0.colmA_Master_3_M1_2[5], Mulitiplexer0.colmA_Master_3_M1_2[6], Mulitiplexer0.colmA_Master_3_M1_2[7],
+                                           Mulitiplexer0.colmB_Master_3_M1_2[0], Mulitiplexer0.colmB_Master_3_M1_2[1], Mulitiplexer0.colmB_Master_3_M1_2[2], Mulitiplexer0.colmB_Master_3_M1_2[3],
+                                           Mulitiplexer0.colmB_Master_3_M1_2[4], Mulitiplexer0.colmB_Master_3_M1_2[5], Mulitiplexer0.colmB_Master_3_M1_2[6], Mulitiplexer0.colmB_Master_3_M1_2[7],
+                                           Mulitiplexer0.colmC_Master_3_M1_2[0], Mulitiplexer0.colmC_Master_3_M1_2[1], Mulitiplexer0.colmC_Master_3_M1_2[2], Mulitiplexer0.colmC_Master_3_M1_2[3],
+                                           Mulitiplexer0.colmC_Master_3_M1_2[4], Mulitiplexer0.colmC_Master_3_M1_2[5], Mulitiplexer0.colmC_Master_3_M1_2[6], Mulitiplexer0.colmC_Master_3_M1_2[7],
+                                           Mulitiplexer0.colmD_Master_3_M1_2[0], Mulitiplexer0.colmD_Master_3_M1_2[1], Mulitiplexer0.colmD_Master_3_M1_2[2], Mulitiplexer0.colmD_Master_3_M1_2[3],
+                                           Mulitiplexer0.colmD_Master_3_M1_2[4], Mulitiplexer0.colmD_Master_3_M1_2[5], Mulitiplexer0.colmD_Master_3_M1_2[6], Mulitiplexer0.colmD_Master_3_M1_2[7],
+                                           Mulitiplexer0.colmE_Master_3_M1_2[0], Mulitiplexer0.colmE_Master_3_M1_2[1], Mulitiplexer0.colmE_Master_3_M1_2[2], Mulitiplexer0.colmE_Master_3_M1_2[3],
+                                           Mulitiplexer0.colmE_Master_3_M1_2[4], Mulitiplexer0.colmE_Master_3_M1_2[5], Mulitiplexer0.colmE_Master_3_M1_2[6], Mulitiplexer0.colmE_Master_3_M1_2[7],
+                                           Mulitiplexer0.colmF_Master_3_M1_2[0], Mulitiplexer0.colmF_Master_3_M1_2[1], Mulitiplexer0.colmF_Master_3_M1_2[2], Mulitiplexer0.colmF_Master_3_M1_2[3],
+                                           Mulitiplexer0.colmF_Master_3_M1_2[4], Mulitiplexer0.colmF_Master_3_M1_2[5], Mulitiplexer0.colmF_Master_3_M1_2[6], Mulitiplexer0.colmF_Master_3_M1_2[7],
+                                           Mulitiplexer0.colmG_Master_3_M1_2[0], Mulitiplexer0.colmG_Master_3_M1_2[1], Mulitiplexer0.colmG_Master_3_M1_2[2], Mulitiplexer0.colmG_Master_3_M1_2[3],
+                                           Mulitiplexer0.colmG_Master_3_M1_2[4], Mulitiplexer0.colmG_Master_3_M1_2[5], Mulitiplexer0.colmG_Master_3_M1_2[6], Mulitiplexer0.colmG_Master_3_M1_2[7],
+                                           Mulitiplexer0.colmH_Master_3_M1_2[0], Mulitiplexer0.colmH_Master_3_M1_2[1], Mulitiplexer0.colmH_Master_3_M1_2[2], Mulitiplexer0.colmH_Master_3_M1_2[3],
+                                           Mulitiplexer0.colmH_Master_3_M1_2[4], Mulitiplexer0.colmH_Master_3_M1_2[5], Mulitiplexer0.colmH_Master_3_M1_2[6], Mulitiplexer0.colmH_Master_3_M1_2[7]) == true)
+        {
+          Display0.clear();
+          Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
+          Display0.draw();
+        }
+        else
+        {
+          Display0.clear();
+          Display0.print_piece_location("Now Move ", "White King", "On H3 to H2", "");
+          Display0.draw();
+          delay(1000);
+        }
+      } // end of White Move 1 Puzzle 3
+
+      delay(1000); // allow for button press
+
+      //*********Move two*************//
+      while ((Button0.r_button() == HIGH))
+      {
+
+        if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_3_M2[0], Mulitiplexer0.colmA_Master_3_M2[1], Mulitiplexer0.colmA_Master_3_M2[2], Mulitiplexer0.colmA_Master_3_M2[3],
+                                           Mulitiplexer0.colmA_Master_3_M2[4], Mulitiplexer0.colmA_Master_3_M2[5], Mulitiplexer0.colmA_Master_3_M2[6], Mulitiplexer0.colmA_Master_3_M2[7],
+                                           Mulitiplexer0.colmB_Master_3_M2[0], Mulitiplexer0.colmB_Master_3_M2[1], Mulitiplexer0.colmB_Master_3_M2[2], Mulitiplexer0.colmB_Master_3_M2[3],
+                                           Mulitiplexer0.colmB_Master_3_M2[4], Mulitiplexer0.colmB_Master_3_M2[5], Mulitiplexer0.colmB_Master_3_M2[6], Mulitiplexer0.colmB_Master_3_M2[7],
+                                           Mulitiplexer0.colmC_Master_3_M2[0], Mulitiplexer0.colmC_Master_3_M2[1], Mulitiplexer0.colmC_Master_3_M2[2], Mulitiplexer0.colmC_Master_3_M2[3],
+                                           Mulitiplexer0.colmC_Master_3_M2[4], Mulitiplexer0.colmC_Master_3_M2[5], Mulitiplexer0.colmC_Master_3_M2[6], Mulitiplexer0.colmC_Master_3_M2[7],
+                                           Mulitiplexer0.colmD_Master_3_M2[0], Mulitiplexer0.colmD_Master_3_M2[1], Mulitiplexer0.colmD_Master_3_M2[2], Mulitiplexer0.colmD_Master_3_M2[3],
+                                           Mulitiplexer0.colmD_Master_3_M2[4], Mulitiplexer0.colmD_Master_3_M2[5], Mulitiplexer0.colmD_Master_3_M2[6], Mulitiplexer0.colmD_Master_3_M2[7],
+                                           Mulitiplexer0.colmE_Master_3_M2[0], Mulitiplexer0.colmE_Master_3_M2[1], Mulitiplexer0.colmE_Master_3_M2[2], Mulitiplexer0.colmE_Master_3_M2[3],
+                                           Mulitiplexer0.colmE_Master_3_M2[4], Mulitiplexer0.colmE_Master_3_M2[5], Mulitiplexer0.colmE_Master_3_M2[6], Mulitiplexer0.colmE_Master_3_M2[7],
+                                           Mulitiplexer0.colmF_Master_3_M2[0], Mulitiplexer0.colmF_Master_3_M2[1], Mulitiplexer0.colmF_Master_3_M2[2], Mulitiplexer0.colmF_Master_3_M2[3],
+                                           Mulitiplexer0.colmF_Master_3_M2[4], Mulitiplexer0.colmF_Master_3_M2[5], Mulitiplexer0.colmF_Master_3_M2[6], Mulitiplexer0.colmF_Master_3_M2[7],
+                                           Mulitiplexer0.colmG_Master_3_M2[0], Mulitiplexer0.colmG_Master_3_M2[1], Mulitiplexer0.colmG_Master_3_M2[2], Mulitiplexer0.colmG_Master_3_M2[3],
+                                           Mulitiplexer0.colmG_Master_3_M2[4], Mulitiplexer0.colmG_Master_3_M2[5], Mulitiplexer0.colmG_Master_3_M2[6], Mulitiplexer0.colmG_Master_3_M2[7],
+                                           Mulitiplexer0.colmH_Master_3_M2[0], Mulitiplexer0.colmH_Master_3_M2[1], Mulitiplexer0.colmH_Master_3_M2[2], Mulitiplexer0.colmH_Master_3_M2[3],
+                                           Mulitiplexer0.colmH_Master_3_M2[4], Mulitiplexer0.colmH_Master_3_M2[5], Mulitiplexer0.colmH_Master_3_M2[6], Mulitiplexer0.colmH_Master_3_M2[7]) == true)
+        {
+          Display0.clear();
+          Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
+          Display0.draw();
+        }
+        else
+        {
+          Display0.clear();
+          Display0.print_piece_location("Blacks Move:", "Waiting for", "Correct Move", "");
+          Display0.draw();
+          delay(1000);
+        }
+      } // end of Black Move 2 Puzzle 3
+
+      delay(1000); // allow for button press
+
+      while ((Button0.r_button() == HIGH))
+      {
+        if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_3_M2_2[0], Mulitiplexer0.colmA_Master_3_M2_2[1], Mulitiplexer0.colmA_Master_3_M2_2[2], Mulitiplexer0.colmA_Master_3_M2_2[3],
+                                           Mulitiplexer0.colmA_Master_3_M2_2[4], Mulitiplexer0.colmA_Master_3_M2_2[5], Mulitiplexer0.colmA_Master_3_M2_2[6], Mulitiplexer0.colmA_Master_3_M2_2[7],
+                                           Mulitiplexer0.colmB_Master_3_M2_2[0], Mulitiplexer0.colmB_Master_3_M2_2[1], Mulitiplexer0.colmB_Master_3_M2_2[2], Mulitiplexer0.colmB_Master_3_M2_2[3],
+                                           Mulitiplexer0.colmB_Master_3_M2_2[4], Mulitiplexer0.colmB_Master_3_M2_2[5], Mulitiplexer0.colmB_Master_3_M2_2[6], Mulitiplexer0.colmB_Master_3_M2_2[7],
+                                           Mulitiplexer0.colmC_Master_3_M2_2[0], Mulitiplexer0.colmC_Master_3_M2_2[1], Mulitiplexer0.colmC_Master_3_M2_2[2], Mulitiplexer0.colmC_Master_3_M2_2[3],
+                                           Mulitiplexer0.colmC_Master_3_M2_2[4], Mulitiplexer0.colmC_Master_3_M2_2[5], Mulitiplexer0.colmC_Master_3_M2_2[6], Mulitiplexer0.colmC_Master_3_M2_2[7],
+                                           Mulitiplexer0.colmD_Master_3_M2_2[0], Mulitiplexer0.colmD_Master_3_M2_2[1], Mulitiplexer0.colmD_Master_3_M2_2[2], Mulitiplexer0.colmD_Master_3_M2_2[3],
+                                           Mulitiplexer0.colmD_Master_3_M2_2[4], Mulitiplexer0.colmD_Master_3_M2_2[5], Mulitiplexer0.colmD_Master_3_M2_2[6], Mulitiplexer0.colmD_Master_3_M2_2[7],
+                                           Mulitiplexer0.colmE_Master_3_M2_2[0], Mulitiplexer0.colmE_Master_3_M2_2[1], Mulitiplexer0.colmE_Master_3_M2_2[2], Mulitiplexer0.colmE_Master_3_M2_2[3],
+                                           Mulitiplexer0.colmE_Master_3_M2_2[4], Mulitiplexer0.colmE_Master_3_M2_2[5], Mulitiplexer0.colmE_Master_3_M2_2[6], Mulitiplexer0.colmE_Master_3_M2_2[7],
+                                           Mulitiplexer0.colmF_Master_3_M2_2[0], Mulitiplexer0.colmF_Master_3_M2_2[1], Mulitiplexer0.colmF_Master_3_M2_2[2], Mulitiplexer0.colmF_Master_3_M2_2[3],
+                                           Mulitiplexer0.colmF_Master_3_M2_2[4], Mulitiplexer0.colmF_Master_3_M2_2[5], Mulitiplexer0.colmF_Master_3_M2_2[6], Mulitiplexer0.colmF_Master_3_M2_2[7],
+                                           Mulitiplexer0.colmG_Master_3_M2_2[0], Mulitiplexer0.colmG_Master_3_M2_2[1], Mulitiplexer0.colmG_Master_3_M2_2[2], Mulitiplexer0.colmG_Master_3_M2_2[3],
+                                           Mulitiplexer0.colmG_Master_3_M2_2[4], Mulitiplexer0.colmG_Master_3_M2_2[5], Mulitiplexer0.colmG_Master_3_M2_2[6], Mulitiplexer0.colmG_Master_3_M2_2[7],
+                                           Mulitiplexer0.colmH_Master_3_M2_2[0], Mulitiplexer0.colmH_Master_3_M2_2[1], Mulitiplexer0.colmH_Master_3_M2_2[2], Mulitiplexer0.colmH_Master_3_M2_2[3],
+                                           Mulitiplexer0.colmH_Master_3_M2_2[4], Mulitiplexer0.colmH_Master_3_M2_2[5], Mulitiplexer0.colmH_Master_3_M2_2[6], Mulitiplexer0.colmH_Master_3_M2_2[7]) == true)
+        {
+          Display0.clear();
+          Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
+          Display0.draw();
+        }
+        else
+        {
+          Display0.clear();
+          Display0.print_piece_location("Now Move ", "White King", "On H2 to H1", "");
+          Display0.draw();
+          delay(1000);
+        }
+      } // end of White Move 2 Puzzle 3
+
+      delay(1000); // allow for button press
+
+      //*********Move three*************//
+      while ((Button0.r_button() == HIGH))
+      {
+
+        if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_3_M2[0], Mulitiplexer0.colmA_Master_3_M2[1], Mulitiplexer0.colmA_Master_3_M2[2], Mulitiplexer0.colmA_Master_3_M2[3],
+                                           Mulitiplexer0.colmA_Master_3_M2[4], Mulitiplexer0.colmA_Master_3_M2[5], Mulitiplexer0.colmA_Master_3_M2[6], Mulitiplexer0.colmA_Master_3_M2[7],
+                                           Mulitiplexer0.colmB_Master_3_M2[0], Mulitiplexer0.colmB_Master_3_M2[1], Mulitiplexer0.colmB_Master_3_M2[2], Mulitiplexer0.colmB_Master_3_M2[3],
+                                           Mulitiplexer0.colmB_Master_3_M2[4], Mulitiplexer0.colmB_Master_3_M2[5], Mulitiplexer0.colmB_Master_3_M2[6], Mulitiplexer0.colmB_Master_3_M2[7],
+                                           Mulitiplexer0.colmC_Master_3_M2[0], Mulitiplexer0.colmC_Master_3_M2[1], Mulitiplexer0.colmC_Master_3_M2[2], Mulitiplexer0.colmC_Master_3_M2[3],
+                                           Mulitiplexer0.colmC_Master_3_M2[4], Mulitiplexer0.colmC_Master_3_M2[5], Mulitiplexer0.colmC_Master_3_M2[6], Mulitiplexer0.colmC_Master_3_M2[7],
+                                           Mulitiplexer0.colmD_Master_3_M2[0], Mulitiplexer0.colmD_Master_3_M2[1], Mulitiplexer0.colmD_Master_3_M2[2], Mulitiplexer0.colmD_Master_3_M2[3],
+                                           Mulitiplexer0.colmD_Master_3_M2[4], Mulitiplexer0.colmD_Master_3_M2[5], Mulitiplexer0.colmD_Master_3_M2[6], Mulitiplexer0.colmD_Master_3_M2[7],
+                                           Mulitiplexer0.colmE_Master_3_M2[0], Mulitiplexer0.colmE_Master_3_M2[1], Mulitiplexer0.colmE_Master_3_M2[2], Mulitiplexer0.colmE_Master_3_M2[3],
+                                           Mulitiplexer0.colmE_Master_3_M2[4], Mulitiplexer0.colmE_Master_3_M2[5], Mulitiplexer0.colmE_Master_3_M2[6], Mulitiplexer0.colmE_Master_3_M2[7],
+                                           Mulitiplexer0.colmF_Master_3_M2[0], Mulitiplexer0.colmF_Master_3_M2[1], Mulitiplexer0.colmF_Master_3_M2[2], Mulitiplexer0.colmF_Master_3_M2[3],
+                                           Mulitiplexer0.colmF_Master_3_M2[4], Mulitiplexer0.colmF_Master_3_M2[5], Mulitiplexer0.colmF_Master_3_M2[6], Mulitiplexer0.colmF_Master_3_M2[7],
+                                           Mulitiplexer0.colmG_Master_3_M2[0], Mulitiplexer0.colmG_Master_3_M2[1], Mulitiplexer0.colmG_Master_3_M2[2], Mulitiplexer0.colmG_Master_3_M2[3],
+                                           Mulitiplexer0.colmG_Master_3_M2[4], Mulitiplexer0.colmG_Master_3_M2[5], Mulitiplexer0.colmG_Master_3_M2[6], Mulitiplexer0.colmG_Master_3_M2[7],
+                                           Mulitiplexer0.colmH_Master_3_M2[0], Mulitiplexer0.colmH_Master_3_M2[1], Mulitiplexer0.colmH_Master_3_M2[2], Mulitiplexer0.colmH_Master_3_M2[3],
+                                           Mulitiplexer0.colmH_Master_3_M2[4], Mulitiplexer0.colmH_Master_3_M2[5], Mulitiplexer0.colmH_Master_3_M2[6], Mulitiplexer0.colmH_Master_3_M2[7]) == true)
+        {
+          Display0.clear();
+          Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
+          Display0.draw();
+        }
+        else
+        {
+          Display0.clear();
+          Display0.print_piece_location("Blacks Move:", "Waiting for", "Correct Move", "");
+          Display0.draw();
+          delay(1000);
+        }
+      } // end of Black Move 3 Puzzle 3
+
+      delay(1000); // allow for button press
+
+      while ((Button0.r_button() == HIGH))
+      {
+        if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_3_M3_2[0], Mulitiplexer0.colmA_Master_3_M3_2[1], Mulitiplexer0.colmA_Master_3_M3_2[2], Mulitiplexer0.colmA_Master_3_M3_2[3],
+                                           Mulitiplexer0.colmA_Master_3_M3_2[4], Mulitiplexer0.colmA_Master_3_M3_2[5], Mulitiplexer0.colmA_Master_3_M3_2[6], Mulitiplexer0.colmA_Master_3_M3_2[7],
+                                           Mulitiplexer0.colmB_Master_3_M3_2[0], Mulitiplexer0.colmB_Master_3_M3_2[1], Mulitiplexer0.colmB_Master_3_M3_2[2], Mulitiplexer0.colmB_Master_3_M3_2[3],
+                                           Mulitiplexer0.colmB_Master_3_M3_2[4], Mulitiplexer0.colmB_Master_3_M3_2[5], Mulitiplexer0.colmB_Master_3_M3_2[6], Mulitiplexer0.colmB_Master_3_M3_2[7],
+                                           Mulitiplexer0.colmC_Master_3_M3_2[0], Mulitiplexer0.colmC_Master_3_M3_2[1], Mulitiplexer0.colmC_Master_3_M3_2[2], Mulitiplexer0.colmC_Master_3_M3_2[3],
+                                           Mulitiplexer0.colmC_Master_3_M3_2[4], Mulitiplexer0.colmC_Master_3_M3_2[5], Mulitiplexer0.colmC_Master_3_M3_2[6], Mulitiplexer0.colmC_Master_3_M3_2[7],
+                                           Mulitiplexer0.colmD_Master_3_M3_2[0], Mulitiplexer0.colmD_Master_3_M3_2[1], Mulitiplexer0.colmD_Master_3_M3_2[2], Mulitiplexer0.colmD_Master_3_M3_2[3],
+                                           Mulitiplexer0.colmD_Master_3_M3_2[4], Mulitiplexer0.colmD_Master_3_M3_2[5], Mulitiplexer0.colmD_Master_3_M3_2[6], Mulitiplexer0.colmD_Master_3_M3_2[7],
+                                           Mulitiplexer0.colmE_Master_3_M3_2[0], Mulitiplexer0.colmE_Master_3_M3_2[1], Mulitiplexer0.colmE_Master_3_M3_2[2], Mulitiplexer0.colmE_Master_3_M3_2[3],
+                                           Mulitiplexer0.colmE_Master_3_M3_2[4], Mulitiplexer0.colmE_Master_3_M3_2[5], Mulitiplexer0.colmE_Master_3_M3_2[6], Mulitiplexer0.colmE_Master_3_M3_2[7],
+                                           Mulitiplexer0.colmF_Master_3_M3_2[0], Mulitiplexer0.colmF_Master_3_M3_2[1], Mulitiplexer0.colmF_Master_3_M3_2[2], Mulitiplexer0.colmF_Master_3_M3_2[3],
+                                           Mulitiplexer0.colmF_Master_3_M3_2[4], Mulitiplexer0.colmF_Master_3_M3_2[5], Mulitiplexer0.colmF_Master_3_M3_2[6], Mulitiplexer0.colmF_Master_3_M3_2[7],
+                                           Mulitiplexer0.colmG_Master_3_M3_2[0], Mulitiplexer0.colmG_Master_3_M3_2[1], Mulitiplexer0.colmG_Master_3_M3_2[2], Mulitiplexer0.colmG_Master_3_M3_2[3],
+                                           Mulitiplexer0.colmG_Master_3_M3_2[4], Mulitiplexer0.colmG_Master_3_M3_2[5], Mulitiplexer0.colmG_Master_3_M3_2[6], Mulitiplexer0.colmG_Master_3_M3_2[7],
+                                           Mulitiplexer0.colmH_Master_3_M3_2[0], Mulitiplexer0.colmH_Master_3_M3_2[1], Mulitiplexer0.colmH_Master_3_M3_2[2], Mulitiplexer0.colmH_Master_3_M3_2[3],
+                                           Mulitiplexer0.colmH_Master_3_M3_2[4], Mulitiplexer0.colmH_Master_3_M3_2[5], Mulitiplexer0.colmH_Master_3_M3_2[6], Mulitiplexer0.colmH_Master_3_M3_2[7]) == true)
+        {
+          Display0.clear();
+          Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
+          Display0.draw();
+        }
+        else
+        {
+          Display0.clear();
+          Display0.print_piece_location("Now Move ", "White Pawn", "On G2 to H3", "");
+          Display0.draw();
+          delay(1000);
+        }
+      } // end of White Move 3 Puzzle 3
+
+      delay(1000); // allow for button press
+
+      //*********Move four*************//
+      while ((Button0.r_button() == HIGH))
+      {
+        if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_3_M4[0], Mulitiplexer0.colmA_Master_3_M4[1], Mulitiplexer0.colmA_Master_3_M4[2], Mulitiplexer0.colmA_Master_3_M4[3],
+                                           Mulitiplexer0.colmA_Master_3_M4[4], Mulitiplexer0.colmA_Master_3_M4[5], Mulitiplexer0.colmA_Master_3_M4[6], Mulitiplexer0.colmA_Master_3_M4[7],
+                                           Mulitiplexer0.colmB_Master_3_M4[0], Mulitiplexer0.colmB_Master_3_M4[1], Mulitiplexer0.colmB_Master_3_M4[2], Mulitiplexer0.colmB_Master_3_M4[3],
+                                           Mulitiplexer0.colmB_Master_3_M4[4], Mulitiplexer0.colmB_Master_3_M4[5], Mulitiplexer0.colmB_Master_3_M4[6], Mulitiplexer0.colmB_Master_3_M4[7],
+                                           Mulitiplexer0.colmC_Master_3_M4[0], Mulitiplexer0.colmC_Master_3_M4[1], Mulitiplexer0.colmC_Master_3_M4[2], Mulitiplexer0.colmC_Master_3_M4[3],
+                                           Mulitiplexer0.colmC_Master_3_M4[4], Mulitiplexer0.colmC_Master_3_M4[5], Mulitiplexer0.colmC_Master_3_M4[6], Mulitiplexer0.colmC_Master_3_M4[7],
+                                           Mulitiplexer0.colmD_Master_3_M4[0], Mulitiplexer0.colmD_Master_3_M4[1], Mulitiplexer0.colmD_Master_3_M4[2], Mulitiplexer0.colmD_Master_3_M4[3],
+                                           Mulitiplexer0.colmD_Master_3_M4[4], Mulitiplexer0.colmD_Master_3_M4[5], Mulitiplexer0.colmD_Master_3_M4[6], Mulitiplexer0.colmD_Master_3_M4[7],
+                                           Mulitiplexer0.colmE_Master_3_M4[0], Mulitiplexer0.colmE_Master_3_M4[1], Mulitiplexer0.colmE_Master_3_M4[2], Mulitiplexer0.colmE_Master_3_M4[3],
+                                           Mulitiplexer0.colmE_Master_3_M4[4], Mulitiplexer0.colmE_Master_3_M4[5], Mulitiplexer0.colmE_Master_3_M4[6], Mulitiplexer0.colmE_Master_3_M4[7],
+                                           Mulitiplexer0.colmF_Master_3_M4[0], Mulitiplexer0.colmF_Master_3_M4[1], Mulitiplexer0.colmF_Master_3_M4[2], Mulitiplexer0.colmF_Master_3_M4[3],
+                                           Mulitiplexer0.colmF_Master_3_M4[4], Mulitiplexer0.colmF_Master_3_M4[5], Mulitiplexer0.colmF_Master_3_M4[6], Mulitiplexer0.colmF_Master_3_M4[7],
+                                           Mulitiplexer0.colmG_Master_3_M4[0], Mulitiplexer0.colmG_Master_3_M4[1], Mulitiplexer0.colmG_Master_3_M4[2], Mulitiplexer0.colmG_Master_3_M4[3],
+                                           Mulitiplexer0.colmG_Master_3_M4[4], Mulitiplexer0.colmG_Master_3_M4[5], Mulitiplexer0.colmG_Master_3_M4[6], Mulitiplexer0.colmG_Master_3_M4[7],
+                                           Mulitiplexer0.colmH_Master_3_M4[0], Mulitiplexer0.colmH_Master_3_M4[1], Mulitiplexer0.colmH_Master_3_M4[2], Mulitiplexer0.colmH_Master_3_M4[3],
+                                           Mulitiplexer0.colmH_Master_3_M4[4], Mulitiplexer0.colmH_Master_3_M4[5], Mulitiplexer0.colmH_Master_3_M4[6], Mulitiplexer0.colmH_Master_3_M4[7]) == true)
+        {
+          Display0.clear();
+          Display0.print_piece_location("Check Mate", "Congratulations", "You Compelted", "The Puzzle");
+          Display0.draw();
+          Buzzer0.write_buzzer();
+          delay(1000);
+          Buzzer0.turn_off_buzzer();
+          delay(1000);
+          Buzzer0.write_buzzer();
+          delay(1000);
+          Buzzer0.turn_off_buzzer();
+          break;
+        }
+        else
+        {
+          Display0.clear();
+          Display0.print_piece_location("Blacks Move:", "Waiting for", "Correct Move", "");
+          Display0.draw();
+          delay(1000);
+        }
+      } // end of Blacks Move 4 Check Mate end of puzzle 3
+    }   // end constpot == 3
 
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
     constpot = 0;                   // resetting pot to init value
