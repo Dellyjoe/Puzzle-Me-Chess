@@ -841,7 +841,7 @@ void loop()
       } // end of while loop Mux C Puzzle 2
 
       Display0.clear();
-      Display0.print_piece_location("Colm E Placement", "WBE2", "", "");
+      Display0.print_piece_location("Colm E Placement", "BRE2", "", "");
       Display0.draw();
 
       while (Mulitiplexer0.r_mux_E_channel(Mulitiplexer0.colmE_Master_2[0], Mulitiplexer0.colmE_Master_2[1], Mulitiplexer0.colmE_Master_2[2], Mulitiplexer0.colmE_Master_2[3],
@@ -1537,5 +1537,6 @@ void loop()
 
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
     constpot = 0;                   // resetting pot to init value
+    delay(3000);                    // For User to read Sucess OLED screen
   }                                 // end  if (test_code == false)
 } //end void loop
