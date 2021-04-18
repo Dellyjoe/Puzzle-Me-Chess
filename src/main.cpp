@@ -1404,22 +1404,22 @@ void loop()
       while ((Button0.r_button() == HIGH))
       {
 
-        if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_3_M2[0], Mulitiplexer0.colmA_Master_3_M2[1], Mulitiplexer0.colmA_Master_3_M2[2], Mulitiplexer0.colmA_Master_3_M2[3],
-                                           Mulitiplexer0.colmA_Master_3_M2[4], Mulitiplexer0.colmA_Master_3_M2[5], Mulitiplexer0.colmA_Master_3_M2[6], Mulitiplexer0.colmA_Master_3_M2[7],
-                                           Mulitiplexer0.colmB_Master_3_M2[0], Mulitiplexer0.colmB_Master_3_M2[1], Mulitiplexer0.colmB_Master_3_M2[2], Mulitiplexer0.colmB_Master_3_M2[3],
-                                           Mulitiplexer0.colmB_Master_3_M2[4], Mulitiplexer0.colmB_Master_3_M2[5], Mulitiplexer0.colmB_Master_3_M2[6], Mulitiplexer0.colmB_Master_3_M2[7],
-                                           Mulitiplexer0.colmC_Master_3_M2[0], Mulitiplexer0.colmC_Master_3_M2[1], Mulitiplexer0.colmC_Master_3_M2[2], Mulitiplexer0.colmC_Master_3_M2[3],
-                                           Mulitiplexer0.colmC_Master_3_M2[4], Mulitiplexer0.colmC_Master_3_M2[5], Mulitiplexer0.colmC_Master_3_M2[6], Mulitiplexer0.colmC_Master_3_M2[7],
-                                           Mulitiplexer0.colmD_Master_3_M2[0], Mulitiplexer0.colmD_Master_3_M2[1], Mulitiplexer0.colmD_Master_3_M2[2], Mulitiplexer0.colmD_Master_3_M2[3],
-                                           Mulitiplexer0.colmD_Master_3_M2[4], Mulitiplexer0.colmD_Master_3_M2[5], Mulitiplexer0.colmD_Master_3_M2[6], Mulitiplexer0.colmD_Master_3_M2[7],
-                                           Mulitiplexer0.colmE_Master_3_M2[0], Mulitiplexer0.colmE_Master_3_M2[1], Mulitiplexer0.colmE_Master_3_M2[2], Mulitiplexer0.colmE_Master_3_M2[3],
-                                           Mulitiplexer0.colmE_Master_3_M2[4], Mulitiplexer0.colmE_Master_3_M2[5], Mulitiplexer0.colmE_Master_3_M2[6], Mulitiplexer0.colmE_Master_3_M2[7],
-                                           Mulitiplexer0.colmF_Master_3_M2[0], Mulitiplexer0.colmF_Master_3_M2[1], Mulitiplexer0.colmF_Master_3_M2[2], Mulitiplexer0.colmF_Master_3_M2[3],
-                                           Mulitiplexer0.colmF_Master_3_M2[4], Mulitiplexer0.colmF_Master_3_M2[5], Mulitiplexer0.colmF_Master_3_M2[6], Mulitiplexer0.colmF_Master_3_M2[7],
-                                           Mulitiplexer0.colmG_Master_3_M2[0], Mulitiplexer0.colmG_Master_3_M2[1], Mulitiplexer0.colmG_Master_3_M2[2], Mulitiplexer0.colmG_Master_3_M2[3],
-                                           Mulitiplexer0.colmG_Master_3_M2[4], Mulitiplexer0.colmG_Master_3_M2[5], Mulitiplexer0.colmG_Master_3_M2[6], Mulitiplexer0.colmG_Master_3_M2[7],
-                                           Mulitiplexer0.colmH_Master_3_M2[0], Mulitiplexer0.colmH_Master_3_M2[1], Mulitiplexer0.colmH_Master_3_M2[2], Mulitiplexer0.colmH_Master_3_M2[3],
-                                           Mulitiplexer0.colmH_Master_3_M2[4], Mulitiplexer0.colmH_Master_3_M2[5], Mulitiplexer0.colmH_Master_3_M2[6], Mulitiplexer0.colmH_Master_3_M2[7]) == true)
+        if (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_3_M3[0], Mulitiplexer0.colmA_Master_3_M3[1], Mulitiplexer0.colmA_Master_3_M3[2], Mulitiplexer0.colmA_Master_3_M3[3],
+                                           Mulitiplexer0.colmA_Master_3_M3[4], Mulitiplexer0.colmA_Master_3_M3[5], Mulitiplexer0.colmA_Master_3_M3[6], Mulitiplexer0.colmA_Master_3_M3[7],
+                                           Mulitiplexer0.colmB_Master_3_M3[0], Mulitiplexer0.colmB_Master_3_M3[1], Mulitiplexer0.colmB_Master_3_M3[2], Mulitiplexer0.colmB_Master_3_M3[3],
+                                           Mulitiplexer0.colmB_Master_3_M3[4], Mulitiplexer0.colmB_Master_3_M3[5], Mulitiplexer0.colmB_Master_3_M3[6], Mulitiplexer0.colmB_Master_3_M3[7],
+                                           Mulitiplexer0.colmC_Master_3_M3[0], Mulitiplexer0.colmC_Master_3_M3[1], Mulitiplexer0.colmC_Master_3_M3[2], Mulitiplexer0.colmC_Master_3_M3[3],
+                                           Mulitiplexer0.colmC_Master_3_M3[4], Mulitiplexer0.colmC_Master_3_M3[5], Mulitiplexer0.colmC_Master_3_M3[6], Mulitiplexer0.colmC_Master_3_M3[7],
+                                           Mulitiplexer0.colmD_Master_3_M3[0], Mulitiplexer0.colmD_Master_3_M3[1], Mulitiplexer0.colmD_Master_3_M3[2], Mulitiplexer0.colmD_Master_3_M3[3],
+                                           Mulitiplexer0.colmD_Master_3_M3[4], Mulitiplexer0.colmD_Master_3_M3[5], Mulitiplexer0.colmD_Master_3_M3[6], Mulitiplexer0.colmD_Master_3_M3[7],
+                                           Mulitiplexer0.colmE_Master_3_M3[0], Mulitiplexer0.colmE_Master_3_M3[1], Mulitiplexer0.colmE_Master_3_M3[2], Mulitiplexer0.colmE_Master_3_M3[3],
+                                           Mulitiplexer0.colmE_Master_3_M3[4], Mulitiplexer0.colmE_Master_3_M3[5], Mulitiplexer0.colmE_Master_3_M3[6], Mulitiplexer0.colmE_Master_3_M3[7],
+                                           Mulitiplexer0.colmF_Master_3_M3[0], Mulitiplexer0.colmF_Master_3_M3[1], Mulitiplexer0.colmF_Master_3_M3[2], Mulitiplexer0.colmF_Master_3_M3[3],
+                                           Mulitiplexer0.colmF_Master_3_M3[4], Mulitiplexer0.colmF_Master_3_M3[5], Mulitiplexer0.colmF_Master_3_M3[6], Mulitiplexer0.colmF_Master_3_M3[7],
+                                           Mulitiplexer0.colmG_Master_3_M3[0], Mulitiplexer0.colmG_Master_3_M3[1], Mulitiplexer0.colmG_Master_3_M3[2], Mulitiplexer0.colmG_Master_3_M3[3],
+                                           Mulitiplexer0.colmG_Master_3_M3[4], Mulitiplexer0.colmG_Master_3_M3[5], Mulitiplexer0.colmG_Master_3_M3[6], Mulitiplexer0.colmG_Master_3_M3[7],
+                                           Mulitiplexer0.colmH_Master_3_M3[0], Mulitiplexer0.colmH_Master_3_M3[1], Mulitiplexer0.colmH_Master_3_M3[2], Mulitiplexer0.colmH_Master_3_M3[3],
+                                           Mulitiplexer0.colmH_Master_3_M3[4], Mulitiplexer0.colmH_Master_3_M3[5], Mulitiplexer0.colmH_Master_3_M3[6], Mulitiplexer0.colmH_Master_3_M3[7]) == true)
         {
           Display0.clear();
           Display0.print_piece_location("Correct Move Now", "Press,", "Blue Button", "");
