@@ -403,22 +403,22 @@ void loop()
   if (test_code == false)
   {
     //*********Clear Chess Board Check*********//
-    while (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Master_1_M2[0], Mulitiplexer0.colmA_Master_1_M2[1], Mulitiplexer0.colmA_Master_1_M2[2], Mulitiplexer0.colmA_Master_1_M2[3],
-                                          Mulitiplexer0.colmA_Master_1_M2[4], Mulitiplexer0.colmA_Master_1_M2[5], Mulitiplexer0.colmA_Master_1_M2[6], Mulitiplexer0.colmA_Master_1_M2[7],
-                                          Mulitiplexer0.colmB_Master_1_M2[0], Mulitiplexer0.colmB_Master_1_M2[1], Mulitiplexer0.colmB_Master_1_M2[2], Mulitiplexer0.colmB_Master_1_M2[3],
-                                          Mulitiplexer0.colmB_Master_1_M2[4], Mulitiplexer0.colmB_Master_1_M2[5], Mulitiplexer0.colmB_Master_1_M2[6], Mulitiplexer0.colmB_Master_1_M2[7],
-                                          Mulitiplexer0.colmC_Master_1_M2[0], Mulitiplexer0.colmC_Master_1_M2[1], Mulitiplexer0.colmC_Master_1_M2[2], Mulitiplexer0.colmC_Master_1_M2[3],
-                                          Mulitiplexer0.colmC_Master_1_M2[4], Mulitiplexer0.colmC_Master_1_M2[5], Mulitiplexer0.colmC_Master_1_M2[6], Mulitiplexer0.colmC_Master_1_M2[7],
-                                          Mulitiplexer0.colmD_Master_1_M2[0], Mulitiplexer0.colmD_Master_1_M2[1], Mulitiplexer0.colmD_Master_1_M2[2], Mulitiplexer0.colmD_Master_1_M2[3],
-                                          Mulitiplexer0.colmD_Master_1_M2[4], Mulitiplexer0.colmD_Master_1_M2[5], Mulitiplexer0.colmD_Master_1_M2[6], Mulitiplexer0.colmD_Master_1_M2[7],
-                                          Mulitiplexer0.colmE_Master_1_M2[0], Mulitiplexer0.colmE_Master_1_M2[1], Mulitiplexer0.colmE_Master_1_M2[2], Mulitiplexer0.colmE_Master_1_M2[3],
-                                          Mulitiplexer0.colmE_Master_1_M2[4], Mulitiplexer0.colmE_Master_1_M2[5], Mulitiplexer0.colmE_Master_1_M2[6], Mulitiplexer0.colmE_Master_1_M2[7],
-                                          Mulitiplexer0.colmF_Master_1_M2[0], Mulitiplexer0.colmF_Master_1_M2[1], Mulitiplexer0.colmF_Master_1_M2[2], Mulitiplexer0.colmF_Master_1_M2[3],
-                                          Mulitiplexer0.colmF_Master_1_M2[4], Mulitiplexer0.colmF_Master_1_M2[5], Mulitiplexer0.colmF_Master_1_M2[6], Mulitiplexer0.colmF_Master_1_M2[7],
-                                          Mulitiplexer0.colmG_Master_1_M2[0], Mulitiplexer0.colmG_Master_1_M2[1], Mulitiplexer0.colmG_Master_1_M2[2], Mulitiplexer0.colmG_Master_1_M2[3],
-                                          Mulitiplexer0.colmG_Master_1_M2[4], Mulitiplexer0.colmG_Master_1_M2[5], Mulitiplexer0.colmG_Master_1_M2[6], Mulitiplexer0.colmG_Master_1_M2[7],
-                                          Mulitiplexer0.colmH_Master_1_M2[0], Mulitiplexer0.colmH_Master_1_M2[1], Mulitiplexer0.colmH_Master_1_M2[2], Mulitiplexer0.colmH_Master_1_M2[3],
-                                          Mulitiplexer0.colmH_Master_1_M2[4], Mulitiplexer0.colmH_Master_1_M2[5], Mulitiplexer0.colmH_Master_1_M2[6], Mulitiplexer0.colmH_Master_1_M2[7]) == false)
+    while (Mulitiplexer0.read_chess_board(Mulitiplexer0.colmA_Clear[0], Mulitiplexer0.colmA_Clear[1], Mulitiplexer0.colmA_Clear[2], Mulitiplexer0.colmA_Clear[3],
+                                          Mulitiplexer0.colmA_Clear[4], Mulitiplexer0.colmA_Clear[5], Mulitiplexer0.colmA_Clear[6], Mulitiplexer0.colmA_Clear[7],
+                                          Mulitiplexer0.colmB_Clear[0], Mulitiplexer0.colmB_Clear[1], Mulitiplexer0.colmB_Clear[2], Mulitiplexer0.colmB_Clear[3],
+                                          Mulitiplexer0.colmB_Clear[4], Mulitiplexer0.colmB_Clear[5], Mulitiplexer0.colmB_Clear[6], Mulitiplexer0.colmB_Clear[7],
+                                          Mulitiplexer0.colmC_Clear[0], Mulitiplexer0.colmC_Clear[1], Mulitiplexer0.colmC_Clear[2], Mulitiplexer0.colmC_Clear[3],
+                                          Mulitiplexer0.colmC_Clear[4], Mulitiplexer0.colmC_Clear[5], Mulitiplexer0.colmC_Clear[6], Mulitiplexer0.colmC_Clear[7],
+                                          Mulitiplexer0.colmD_Clear[0], Mulitiplexer0.colmD_Clear[1], Mulitiplexer0.colmD_Clear[2], Mulitiplexer0.colmD_Clear[3],
+                                          Mulitiplexer0.colmD_Clear[4], Mulitiplexer0.colmD_Clear[5], Mulitiplexer0.colmD_Clear[6], Mulitiplexer0.colmD_Clear[7],
+                                          Mulitiplexer0.colmE_Clear[0], Mulitiplexer0.colmE_Clear[1], Mulitiplexer0.colmE_Clear[2], Mulitiplexer0.colmE_Clear[3],
+                                          Mulitiplexer0.colmE_Clear[4], Mulitiplexer0.colmE_Clear[5], Mulitiplexer0.colmE_Clear[6], Mulitiplexer0.colmE_Clear[7],
+                                          Mulitiplexer0.colmF_Clear[0], Mulitiplexer0.colmF_Clear[1], Mulitiplexer0.colmF_Clear[2], Mulitiplexer0.colmF_Clear[3],
+                                          Mulitiplexer0.colmF_Clear[4], Mulitiplexer0.colmF_Clear[5], Mulitiplexer0.colmF_Clear[6], Mulitiplexer0.colmF_Clear[7],
+                                          Mulitiplexer0.colmG_Clear[0], Mulitiplexer0.colmG_Clear[1], Mulitiplexer0.colmG_Clear[2], Mulitiplexer0.colmG_Clear[3],
+                                          Mulitiplexer0.colmG_Clear[4], Mulitiplexer0.colmG_Clear[5], Mulitiplexer0.colmG_Clear[6], Mulitiplexer0.colmG_Clear[7],
+                                          Mulitiplexer0.colmH_Clear[0], Mulitiplexer0.colmH_Clear[1], Mulitiplexer0.colmH_Clear[2], Mulitiplexer0.colmH_Clear[3],
+                                          Mulitiplexer0.colmH_Clear[4], Mulitiplexer0.colmH_Clear[5], Mulitiplexer0.colmH_Clear[6], Mulitiplexer0.colmH_Clear[7]) == false)
     {
       Display0.clear();
       Display0.print_piece_location("Plase Clear ", "Chess Board,", "Before,", "Continuing");
