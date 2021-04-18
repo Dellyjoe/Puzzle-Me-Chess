@@ -81,7 +81,6 @@ void LED::LED_on_off(int LEDarry[])
   digitalWrite(LEDarry[16], HIGH);
   digitalWrite(LEDarry[17], LOW);
   delayMicroseconds(750);
-  //delay(1);
 } // end LED_on_off
 
 void LED::test_all_LEDs()
