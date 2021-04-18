@@ -237,6 +237,15 @@ public:
     int colmF_Master_3_M4[8] = {0, 1, 0, 1, 1, 1, 1, 1};
     int colmG_Master_3_M4[8] = {0, 1, 1, 1, 1, 1, 1, 1};
     int colmH_Master_3_M4[8] = {0, 1, 0, 0, 1, 1, 1, 0};
+    //*********Clear Chess Board Check*********//
+    int colmA_Clear[8] = {1, 1, 1, 1, 1, 1, 1, 1};
+    int colmB_Clear[8] = {1, 1, 1, 1, 1, 1, 1, 1};
+    int colmC_Clear[8] = {1, 1, 1, 1, 1, 1, 1, 1};
+    int colmD_Clear[8] = {1, 1, 1, 1, 1, 1, 1, 1};
+    int colmE_Clear[8] = {1, 1, 1, 1, 1, 1, 1, 1};
+    int colmF_Clear[8] = {1, 1, 1, 1, 1, 1, 1, 1};
+    int colmG_Clear[8] = {1, 1, 1, 1, 1, 1, 1, 1};
+    int colmH_Clear[8] = {1, 1, 1, 1, 1, 1, 1, 1};
 }; // end Class Mulitiplexer
 
 //******************************************Output*****************************//
