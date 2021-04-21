@@ -229,7 +229,6 @@ void setup()
   Mulitiplexer0.init_enable(36);
   LED0.init_LED();
   //******************************************Interrupts***********************//
-  pinMode(21, INPUT);
   attachInterrupt(digitalPinToInterrupt(20), show_answer, HIGH);
   attachInterrupt(digitalPinToInterrupt(30), show_hint, LOW);
 } // end setup
