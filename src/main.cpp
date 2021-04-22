@@ -217,7 +217,7 @@ void setup()
   SDcard0.int_SD();
   //SDcard0.print_SD_info(); //uncomment to print SD info
   SDcard0.print_directory();
-  Serial.begin(9600);
+  //Serial.begin(9600);
   SDcard0.readchesspuzzle();
   //******************************************Inputs***************************//
   Button0.init_button(22);

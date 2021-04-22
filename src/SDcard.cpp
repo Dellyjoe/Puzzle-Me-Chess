@@ -20,8 +20,8 @@ SdFile root;
 //******************************************Setup******************************//
 void SDcard::int_SD()
 {
-    while (!Serial)
-        ;
+    //while (!Serial)
+      //  ;
     if (!SD.begin(CS_PIN))
     {
         Serial.println("initialization failed. Things to check:");
