@@ -10,8 +10,8 @@ public:
     void test_all_LEDs();
 
     //******************************************LEDS***************************/
-    //**LED Arry Number   0       1      2       3     4      5      6      7      8       9      10     11     12     13     14    15    16 17//
-    //**LED Pin Number    1       2      3       4     5      6      7      8      9       10     11     12     24     25     26    27
+    //**LED Arry Number 0       1      2       3     4      5      6      7      8       9      10     11     12     13     14    15    16 17//
+    //**LED Pin Number  1       2      3       4     5      6      7      8      9       10     11     12     24     25     26    27
     //**Col A LEDS**//                                                              A
     int LEDA1[18] = {OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 9, 1};
     int LEDA2[18] = {INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, OUTPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, INPUT, 9, 2};
