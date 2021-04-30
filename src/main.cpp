@@ -231,7 +231,7 @@ void setup()
   //******************************************Interrupts***********************//
   attachInterrupt(digitalPinToInterrupt(20), show_answer, HIGH);
   attachInterrupt(digitalPinToInterrupt(30), show_hint, LOW);
-} // end setup
+} // end setupccc
 
 void loop()
 {
@@ -742,7 +742,7 @@ void loop()
         else
         {
           Display0.clear();
-          Display0.print_piece_location("Now Move ", "Black Bishop", "On F8 to G8", "");
+          Display0.print_piece_location("Now Move ", "Black Rook", "On F8 to G8", "");
           Display0.draw();
           delay(1000);
         }
