@@ -1093,7 +1093,7 @@ void loop()
           delay(1000);
           Buzzer0.write_buzzer();
           delay(1000);
-          Buzzer0.turn_off_buzzer();
+
           break;
         }
         else
@@ -1521,7 +1521,7 @@ void loop()
           delay(1000);
           Buzzer0.write_buzzer();
           delay(1000);
-          Buzzer0.turn_off_buzzer();
+        
           break;
         }
         else
@@ -1533,7 +1533,8 @@ void loop()
         }
       } // end of Blacks Move 4 Check Mate end of puzzle 3
     }   // end constpot == 3
-
+    
+    Buzzer0.turn_off_buzzer();
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
     constpot = 0;                   // resetting pot to init value
     delay(3000);                    // For User to read Sucess OLED screen
