@@ -229,7 +229,7 @@ void setup()
   Mulitiplexer0.init_enable(36);
   LED0.init_LED();
   //******************************************Interrupts***********************//
-  attachInterrupt(digitalPinToInterrupt(20), show_answer, HIGH);
+  attachInterrupt(digitalPinToInterrupt(20), show_answer, LOW);
   attachInterrupt(digitalPinToInterrupt(30), show_hint, LOW);
 } // end setupccc
 
@@ -1533,7 +1533,7 @@ void loop()
         }
       } // end of Blacks Move 4 Check Mate end of puzzle 3
     }   // end constpot == 3
-    
+
     Buzzer0.turn_off_buzzer();
     LED0.LED_on_off(LED0.LEDclear); // clears all LEDs
     constpot = 0;                   // resetting pot to init value
