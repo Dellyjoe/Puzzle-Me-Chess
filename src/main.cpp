@@ -222,7 +222,7 @@ void setup()
   //******************************************Inputs***************************//
   Button0.init_button(22);
   Potentiometer0.init_pot(23, 1, 3); // setting A9 to pot/Enabling pot
-  Mulitiplexer0.init_muxs_input(15, 14, 32, 39, 38, 37, 16, 17);
+  Mulitiplexer0.init_muxs_input(15, 37, 14, 38, 32, 39, 17, 16); // A,B,C,D,E,F,H,G
   //******************************************Outputs**************************//
   Buzzer0.init_buzzer(31);                    // setting A1 to buzzer
   Mulitiplexer0.init_muxs_output(35, 34, 33); // setting output channels s1 = a, s2 = b, s3 = c
