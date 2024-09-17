@@ -231,7 +231,7 @@ void setup()
   //******************************************Interrupts***********************//
   attachInterrupt(digitalPinToInterrupt(20), show_answer, LOW);
   attachInterrupt(digitalPinToInterrupt(30), show_hint, LOW);
-} // end setupccc
+} // end setup
 
 void loop()
 {
